@@ -4,10 +4,11 @@
 
 Custo: zero. Sem tela, sem usuário.
 
-- [ ] Evoluir o `radar.py` pra coletor: guardar cada leitura no Supabase (tabela `leituras`) em vez de só comparar com o limite.
+- [x] `coletor.py`: lê as 15 rotas nos dois sentidos (`rotas.py`) a cada 30 min pra hoje, amanhã e depois, e às 6h pros próximos 30 dias. Grava em `dados/leituras/AAAA-MM-DD/HHMM.csv.gz`, dentro do próprio repositório (sem banco externo, sem conta nova).
+- [x] `analise.py`: todo dia às 7h15 monta a série de cada voo decolado, mede a queda nas últimas 48 h e escreve `relatorios/ultimo.md` com quedas ≥ 30/50/70% por rota, companhia, horário, dia da semana, quanto tempo a queda durou e as 20 maiores.
+- [ ] Juntar o branch ao `main` pra as automações começarem a rodar (o GitHub só agenda no branch principal).
 - [ ] Adicionar `fli` como segunda fonte, pra comparar estabilidade com a leitura direta.
-- [ ] Rodar 15 rotas (lista em `03-modelo-de-previsao.md`) com intervalo de 30 min pra voos das próximas 48 h e 1 vez por dia pros próximos 30 dias.
-- [ ] No fim de cada semana, gerar um relatório automático: quedas ≥ 30%, 50% e 70% por rota, horário, companhia e duração da queda.
+- [ ] Baixar microdados de tarifas e SIROS da ANAC pra ter o "preço normal" e a oferta de assentos por rota.
 - [ ] Manter o alerta pessoal SP → FLN funcionando enquanto isso (é o primeiro usuário do produto).
 
 Critério pra seguir: quedas de 50% em pelo menos 5% dos voos em alguma rota. Se for menos de 1% em todas, o produto vira "melhor dia + pra onde ir" sem a promessa de última hora.
@@ -39,4 +40,4 @@ Critério pra seguir: quedas de 50% em pelo menos 5% dos voos em alguma rota. Se
 
 ## Pendência imediata
 
-O alerta SP → FLN (R$ 500, 14 dias, a cada 3 h) está no branch `claude/gallant-hopper-lfkqif` e só passa a rodar quando for juntado ao `main`.
+O alerta SP → FLN, o coletor e a análise estão no branch `claude/gallant-hopper-lfkqif` e só passam a rodar quando forem juntados ao `main`.

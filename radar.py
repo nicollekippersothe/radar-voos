@@ -35,8 +35,10 @@ VOO_RX = re.compile(
 )
 
 
-def buscar(data):
-    q = f"Flights to {DESTINO} from {ORIGEM} on {data} one way"
+def buscar(data, origem=None, destino=None):
+    origem = origem or ORIGEM
+    destino = destino or DESTINO
+    q = f"Flights to {destino} from {origem} on {data} one way"
     url = "https://www.google.com/travel/flights?" + urllib.parse.urlencode(
         {"q": q, "curr": "BRL", "hl": "pt-BR", "gl": "BR"}
     )

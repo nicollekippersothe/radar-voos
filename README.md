@@ -11,6 +11,20 @@ Procura passagens baratas no Google Voos e avisa por issue quando aparece alguma
 
 Hoje ele vigia **São Paulo (GRU, CGH e VCP) → Florianópolis**, só ida, nos próximos 14 dias, com limite de **R$ 500**. A busca roda sozinha a cada 3 horas pelo GitHub Actions.
 
+## Coletor de padrões (fase 0)
+
+Além do alerta, o repositório coleta o preço de cada voo de 15 rotas nos dois sentidos (`rotas.py`) a cada 30 minutos, pra descobrir com que frequência, onde e quando o preço cai perto da partida. Não usa banco externo: cada leitura vira um arquivo em `dados/leituras/AAAA-MM-DD/HHMM.csv.gz`, gravado pela própria Action.
+
+Todo dia às 7h15, `analise.py` monta a série de preço de cada voo já decolado, mede a queda nas últimas 48 horas e escreve `relatorios/ultimo.md`: quedas de 30%, 50% e 70% por rota, companhia, horário, dia da semana, quanto tempo a queda durou e as 20 maiores. Esse relatório é o que decide se existe produto de última hora (ver `docs/06-roteiro.md`).
+
+Pra rodar na mão:
+
+```sh
+python3 coletor.py                       # todas as rotas
+ROTAS=SAO-FLN,FLN-SAO python3 coletor.py # só um trecho
+python3 analise.py                       # gera relatorios/ultimo.md
+```
+
 ## Como o aviso chega
 
 Quando acha voo no limite, o radar abre uma issue com o label `alerta-sao-fln`. O GitHub manda e-mail pra quem acompanha o repositório (o dono acompanha por padrão). Enquanto a issue estiver aberta, voos novos entram como comentário, sem repetir os que já foram avisados. Feche a issue pra zerar o alerta.
