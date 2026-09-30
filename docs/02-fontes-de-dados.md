@@ -1,6 +1,6 @@
 # Fontes de dados
 
-Levantamento feito em 30/09/2026. Situação de cada fonte, custo e se serve pro caso de última hora. As seções "Dados públicos da ANAC" e "Ferramentas de raspagem genéricas" serão completadas com o resultado da segunda pesquisa (ver `04-benchmark.md`).
+Levantamento feito em 30/09/2026. Situação de cada fonte, custo e se serve pro caso de última hora. Os dados públicos da ANAC e as ferramentas de raspagem genéricas (Apify, Bright Data e outras) estão em `04-benchmark.md`.
 
 ## Como o preço de passagem é publicado (o "cru")
 
@@ -73,7 +73,7 @@ O que dá pra fazer com as companhias é **deep link**: um link que abre o site 
 
 ## Decisão pra cada fase
 
-**Fase 0 (agora, validação, sem usuários):** `fli` ou a leitura atual do `radar.py`, rodando do GitHub Actions ou de uma máquina pequena, com intervalo de 30 minutos pra voos das próximas 48 horas e 1 vez por dia pros próximos 30 dias. Custo zero. Objetivo: acumular histórico e descobrir com que frequência a queda de última hora acontece.
+**Fase 0 (agora, validação, sem usuários):** `fli` ou a leitura atual do `radar.py`, rodando do GitHub Actions ou de uma máquina pequena, com intervalo de 30 minutos pra voos das próximas 48 horas e 1 vez por dia pros próximos 30 dias. Bright Data como reserva (5 mil registros grátis por mês). Custo zero. Objetivo: acumular histórico e descobrir com que frequência a queda de última hora acontece. Em paralelo, baixar os microdados de tarifas e o SIROS da ANAC pra ter o "preço normal" e a oferta de assentos por rota.
 
 **Fase 1 (produto com usuários):** trocar pra SearchApi (mais barato) ou SerpApi (com cobertura jurídica). Conta de custo: 15 rotas × 2 sentidos × 48h em janelas de 30 min = 96 leituras por rota por dia = cerca de 2.900 buscas por dia, ou 87 mil por mês. Na SearchApi fica em torno de US$ 90 a US$ 350 por mês. Dá pra reduzir consultando mais devagar de madrugada.
 

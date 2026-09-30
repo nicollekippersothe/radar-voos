@@ -1,6 +1,13 @@
 # Radar de voos
 
-Procura passagens baratas no Google Voos e avisa por issue quando aparece alguma abaixo do limite.
+Procura passagens baratas no Google Voos e avisa por issue quando aparece alguma abaixo do limite. É o primeiro passo de um produto maior: um radar de passagens de última hora no Brasil. A visão, as fontes de dados, o modelo de previsão, o benchmark e o roteiro estão em `docs/`:
+
+- `docs/01-visao.md`: o problema, o público e os diferenciais
+- `docs/02-fontes-de-dados.md`: APIs, raspagem, afiliados, o que serve e o que não serve
+- `docs/03-modelo-de-previsao.md`: o que coletar e como responder "melhor dia", "chance de queda" e "comprar ou esperar"
+- `docs/04-benchmark.md`: Skyscanner, Hopper, Google Voos, grupos brasileiros, dados da ANAC e ferramentas de raspagem
+- `docs/05-produto-e-ux.md`: telas, login, alerta e linguagem
+- `docs/06-roteiro.md`: fases e o que não fazer agora
 
 Hoje ele vigia **São Paulo (GRU, CGH e VCP) → Florianópolis**, só ida, nos próximos 14 dias, com limite de **R$ 500**. A busca roda sozinha a cada 3 horas pelo GitHub Actions.
 
