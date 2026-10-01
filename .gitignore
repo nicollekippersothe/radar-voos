@@ -165,7 +165,7 @@ venv.bak/
 .ropeproject
 
 # mkdocs documentation
-/site
+# /site (liberado: o site do radar fica aqui)
 
 # mypy
 .mypy_cache/
