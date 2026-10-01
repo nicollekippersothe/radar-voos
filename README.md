@@ -25,6 +25,19 @@ ROTAS=SAO-FLN,FLN-SAO python3 coletor.py # só um trecho
 python3 analise.py                       # gera relatorios/ultimo.md
 ```
 
+## Site (Vercel)
+
+A pasta `site/` tem a interface: "Pra onde ir" (origem, valor máximo e janela de dias), "Melhor dia" (menor preço por dia de um trecho) e "Padrões" (o relatório da análise). Ela lê os arquivos `dados/ultimo.csv.gz`, `dados/ultimo-30d.csv.gz` e `relatorios/ultimo.md` direto do GitHub, sem banco.
+
+Pra publicar: em vercel.com, **Add New → Project**, importe este repositório e, em **Root Directory**, escolha `site`. Não precisa de variável de ambiente se o branch de produção for `main`. Pra testar outro branch, crie a variável `RADAR_RAMO` com o nome do branch.
+
+Pra rodar local:
+
+```sh
+cd site && npm install
+RADAR_LOCAL=.. npm run dev   # lê os arquivos do disco em vez do GitHub
+```
+
 ## Como o aviso chega
 
 Quando acha voo no limite, o radar abre uma issue com o label `alerta-sao-fln`. O GitHub manda e-mail pra quem acompanha o repositório (o dono acompanha por padrão). Enquanto a issue estiver aberta, voos novos entram como comentário, sem repetir os que já foram avisados. Feche a issue pra zerar o alerta.
