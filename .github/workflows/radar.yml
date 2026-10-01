@@ -1,0 +1,33 @@
+name: Radar de voos
+
+on:
+  schedule:
+    - cron: "17 */3 * * *" # a cada 3 horas
+  workflow_dispatch:
+    inputs:
+      preco_max:
+        description: "Preço máximo em reais"
+        default: "500"
+      dias:
+        description: "Quantos dias à frente olhar"
+        default: "14"
+
+permissions:
+  issues: write
+
+jobs:
+  sp-floripa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python radar.py
+        env:
+          ORIGEM: SAO
+          DESTINO: FLN
+          PRECO_MAX: ${{ inputs.preco_max || '500' }}
+          DIAS: ${{ inputs.dias || '14' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
