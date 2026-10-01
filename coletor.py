@@ -114,6 +114,10 @@ def main():
     caminho = os.path.join(pasta, agora.strftime("%H%M") + ".csv.gz")
     with gzip.open(caminho, "wt", encoding="utf-8") as f:
         f.write(buf.getvalue())
+    # Cópia com nome fixo pro site ler sem precisar listar a pasta.
+    nome_fixo = "ultimo-30d.csv.gz" if dias == JANELA_LONGA else "ultimo.csv.gz"
+    with gzip.open(os.path.join(PASTA, "..", nome_fixo), "wt", encoding="utf-8") as f:
+        f.write(buf.getvalue())
     print(f"{len(linhas)} voos gravados em {os.path.relpath(caminho)} ({vazias} buscas vazias)")
 
 
