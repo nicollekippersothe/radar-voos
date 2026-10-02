@@ -29,7 +29,7 @@ python3 analise.py                       # gera relatorios/ultimo.md
 
 A pasta `site/` tem a interface: "Pra onde ir" (origem, valor máximo e janela de dias), "Melhor dia" (menor preço por dia de um trecho) e "Padrões" (o relatório da análise). Ela lê os arquivos `dados/ultimo.csv.gz`, `dados/ultimo-30d.csv.gz` e `relatorios/ultimo.md` direto do GitHub, sem banco.
 
-Pra publicar: em vercel.com, **Add New → Project**, importe este repositório e, em **Root Directory**, escolha `site`. Não precisa de variável de ambiente se o branch de produção for `main`. Pra testar outro branch, crie a variável `RADAR_RAMO` com o nome do branch. Opcional: `GITHUB_TOKEN` (um token de leitura do GitHub) sobe o limite da API de 60 pra 5.000 pedidos por hora, caso o endereço raw falhe.
+Pra publicar: em vercel.com, **Add New → Project**, importe este repositório e, em **Root Directory**, escolha `site`. Os commits automáticos do coletor usam a identidade da dona do repositório (o plano Hobby da Vercel bloqueia deploy de commit de outro autor), e o `site/vercel.json` pula o build quando o commit só altera dados. Não precisa de variável de ambiente se o branch de produção for `main`. Pra testar outro branch, crie a variável `RADAR_RAMO` com o nome do branch. Opcional: `GITHUB_TOKEN` (um token de leitura do GitHub) sobe o limite da API de 60 pra 5.000 pedidos por hora, caso o endereço raw falhe.
 
 Pra rodar local:
 
