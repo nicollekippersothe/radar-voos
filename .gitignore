@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+# lib/ (liberado: site/lib faz parte do site)
 lib64/
 parts/
 sdist/
