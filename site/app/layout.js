@@ -1,10 +1,10 @@
-import { Instrument_Sans, Archivo, JetBrains_Mono } from "next/font/google";
+import { Instrument_Sans, Instrument_Serif, Archivo } from "next/font/google";
 import { Nav } from "./nav";
 import "./globals.css";
 
 const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Archivo({ subsets: ["latin"], variable: "--font-display", display: "swap", weight: ["500", "600", "700"] });
-const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap", weight: ["400", "500"] });
+const serif = Instrument_Serif({ subsets: ["latin"], variable: "--font-serif", display: "swap", weight: "400", style: ["italic"] });
 
 export const metadata = {
   title: "Radar de Voos",
@@ -23,22 +23,22 @@ const temaScript = `(function(){try{var m=matchMedia('(prefers-color-scheme: dar
 
 export default function Layout({ children }) {
   return (
-    <html lang="pt-BR" className={`${sans.variable} ${display.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${sans.variable} ${display.variable} ${serif.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: temaScript }} />
       </head>
       <body className="min-h-dvh flex flex-col">
-        <header className="sticky top-0 z-20 border-b border-border/70 bg-background/85 backdrop-blur-md">
-          <div className="shell flex h-[3.5em] items-center justify-between gap-4">
-            <a href="/" className="font-display text-[1.1em] font-semibold tracking-[-0.03em]">
+        <header className="sticky top-0 z-20 border-b bg-background">
+          <div className="shell flex h-[3.75em] items-center justify-between gap-4">
+            <a href="/" className="flex min-h-[44px] items-center font-display text-[1.1em] font-semibold tracking-[-0.03em]">
               Radar<span className="text-brand">.</span>
             </a>
             <Nav />
           </div>
         </header>
         <main className="shell flex-1 pb-[6em] pt-[3em]">{children}</main>
-        <footer className="shell border-t border-border/70 py-[1.5em] t-label text-muted-foreground">
-          Radar de Voos · dados lidos no Google Voos · a compra é feita na companhia
+        <footer className="shell border-t py-[1.5em] text-[0.85em] text-muted-foreground">
+          Radar de Voos. Preços lidos no Google Voos, com horário de leitura. A compra é feita no site da companhia.
         </footer>
       </body>
     </html>

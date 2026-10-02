@@ -38,7 +38,7 @@ async function baixar(caminho) {
 
 async function baixarCsv(caminho) {
   const bruto = await baixar(caminho);
-  if (!bruto) return [];
+  if (!bruto) return null;
   const texto = gunzipSync(bruto).toString("utf-8");
   const linhas = texto.trim().split("\n");
   const cab = linhas.shift().split(",");
@@ -64,15 +64,17 @@ async function baixarCsv(caminho) {
 /** Junta a leitura curta (mais recente) com a de 30 dias; pra cada voo fica a leitura mais nova. */
 export async function leituras() {
   const [curta, longa] = await Promise.all([baixarCsv("dados/ultimo.csv.gz"), baixarCsv("dados/ultimo-30d.csv.gz")]);
+  // Os dois arquivos indisponíveis é falha de leitura, não ausência de dados.
+  const erro = curta === null && longa === null;
   const porVoo = new Map();
-  for (const v of [...longa, ...curta]) {
+  for (const v of [...(longa || []), ...(curta || [])]) {
     const k = `${v.origem}|${v.destino}|${v.data_voo}|${v.companhia}|${v.h_saida}|${v.paradas}`;
     const atual = porVoo.get(k);
     if (!atual || atual.lido_em < v.lido_em) porVoo.set(k, v);
   }
   const todas = [...porVoo.values()];
   const lidoEm = todas.reduce((m, v) => (v.lido_em > m ? v.lido_em : m), "");
-  return { voos: todas, lidoEm };
+  return { voos: todas, lidoEm, erro };
 }
 
 export async function relatorio() {

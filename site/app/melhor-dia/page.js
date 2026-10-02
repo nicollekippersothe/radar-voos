@@ -1,7 +1,7 @@
 import { leituras, nome } from "@/lib/dados";
 import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, hojeIso, linkGoogle } from "@/lib/formato";
 import { FormDia } from "../filtros";
-import { Vazio, Linha, Secao } from "../blocos";
+import { Vazio, Linha, Secao, Erro } from "../blocos";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -12,7 +12,7 @@ export default async function MelhorDia({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const destino = (sp.destino || "FLN").toUpperCase();
   const soDiretos = sp.diretos !== "0";
-  const { voos, lidoEm } = await leituras();
+  const { voos, lidoEm, erro } = await leituras();
 
   const hoje = hojeIso();
   const doTrecho = voos.filter((v) => v.origem === origem && v.destino === destino && v.data_voo >= hoje && (!soDiretos || v.paradas === 0));
@@ -35,11 +35,11 @@ export default async function MelhorDia({ searchParams }) {
 
   return (
     <>
-      <section className="mb-[2.5em] flex flex-col gap-[1.2em]">
-        <span className="t-label text-brand">( Melhor dia )</span>
+      <section className="mb-[2.5em] flex flex-col gap-[1em]">
+        <span className="t-kicker text-brand">Viagens de última hora</span>
         <h1 className="t-display max-w-[10ch]">Qual dia é<br />mais barato?</h1>
         <p className="t-lead max-w-[42ch] text-muted-foreground">
-          Menor preço por dia no trecho, lido {horaLeitura(lidoEm)}. Os próximos 3 dias atualizam a cada 30 min; o resto, uma vez por dia.
+          Menor preço por dia no trecho{lidoEm ? `, lido ${horaLeitura(lidoEm)}` : ""}. Os próximos 3 dias atualizam a cada 30 min; o resto, uma vez por dia.
         </p>
       </section>
 
@@ -51,16 +51,18 @@ export default async function MelhorDia({ searchParams }) {
         diretos={soDiretos}
       />
 
-      {dias.length === 0 ? (
+      {erro ? (
+        <Erro href={base} />
+      ) : dias.length === 0 ? (
         <Vazio
           titulo={`Sem leituras pra ${nome(origem)} → ${nome(destino)}`}
           texto="Esse trecho pode não estar na lista vigiada, ou o coletor ainda não passou por ele."
-          acao={<Button variant="outline" size="lg" className="h-[2.6em] rounded-md text-[1em]" render={<a href="/" />}>Ver pra onde dá pra ir</Button>}
+          acao={<Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" render={<a href="/" />}>Ver pra onde dá pra ir</Button>}
         />
       ) : (
         <>
-          <div className="mt-[2.5em] grid gap-[1.5em] sm:grid-cols-[auto_1fr] sm:items-end">
-            <div className="flex flex-col gap-[0.4em]">
+          <div className="mt-[3em] grid gap-[1.5em] sm:grid-cols-[auto_1fr] sm:items-end">
+            <div className="flex flex-col gap-[0.5em]">
               <span className="t-label text-muted-foreground">Mais barato</span>
               <span className="t-h1 t-num">{reais(menor)}</span>
               <span className="text-muted-foreground">{diaMaisBarato && diaLongo(diaMaisBarato.data_voo)} · {nome(origem)} → {nome(destino)}</span>
@@ -68,7 +70,7 @@ export default async function MelhorDia({ searchParams }) {
           </div>
 
           <Secao rotulo={`${dias.length} dias com leitura`} />
-          <ol className="entra flex flex-col gap-[0.35em] rounded-xl border bg-card p-[0.75em]">
+          <ol className="entra flex flex-col gap-[0.25em] rounded-lg border bg-card p-[0.75em]">
             {dias.map((d) => {
               const sel = d.data_voo === diaSel;
               const top = d.preco === menor;
@@ -79,15 +81,15 @@ export default async function MelhorDia({ searchParams }) {
                     aria-current={sel ? "true" : undefined}
                     aria-label={`${diaLongo(d.data_voo)}, ${reais(d.preco)}${top ? ", o mais barato" : ""}`}
                     className={cn(
-                      "grid grid-cols-[5.5em_1fr_auto] items-center gap-[0.9em] rounded-md px-[0.7em] py-[0.5em] transition-colors hover:bg-muted/70",
+                      "grid min-h-[44px] grid-cols-[5.5em_1fr_auto] items-center gap-[1em] rounded-md px-[0.75em] py-[0.5em] transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
                       sel && "bg-muted"
                     )}
                   >
                     <span className={cn("text-[0.9em]", top ? "font-medium text-foreground" : "text-muted-foreground")}>{diaCurto(d.data_voo)}</span>
-                    <span className="h-[0.9em] overflow-hidden rounded-sm bg-muted">
+                    <span className="h-[0.75em] overflow-hidden rounded-sm bg-muted">
                       <i className={cn("block h-full rounded-sm", top ? "bg-brand" : "bg-foreground/70")} style={{ width: `${Math.max(4, (100 * d.preco) / maior)}%` }} />
                     </span>
-                    <span className={cn("t-num font-display text-[1.1em] font-semibold tracking-[-0.03em]", top && "text-brand")}>{reais(d.preco)}</span>
+                    <span className={cn("t-num font-display text-[1.1em] font-semibold tracking-[-0.03em]", top && "text-brand")}>{reais(d.preco)}{top && <span className="sr-only"> (mais barato)</span>}</span>
                   </a>
                 </li>
               );
@@ -97,7 +99,7 @@ export default async function MelhorDia({ searchParams }) {
           {voosDoDia.length > 0 && (
             <>
               <Secao rotulo="Voos do dia" titulo={diaLongo(diaSel)} />
-              <div className="divide-y rounded-xl border bg-card">
+              <div className="divide-y rounded-lg border bg-card">
                 {voosDoDia.map((v, i) => (
                   <Linha
                     key={i}
@@ -115,7 +117,7 @@ export default async function MelhorDia({ searchParams }) {
               </div>
               {todosDoDia.length > voosDoDia.length && (
                 <div className="mt-[1em]">
-                  <Button variant="outline" className="h-[2.4em] rounded-full text-[0.9em]" render={<a href={`${base}&dia=${diaSel}&todos=1`} />}>
+                  <Button variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" render={<a href={`${base}&dia=${diaSel}&todos=1`} />}>
                     Ver todos os {todosDoDia.length} voos
                   </Button>
                 </div>
@@ -125,9 +127,6 @@ export default async function MelhorDia({ searchParams }) {
         </>
       )}
 
-      <p className="mt-[3em] max-w-[60ch] text-[0.85em] leading-[1.4] text-muted-foreground">
-        Quando o coletor tiver semanas de histórico, esta tela mostra também o menor preço já visto no trecho e a chance de cair antes do dia. Hoje mostra só a última leitura.
-      </p>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { leituras, nome } from "@/lib/dados";
 import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, hojeIso, somaDias, linkGoogle } from "@/lib/formato";
 import { FormHome } from "./filtros";
-import { Vazio, Linha, Secao } from "./blocos";
+import { Vazio, Linha, Secao, Erro } from "./blocos";
 import { Button } from "@/components/ui/button";
 import { CalendarDays } from "lucide-react";
 
@@ -21,7 +21,7 @@ export default async function Home({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const valor = Number(sp.valor || 500);
   const dias = Number(sp.dias || 3);
-  const { voos, lidoEm } = await leituras();
+  const { voos, lidoEm, erro } = await leituras();
 
   const hoje = hojeIso();
   const limite = somaDias(hoje, dias);
@@ -39,24 +39,26 @@ export default async function Home({ searchParams }) {
 
   return (
     <>
-      <section className="mb-[2.5em] flex flex-col gap-[1.2em]">
-        <span className="t-label text-brand">( Última hora )</span>
+      <section className="mb-[2.5em] flex flex-col gap-[1em]">
+        <span className="t-kicker text-brand">Viagens de última hora</span>
         <h1 className="t-display max-w-[10ch]">Pra onde<br />dá pra ir?</h1>
         <p className="t-lead max-w-[42ch] text-muted-foreground">
-          Diga quanto tem e quando quer sair. A lista mostra o destino mais barato de cada cidade, só de ida, com o preço lido no Google Voos {horaLeitura(lidoEm)}.
+          Diga quanto tem e quando quer sair. A lista mostra o destino mais barato de cada cidade, só de ida{lidoEm ? `, lido no Google Voos ${horaLeitura(lidoEm)}` : ""}.
         </p>
       </section>
 
       <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} />
 
-      {lista.length === 0 ? (
+      {erro ? (
+        <Erro href={`/?origem=${origem}&valor=${valor}&dias=${dias}`} />
+      ) : lista.length === 0 ? (
         <Vazio
           titulo={semLeituras ? "Ainda sem leituras" : `Nada por até ${reais(valor)}`}
           texto={semLeituras
             ? "O coletor grava a primeira leitura assim que começar a rodar. Volte em alguns minutos."
             : `Saindo de ${nome(origem)} nesse período, nenhum voo coube no valor. Tente um valor maior ou uma janela mais longa.`}
           acao={!semLeituras && (
-            <Button variant="outline" size="lg" className="h-[2.6em] rounded-md text-[1em]" render={<a href={`/?origem=${origem}&valor=${sugestao}&dias=${Math.max(dias, 7)}`} />}>
+            <Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" render={<a href={`/?origem=${origem}&valor=${sugestao}&dias=${Math.max(dias, 7)}`} />}>
               Tentar com {reais(sugestao)} em 7 dias
             </Button>
           )}
@@ -67,7 +69,7 @@ export default async function Home({ searchParams }) {
             rotulo={`${lista.length === 1 ? "1 destino" : `${lista.length} destinos`} por até ${reais(valor)}`}
             titulo={`Saindo de ${nome(origem)}`}
           />
-          <div className="divide-y rounded-xl border bg-card">
+          <div className="divide-y rounded-lg border bg-card">
             {lista.map((v, i) => (
               <Linha
                 key={v.destino}
@@ -83,9 +85,9 @@ export default async function Home({ searchParams }) {
               />
             ))}
           </div>
-          <div className="mt-[1.2em] flex flex-wrap gap-[0.6em]">
+          <div className="mt-[1em] flex flex-wrap gap-[0.5em]">
             {lista.slice(0, 3).map((v) => (
-              <Button key={v.destino} variant="outline" className="h-[2.4em] rounded-full text-[0.9em]" render={<a href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`} />}>
+              <Button key={v.destino} variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" render={<a href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`} />}>
                 <CalendarDays data-icon="inline-start" /> Melhor dia pra {nome(v.destino)}
               </Button>
             ))}
@@ -94,7 +96,7 @@ export default async function Home({ searchParams }) {
       )}
 
       <p className="mt-[3em] max-w-[60ch] text-[0.85em] leading-[1.4] text-muted-foreground">
-        Preços lidos em buscador público, com horário de leitura. Mudam a qualquer momento. A compra é feita no site da companhia ou agência. O radar não vende passagens.
+        Os preços mudam a qualquer momento. Cada linha abre o Google Voos no trecho e na data pra você conferir antes de comprar.
       </p>
     </>
   );

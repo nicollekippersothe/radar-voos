@@ -16,7 +16,7 @@ function Campo({ rotulo, children }) {
 function Escolha({ name, valor, opcoes, rotuloAria }) {
   return (
     <Select name={name} defaultValue={valor} items={opcoes.map(([v, r]) => ({ value: v, label: r }))}>
-      <SelectTrigger aria-label={rotuloAria} className="h-[2.75em] w-full min-w-[9em] rounded-md px-[0.9em] text-[1em] bg-card">
+      <SelectTrigger aria-label={rotuloAria} className="h-[44px]! w-full min-w-[9em] rounded-md px-[1em] text-[1em] bg-card">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>
@@ -30,25 +30,25 @@ function Escolha({ name, valor, opcoes, rotuloAria }) {
 
 export function FormHome({ origem, origens, valor, dias, janelas }) {
   return (
-    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-xl border bg-card/60 p-[1.25em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
       <Campo rotulo="Saindo de">
         <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
       </Campo>
       <Campo rotulo="Com até">
         <div className="relative">
-          <span className="pointer-events-none absolute inset-y-0 left-[0.9em] flex items-center text-muted-foreground">R$</span>
+          <span className="pointer-events-none absolute inset-y-0 left-[1em] flex items-center text-muted-foreground">R$</span>
           <Input
             type="number" name="valor" defaultValue={valor} min="100" step="50" inputMode="numeric"
             aria-label="Valor máximo em reais"
-            className="h-[2.75em] rounded-md bg-card pl-[2.6em] text-[1em] t-num"
+            className="h-[44px] rounded-md bg-card pl-[2.5em] text-[1em] t-num"
           />
         </div>
       </Campo>
       <Campo rotulo="Nos próximos">
         <Escolha name="dias" valor={String(dias)} opcoes={janelas} rotuloAria="Janela de dias" />
       </Campo>
-      <Button type="submit" size="lg" className="h-[2.75em] rounded-md bg-brand px-[1.4em] text-[1em] text-brand-foreground hover:bg-brand/90">
-        Ver opções <ArrowRight data-icon="inline-end" />
+      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+        Ver destinos <ArrowRight data-icon="inline-end" />
       </Button>
     </form>
   );
@@ -56,7 +56,7 @@ export function FormHome({ origem, origens, valor, dias, janelas }) {
 
 export function FormDia({ origem, origens, destino, destinos, diretos }) {
   return (
-    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-xl border bg-card/60 p-[1.25em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
       <Campo rotulo="De">
         <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
       </Campo>
@@ -66,8 +66,8 @@ export function FormDia({ origem, origens, destino, destinos, diretos }) {
       <Campo rotulo="Voos">
         <Escolha name="diretos" valor={diretos ? "1" : "0"} opcoes={[["1", "Só diretos"], ["0", "Com paradas também"]]} rotuloAria="Tipo de voo" />
       </Campo>
-      <Button type="submit" size="lg" className="h-[2.75em] rounded-md bg-brand px-[1.4em] text-[1em] text-brand-foreground hover:bg-brand/90">
-        Comparar <ArrowRight data-icon="inline-end" />
+      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+        Comparar dias <ArrowRight data-icon="inline-end" />
       </Button>
     </form>
   );

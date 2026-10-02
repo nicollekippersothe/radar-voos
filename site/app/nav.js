@@ -21,7 +21,7 @@ export function Nav() {
             href={href}
             aria-current={ativo ? "page" : undefined}
             className={cn(
-              "rounded-full px-[0.9em] py-[0.45em] text-[0.85em] font-medium transition-colors",
+              "flex min-h-[44px] items-center rounded-full px-[1em] text-[0.9em] font-medium transition-colors",
               ativo ? "bg-card text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
             )}
           >
