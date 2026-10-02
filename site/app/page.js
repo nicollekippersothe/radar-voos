@@ -1,11 +1,17 @@
-import { leituras, nome, CIDADES, diaCurto, reais, duracao } from "../lib/dados";
+import { leituras, nome } from "../lib/dados";
+import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, hojeIso, somaDias, linkGoogle } from "../lib/formato";
+import { Chevron, Seta, Aviao } from "./icones";
 
 export const dynamic = "force-dynamic";
 
-function linkGoogle(o, d, data) {
-  const q = `Flights to ${d} from ${o} on ${data} one way`;
-  return `https://www.google.com/travel/flights?q=${encodeURIComponent(q)}&curr=BRL&hl=pt-BR`;
-}
+const JANELAS = [
+  ["0", "hoje"],
+  ["1", "até amanhã"],
+  ["3", "3 dias"],
+  ["7", "7 dias"],
+  ["14", "14 dias"],
+  ["30", "30 dias"],
+];
 
 export default async function Home({ searchParams }) {
   const sp = await searchParams;
@@ -14,12 +20,10 @@ export default async function Home({ searchParams }) {
   const dias = Number(sp.dias || 3);
   const { voos, lidoEm } = await leituras();
 
-  const hoje = new Date(new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
-  const limite = new Date(hoje); limite.setDate(limite.getDate() + dias);
-  const limiteIso = limite.toISOString().slice(0, 10);
-  const hojeIso = hoje.toISOString().slice(0, 10);
+  const hoje = hojeIso();
+  const limite = somaDias(hoje, dias);
 
-  const candidatos = voos.filter((v) => v.origem === origem && v.preco <= valor && v.data_voo >= hojeIso && v.data_voo <= limiteIso);
+  const candidatos = voos.filter((v) => v.origem === origem && v.preco <= valor && v.data_voo >= hoje && v.data_voo <= limite);
   const porDestino = new Map();
   for (const v of candidatos) {
     const atual = porDestino.get(v.destino);
@@ -27,57 +31,101 @@ export default async function Home({ searchParams }) {
   }
   const lista = [...porDestino.values()].sort((a, b) => a.preco - b.preco);
   const origens = [...new Set(voos.map((v) => v.origem))].sort();
+  const semLeituras = voos.length === 0;
 
   return (
     <>
-      <h1>Pra onde dá pra ir?</h1>
-      <p className="sub">Voos só de ida, lidos no Google Voos {lidoEm ? `às ${lidoEm.slice(11)} de ${diaCurto(lidoEm.slice(0, 10))}` : ""}.</p>
+      <h1 className="display">Pra onde dá pra ir?</h1>
+      <p className="sub">
+        Voos só de ida, lidos no Google Voos {horaLeitura(lidoEm)}.
+      </p>
+
       <form className="frase" method="get">
         Saindo de{" "}
-        <select name="origem" defaultValue={origem}>
-          {origens.map((o) => <option key={o} value={o}>{nome(o)}</option>)}
-        </select>
-        , com até R${" "}
-        <input type="number" name="valor" defaultValue={valor} min="100" step="50" />
+        <label className="campo">
+          <select name="origem" defaultValue={origem} aria-label="Origem">
+            {(origens.length ? origens : [origem]).map((o) => <option key={o} value={o}>{nome(o)}</option>)}
+          </select>
+          <span className="seta"><Seta /></span>
+        </label>
+        , com até{" "}
+        <label className="campo">
+          <span aria-hidden="true">R$&nbsp;</span>
+          <input className="num" type="number" name="valor" defaultValue={valor} min="100" step="50" aria-label="Valor máximo em reais" />
+        </label>
         , nos próximos{" "}
-        <select name="dias" defaultValue={dias}>
-          <option value="0">hoje</option>
-          <option value="1">até amanhã</option>
-          <option value="3">3 dias</option>
-          <option value="7">7 dias</option>
-          <option value="14">14 dias</option>
-          <option value="30">30 dias</option>
-        </select>
-        <button type="submit">Ver opções</button>
+        <label className="campo">
+          <select name="dias" defaultValue={String(dias)} aria-label="Janela de dias">
+            {JANELAS.map(([v, r]) => <option key={v} value={v}>{r}</option>)}
+          </select>
+          <span className="seta"><Seta /></span>
+        </label>
+        <button className="enviar" type="submit">Ver opções</button>
       </form>
 
-      {lista.length === 0 && (
-        <div className="vazio">
-          Nada por até {reais(valor)} saindo de {nome(origem)} nesse período. Aumente o valor ou a janela.
-          {voos.length === 0 && " (Ainda não há leituras publicadas. O coletor grava a primeira assim que começar a rodar.)"}
+      {lista.length === 0 ? (
+        <div className="vazio entra">
+          <div className="icone"><Aviao /></div>
+          <h3>{semLeituras ? "Ainda sem leituras" : `Nada por até ${reais(valor)}`}</h3>
+          <p>
+            {semLeituras
+              ? "O coletor grava a primeira leitura assim que começar a rodar. Volte em alguns minutos."
+              : `Saindo de ${nome(origem)} nesse período, nenhum voo coube no valor. Experimente um valor maior ou uma janela mais longa.`}
+          </p>
+          {!semLeituras && (
+            <a className="botao" href={`/?origem=${origem}&valor=${Math.round(valor * 1.5 / 50) * 50}&dias=${Math.max(dias, 7)}`}>
+              Tentar com {reais(Math.round(valor * 1.5 / 50) * 50)} em 7 dias
+            </a>
+          )}
         </div>
-      )}
-
-      {lista.map((v) => (
-        <div className="cartao" key={v.destino}>
-          <div className="topo">
-            <span className="destino">{nome(v.destino)}</span>
-            <span className="preco">{reais(v.preco)}</span>
+      ) : (
+        <>
+          <div className="secao-titulo">
+            {lista.length === 1 ? "1 destino" : `${lista.length} destinos`} por até {reais(valor)}
           </div>
-          <div className="detalhe">
-            {diaCurto(v.data_voo)} · {v.companhia} · {v.paradas === 0 ? "direto" : `${v.paradas} parada${v.paradas > 1 ? "s" : ""}`} · {duracao(v.duracao_min)}
-            <br />sai {v.h_saida}, chega {v.h_chegada}
+          <div className="grupo">
+            {lista.map((v) => (
+              <a
+                className="linha entra"
+                key={v.destino}
+                href={linkGoogle(v.origem, v.destino, v.data_voo)}
+                target="_blank"
+                rel="noopener"
+                aria-label={`${nome(v.destino)}, ${reais(v.preco)}, ${diaCurto(v.data_voo)}, ${v.companhia}, ${paradas(v.paradas)}. Abre no Google Voos`}
+              >
+                <div>
+                  <div className="titulo">
+                    {nome(v.destino)}
+                    {v.paradas === 0 && <span className="etiqueta">direto</span>}
+                  </div>
+                  <div className="detalhe">
+                    {diaCurto(v.data_voo)} · {v.companhia}
+                    {v.paradas > 0 && ` · ${paradas(v.paradas)}`} · {duracao(v.duracao_min)}
+                    <br />
+                    <span className="num">{intervalo(v.h_saida, v.h_chegada)}</span>
+                  </div>
+                </div>
+                <div className="preco display num">
+                  {reais(v.preco)}
+                  <small>Google Voos</small>
+                </div>
+                <span className="chevron"><Chevron /></span>
+              </a>
+            ))}
           </div>
           <div className="acoes">
-            <a className="botao principal" href={linkGoogle(v.origem, v.destino, v.data_voo)} target="_blank" rel="noopener">Ver no Google Voos</a>
-            <a className="botao" href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`}>Comparar dias</a>
+            {lista.slice(0, 3).map((v) => (
+              <a key={v.destino} className="botao" href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`}>
+                Comparar dias: {nome(v.destino)}
+              </a>
+            ))}
           </div>
-        </div>
-      ))}
+        </>
+      )}
 
       <p className="aviso">
-        Preços lidos em buscador público, com horário de leitura. Mudam a qualquer momento. A compra é feita no site da companhia ou agência.
-        O radar não vende passagens.
+        Preços lidos em buscador público, com horário de leitura. Mudam a qualquer momento.
+        A compra é feita no site da companhia ou agência. O radar não vende passagens.
       </p>
     </>
   );
