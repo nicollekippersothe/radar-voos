@@ -1,23 +1,34 @@
 "use client";
-
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-const ITENS = [
-  ["/", "Pra onde ir"],
+const LINKS = [
+  ["/", "Pra onde"],
   ["/melhor-dia", "Melhor dia"],
   ["/relatorio", "Padrões"],
 ];
 
-export default function Nav() {
-  const atual = usePathname();
+export function Nav() {
+  const path = usePathname();
   return (
-    <nav className="segmentos" aria-label="Seções">
-      {ITENS.map(([href, rotulo]) => (
-        <Link key={href} href={href} aria-current={atual === href ? "page" : undefined}>
-          {rotulo}
-        </Link>
-      ))}
+    <nav aria-label="Seções" className="flex items-center gap-0.5 rounded-full bg-muted p-0.5">
+      {LINKS.map(([href, rotulo]) => {
+        const ativo = href === "/" ? path === "/" : path.startsWith(href);
+        return (
+          <Link
+            key={href}
+            href={href}
+            aria-current={ativo ? "page" : undefined}
+            className={cn(
+              "rounded-full px-[0.9em] py-[0.45em] text-[0.85em] font-medium transition-colors",
+              ativo ? "bg-card text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+            )}
+          >
+            {rotulo}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

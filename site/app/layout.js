@@ -1,39 +1,45 @@
+import { Instrument_Sans, Archivo, JetBrains_Mono } from "next/font/google";
+import { Nav } from "./nav";
 import "./globals.css";
-import Nav from "./nav";
+
+const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const display = Archivo({ subsets: ["latin"], variable: "--font-display", display: "swap", weight: ["500", "600", "700"] });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap", weight: ["400", "500"] });
 
 export const metadata = {
   title: "Radar de Voos",
-  description: "Pra onde dá pra ir com o que você tem, e qual dia tende a ser mais barato.",
+  description: "Pra onde dá pra ir com o que você tem. Voos de última hora saindo do Brasil, lidos em buscador público.",
 };
 
 export const viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f7f5f2" },
-    { media: "(prefers-color-scheme: dark)", color: "#121110" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f3f1" },
+    { media: "(prefers-color-scheme: dark)", color: "#1a1818" },
   ],
-  width: "device-width",
-  initialScale: 1,
 };
+
+// Liga a classe .dark pelo tema do sistema, antes da primeira pintura.
+const temaScript = `(function(){try{var m=matchMedia('(prefers-color-scheme: dark)');var f=function(){document.documentElement.classList.toggle('dark',m.matches)};f();m.addEventListener('change',f)}catch(e){}})();`;
 
 export default function Layout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={`${sans.variable} ${display.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..700,0..100,0..1&display=swap"
-          rel="stylesheet"
-        />
+        <script dangerouslySetInnerHTML={{ __html: temaScript }} />
       </head>
-      <body>
-        <header className="topo">
-          <div className="topo-inner">
-            <a className="marca display" href="/">Radar de Voos</a>
+      <body className="min-h-dvh flex flex-col">
+        <header className="sticky top-0 z-20 border-b border-border/70 bg-background/85 backdrop-blur-md">
+          <div className="shell flex h-[3.5em] items-center justify-between gap-4">
+            <a href="/" className="font-display text-[1.1em] font-semibold tracking-[-0.03em]">
+              Radar<span className="text-brand">.</span>
+            </a>
             <Nav />
           </div>
         </header>
-        <main className="pagina">{children}</main>
+        <main className="shell flex-1 pb-[6em] pt-[3em]">{children}</main>
+        <footer className="shell border-t border-border/70 py-[1.5em] t-label text-muted-foreground">
+          Radar de Voos · dados lidos no Google Voos · a compra é feita na companhia
+        </footer>
       </body>
     </html>
   );

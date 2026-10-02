@@ -1,6 +1,9 @@
-import { leituras, nome } from "../../lib/dados";
-import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, hojeIso, linkGoogle } from "../../lib/formato";
-import { Chevron, Seta, Aviao } from "../icones";
+import { leituras, nome } from "@/lib/dados";
+import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, hojeIso, linkGoogle } from "@/lib/formato";
+import { FormDia } from "../filtros";
+import { Vazio, Linha, Secao } from "../blocos";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
@@ -28,98 +31,93 @@ export default async function MelhorDia({ searchParams }) {
   const mostrarTodos = sp.todos === "1";
   const voosDoDia = mostrarTodos ? todosDoDia : todosDoDia.slice(0, 10);
   const base = `?origem=${origem}&destino=${destino}&diretos=${soDiretos ? 1 : 0}`;
+  const diaMaisBarato = dias.find((d) => d.preco === menor);
 
   return (
     <>
-      <h1 className="display">Qual dia é mais barato?</h1>
-      <p className="sub">
-        Menor preço por dia, lido {horaLeitura(lidoEm)}. Os próximos 3 dias atualizam a cada 30 min; o resto, uma vez por dia.
-      </p>
+      <section className="mb-[2.5em] flex flex-col gap-[1.2em]">
+        <span className="t-label text-brand">( Melhor dia )</span>
+        <h1 className="t-display max-w-[10ch]">Qual dia é<br />mais barato?</h1>
+        <p className="t-lead max-w-[42ch] text-muted-foreground">
+          Menor preço por dia no trecho, lido {horaLeitura(lidoEm)}. Os próximos 3 dias atualizam a cada 30 min; o resto, uma vez por dia.
+        </p>
+      </section>
 
-      <form className="frase" method="get">
-        De{" "}
-        <label className="campo">
-          <select name="origem" defaultValue={origem} aria-label="Origem">
-            {(origens.length ? origens : [origem]).map((o) => <option key={o} value={o}>{nome(o)}</option>)}
-          </select>
-          <span className="seta"><Seta /></span>
-        </label>
-        {" "}pra{" "}
-        <label className="campo">
-          <select name="destino" defaultValue={destino} aria-label="Destino">
-            {(destinos.length ? destinos : [destino]).map((d) => <option key={d} value={d}>{nome(d)}</option>)}
-          </select>
-          <span className="seta"><Seta /></span>
-        </label>
-        ,{" "}
-        <label className="campo">
-          <select name="diretos" defaultValue={soDiretos ? "1" : "0"} aria-label="Tipo de voo">
-            <option value="1">só diretos</option>
-            <option value="0">com paradas também</option>
-          </select>
-          <span className="seta"><Seta /></span>
-        </label>
-        <button className="enviar" type="submit">Comparar</button>
-      </form>
+      <FormDia
+        origem={origem}
+        origens={(origens.length ? origens : [origem]).map((o) => [o, nome(o)])}
+        destino={destino}
+        destinos={(destinos.length ? destinos : [destino]).map((d) => [d, nome(d)])}
+        diretos={soDiretos}
+      />
 
       {dias.length === 0 ? (
-        <div className="vazio entra">
-          <div className="icone"><Aviao /></div>
-          <h3>Sem leituras pra {nome(origem)} → {nome(destino)}</h3>
-          <p>Esse trecho pode não estar na lista vigiada, ou o coletor ainda não passou por ele.</p>
-          <a className="botao" href="/">Ver pra onde dá pra ir</a>
-        </div>
+        <Vazio
+          titulo={`Sem leituras pra ${nome(origem)} → ${nome(destino)}`}
+          texto="Esse trecho pode não estar na lista vigiada, ou o coletor ainda não passou por ele."
+          acao={<Button variant="outline" size="lg" className="h-[2.6em] rounded-md text-[1em]" render={<a href="/" />}>Ver pra onde dá pra ir</Button>}
+        />
       ) : (
         <>
-          <div className="secao-titulo">Menor preço por dia</div>
-          <div className="dias entra">
-            {dias.map((d) => (
-              <a
-                className={`dia ${d.preco === menor ? "menor" : ""}`}
-                key={d.data_voo}
-                href={`${base}&dia=${d.data_voo}`}
-                aria-current={d.data_voo === diaSel ? "true" : undefined}
-                aria-label={`${diaLongo(d.data_voo)}, ${reais(d.preco)}${d.preco === menor ? ", o mais barato" : ""}`}
-              >
-                <span className="rotulo">{diaCurto(d.data_voo)}</span>
-                <span className="trilho"><i style={{ width: `${Math.max(6, (100 * d.preco) / maior)}%` }} /></span>
-                <span className="valor display num">{reais(d.preco)}</span>
-              </a>
-            ))}
+          <div className="mt-[2.5em] grid gap-[1.5em] sm:grid-cols-[auto_1fr] sm:items-end">
+            <div className="flex flex-col gap-[0.4em]">
+              <span className="t-label text-muted-foreground">Mais barato</span>
+              <span className="t-h1 t-num">{reais(menor)}</span>
+              <span className="text-muted-foreground">{diaMaisBarato && diaLongo(diaMaisBarato.data_voo)} · {nome(origem)} → {nome(destino)}</span>
+            </div>
           </div>
+
+          <Secao rotulo={`${dias.length} dias com leitura`} />
+          <ol className="entra flex flex-col gap-[0.35em] rounded-xl border bg-card p-[0.75em]">
+            {dias.map((d) => {
+              const sel = d.data_voo === diaSel;
+              const top = d.preco === menor;
+              return (
+                <li key={d.data_voo}>
+                  <a
+                    href={`${base}&dia=${d.data_voo}`}
+                    aria-current={sel ? "true" : undefined}
+                    aria-label={`${diaLongo(d.data_voo)}, ${reais(d.preco)}${top ? ", o mais barato" : ""}`}
+                    className={cn(
+                      "grid grid-cols-[5.5em_1fr_auto] items-center gap-[0.9em] rounded-md px-[0.7em] py-[0.5em] transition-colors hover:bg-muted/70",
+                      sel && "bg-muted"
+                    )}
+                  >
+                    <span className={cn("text-[0.9em]", top ? "font-medium text-foreground" : "text-muted-foreground")}>{diaCurto(d.data_voo)}</span>
+                    <span className="h-[0.9em] overflow-hidden rounded-sm bg-muted">
+                      <i className={cn("block h-full rounded-sm", top ? "bg-brand" : "bg-foreground/70")} style={{ width: `${Math.max(4, (100 * d.preco) / maior)}%` }} />
+                    </span>
+                    <span className={cn("t-num font-display text-[1.1em] font-semibold tracking-[-0.03em]", top && "text-brand")}>{reais(d.preco)}</span>
+                  </a>
+                </li>
+              );
+            })}
+          </ol>
 
           {voosDoDia.length > 0 && (
             <>
-              <div className="secao-titulo">{diaLongo(diaSel)}</div>
-              <div className="grupo">
+              <Secao rotulo="Voos do dia" titulo={diaLongo(diaSel)} />
+              <div className="divide-y rounded-xl border bg-card">
                 {voosDoDia.map((v, i) => (
-                  <a
-                    className="linha entra"
+                  <Linha
                     key={i}
                     href={linkGoogle(v.origem, v.destino, v.data_voo)}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label={`${v.companhia}, ${intervalo(v.h_saida, v.h_chegada)}, ${paradas(v.paradas)}, ${reais(v.preco)}. Abre no Google Voos`}
-                  >
-                    <div>
-                      <div className="titulo">
-                        {v.companhia}
-                        {v.paradas === 0 ? <span className="etiqueta">direto</span> : <span className="etiqueta neutra">{paradas(v.paradas)}</span>}
-                      </div>
-                      <div className="detalhe">
-                        <span className="num">{intervalo(v.h_saida, v.h_chegada)}</span> · {duracao(v.duracao_min)}
-                      </div>
-                    </div>
-                    <div className="preco display num">{reais(v.preco)}</div>
-                    <span className="chevron"><Chevron /></span>
-                  </a>
+                    indice={i + 1}
+                    titulo={v.companhia}
+                    etiqueta={v.paradas === 0 ? "direto" : paradas(v.paradas)}
+                    boa={v.paradas === 0}
+                    detalhe={duracao(v.duracao_min)}
+                    horario={intervalo(v.h_saida, v.h_chegada)}
+                    preco={reais(v.preco)}
+                    aria={`${v.companhia}, ${intervalo(v.h_saida, v.h_chegada)}, ${paradas(v.paradas)}, ${reais(v.preco)}. Abre no Google Voos`}
+                  />
                 ))}
               </div>
               {todosDoDia.length > voosDoDia.length && (
-                <div className="acoes">
-                  <a className="botao" href={`${base}&dia=${diaSel}&todos=1`}>
+                <div className="mt-[1em]">
+                  <Button variant="outline" className="h-[2.4em] rounded-full text-[0.9em]" render={<a href={`${base}&dia=${diaSel}&todos=1`} />}>
                     Ver todos os {todosDoDia.length} voos
-                  </a>
+                  </Button>
                 </div>
               )}
             </>
@@ -127,9 +125,8 @@ export default async function MelhorDia({ searchParams }) {
         </>
       )}
 
-      <p className="aviso">
-        Quando o coletor tiver semanas de histórico, esta tela mostra também o menor preço já visto no trecho
-        e a chance de cair antes do dia. Hoje mostra só a última leitura.
+      <p className="mt-[3em] max-w-[60ch] text-[0.85em] leading-[1.4] text-muted-foreground">
+        Quando o coletor tiver semanas de histórico, esta tela mostra também o menor preço já visto no trecho e a chance de cair antes do dia. Hoje mostra só a última leitura.
       </p>
     </>
   );
