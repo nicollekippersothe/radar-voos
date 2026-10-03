@@ -213,11 +213,89 @@ def _no(vs, p_pai):
     k = sum(1 for v in vs if v["queda_48h"] >= LIMIAR_QUEDA)
     p = (k + PESO_PAI * p_pai) / (n + PESO_PAI)
     caidos = [v for v in vs if v["queda_48h"] >= LIMIAR_QUEDA]
+
+    def quartis(valores):
+        if len(valores) >= 4:
+            q = statistics.quantiles(valores, n=4)
+            return int(q[0]), int(q[2])
+        return None, None
+
+    pra = [v["min_48h"] for v in caidos]
+    pra_p25, pra_p75 = quartis(pra)
     return {
         "n": n, "k": k, "p": round(p, 3),
         "queda_med": round(statistics.median(v["queda_48h"] for v in caidos), 3) if caidos else None,
         "horas_antes_med": round(statistics.median(v["horas_antes_do_min"] for v in caidos), 1) if caidos else None,
+        # De quanto pra quanto, em reais, só nos voos que caíram.
+        "de": int(statistics.median(v["preco_ref"] for v in caidos)) if caidos else None,
+        "pra": int(statistics.median(pra)) if caidos else None,
+        "pra_p25": pra_p25, "pra_p75": pra_p75,
     }
+
+
+FAIXAS_ANTECEDENCIA = [(0, 1, "no dia"), (1, 2, "1 dia antes"), (2, 3, "2 dias antes"),
+                       (3, 7, "3 a 6 dias antes"), (7, 14, "7 a 13 dias antes"), (14, 31, "14 a 30 dias antes")]
+MIN_VOOS_FAIXA = 8
+
+
+def indice_faixa(dias):
+    for i, (a, b, _) in enumerate(FAIXAS_ANTECEDENCIA):
+        if a <= dias < b:
+            return i
+    return None
+
+
+def curva_antecedencia(series):
+    """Quanto o preço de um mesmo voo muda conforme a data de decolar se aproxima.
+
+    Pra cada voo com leituras em 2 faixas ou mais, divide a mediana de cada faixa
+    pela mediana do próprio voo, o que tira o efeito de voo caro ou barato. Depois
+    tira a mediana dessas razões por rota (e no geral). Usa mediana dentro da faixa,
+    e não mínimo, pra faixa lida a cada 30 min não parecer mais barata só por ter
+    mais leituras.
+    """
+    rel = collections.defaultdict(lambda: collections.defaultdict(list))
+    base = collections.defaultdict(list)
+    for chave, serie in series.items():
+        if len(serie) < 3:
+            continue
+        origem, destino, data_voo, _, h_saida, _ = chave
+        partida = dt.datetime.fromisoformat(f"{data_voo} {h_saida}").replace(tzinfo=BRASILIA)
+        med = statistics.median(p for _, p in serie)
+        faixas = collections.defaultdict(list)
+        for t, p in serie:
+            dias = (partida - t).total_seconds() / 86400
+            if dias < 0:
+                continue
+            i = indice_faixa(dias)
+            if i is not None:
+                faixas[i].append(p)
+        if len(faixas) < 2:
+            continue
+        rota = f"{origem}-{destino}"
+        base[rota].append(med)
+        base["geral"].append(med)
+        for i, ps in faixas.items():
+            r = statistics.median(ps) / med
+            rel[rota][i].append(r)
+            rel["geral"][i].append(r)
+    saida = {}
+    for rota, faixas in rel.items():
+        linhas = []
+        for i, rs in sorted(faixas.items()):
+            if len(rs) < MIN_VOOS_FAIXA:
+                continue
+            # Média com corte em [0,3 ; 3]: a mediana fica em 1,0 porque a maioria dos voos
+            # não muda de preço, e o que importa pra decidir é o preço esperado, que sente
+            # tanto as quedas quanto as altas.
+            r = statistics.mean(min(3.0, max(0.3, x)) for x in rs)
+            mudou = sum(1 for x in rs if abs(x - 1) >= 0.05) / len(rs)
+            linhas.append({"i": i, "rotulo": FAIXAS_ANTECEDENCIA[i][2], "de": FAIXAS_ANTECEDENCIA[i][0],
+                           "ate": FAIXAS_ANTECEDENCIA[i][1] - 1, "n": len(rs), "rel": round(r, 3),
+                           "mudou": round(mudou, 2)})
+        if linhas:
+            saida[rota] = {"base": int(statistics.median(base[rota])), "faixas": linhas}
+    return saida
 
 
 def modelo(voos, series, agora):
@@ -294,6 +372,7 @@ def modelo(voos, series, agora):
         "cortes": cortes,
         "hora_do_min": {str(h): n for h, n in sorted(hora_do_min.items())},
         "rotas": rotas,
+        "curva": curva_antecedencia(series),
         "abertos": abertos,
     }
 

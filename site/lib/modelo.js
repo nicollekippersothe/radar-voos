@@ -51,6 +51,42 @@ export function veredito(m, v) {
   const jaCaiu = s && s.ref && v.preco <= s.ref * (1 - (m.limiar || 0.3));
   if (jaCaiu) return { tom: "bom", curto: "já caiu", longo: `Já caiu ${Math.round(100 * (1 - v.preco / s.ref))}% em relação ao que custava antes. É o momento.`, e, abaixo };
   if (abaixo !== null && abaixo >= 0.15) return { tom: "bom", curto: `${Math.round(100 * abaixo)}% abaixo do comum`, longo: `Está ${Math.round(100 * abaixo)}% abaixo do que esse trecho costuma custar (R$ ${t.tipico}). Compra.`, e, abaixo };
-  if (e.p >= 0.2) return { tom: "espera", curto: `cai ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim caíram ${Math.round(100 * e.p)}% das vezes nas 48 h antes de sair, em média ${Math.round(100 * (e.queda_med || 0))}%, uns ${Math.round(e.horas_antes_med || 0)} h antes. Se não precisa decidir agora, dá pra esperar.`, e, abaixo };
+  const faixaRs = e.de && e.pra ? ` Quando cai, vai de R$ ${e.de} pra R$ ${e.pra}.` : "";
+  if (e.p >= 0.2) return { tom: "espera", curto: `cai ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim caíram ${Math.round(100 * e.p)}% das vezes nas 48 h antes de sair, uns ${Math.round(e.horas_antes_med || 0)} h antes.${faixaRs} Se não precisa decidir agora, dá pra esperar.`, e, abaixo };
   return { tom: "neutro", curto: `cai ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim raramente caem na última hora (${Math.round(100 * e.p)}% das vezes). Esperar costuma não compensar.`, e, abaixo };
+}
+
+/** Curva de preço por antecedência do trecho; cai na curva geral se o trecho tem pouca base. */
+export function curvaRota(m, origem, destino) {
+  const c = m?.curva;
+  if (!c) return null;
+  const r = c[`${origem}-${destino}`];
+  if (r && r.faixas.length >= 2) return { ...r, fonte: "do trecho" };
+  const g = c.geral;
+  return g && g.faixas.length >= 2 ? { ...g, fonte: "de todas as rotas" } : null;
+}
+
+/**
+ * Melhor data pra comprar um voo numa data.
+ * Compara o preço esperado da faixa em que a pessoa está hoje com o da faixa mais barata.
+ */
+export function recomendar(curva, dataVoo, hoje, { diaIso, somaDias }) {
+  if (!curva || !dataVoo) return null;
+  const ate = Math.round((new Date(dataVoo + "T12:00:00Z") - new Date(hoje + "T12:00:00Z")) / 86400000);
+  if (ate < 0) return null;
+  const faixas = curva.faixas;
+  const melhor = faixas.reduce((a, b) => (b.rel < a.rel ? b : a));
+  const atual = faixas.find((f) => ate >= f.de && ate <= f.ate) || null;
+  const maxDias = Math.max(...faixas.map((f) => f.ate));
+  const janela = { de: somaDias(dataVoo, -melhor.ate), ate: somaDias(dataVoo, -melhor.de) };
+  let acao;
+  if (atual && atual.i === melhor.i) acao = "agora";
+  else if (ate > melhor.ate) acao = "espera";
+  else acao = "passou";
+  // Se a antecedência pedida passa do que já foi observado, não dá pra comparar com "hoje".
+  const semDados = !atual && ate > maxDias;
+  const ref = atual || faixas.find((f) => f.de <= Math.min(ate, maxDias) && Math.min(ate, maxDias) <= f.ate) || null;
+  const economiaPct = ref && ref.rel > melhor.rel ? (ref.rel - melhor.rel) / ref.rel : 0;
+  const economiaRs = ref ? Math.round(curva.base * Math.max(0, ref.rel - melhor.rel)) : 0;
+  return { ate, atual, melhor, janela, acao, semDados, economiaPct, economiaRs, maxDias };
 }
