@@ -15,7 +15,7 @@
 @theme inline {
   --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-display), var(--font-sans), sans-serif;
-  --font-serif: var(--font-serif), Georgia, serif;
+  --font-mono: var(--font-mono), ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -103,7 +103,7 @@
 
 /* Escala tipográfica em múltiplos do corpo, com tracking que aperta conforme cresce. */
 @utility t-label { font-size: 0.75em; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.2; }
-@utility t-kicker { font-family: var(--font-serif); font-style: italic; font-size: 1.5em; line-height: 1.1; letter-spacing: -0.01em; }
+@utility t-kicker { font-family: var(--font-mono); font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; line-height: 1.2; }
 @utility t-lead { font-size: 1.25em; line-height: 1.08; letter-spacing: -0.02em; }
 @utility t-h3 { font-family: var(--font-display); font-weight: 600; font-size: 2em; line-height: 0.95; letter-spacing: -0.04em; }
 @utility t-h2 { font-family: var(--font-display); font-weight: 600; font-size: 3em; line-height: 0.95; letter-spacing: -0.04em; }

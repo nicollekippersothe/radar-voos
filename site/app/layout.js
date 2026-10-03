@@ -1,10 +1,10 @@
-import { Instrument_Sans, Instrument_Serif, Archivo } from "next/font/google";
+import { Instrument_Sans, Space_Mono, Archivo } from "next/font/google";
 import { Nav } from "./nav";
 import "./globals.css";
 
 const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
 const display = Archivo({ subsets: ["latin"], variable: "--font-display", display: "swap", weight: ["500", "600", "700"] });
-const serif = Instrument_Serif({ subsets: ["latin"], variable: "--font-serif", display: "swap", weight: "400", style: ["italic"] });
+const mono = Space_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap", weight: ["400", "700"] });
 
 export const metadata = {
   title: "Radar de Voos",
@@ -23,7 +23,7 @@ const temaScript = `(function(){try{var m=matchMedia('(prefers-color-scheme: dar
 
 export default function Layout({ children }) {
   return (
-    <html lang="pt-BR" className={`${sans.variable} ${display.variable} ${serif.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${sans.variable} ${display.variable} ${mono.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: temaScript }} />
       </head>
