@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "7,37 * * * *" # a cada 30 minutos
   workflow_dispatch:
+    inputs:
+      longa:
+        description: "Forçar a leitura de 30 dias à frente"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -22,6 +27,8 @@ jobs:
         with:
           python-version: "3.12"
       - run: python coletor.py
+        env:
+          FORCAR_LONGA: ${{ inputs.longa && '1' || '' }}
       - name: Guardar leituras no repositório
         run: |
           git config user.name "nicollekippersothe"

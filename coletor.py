@@ -9,7 +9,7 @@ linha por voo lido. O analise.py junta tudo.
 
 Variáveis de ambiente:
   JANELA_CURTA   dias à frente lidos em toda execução (padrão 2, ou seja hoje, amanhã e depois)
-  JANELA_LONGA   dias à frente lidos só na execução das 6h (padrão 30)
+  JANELA_LONGA   dias à frente lidos a cada 20 h, ou quando FORCAR_LONGA=1 (padrão 30)
   ROTAS          lista "SAO-FLN,FLN-SAO" pra sobrescrever rotas.py (útil pra testar)
   THREADS        buscas em paralelo (padrão 6)
 """
@@ -79,13 +79,27 @@ def ler(par):
     return linhas
 
 
+def ultima_leitura_longa():
+    """Horário da última leitura de 30 dias, lido do próprio arquivo. None se nunca rodou."""
+    caminho = os.path.join(PASTA, "..", "ultimo-30d.csv.gz")
+    try:
+        with gzip.open(caminho, "rt", encoding="utf-8") as f:
+            next(f)
+            return dt.datetime.strptime(next(f).split(",")[0], "%Y-%m-%d %H:%M").replace(tzinfo=BRASILIA)
+    except Exception:
+        return None
+
+
 def main():
     agora = dt.datetime.now(BRASILIA).replace(second=0, microsecond=0)
     hoje = agora.date()
     lido_em = agora.strftime("%Y-%m-%d %H:%M")
 
-    # A janela longa só roda uma vez por dia, na execução das 6h, pra não gastar à toa.
-    dias = JANELA_LONGA if agora.hour == 6 and agora.minute < 30 else JANELA_CURTA
+    # A janela longa roda quando a última leitura longa tem mais de 20 h (ou nunca rodou),
+    # em vez de depender de o cron cair entre 6h00 e 6h29, que o GitHub não garante.
+    ultima = ultima_leitura_longa()
+    longa = os.environ.get("FORCAR_LONGA") == "1" or ultima is None or agora - ultima > dt.timedelta(hours=20)
+    dias = JANELA_LONGA if longa else JANELA_CURTA
     datas = [(hoje + dt.timedelta(days=i)).isoformat() for i in range(dias + 1)]
 
     rotas = os.environ.get("ROTAS")
