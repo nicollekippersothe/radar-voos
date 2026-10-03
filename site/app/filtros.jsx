@@ -72,3 +72,19 @@ export function FormDia({ origem, origens, destino, destinos, diretos }) {
     </form>
   );
 }
+
+export function FormRota({ origem, origens, destino, destinos, cia, cias, faixa }) {
+  return (
+    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-2 sm:items-end lg:grid-cols-[1fr_1fr_1fr_1fr_auto]">
+      <Campo rotulo="De"><Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" /></Campo>
+      <Campo rotulo="Pra"><Escolha name="destino" valor={destino} opcoes={destinos} rotuloAria="Destino" /></Campo>
+      <Campo rotulo="Companhia"><Escolha name="cia" valor={cia} opcoes={cias} rotuloAria="Companhia" /></Campo>
+      <Campo rotulo="Horário do voo">
+        <Escolha name="faixa" valor={faixa} opcoes={[["", "Qualquer hora"], ["madrugada", "Madrugada"], ["manha", "Manhã"], ["tarde", "Tarde"], ["noite", "Noite"]]} rotuloAria="Horário" />
+      </Campo>
+      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+        Ver chance <ArrowRight data-icon="inline-end" />
+      </Button>
+    </form>
+  );
+}

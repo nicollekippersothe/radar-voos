@@ -22,7 +22,7 @@ export function Vazio({ titulo, texto, acao }) {
   );
 }
 
-export function Linha({ href, indice, titulo, etiqueta, boa, detalhe, horario, preco, aria }) {
+export function Linha({ href, indice, titulo, etiqueta, boa, sinal, detalhe, horario, preco, aria }) {
   return (
     <a
       href={href}
@@ -33,11 +33,12 @@ export function Linha({ href, indice, titulo, etiqueta, boa, detalhe, horario, p
     >
       <span className="t-label t-num text-muted-foreground">{String(indice).padStart(2, "0")}</span>
       <span className="flex flex-col gap-[0.25em]">
-        <span className="flex items-center gap-[0.5em] text-[1.15em] font-medium tracking-[-0.02em]">
+        <span className="flex flex-wrap items-center gap-x-[0.5em] gap-y-[0.25em] text-[1.15em] font-medium tracking-[-0.02em]">
           {titulo}
           {etiqueta && (
             <Badge variant="secondary" className={cn("rounded-full text-[0.65em] font-medium", boa && "bg-good/12 text-good")}>{etiqueta}</Badge>
           )}
+          {sinal && <Sinal {...sinal} />}
         </span>
         <span className="text-[0.85em] text-muted-foreground">{detalhe}<span className="sm:hidden"> · <span className="t-num">{horario}</span></span></span>
       </span>
@@ -58,5 +59,21 @@ export function Erro({ href }) {
       <p className="max-w-[48ch] text-muted-foreground">O arquivo de preços não respondeu agora. Costuma voltar em um minuto.</p>
       <a className="flex min-h-[44px] items-center rounded-md border bg-card px-[1.25em] font-medium hover:bg-muted" href={href}>Tentar de novo</a>
     </div>
+  );
+}
+
+export function Sinal({ tom, curto }) {
+  return (
+    <Badge
+      variant="secondary"
+      className={cn(
+        "rounded-full text-[0.65em] font-medium",
+        tom === "bom" && "bg-brand/12 text-brand",
+        tom === "espera" && "bg-secondary text-foreground",
+        tom === "neutro" && "bg-transparent text-muted-foreground border-border"
+      )}
+    >
+      {curto}
+    </Badge>
   );
 }

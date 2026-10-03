@@ -1,4 +1,6 @@
 import { leituras, nome } from "@/lib/dados";
+import { modelo, veredito } from "@/lib/modelo";
+import { Veredito } from "../veredito";
 import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, hojeIso, linkGoogle } from "@/lib/formato";
 import { FormDia } from "../filtros";
 import { Vazio, Linha, Secao, Erro } from "../blocos";
@@ -12,7 +14,7 @@ export default async function MelhorDia({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const destino = (sp.destino || "FLN").toUpperCase();
   const soDiretos = sp.diretos !== "0";
-  const { voos, lidoEm, erro } = await leituras();
+  const [{ voos, lidoEm, erro }, m] = await Promise.all([leituras(), modelo()]);
 
   const hoje = hojeIso();
   const doTrecho = voos.filter((v) => v.origem === origem && v.destino === destino && v.data_voo >= hoje && (!soDiretos || v.paradas === 0));
@@ -99,6 +101,7 @@ export default async function MelhorDia({ searchParams }) {
           {voosDoDia.length > 0 && (
             <>
               <Secao rotulo="Voos do dia" titulo={diaLongo(diaSel)} />
+              <Veredito m={m} voo={voosDoDia[0]} />
               <div className="divide-y rounded-lg border bg-card">
                 {voosDoDia.map((v, i) => (
                   <Linha
@@ -108,6 +111,7 @@ export default async function MelhorDia({ searchParams }) {
                     titulo={v.companhia}
                     etiqueta={v.paradas === 0 ? "direto" : paradas(v.paradas)}
                     boa={v.paradas === 0}
+                    sinal={veredito(m, v)}
                     detalhe={duracao(v.duracao_min)}
                     horario={intervalo(v.h_saida, v.h_chegada)}
                     preco={reais(v.preco)}

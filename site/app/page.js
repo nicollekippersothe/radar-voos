@@ -1,4 +1,5 @@
 import { leituras, nome } from "@/lib/dados";
+import { modelo, veredito } from "@/lib/modelo";
 import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, hojeIso, somaDias, linkGoogle } from "@/lib/formato";
 import { FormHome } from "./filtros";
 import { Vazio, Linha, Secao, Erro } from "./blocos";
@@ -21,7 +22,7 @@ export default async function Home({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const valor = Number(sp.valor || 500);
   const dias = Number(sp.dias || 3);
-  const { voos, lidoEm, erro } = await leituras();
+  const [{ voos, lidoEm, erro }, m] = await Promise.all([leituras(), modelo()]);
 
   const hoje = hojeIso();
   const limite = somaDias(hoje, dias);
@@ -78,6 +79,7 @@ export default async function Home({ searchParams }) {
                 titulo={nome(v.destino)}
                 etiqueta={v.paradas === 0 ? "direto" : paradas(v.paradas)}
                 boa={v.paradas === 0}
+                sinal={(() => { const r = veredito(m, v); return r && r.tom === "bom" ? r : null; })()}
                 detalhe={`${diaCurto(v.data_voo)} · ${v.companhia} · ${duracao(v.duracao_min)}`}
                 horario={intervalo(v.h_saida, v.h_chegada)}
                 preco={reais(v.preco)}
@@ -88,7 +90,7 @@ export default async function Home({ searchParams }) {
           <div className="mt-[1em] flex flex-wrap gap-[0.5em]">
             {lista.slice(0, 3).map((v) => (
               <Button key={v.destino} variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" render={<a href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`} />}>
-                <CalendarDays data-icon="inline-start" /> Melhor dia pra {nome(v.destino)}
+                <CalendarDays data-icon="inline-start" /> Vale esperar? {nome(v.destino)}
               </Button>
             ))}
           </div>

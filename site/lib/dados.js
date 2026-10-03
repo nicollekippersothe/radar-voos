@@ -17,7 +17,7 @@ export function nome(codigo) {
 }
 
 /** Baixa um arquivo do repositório. Tenta o raw primeiro; se falhar, usa a API do GitHub. */
-async function baixar(caminho) {
+export async function baixar(caminho) {
   // RADAR_LOCAL=../ lê os arquivos do disco, pra desenvolver sem depender do GitHub.
   if (process.env.RADAR_LOCAL) {
     try { return await readFile(path.join(process.env.RADAR_LOCAL, caminho)); } catch { return null; }
