@@ -40,7 +40,7 @@ rodada seguinte, em vez de estourar a cota. Se um dia o ritmo passar disso, o pl
 
 Você faz tudo isso uma vez, em uns 20 minutos. Precisa de Node 20 ou mais no computador.
 
-**1. Criar a conta.** Em https://dash.cloudflare.com/sign-up. Plano gratuito, sem cartão.
+**1. Criar a conta.** Em https://dash.cloudflare.com/sign-up. Plano gratuito, sem cartão. (Prefere não instalar nada? Veja "Fazer pela nuvem" mais abaixo.)
 
 **2. Instalar e entrar.**
 
@@ -140,6 +140,47 @@ Faça Redeploy. Pra voltar aos CSV, apague a variável e faça Redeploy de novo.
 
 **13. Desligar o remendo.** Com o `ultima_coleta` andando de 30 em 30 minutos, a rotina horária
 que criei na sessão do Claude Code (`trig_01ArA6n6vUNs2ZwYbGVTyqYP`) não é mais necessária.
+
+## Fazer pela nuvem, sem terminal no seu computador
+
+Os passos 2, 3, 4, 6 e 10 rodam numa sessão do Claude Code na nuvem. Não precisa de Node nem de
+nada instalado no seu computador. O que não dá pra fazer de lá é criar a conta, criar tokens no
+painel e cadastrar segredos no GitHub. Isso fica com você, no navegador (ou com a extensão).
+
+**No navegador, antes:**
+
+1. Crie a conta na Cloudflare. Abra Workers & Pages uma vez: ele pede pra escolher o subdomínio
+   `workers.dev`. Sem isso o primeiro deploy falha.
+2. Crie um token em Perfil > API Tokens > Create Custom Token, com três permissões na sua conta:
+   **Workers Scripts: Edit**, **D1: Edit** e **Account Settings: Read**. Copie o token e o Account ID.
+3. Nas configurações do ambiente da sessão (menu do ambiente na barra de título, depois Edit),
+   crie as variáveis `CLOUDFLARE_API_TOKEN` e `CLOUDFLARE_ACCOUNT_ID`. **Não cole o token no chat.**
+   Abra uma sessão nova: o ambiente só é lido quando a sessão começa.
+
+**A sessão nova roda (é o que ela deve executar):**
+
+```bash
+cd cloudflare && npm install
+npx wrangler d1 create radar
+ID=$(npx wrangler d1 list --json | python3 -c "import sys,json;print(next(d['uuid'] for d in json.load(sys.stdin) if d['name']=='radar'))")
+sed -i "s/COLE_AQUI_O_ID_DO_BANCO/$ID/" wrangler.jsonc
+npm run esquema
+npm run deploy
+npm run materializar
+git add wrangler.jsonc && git commit -m "D1: id do banco" && git push
+echo "database_id: $ID"
+```
+
+O `database_id` não é segredo, pode ficar no repositório.
+
+**No navegador, depois:**
+
+4. Worker > Settings > Variables and Secrets > Add, com **Type: Secret**, nome `GITHUB_TOKEN` e o
+   token do GitHub do passo 5. Tem que ser Secret: variável comum some a cada deploy.
+5. Crie os três segredos no GitHub (passo 8). Pra esses, o ideal é um segundo token da Cloudflare só com
+   **D1: Edit**, porque o do deploy tem poder demais pra ficar guardado no GitHub. Depois do deploy
+   você pode apagar o primeiro.
+6. Rode "Carregar histórico no D1" em Actions.
 
 ## Segunda fonte (Aviasales, via Travelpayouts)
 
