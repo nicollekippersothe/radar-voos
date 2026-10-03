@@ -77,6 +77,9 @@ WITH s AS (
              v.partida) AS fim
   FROM v_voo v JOIN v_seg g ON g.voo_id = v.id
   WHERE g.preco > 0 AND g.ini < v.partida
+    -- Só os últimos 60 dias: sem esse teto, a conta diária leria o histórico inteiro e
+    -- gastaria cada vez mais da cota de leituras conforme o banco cresce.
+    AND v.data_voo >= date('now', '-60 days')
 ),
 tot AS (
   SELECT id, SUM(preco * (fim - ini)) * 1.0 / SUM(fim - ini) AS media
