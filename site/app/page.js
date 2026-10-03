@@ -1,6 +1,7 @@
-import { leituras, nome } from "@/lib/dados";
+import { nome } from "@/lib/dados";
+import { dadosHome } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
-import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, hojeIso, somaDias, linkGoogle } from "@/lib/formato";
+import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, linkGoogle } from "@/lib/formato";
 import { FormHome } from "./filtros";
 import { Vazio, Linha, Secao, Erro } from "./blocos";
 import { Button } from "@/components/ui/button";
@@ -22,20 +23,8 @@ export default async function Home({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const valor = Number(sp.valor || 500);
   const dias = Number(sp.dias || 3);
-  const [{ voos, lidoEm, erro }, m] = await Promise.all([leituras(), modelo()]);
-
-  const hoje = hojeIso();
-  const limite = somaDias(hoje, dias);
-  const candidatos = voos.filter((v) => v.origem === origem && v.preco <= valor && v.data_voo >= hoje && v.data_voo <= limite);
-  const porDestino = new Map();
-  for (const v of candidatos) {
-    const atual = porDestino.get(v.destino);
-    if (!atual || v.preco < atual.preco || (v.preco === atual.preco && v.paradas < atual.paradas)) porDestino.set(v.destino, v);
-  }
-  const lista = [...porDestino.values()].sort((a, b) => a.preco - b.preco);
-  const origens = [...new Set(voos.map((v) => v.origem))].sort();
+  const [{ lista, origens, lidoEm, erro, semLeituras }, m] = await Promise.all([dadosHome({ origem, valor, dias }), modelo()]);
   const opcoesOrigem = (origens.length ? origens : [origem]).map((o) => [o, nome(o)]);
-  const semLeituras = voos.length === 0;
   const sugestao = Math.round((valor * 1.5) / 50) * 50;
 
   return (

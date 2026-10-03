@@ -56,6 +56,19 @@ PRECO_MAX=800 DIAS=7 python3 radar.py
 
 Edite `ORIGEM` e `DESTINO` em `.github/workflows/radar.yml` com os códigos IATA (ex.: `SAO`, `FLN`, `RIO`, `POA`). Para vigiar mais de um trecho, copie o job `sp-floripa` e mude os códigos.
 
+## Banco SQL, agendador e segunda fonte (Cloudflare)
+
+O coletor grava os CSV no repositório e, se os segredos da Cloudflare existirem, também sincroniza
+um banco D1 (SQLite) só com o que mudou. Um Worker da Cloudflare dispara o coletor a cada 30 min
+(o cron do GitHub atrasa), atualiza os resultados calculados uma vez por dia e serve uma API de
+leitura pro site. Tudo é opcional: sem os segredos, o projeto funciona como antes.
+
+- Passo a passo, limites do plano gratuito e solução de problemas: [`docs/07-cloudflare.md`](docs/07-cloudflare.md)
+- Esquema, visões e consultas prontas: `cloudflare/schema.sql`, `cloudflare/views.sql`, `cloudflare/consultas.sql`
+- Sincronização com o banco e carga do histórico: `d1.py`
+- Segunda fonte de preço (Aviasales, via Travelpayouts): `referencia.py`
+- No site, a variável `RADAR_API` liga a leitura pela API. Sem ela, o site lê os CSV.
+
 ## Limitações
 
 - Os dados vêm da página pública do Google Voos, lida sem navegador. Se o Google mudar o formato da página, a Action falha e o GitHub avisa por e-mail.

@@ -41,7 +41,7 @@ export default async function Padroes({ searchParams }) {
   const origens = [...new Set(Object.keys(m.rotas).map((r) => r.split("-")[0]))].sort();
   const destinos = [...new Set(Object.keys(m.rotas).filter((r) => r.startsWith(origem + "-")).map((r) => r.split("-")[1]))].sort();
   const cias = [...new Set(voos.filter((v) => v.origem === origem && v.destino === destino).map((v) => v.companhia))].sort();
-  const e = estimar(m, { origem, destino, companhia: cia || "—", h_saida: sp.faixa === "manha" ? "08:00" : sp.faixa === "tarde" ? "14:00" : sp.faixa === "noite" ? "20:00" : sp.faixa === "madrugada" ? "02:00" : "—" });
+  const e = estimar(m, { origem, destino, companhia: cia || "-", h_saida: sp.faixa === "manha" ? "08:00" : sp.faixa === "tarde" ? "14:00" : sp.faixa === "noite" ? "20:00" : sp.faixa === "madrugada" ? "02:00" : "-" });
   const rota = m.rotas[`${origem}-${destino}`];
 
   // Ranking de rotas por chance, só as que já têm base razoável.

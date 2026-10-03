@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "radar-voos",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-01",
+
+  // Dois agendamentos (plano gratuito permite 5):
+  //  - a cada 30 min: manda o GitHub rodar o coletor, no horário certo
+  //  - 1 vez por dia, 6h10 em Brasília (09:10 UTC): atualiza os resultados calculados
+  "triggers": { "crons": ["*/30 * * * *", "10 9 * * *"] },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "radar",
+      "database_id": "COLE_AQUI_O_ID_DO_BANCO"
+    }
+  ],
+
+  "vars": {
+    "GITHUB_REPO": "nicollekippersothe/radar-voos",
+    "GITHUB_REF": "main"
+  },
+
+  // Arquivos .sql viram texto importável no Worker.
+  "rules": [{ "type": "Text", "globs": ["**/*.sql"], "fallthrough": true }]
+}

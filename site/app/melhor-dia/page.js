@@ -1,7 +1,8 @@
-import { leituras, nome } from "@/lib/dados";
+import { nome } from "@/lib/dados";
+import { dadosDia } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { Veredito } from "../veredito";
-import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, hojeIso, linkGoogle } from "@/lib/formato";
+import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, linkGoogle } from "@/lib/formato";
 import { FormDia } from "../filtros";
 import { Vazio, Linha, Secao, Erro } from "../blocos";
 import { Button } from "@/components/ui/button";
@@ -14,22 +15,12 @@ export default async function MelhorDia({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const destino = (sp.destino || "FLN").toUpperCase();
   const soDiretos = sp.diretos !== "0";
-  const [{ voos, lidoEm, erro }, m] = await Promise.all([leituras(), modelo()]);
-
-  const hoje = hojeIso();
-  const doTrecho = voos.filter((v) => v.origem === origem && v.destino === destino && v.data_voo >= hoje && (!soDiretos || v.paradas === 0));
-  const porDia = new Map();
-  for (const v of doTrecho) {
-    const atual = porDia.get(v.data_voo);
-    if (!atual || v.preco < atual.preco) porDia.set(v.data_voo, v);
-  }
-  const dias = [...porDia.values()].sort((a, b) => a.data_voo.localeCompare(b.data_voo));
+  const [{ dias, diaSel, todosDoDia, origens, destinos, lidoEm, erro }, m] = await Promise.all([
+    dadosDia({ origem, destino, soDiretos, dia: sp.dia }),
+    modelo(),
+  ]);
   const menor = dias.length ? Math.min(...dias.map((d) => d.preco)) : 0;
   const maior = dias.length ? Math.max(...dias.map((d) => d.preco)) : 1;
-  const origens = [...new Set(voos.map((v) => v.origem))].sort();
-  const destinos = [...new Set(voos.filter((v) => v.origem === origem).map((v) => v.destino))].sort();
-  const diaSel = sp.dia || (dias.find((d) => d.preco === menor) || {}).data_voo;
-  const todosDoDia = doTrecho.filter((v) => v.data_voo === diaSel).sort((a, b) => a.preco - b.preco);
   const mostrarTodos = sp.todos === "1";
   const voosDoDia = mostrarTodos ? todosDoDia : todosDoDia.slice(0, 10);
   const base = `?origem=${origem}&destino=${destino}&diretos=${soDiretos ? 1 : 0}`;

@@ -134,6 +134,23 @@ def main():
         f.write(buf.getvalue())
     print(f"{len(linhas)} voos gravados em {os.path.relpath(caminho)} ({vazias} buscas vazias)")
 
+    # Banco D1 (Cloudflare) e segunda fonte. Qualquer falha aqui só avisa: o CSV acima já está
+    # gravado e é a fonte de segurança, então o coletor não pode falhar por causa do banco.
+    try:
+        import d1
+        d1.sincronizar(linhas, dias, agora)
+    except Exception as e:
+        print(f"D1: não sincronizou ({e}). Os CSV foram gravados normalmente.", file=sys.stderr)
+    if longa:
+        try:
+            import referencia
+            ref = referencia.coletar(rotas, hoje)
+            if ref:
+                import d1
+                print(f"referência: {referencia.gravar_d1(ref, agora)} preços gravados no D1.")
+        except Exception as e:
+            print(f"referência: não coletou ({e}).", file=sys.stderr)
+
 
 if __name__ == "__main__":
     main()

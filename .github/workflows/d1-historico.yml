@@ -1,0 +1,37 @@
+name: Carregar histórico no D1
+
+# Rode uma vez, depois de criar o banco e configurar os segredos. É seguro repetir:
+# tudo é INSERT OR IGNORE. Se parar no teto de escritas, rode de novo no dia seguinte.
+on:
+  workflow_dispatch:
+    inputs:
+      max_escritas:
+        description: "Teto de escritas nesta rodada (o plano gratuito do D1 aceita 100000 por dia)"
+        default: "40000"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: d1-historico
+  cancel-in-progress: false
+
+jobs:
+  carregar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python d1.py backfill --max-escritas "${{ inputs.max_escritas }}"
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+      - run: python d1.py saude
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}

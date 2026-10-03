@@ -29,6 +29,12 @@ jobs:
       - run: python coletor.py
         env:
           FORCAR_LONGA: ${{ inputs.longa && '1' || '' }}
+          # Opcionais. Sem eles o coletor só grava os CSV, como antes.
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+          TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
       - name: Guardar leituras no repositório
         run: |
           git config user.name "nicollekippersothe"
