@@ -276,11 +276,14 @@ def sincronizar(linhas, dias, agora, banco=None, verbose=True):
     # Uma consulta por trecho, unidas. Com OR o SQLite usa só o prefixo "origem" do índice e lê
     # muito mais linhas (medido: 127 mil passos contra 204 por trecho); com UNION ALL cada parte
     # busca direto pelo índice (origem, destino, data_voo).
-    por_trecho = " UNION ALL ".join(
-        "SELECT id, origem, destino, data_voo, h_saida, ultimo_preco FROM voos "
-        f"WHERE origem = {lit(o)} AND destino = {lit(d)} AND data_voo BETWEEN {lit(hoje)} AND {lit(ate)}"
-        for o, d in sorted(rotas))
-    estado = {int(r["id"]): r for r in banco.consultar(por_trecho + ";")}
+    # O D1 aceita no máximo 5 partes unidas por consulta, então vai em blocos de 5 trechos.
+    estado = {}
+    for bloco in _em_blocos(sorted(rotas), 5):
+        por_trecho = " UNION ALL ".join(
+            "SELECT id, origem, destino, data_voo, h_saida, ultimo_preco FROM voos "
+            f"WHERE origem = {lit(o)} AND destino = {lit(d)} AND data_voo BETWEEN {lit(hoje)} AND {lit(ate)}"
+            for o, d in bloco)
+        estado.update({int(r["id"]): r for r in banco.consultar(por_trecho + ";")})
     novos, mudou, sumiu = diferencas(atuais, estado, buscas_ok, agora_ep)
     total = len(novos) + len(mudou) + len(sumiu)
     usado = escritas_hoje(banco, agora_ep)
