@@ -229,7 +229,7 @@ const rotas = {
 
   // Versão publicada. Serve pra confirmar que o deploy automático (Workers Builds) está funcionando.
   async "/api/versao"() {
-    return { versao: "2026-10-06-a", rotas: Object.keys(rotas).length };
+    return { versao: "2026-10-06-b", rotas: Object.keys(rotas).length };
   },
 
   // Saúde: o que tem no banco e quando foi a última coleta.
