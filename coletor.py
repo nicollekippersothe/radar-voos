@@ -165,6 +165,12 @@ def main():
             print(f"fila: {len(fila)} trechos passaram a ser vigiados.")
     except Exception as e:
         print(f"D1: não sincronizou ({e}). Os CSV foram gravados normalmente.", file=sys.stderr)
+    try:
+        import d1 as _d1
+        if _d1.consumo():
+            print(_d1.consumo())
+    except Exception:
+        pass
     if longa:
         try:
             import referencia

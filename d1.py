@@ -83,6 +83,8 @@ class D1Rest:
     def __init__(self, conta, banco, token):
         self.url = f"https://api.cloudflare.com/client/v4/accounts/{conta}/d1/database/{banco}/query"
         self.token = token
+        self.lidas = 0      # linhas lidas e escritas nesta execução, pra vigiar a cota do plano gratuito
+        self.escritas = 0
 
     def _post(self, sql):
         corpo = json.dumps({"sql": sql}).encode("utf-8")
@@ -97,6 +99,10 @@ class D1Rest:
                     dados = json.load(r)
                 if not dados.get("success"):
                     raise RuntimeError(f"D1 recusou: {dados.get('errors')}")
+                for parte in dados["result"]:
+                    meta = parte.get("meta") or {}
+                    self.lidas += meta.get("rows_read") or 0
+                    self.escritas += meta.get("rows_written") or 0
                 return dados["result"]
             except urllib.error.HTTPError as e:
                 detalhe = e.read().decode("utf-8", "replace")[:300]
@@ -148,13 +154,25 @@ class Arquivo:
         self.f.close()
 
 
+_BANCO = None
+
+
 def banco_do_ambiente():
-    conta = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
-    banco = os.environ.get("D1_DATABASE_ID")
-    token = os.environ.get("CLOUDFLARE_API_TOKEN")
-    if conta and banco and token:
-        return D1Rest(conta, banco, token)
-    return None
+    """Um cliente só por execução, pra somar as linhas lidas e escritas em todas as chamadas."""
+    global _BANCO
+    if _BANCO is None:
+        conta = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+        banco = os.environ.get("D1_DATABASE_ID")
+        token = os.environ.get("CLOUDFLARE_API_TOKEN")
+        if conta and banco and token:
+            _BANCO = D1Rest(conta, banco, token)
+    return _BANCO
+
+
+def consumo():
+    """Linhas lidas e escritas no D1 nesta execução (o gratuito dá 5 milhões de leituras e 100 mil escritas por dia)."""
+    b = _BANCO
+    return f"D1 consumo desta rodada: {b.lidas} linhas lidas, {b.escritas} escritas." if b is not None else ""
 
 
 # ----------------------------------------------------------------- diferenças

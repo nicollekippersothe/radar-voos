@@ -13,13 +13,16 @@ export async function dadosHome({ origem, valor, dias }) {
       chamar("/api/trechos"),
     ]);
     const origens = [...new Set((t?.trechos || []).map((x) => x.origem))].sort();
-    return {
-      lista: (r?.destinos || []).map((d) => ({ ...d, origem })),
-      origens,
-      lidoEm: r?.lido_em || "",
-      erro: r === null || t === null,
-      semLeituras: t !== null && origens.length === 0,
-    };
+    // Se o banco falhar (por exemplo, limite diário do plano gratuito), cai pros arquivos do repositório.
+    if (r !== null && t !== null) {
+      return {
+        lista: (r?.destinos || []).map((d) => ({ ...d, origem })),
+        origens,
+        lidoEm: r?.lido_em || "",
+        erro: false,
+        semLeituras: origens.length === 0,
+      };
+    }
   }
   const { voos, lidoEm, erro } = await leituras();
   const hoje = hojeIso();
@@ -44,20 +47,22 @@ export async function dadosDia({ origem, destino, soDiretos, dia }) {
       chamar("/api/dias", { origem, destino, diretos: soDiretos ? 1 : 0 }),
       chamar("/api/trechos"),
     ]);
-    const trechos = t?.trechos || [];
-    const dias = (r?.dias || []).map((d) => ({ ...d, origem, destino }));
-    const menor = dias.length ? Math.min(...dias.map((d) => d.preco)) : 0;
-    const diaSel = dia || (dias.find((d) => d.preco === menor) || {}).data_voo;
-    const v = diaSel ? await chamar("/api/voos", { origem, destino, data: diaSel }) : null;
-    return {
-      dias,
-      diaSel,
-      todosDoDia: (v?.voos || []).filter((x) => !soDiretos || x.paradas === 0).map((x) => ({ ...x, origem, destino })),
-      origens: [...new Set(trechos.map((x) => x.origem))].sort(),
-      destinos: [...new Set(trechos.filter((x) => x.origem === origem).map((x) => x.destino))].sort(),
-      lidoEm: r?.lido_em || "",
-      erro: r === null || t === null,
-    };
+    if (r !== null && t !== null) {
+      const trechos = t?.trechos || [];
+      const dias = (r?.dias || []).map((d) => ({ ...d, origem, destino }));
+      const menor = dias.length ? Math.min(...dias.map((d) => d.preco)) : 0;
+      const diaSel = dia || (dias.find((d) => d.preco === menor) || {}).data_voo;
+      const v = diaSel ? await chamar("/api/voos", { origem, destino, data: diaSel }) : null;
+      return {
+        dias,
+        diaSel,
+        todosDoDia: (v?.voos || []).filter((x) => !soDiretos || x.paradas === 0).map((x) => ({ ...x, origem, destino })),
+        origens: [...new Set(trechos.map((x) => x.origem))].sort(),
+        destinos: [...new Set(trechos.filter((x) => x.origem === origem).map((x) => x.destino))].sort(),
+        lidoEm: r?.lido_em || "",
+        erro: false,
+      };
+    }
   }
   const { voos, lidoEm, erro } = await leituras();
   const hoje = hojeIso();

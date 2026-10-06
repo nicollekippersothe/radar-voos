@@ -33,3 +33,11 @@ DELETE FROM curva_trecho;
 INSERT INTO curva_trecho (origem, destino, i, rotulo, de_dias, ate_dias, n, rel, preco_medio_voo)
 SELECT origem, destino, i, rotulo, de_dias, ate_dias, n, rel, preco_medio_voo
 FROM v_curva_tudo WHERE n >= 8;
+
+-- 3) Contagens pro /api/saude: contar tabela inteira a cada chamada gasta a cota de leitura do plano gratuito.
+INSERT INTO meta (chave, valor) SELECT 'cont_voos', COUNT(*) FROM voos WHERE true
+ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;
+INSERT INTO meta (chave, valor) SELECT 'cont_precos', COUNT(*) FROM precos WHERE true
+ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;
+INSERT INTO meta (chave, valor) SELECT 'cont_referencia', COUNT(*) FROM referencia WHERE true
+ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;

@@ -286,27 +286,30 @@ const rotas = {
 
   // Versão publicada. Serve pra confirmar que o deploy automático (Workers Builds) está funcionando.
   async "/api/versao"() {
-    return { versao: "2026-10-06-d", rotas: Object.keys(rotas).length };
+    return { versao: "2026-10-06-e", rotas: Object.keys(rotas).length };
   },
 
   // Saúde: o que tem no banco e quando foi a última coleta.
   async "/api/saude"(url, env) {
-    const q = (sql) => env.DB.prepare(sql).first();
-    const [voos, precos, queda, ref, sync, mat] = await Promise.all([
-      q("SELECT COUNT(*) AS n FROM voos"),
-      q("SELECT COUNT(*) AS n FROM precos"),
-      q("SELECT COUNT(*) AS n FROM queda_voo"),
-      q("SELECT COUNT(*) AS n FROM referencia"),
-      q("SELECT valor FROM meta WHERE chave = 'ultima_sync'"),
-      q("SELECT valor FROM meta WHERE chave = 'queda_ate'"),
-    ]);
-    const iso = (s) => (s ? new Date(Number(s) * 1000).toISOString() : null);
+    // Só lê a tabela meta (poucas linhas). As contagens grandes são gravadas na atualização diária.
+    const { results } = await env.DB.prepare(
+      "SELECT chave, valor FROM meta WHERE chave IN ('ultima_sync', 'queda_ate', 'cont_voos', 'cont_precos', 'cont_referencia')"
+    ).all();
+    const m = Object.fromEntries(results.map((r) => [r.chave, r.valor]));
+    const iso = (v) => (v ? new Date(Number(v) * 1000).toISOString() : null);
+    const num = (v) => (v === undefined ? null : Number(v));
     return {
-      voos: voos.n, precos: precos.n, voos_com_queda_medida: queda.n, referencias: ref.n,
-      ultima_coleta: iso(sync?.valor), ultima_materializacao: iso(mat?.valor),
+      voos: num(m.cont_voos), precos: num(m.cont_precos), referencias: num(m.cont_referencia),
+      ultima_coleta: iso(m.ultima_sync), ultima_materializacao: iso(m.queda_ate),
     };
   },
 };
+
+// Memória por instância do Worker: repete a resposta por alguns segundos sem tocar no banco.
+// (O cache da Cloudflare não funciona no domínio workers.dev, e a cota de leitura do plano gratuito é de 5 milhões por dia.)
+const MEMORIA = new Map();
+const VALIDADE_S = { "/api/saude": 300 };
+const SEM_MEMORIA = new Set(["/api/pedir", "/api/atualizar", "/api/versao"]);
 
 export default {
   async scheduled(controller, env, ctx) {
@@ -324,9 +327,21 @@ export default {
       return new Response(JSON.stringify({ erro: "não encontrado", rotas: Object.keys(rotas) }), { status: 404, headers: JSON_HEADERS });
     }
     try {
-      const corpo = await rota(url, env);
-      return new Response(JSON.stringify(corpo), {
-        headers: { ...JSON_HEADERS, "cache-control": ["/api/pedir", "/api/atualizar"].includes(url.pathname) ? "no-store" : "public, max-age=120, s-maxage=300" },
+      const validade = SEM_MEMORIA.has(url.pathname) ? 0 : (VALIDADE_S[url.pathname] || 90) * 1000;
+      const chave = url.pathname + url.search;
+      const guardado = validade ? MEMORIA.get(chave) : null;
+      let texto;
+      if (guardado && Date.now() - guardado.t < validade) {
+        texto = guardado.texto;
+      } else {
+        texto = JSON.stringify(await rota(url, env));
+        if (validade) {
+          if (MEMORIA.size > 300) MEMORIA.clear();
+          MEMORIA.set(chave, { t: Date.now(), texto });
+        }
+      }
+      return new Response(texto, {
+        headers: { ...JSON_HEADERS, "cache-control": validade ? "public, max-age=60" : "no-store" },
       });
     } catch (e) {
       console.error(e);
