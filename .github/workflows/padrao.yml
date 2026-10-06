@@ -1,0 +1,32 @@
+name: Padrão de última hora
+
+on:
+  schedule:
+    - cron: "40 9 * * *" # todo dia, depois da atualização do modelo
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  medir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python padrao.py
+      - name: Guardar relatório
+        run: |
+          git config user.name "nicollekippersothe"
+          git config user.email "167126609+nicollekippersothe@users.noreply.github.com"
+          git add relatorios/padrao-ultima-hora.json
+          git diff --cached --quiet && exit 0
+          git commit -m "padrão de última hora $(TZ=America/Sao_Paulo date '+%Y-%m-%d')"
+          for i in 1 2 3 4; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
