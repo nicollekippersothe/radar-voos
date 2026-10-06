@@ -47,6 +47,9 @@ PARES = [
     ("BHZ", "REC"),
     ("CWB", "POA"),
     ("FOR", "REC"),
+    # Chapecó: só esses dois têm voo direto (testado no Google em 6/out/2026). Os demais trechos só têm conexão.
+    ("SAO", "XAP"),
+    ("FLN", "XAP"),
 ]
 
 ROTAS = PARES + [(d, o) for o, d in PARES]
