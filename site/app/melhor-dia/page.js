@@ -1,5 +1,5 @@
-import { nome } from "@/lib/dados";
-import { dadosDia, referencias } from "@/lib/fonte";
+import { nome, CIDADES } from "@/lib/dados";
+import { dadosDia, referencias, pedirTrecho } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { Veredito } from "../veredito";
 import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, linkGoogle } from "@/lib/formato";
@@ -9,6 +9,19 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
+
+// Lista as cidades já vigiadas primeiro e depois as outras, pra dar pra pedir qualquer trecho.
+function todasAsCidades(vigiadas, atual) {
+  const ja = new Set([...vigiadas, atual]);
+  const outras = Object.keys(CIDADES).filter((c) => !ja.has(c)).sort((a, b) => nome(a).localeCompare(nome(b), "pt-BR"));
+  return [...[...ja].sort((a, b) => nome(a).localeCompare(nome(b), "pt-BR")), ...outras].map((c) => [c, nome(c)]);
+}
+
+const AVISO_PEDIDO = {
+  na_fila: ["Entrou na fila", "Esse trecho ainda não era vigiado. Já pedimos pro coletor: a primeira leitura chega na próxima rodada, em até 30 minutos. Volte aqui depois."],
+  vigiado: ["Já estamos lendo esse trecho", "A primeira leitura está a caminho. Atualize em alguns minutos."],
+  cheio: ["A fila de novos trechos está cheia", "Estamos no limite de trechos novos por enquanto. Tente de novo amanhã ou escolha um trecho que já aparece na lista."],
+};
 
 export default async function MelhorDia({ searchParams }) {
   const sp = await searchParams;
@@ -20,6 +33,7 @@ export default async function MelhorDia({ searchParams }) {
     modelo(),
   ]);
   const refs = await referencias(origem, destino);
+  const pedido = !erro && dias.length === 0 && origem !== destino ? await pedirTrecho(origem, destino) : null;
   const refDia = refs.find((x) => x.data_voo === diaSel);
   const menor = dias.length ? Math.min(...dias.map((d) => d.preco)) : 0;
   const maior = dias.length ? Math.max(...dias.map((d) => d.preco)) : 1;
@@ -40,9 +54,9 @@ export default async function MelhorDia({ searchParams }) {
 
       <FormDia
         origem={origem}
-        origens={(origens.length ? origens : [origem]).map((o) => [o, nome(o)])}
+        origens={todasAsCidades(origens, origem)}
         destino={destino}
-        destinos={(destinos.length ? destinos : [destino]).map((d) => [d, nome(d)])}
+        destinos={todasAsCidades(destinos, destino)}
         diretos={soDiretos}
       />
 
@@ -50,8 +64,8 @@ export default async function MelhorDia({ searchParams }) {
         <Erro href={base} />
       ) : dias.length === 0 ? (
         <Vazio
-          titulo={`Sem leituras pra ${nome(origem)} → ${nome(destino)}`}
-          texto="Esse trecho pode não estar na lista vigiada, ou o coletor ainda não passou por ele."
+          titulo={AVISO_PEDIDO[pedido] ? `${nome(origem)} → ${nome(destino)}: ${AVISO_PEDIDO[pedido][0].toLowerCase()}` : `Sem leituras pra ${nome(origem)} → ${nome(destino)}`}
+          texto={AVISO_PEDIDO[pedido] ? AVISO_PEDIDO[pedido][1] : "Esse trecho pode não estar na lista vigiada, ou o coletor ainda não passou por ele."}
           acao={<Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" nativeButton={false} render={<a href="/" />}>Ver pra onde dá pra ir</Button>}
         />
       ) : (

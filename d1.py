@@ -308,6 +308,26 @@ def sincronizar(linhas, dias, agora, banco=None, verbose=True):
     return resumo
 
 
+# ------------------------------------------------------- trechos pedidos pelo site
+
+def rotas_dinamicas(banco):
+    """Trechos que o site pediu. Devolve (vigiadas, fila), cada uma lista de (origem, destino).
+
+    O Worker cria as tabelas no primeiro pedido; aqui também, pra o coletor não depender da ordem."""
+    banco.executar("CREATE TABLE IF NOT EXISTS fila (origem TEXT NOT NULL, destino TEXT NOT NULL, pedido_em INTEGER NOT NULL, PRIMARY KEY (origem, destino));"
+                   "CREATE TABLE IF NOT EXISTS vigiadas (origem TEXT NOT NULL, destino TEXT NOT NULL, desde INTEGER NOT NULL, PRIMARY KEY (origem, destino));")
+    vig = [(r["origem"], r["destino"]) for r in banco.consultar("SELECT origem, destino FROM vigiadas ORDER BY origem, destino;")]
+    fila = [(r["origem"], r["destino"]) for r in banco.consultar("SELECT origem, destino FROM fila ORDER BY pedido_em LIMIT 40;")]
+    return vig, fila
+
+
+def concluir_fila(banco, pares, agora_ep):
+    """Os trechos da fila já foram lidos: passam a ser vigiados e saem da fila."""
+    for o, d in pares:
+        banco.executar(f"INSERT OR IGNORE INTO vigiadas (origem, destino, desde) VALUES ({lit(o)}, {lit(d)}, {int(agora_ep)});"
+                       f"DELETE FROM fila WHERE origem = {lit(o)} AND destino = {lit(d)};")
+
+
 # ------------------------------------------------------------- histórico (CSV)
 
 def reproduzir_historico(pasta=None):

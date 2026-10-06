@@ -58,6 +58,13 @@ const somaDias = (iso, n) => {
   d.setUTCDate(d.getUTCDate() + n);
   return d.toISOString().slice(0, 10);
 };
+// Cidades que o site aceita pedir (as mesmas de cobertura.py). Pedido fora da lista é recusado.
+const CIDADES = new Set((
+  "RBR MCZ MCP MAO SSA FOR BSB VIX GYN SLZ CGB CGR BHZ BEL JPA CWB REC THE RIO NAT POA PVH BVB FLN SAO AJU PMW " +
+  "IGU BPS IOS JDO PNZ LDB MGF UDI RAO JOI NVT IMP MAB STM CXJ VDC MOC XAP CKS"
+).split(" "));
+const MAX_DINAMICAS = 150; // vigiadas + na fila. Protege o tempo do coletor e a cota do D1.
+
 const cod = (v, padrao) => (/^[A-Za-z]{3}$/.test(v || "") ? v.toUpperCase() : padrao);
 const inteiro = (v, padrao, min, max) => {
   const n = Number(v);
@@ -227,9 +234,33 @@ const rotas = {
     return { origem, destino, datas: results };
   },
 
+  // Pedido de trecho novo. O coletor lê a fila a cada rodada, passa a vigiar o trecho e tira da fila.
+  // Responde: vigiado, na_fila, cheio ou invalido.
+  async "/api/pedir"(url, env) {
+    const origem = cod(url.searchParams.get("origem"), "");
+    const destino = cod(url.searchParams.get("destino"), "");
+    if (!CIDADES.has(origem) || !CIDADES.has(destino) || origem === destino) return { status: "invalido" };
+    await env.DB.batch([
+      env.DB.prepare("CREATE TABLE IF NOT EXISTS fila (origem TEXT NOT NULL, destino TEXT NOT NULL, pedido_em INTEGER NOT NULL, PRIMARY KEY (origem, destino))"),
+      env.DB.prepare("CREATE TABLE IF NOT EXISTS vigiadas (origem TEXT NOT NULL, destino TEXT NOT NULL, desde INTEGER NOT NULL, PRIMARY KEY (origem, destino))"),
+    ]);
+    const tem = await env.DB.prepare(
+      `SELECT (SELECT 1 FROM voos WHERE origem = ?1 AND destino = ?2 LIMIT 1) AS voo,
+              (SELECT 1 FROM vigiadas WHERE origem = ?1 AND destino = ?2) AS vig,
+              (SELECT 1 FROM fila WHERE origem = ?1 AND destino = ?2) AS fila,
+              (SELECT COUNT(*) FROM vigiadas) + (SELECT COUNT(*) FROM fila) AS total`
+    ).bind(origem, destino).first();
+    if (tem.voo || tem.vig) return { status: "vigiado" };
+    if (tem.fila) return { status: "na_fila" };
+    if (tem.total >= MAX_DINAMICAS) return { status: "cheio" };
+    await env.DB.prepare("INSERT OR IGNORE INTO fila (origem, destino, pedido_em) VALUES (?1, ?2, ?3)")
+      .bind(origem, destino, Math.floor(Date.now() / 1000)).run();
+    return { status: "na_fila" };
+  },
+
   // Versão publicada. Serve pra confirmar que o deploy automático (Workers Builds) está funcionando.
   async "/api/versao"() {
-    return { versao: "2026-10-06-b", rotas: Object.keys(rotas).length };
+    return { versao: "2026-10-06-c", rotas: Object.keys(rotas).length };
   },
 
   // Saúde: o que tem no banco e quando foi a última coleta.
@@ -269,7 +300,7 @@ export default {
     try {
       const corpo = await rota(url, env);
       return new Response(JSON.stringify(corpo), {
-        headers: { ...JSON_HEADERS, "cache-control": "public, max-age=120, s-maxage=300" },
+        headers: { ...JSON_HEADERS, "cache-control": url.pathname === "/api/pedir" ? "no-store" : "public, max-age=120, s-maxage=300" },
       });
     } catch (e) {
       console.error(e);

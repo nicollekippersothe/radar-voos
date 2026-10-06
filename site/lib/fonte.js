@@ -96,3 +96,10 @@ export function melhorReferencia(refs, { hoje, limite, valor, precoGoogle }) {
   }
   return melhor;
 }
+
+/** Pede ao Worker pra passar a vigiar um trecho. Devolve vigiado, na_fila, cheio ou invalido (null sem API ou se falhou). */
+export async function pedirTrecho(origem, destino) {
+  if (!temApi()) return null;
+  const r = await chamar("/api/pedir", { origem, destino });
+  return r?.status || null;
+}

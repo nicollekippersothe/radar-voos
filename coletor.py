@@ -103,10 +103,27 @@ def main():
     datas = [(hoje + dt.timedelta(days=i)).isoformat() for i in range(dias + 1)]
 
     rotas = os.environ.get("ROTAS")
-    rotas = [tuple(r.split("-")) for r in rotas.split(",")] if rotas else ROTAS
-    pares = [(o, d, data, lido_em) for o, d in rotas for data in datas]
+    fila = []
+    if rotas:
+        rotas = [tuple(r.split("-")) for r in rotas.split(",")]
+    else:
+        rotas = list(ROTAS)
+        # Trechos que as pessoas pediram no site: os já vigiados entram sempre; os da fila entram
+        # agora com a leitura de 30 dias, mesmo numa rodada curta. Falha no banco não para a coleta.
+        try:
+            import d1
+            banco = d1.banco_do_ambiente()
+            if banco is not None:
+                vigiadas, fila = d1.rotas_dinamicas(banco)
+                rotas += [r for r in vigiadas + fila if r not in rotas]
+        except Exception as e:
+            print(f"fila de trechos: não consegui ler ({e}).", file=sys.stderr)
+    datas_longas = [(hoje + dt.timedelta(days=i)).isoformat() for i in range(JANELA_LONGA + 1)]
+    pares = [(o, d, data, lido_em) for o, d in rotas
+             for data in (datas_longas if (o, d) in fila else datas)]
 
-    print(f"{lido_em}: {len(rotas)} rotas × {len(datas)} datas = {len(pares)} buscas")
+    print(f"{lido_em}: {len(rotas)} rotas × {len(datas)} datas = {len(pares)} buscas"
+          + (f" (inclui {len(fila)} trechos novos da fila, 30 dias cada)" if fila else ""))
     linhas, vazias = [], 0
     with cf.ThreadPoolExecutor(THREADS) as ex:
         for resultado in ex.map(ler, pares):
@@ -129,7 +146,7 @@ def main():
     with gzip.open(caminho, "wt", encoding="utf-8") as f:
         f.write(buf.getvalue())
     # Cópia com nome fixo pro site ler sem precisar listar a pasta.
-    nome_fixo = "ultimo-30d.csv.gz" if dias == JANELA_LONGA else "ultimo.csv.gz"
+    nome_fixo = "ultimo-30d.csv.gz" if longa else "ultimo.csv.gz"
     with gzip.open(os.path.join(PASTA, "..", nome_fixo), "wt", encoding="utf-8") as f:
         f.write(buf.getvalue())
     print(f"{len(linhas)} voos gravados em {os.path.relpath(caminho)} ({vazias} buscas vazias)")
@@ -138,7 +155,12 @@ def main():
     # gravado e é a fonte de segurança, então o coletor não pode falhar por causa do banco.
     try:
         import d1
-        d1.sincronizar(linhas, dias, agora)
+        # Com trechos novos da fila a janela é de 30 dias, mas só eles foram lidos além do curto.
+        # Isso é seguro: o D1 só marca como "saiu" o que estava numa busca feita agora.
+        d1.sincronizar(linhas, JANELA_LONGA if fila else dias, agora)
+        if fila:
+            d1.concluir_fila(d1.banco_do_ambiente(), fila, int(agora.timestamp()))
+            print(f"fila: {len(fila)} trechos passaram a ser vigiados.")
     except Exception as e:
         print(f"D1: não sincronizou ({e}). Os CSV foram gravados normalmente.", file=sys.stderr)
     if longa:
