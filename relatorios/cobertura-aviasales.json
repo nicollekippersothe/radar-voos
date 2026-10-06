@@ -1,0 +1,3753 @@
+{
+ "gerado_em": "2026-10-05T21:45-03:00",
+ "cidades": [
+  "RBR",
+  "MCZ",
+  "MCP",
+  "MAO",
+  "SSA",
+  "FOR",
+  "BSB",
+  "VIX",
+  "GYN",
+  "SLZ",
+  "CGB",
+  "CGR",
+  "BHZ",
+  "BEL",
+  "JPA",
+  "CWB",
+  "REC",
+  "THE",
+  "RIO",
+  "NAT",
+  "POA",
+  "PVH",
+  "BVB",
+  "FLN",
+  "SAO",
+  "AJU",
+  "PMW",
+  "IGU",
+  "BPS",
+  "IOS",
+  "JDO",
+  "PNZ",
+  "LDB",
+  "MGF",
+  "UDI",
+  "RAO",
+  "JOI",
+  "NVT",
+  "IMP",
+  "MAB",
+  "STM",
+  "CXJ",
+  "VDC",
+  "MOC",
+  "XAP",
+  "CKS"
+ ],
+ "pedidos": 4140,
+ "erros": {
+  "HTTP 429": 234
+ },
+ "pares": [
+  {
+   "origem": "RBR",
+   "destino": "MCP",
+   "dias": 1,
+   "menor": 1497,
+   "mediana": 1497
+  },
+  {
+   "origem": "RBR",
+   "destino": "MAO",
+   "dias": 1,
+   "menor": 2906,
+   "mediana": 2906
+  },
+  {
+   "origem": "RBR",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 1287,
+   "mediana": 1922
+  },
+  {
+   "origem": "RBR",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1324,
+   "mediana": 1324
+  },
+  {
+   "origem": "RBR",
+   "destino": "JPA",
+   "dias": 1,
+   "menor": 1344,
+   "mediana": 1344
+  },
+  {
+   "origem": "RBR",
+   "destino": "RIO",
+   "dias": 2,
+   "menor": 1676,
+   "mediana": 2021
+  },
+  {
+   "origem": "RBR",
+   "destino": "SAO",
+   "dias": 2,
+   "menor": 2388,
+   "mediana": 2765
+  },
+  {
+   "origem": "RBR",
+   "destino": "JOI",
+   "dias": 1,
+   "menor": 2225,
+   "mediana": 2225
+  },
+  {
+   "origem": "MCZ",
+   "destino": "FOR",
+   "dias": 3,
+   "menor": 1210,
+   "mediana": 1439
+  },
+  {
+   "origem": "MCZ",
+   "destino": "BSB",
+   "dias": 5,
+   "menor": 755,
+   "mediana": 1081
+  },
+  {
+   "origem": "MCZ",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 1096,
+   "mediana": 1096
+  },
+  {
+   "origem": "MCZ",
+   "destino": "CGB",
+   "dias": 2,
+   "menor": 967,
+   "mediana": 1039
+  },
+  {
+   "origem": "MCZ",
+   "destino": "CGR",
+   "dias": 1,
+   "menor": 1197,
+   "mediana": 1197
+  },
+  {
+   "origem": "MCZ",
+   "destino": "BHZ",
+   "dias": 2,
+   "menor": 1051,
+   "mediana": 1052
+  },
+  {
+   "origem": "MCZ",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 921,
+   "mediana": 1022
+  },
+  {
+   "origem": "MCZ",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 917,
+   "mediana": 917
+  },
+  {
+   "origem": "MCZ",
+   "destino": "SAO",
+   "dias": 4,
+   "menor": 921,
+   "mediana": 1065
+  },
+  {
+   "origem": "MCZ",
+   "destino": "AJU",
+   "dias": 1,
+   "menor": 1588,
+   "mediana": 1588
+  },
+  {
+   "origem": "MCZ",
+   "destino": "MGF",
+   "dias": 1,
+   "menor": 1323,
+   "mediana": 1323
+  },
+  {
+   "origem": "MCP",
+   "destino": "BSB",
+   "dias": 4,
+   "menor": 579,
+   "mediana": 897
+  },
+  {
+   "origem": "MCP",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 1287,
+   "mediana": 1287
+  },
+  {
+   "origem": "MCP",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 1243,
+   "mediana": 1243
+  },
+  {
+   "origem": "MCP",
+   "destino": "SAO",
+   "dias": 1,
+   "menor": 1100,
+   "mediana": 1100
+  },
+  {
+   "origem": "MCP",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 865,
+   "mediana": 865
+  },
+  {
+   "origem": "MCP",
+   "destino": "STM",
+   "dias": 2,
+   "menor": 1245,
+   "mediana": 1664
+  },
+  {
+   "origem": "MCP",
+   "destino": "VDC",
+   "dias": 1,
+   "menor": 1956,
+   "mediana": 1956
+  },
+  {
+   "origem": "MAO",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 1782,
+   "mediana": 1782
+  },
+  {
+   "origem": "MAO",
+   "destino": "VIX",
+   "dias": 1,
+   "menor": 1763,
+   "mediana": 1763
+  },
+  {
+   "origem": "MAO",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 769,
+   "mediana": 769
+  },
+  {
+   "origem": "MAO",
+   "destino": "BEL",
+   "dias": 2,
+   "menor": 986,
+   "mediana": 1067
+  },
+  {
+   "origem": "MAO",
+   "destino": "CWB",
+   "dias": 9,
+   "menor": 965,
+   "mediana": 1466
+  },
+  {
+   "origem": "MAO",
+   "destino": "REC",
+   "dias": 3,
+   "menor": 814,
+   "mediana": 865
+  },
+  {
+   "origem": "MAO",
+   "destino": "RIO",
+   "dias": 2,
+   "menor": 1530,
+   "mediana": 1636
+  },
+  {
+   "origem": "MAO",
+   "destino": "PVH",
+   "dias": 2,
+   "menor": 1184,
+   "mediana": 1215
+  },
+  {
+   "origem": "MAO",
+   "destino": "BVB",
+   "dias": 2,
+   "menor": 714,
+   "mediana": 959
+  },
+  {
+   "origem": "MAO",
+   "destino": "FLN",
+   "dias": 6,
+   "menor": 1112,
+   "mediana": 1309
+  },
+  {
+   "origem": "MAO",
+   "destino": "SAO",
+   "dias": 12,
+   "menor": 1104,
+   "mediana": 1556
+  },
+  {
+   "origem": "MAO",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 2141,
+   "mediana": 2141
+  },
+  {
+   "origem": "MAO",
+   "destino": "IGU",
+   "dias": 2,
+   "menor": 1883,
+   "mediana": 1943
+  },
+  {
+   "origem": "SSA",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 1712,
+   "mediana": 1712
+  },
+  {
+   "origem": "SSA",
+   "destino": "FOR",
+   "dias": 3,
+   "menor": 555,
+   "mediana": 626
+  },
+  {
+   "origem": "SSA",
+   "destino": "BSB",
+   "dias": 3,
+   "menor": 634,
+   "mediana": 747
+  },
+  {
+   "origem": "SSA",
+   "destino": "BHZ",
+   "dias": 5,
+   "menor": 596,
+   "mediana": 716
+  },
+  {
+   "origem": "SSA",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1144,
+   "mediana": 1144
+  },
+  {
+   "origem": "SSA",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 740,
+   "mediana": 740
+  },
+  {
+   "origem": "SSA",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 442,
+   "mediana": 501
+  },
+  {
+   "origem": "SSA",
+   "destino": "RIO",
+   "dias": 4,
+   "menor": 928,
+   "mediana": 949
+  },
+  {
+   "origem": "SSA",
+   "destino": "NAT",
+   "dias": 1,
+   "menor": 1369,
+   "mediana": 1369
+  },
+  {
+   "origem": "SSA",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 1547,
+   "mediana": 1547
+  },
+  {
+   "origem": "SSA",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 1674,
+   "mediana": 1674
+  },
+  {
+   "origem": "SSA",
+   "destino": "FLN",
+   "dias": 2,
+   "menor": 1339,
+   "mediana": 1521
+  },
+  {
+   "origem": "SSA",
+   "destino": "SAO",
+   "dias": 19,
+   "menor": 461,
+   "mediana": 939
+  },
+  {
+   "origem": "SSA",
+   "destino": "IGU",
+   "dias": 5,
+   "menor": 615,
+   "mediana": 813
+  },
+  {
+   "origem": "SSA",
+   "destino": "BPS",
+   "dias": 2,
+   "menor": 507,
+   "mediana": 663
+  },
+  {
+   "origem": "SSA",
+   "destino": "PNZ",
+   "dias": 2,
+   "menor": 614,
+   "mediana": 631
+  },
+  {
+   "origem": "SSA",
+   "destino": "VDC",
+   "dias": 2,
+   "menor": 1673,
+   "mediana": 1789
+  },
+  {
+   "origem": "FOR",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 842,
+   "mediana": 842
+  },
+  {
+   "origem": "FOR",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 621,
+   "mediana": 621
+  },
+  {
+   "origem": "FOR",
+   "destino": "CGB",
+   "dias": 1,
+   "menor": 1303,
+   "mediana": 1303
+  },
+  {
+   "origem": "FOR",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 437,
+   "mediana": 438
+  },
+  {
+   "origem": "FOR",
+   "destino": "RIO",
+   "dias": 11,
+   "menor": 715,
+   "mediana": 822
+  },
+  {
+   "origem": "FOR",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 1174,
+   "mediana": 1174
+  },
+  {
+   "origem": "FOR",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 965,
+   "mediana": 965
+  },
+  {
+   "origem": "FOR",
+   "destino": "SAO",
+   "dias": 10,
+   "menor": 699,
+   "mediana": 905
+  },
+  {
+   "origem": "FOR",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 568,
+   "mediana": 568
+  },
+  {
+   "origem": "FOR",
+   "destino": "BPS",
+   "dias": 1,
+   "menor": 1228,
+   "mediana": 1228
+  },
+  {
+   "origem": "FOR",
+   "destino": "IOS",
+   "dias": 1,
+   "menor": 1553,
+   "mediana": 1553
+  },
+  {
+   "origem": "FOR",
+   "destino": "JDO",
+   "dias": 4,
+   "menor": 422,
+   "mediana": 773
+  },
+  {
+   "origem": "FOR",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 802,
+   "mediana": 802
+  },
+  {
+   "origem": "FOR",
+   "destino": "MGF",
+   "dias": 4,
+   "menor": 845,
+   "mediana": 1205
+  },
+  {
+   "origem": "FOR",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 1329,
+   "mediana": 1329
+  },
+  {
+   "origem": "FOR",
+   "destino": "JOI",
+   "dias": 1,
+   "menor": 1817,
+   "mediana": 1817
+  },
+  {
+   "origem": "FOR",
+   "destino": "NVT",
+   "dias": 1,
+   "menor": 1410,
+   "mediana": 1410
+  },
+  {
+   "origem": "FOR",
+   "destino": "CXJ",
+   "dias": 1,
+   "menor": 1450,
+   "mediana": 1450
+  },
+  {
+   "origem": "FOR",
+   "destino": "CKS",
+   "dias": 1,
+   "menor": 1558,
+   "mediana": 1558
+  },
+  {
+   "origem": "BSB",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 916,
+   "mediana": 916
+  },
+  {
+   "origem": "BSB",
+   "destino": "MAO",
+   "dias": 4,
+   "menor": 1192,
+   "mediana": 1615
+  },
+  {
+   "origem": "BSB",
+   "destino": "SSA",
+   "dias": 4,
+   "menor": 587,
+   "mediana": 624
+  },
+  {
+   "origem": "BSB",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 638,
+   "mediana": 638
+  },
+  {
+   "origem": "BSB",
+   "destino": "VIX",
+   "dias": 2,
+   "menor": 945,
+   "mediana": 1063
+  },
+  {
+   "origem": "BSB",
+   "destino": "GYN",
+   "dias": 2,
+   "menor": 750,
+   "mediana": 774
+  },
+  {
+   "origem": "BSB",
+   "destino": "SLZ",
+   "dias": 2,
+   "menor": 560,
+   "mediana": 619
+  },
+  {
+   "origem": "BSB",
+   "destino": "CGB",
+   "dias": 3,
+   "menor": 833,
+   "mediana": 848
+  },
+  {
+   "origem": "BSB",
+   "destino": "BHZ",
+   "dias": 4,
+   "menor": 547,
+   "mediana": 597
+  },
+  {
+   "origem": "BSB",
+   "destino": "BEL",
+   "dias": 2,
+   "menor": 705,
+   "mediana": 982
+  },
+  {
+   "origem": "BSB",
+   "destino": "JPA",
+   "dias": 4,
+   "menor": 575,
+   "mediana": 671
+  },
+  {
+   "origem": "BSB",
+   "destino": "CWB",
+   "dias": 2,
+   "menor": 914,
+   "mediana": 1073
+  },
+  {
+   "origem": "BSB",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 290,
+   "mediana": 721
+  },
+  {
+   "origem": "BSB",
+   "destino": "RIO",
+   "dias": 7,
+   "menor": 456,
+   "mediana": 1404
+  },
+  {
+   "origem": "BSB",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 1555,
+   "mediana": 1555
+  },
+  {
+   "origem": "BSB",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 1322,
+   "mediana": 1322
+  },
+  {
+   "origem": "BSB",
+   "destino": "FLN",
+   "dias": 4,
+   "menor": 691,
+   "mediana": 1201
+  },
+  {
+   "origem": "BSB",
+   "destino": "SAO",
+   "dias": 11,
+   "menor": 456,
+   "mediana": 698
+  },
+  {
+   "origem": "BSB",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 697,
+   "mediana": 697
+  },
+  {
+   "origem": "BSB",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 571,
+   "mediana": 571
+  },
+  {
+   "origem": "BSB",
+   "destino": "BPS",
+   "dias": 2,
+   "menor": 944,
+   "mediana": 1032
+  },
+  {
+   "origem": "VIX",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 532,
+   "mediana": 532
+  },
+  {
+   "origem": "VIX",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 1002,
+   "mediana": 1002
+  },
+  {
+   "origem": "VIX",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 569,
+   "mediana": 569
+  },
+  {
+   "origem": "VIX",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1479,
+   "mediana": 1479
+  },
+  {
+   "origem": "VIX",
+   "destino": "RIO",
+   "dias": 3,
+   "menor": 313,
+   "mediana": 330
+  },
+  {
+   "origem": "VIX",
+   "destino": "POA",
+   "dias": 2,
+   "menor": 917,
+   "mediana": 966
+  },
+  {
+   "origem": "VIX",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 456,
+   "mediana": 456
+  },
+  {
+   "origem": "VIX",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 354,
+   "mediana": 456
+  },
+  {
+   "origem": "VIX",
+   "destino": "LDB",
+   "dias": 1,
+   "menor": 1067,
+   "mediana": 1067
+  },
+  {
+   "origem": "VIX",
+   "destino": "MOC",
+   "dias": 1,
+   "menor": 751,
+   "mediana": 751
+  },
+  {
+   "origem": "GYN",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 998,
+   "mediana": 998
+  },
+  {
+   "origem": "GYN",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1135,
+   "mediana": 1135
+  },
+  {
+   "origem": "GYN",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 786,
+   "mediana": 1002
+  },
+  {
+   "origem": "GYN",
+   "destino": "CGB",
+   "dias": 1,
+   "menor": 957,
+   "mediana": 957
+  },
+  {
+   "origem": "GYN",
+   "destino": "CGR",
+   "dias": 1,
+   "menor": 668,
+   "mediana": 668
+  },
+  {
+   "origem": "GYN",
+   "destino": "RIO",
+   "dias": 3,
+   "menor": 606,
+   "mediana": 858
+  },
+  {
+   "origem": "GYN",
+   "destino": "SAO",
+   "dias": 1,
+   "menor": 850,
+   "mediana": 850
+  },
+  {
+   "origem": "GYN",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 781,
+   "mediana": 781
+  },
+  {
+   "origem": "GYN",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 1030,
+   "mediana": 1030
+  },
+  {
+   "origem": "GYN",
+   "destino": "RAO",
+   "dias": 1,
+   "menor": 793,
+   "mediana": 793
+  },
+  {
+   "origem": "GYN",
+   "destino": "JOI",
+   "dias": 2,
+   "menor": 660,
+   "mediana": 673
+  },
+  {
+   "origem": "GYN",
+   "destino": "NVT",
+   "dias": 1,
+   "menor": 1215,
+   "mediana": 1215
+  },
+  {
+   "origem": "GYN",
+   "destino": "MAB",
+   "dias": 1,
+   "menor": 1048,
+   "mediana": 1048
+  },
+  {
+   "origem": "GYN",
+   "destino": "MOC",
+   "dias": 1,
+   "menor": 1308,
+   "mediana": 1308
+  },
+  {
+   "origem": "SLZ",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 1093,
+   "mediana": 1093
+  },
+  {
+   "origem": "SLZ",
+   "destino": "MCP",
+   "dias": 1,
+   "menor": 1414,
+   "mediana": 1414
+  },
+  {
+   "origem": "SLZ",
+   "destino": "MAO",
+   "dias": 2,
+   "menor": 666,
+   "mediana": 854
+  },
+  {
+   "origem": "SLZ",
+   "destino": "FOR",
+   "dias": 2,
+   "menor": 598,
+   "mediana": 612
+  },
+  {
+   "origem": "SLZ",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 710,
+   "mediana": 927
+  },
+  {
+   "origem": "SLZ",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 1560,
+   "mediana": 1560
+  },
+  {
+   "origem": "SLZ",
+   "destino": "JPA",
+   "dias": 1,
+   "menor": 943,
+   "mediana": 943
+  },
+  {
+   "origem": "SLZ",
+   "destino": "REC",
+   "dias": 1,
+   "menor": 819,
+   "mediana": 819
+  },
+  {
+   "origem": "SLZ",
+   "destino": "THE",
+   "dias": 1,
+   "menor": 1060,
+   "mediana": 1060
+  },
+  {
+   "origem": "SLZ",
+   "destino": "RIO",
+   "dias": 3,
+   "menor": 515,
+   "mediana": 573
+  },
+  {
+   "origem": "SLZ",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 1286,
+   "mediana": 1286
+  },
+  {
+   "origem": "SLZ",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 2052,
+   "mediana": 2052
+  },
+  {
+   "origem": "SLZ",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 1053,
+   "mediana": 1053
+  },
+  {
+   "origem": "SLZ",
+   "destino": "STM",
+   "dias": 1,
+   "menor": 1881,
+   "mediana": 1881
+  },
+  {
+   "origem": "SLZ",
+   "destino": "CKS",
+   "dias": 2,
+   "menor": 2640,
+   "mediana": 2708
+  },
+  {
+   "origem": "CGB",
+   "destino": "RBR",
+   "dias": 1,
+   "menor": 1134,
+   "mediana": 1134
+  },
+  {
+   "origem": "CGB",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1830,
+   "mediana": 1830
+  },
+  {
+   "origem": "CGB",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 891,
+   "mediana": 891
+  },
+  {
+   "origem": "CGB",
+   "destino": "BSB",
+   "dias": 3,
+   "menor": 820,
+   "mediana": 944
+  },
+  {
+   "origem": "CGB",
+   "destino": "CGR",
+   "dias": 2,
+   "menor": 901,
+   "mediana": 980
+  },
+  {
+   "origem": "CGB",
+   "destino": "RIO",
+   "dias": 4,
+   "menor": 768,
+   "mediana": 957
+  },
+  {
+   "origem": "CGB",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 874,
+   "mediana": 874
+  },
+  {
+   "origem": "CGB",
+   "destino": "PVH",
+   "dias": 2,
+   "menor": 596,
+   "mediana": 870
+  },
+  {
+   "origem": "CGB",
+   "destino": "SAO",
+   "dias": 7,
+   "menor": 337,
+   "mediana": 401
+  },
+  {
+   "origem": "CGB",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 987,
+   "mediana": 987
+  },
+  {
+   "origem": "CGB",
+   "destino": "MGF",
+   "dias": 1,
+   "menor": 549,
+   "mediana": 549
+  },
+  {
+   "origem": "CGB",
+   "destino": "RAO",
+   "dias": 1,
+   "menor": 1884,
+   "mediana": 1884
+  },
+  {
+   "origem": "CGB",
+   "destino": "NVT",
+   "dias": 1,
+   "menor": 1468,
+   "mediana": 1468
+  },
+  {
+   "origem": "CGR",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 1659,
+   "mediana": 1659
+  },
+  {
+   "origem": "CGR",
+   "destino": "GYN",
+   "dias": 2,
+   "menor": 797,
+   "mediana": 1149
+  },
+  {
+   "origem": "CGR",
+   "destino": "CGB",
+   "dias": 1,
+   "menor": 1550,
+   "mediana": 1550
+  },
+  {
+   "origem": "CGR",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 1338,
+   "mediana": 1338
+  },
+  {
+   "origem": "CGR",
+   "destino": "RIO",
+   "dias": 5,
+   "menor": 972,
+   "mediana": 1118
+  },
+  {
+   "origem": "CGR",
+   "destino": "FLN",
+   "dias": 2,
+   "menor": 1385,
+   "mediana": 1481
+  },
+  {
+   "origem": "CGR",
+   "destino": "SAO",
+   "dias": 4,
+   "menor": 649,
+   "mediana": 1030
+  },
+  {
+   "origem": "CGR",
+   "destino": "LDB",
+   "dias": 1,
+   "menor": 1384,
+   "mediana": 1384
+  },
+  {
+   "origem": "CGR",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 1669,
+   "mediana": 1669
+  },
+  {
+   "origem": "CGR",
+   "destino": "RAO",
+   "dias": 1,
+   "menor": 1513,
+   "mediana": 1513
+  },
+  {
+   "origem": "BHZ",
+   "destino": "MCZ",
+   "dias": 2,
+   "menor": 1029,
+   "mediana": 1049
+  },
+  {
+   "origem": "BHZ",
+   "destino": "MAO",
+   "dias": 1,
+   "menor": 519,
+   "mediana": 519
+  },
+  {
+   "origem": "BHZ",
+   "destino": "SSA",
+   "dias": 2,
+   "menor": 786,
+   "mediana": 825
+  },
+  {
+   "origem": "BHZ",
+   "destino": "FOR",
+   "dias": 2,
+   "menor": 485,
+   "mediana": 813
+  },
+  {
+   "origem": "BHZ",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 595,
+   "mediana": 615
+  },
+  {
+   "origem": "BHZ",
+   "destino": "VIX",
+   "dias": 4,
+   "menor": 828,
+   "mediana": 1010
+  },
+  {
+   "origem": "BHZ",
+   "destino": "CGB",
+   "dias": 2,
+   "menor": 1014,
+   "mediana": 1251
+  },
+  {
+   "origem": "BHZ",
+   "destino": "CGR",
+   "dias": 2,
+   "menor": 1342,
+   "mediana": 1565
+  },
+  {
+   "origem": "BHZ",
+   "destino": "CWB",
+   "dias": 4,
+   "menor": 766,
+   "mediana": 1152
+  },
+  {
+   "origem": "BHZ",
+   "destino": "THE",
+   "dias": 2,
+   "menor": 1086,
+   "mediana": 1194
+  },
+  {
+   "origem": "BHZ",
+   "destino": "RIO",
+   "dias": 4,
+   "menor": 537,
+   "mediana": 655
+  },
+  {
+   "origem": "BHZ",
+   "destino": "NAT",
+   "dias": 3,
+   "menor": 725,
+   "mediana": 992
+  },
+  {
+   "origem": "BHZ",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 1120,
+   "mediana": 1120
+  },
+  {
+   "origem": "BHZ",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 568,
+   "mediana": 586
+  },
+  {
+   "origem": "BHZ",
+   "destino": "PMW",
+   "dias": 4,
+   "menor": 754,
+   "mediana": 876
+  },
+  {
+   "origem": "BHZ",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 1284,
+   "mediana": 1284
+  },
+  {
+   "origem": "BHZ",
+   "destino": "BPS",
+   "dias": 2,
+   "menor": 547,
+   "mediana": 846
+  },
+  {
+   "origem": "BHZ",
+   "destino": "JDO",
+   "dias": 1,
+   "menor": 1039,
+   "mediana": 1039
+  },
+  {
+   "origem": "BHZ",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 728,
+   "mediana": 728
+  },
+  {
+   "origem": "BHZ",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 922,
+   "mediana": 922
+  },
+  {
+   "origem": "BHZ",
+   "destino": "VDC",
+   "dias": 2,
+   "menor": 682,
+   "mediana": 863
+  },
+  {
+   "origem": "BEL",
+   "destino": "RBR",
+   "dias": 1,
+   "menor": 1279,
+   "mediana": 1279
+  },
+  {
+   "origem": "BEL",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 1692,
+   "mediana": 1692
+  },
+  {
+   "origem": "BEL",
+   "destino": "MCP",
+   "dias": 1,
+   "menor": 679,
+   "mediana": 679
+  },
+  {
+   "origem": "BEL",
+   "destino": "MAO",
+   "dias": 2,
+   "menor": 1142,
+   "mediana": 1155
+  },
+  {
+   "origem": "BEL",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 957,
+   "mediana": 957
+  },
+  {
+   "origem": "BEL",
+   "destino": "NAT",
+   "dias": 1,
+   "menor": 1192,
+   "mediana": 1192
+  },
+  {
+   "origem": "BEL",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 1579,
+   "mediana": 1579
+  },
+  {
+   "origem": "BEL",
+   "destino": "SAO",
+   "dias": 2,
+   "menor": 813,
+   "mediana": 827
+  },
+  {
+   "origem": "BEL",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 1200,
+   "mediana": 1200
+  },
+  {
+   "origem": "JPA",
+   "destino": "GYN",
+   "dias": 1,
+   "menor": 1056,
+   "mediana": 1056
+  },
+  {
+   "origem": "JPA",
+   "destino": "CWB",
+   "dias": 14,
+   "menor": 689,
+   "mediana": 930
+  },
+  {
+   "origem": "JPA",
+   "destino": "RIO",
+   "dias": 6,
+   "menor": 559,
+   "mediana": 875
+  },
+  {
+   "origem": "JPA",
+   "destino": "PVH",
+   "dias": 18,
+   "menor": 1206,
+   "mediana": 1554
+  },
+  {
+   "origem": "JPA",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 925,
+   "mediana": 925
+  },
+  {
+   "origem": "JPA",
+   "destino": "SAO",
+   "dias": 10,
+   "menor": 624,
+   "mediana": 901
+  },
+  {
+   "origem": "JPA",
+   "destino": "IGU",
+   "dias": 15,
+   "menor": 716,
+   "mediana": 1136
+  },
+  {
+   "origem": "CWB",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 659,
+   "mediana": 659
+  },
+  {
+   "origem": "CWB",
+   "destino": "BSB",
+   "dias": 4,
+   "menor": 1094,
+   "mediana": 1202
+  },
+  {
+   "origem": "CWB",
+   "destino": "CGR",
+   "dias": 2,
+   "menor": 776,
+   "mediana": 822
+  },
+  {
+   "origem": "CWB",
+   "destino": "BHZ",
+   "dias": 6,
+   "menor": 496,
+   "mediana": 802
+  },
+  {
+   "origem": "CWB",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1203,
+   "mediana": 1203
+  },
+  {
+   "origem": "CWB",
+   "destino": "REC",
+   "dias": 1,
+   "menor": 935,
+   "mediana": 935
+  },
+  {
+   "origem": "CWB",
+   "destino": "RIO",
+   "dias": 7,
+   "menor": 360,
+   "mediana": 558
+  },
+  {
+   "origem": "CWB",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 685,
+   "mediana": 685
+  },
+  {
+   "origem": "CWB",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 1126,
+   "mediana": 1126
+  },
+  {
+   "origem": "CWB",
+   "destino": "SAO",
+   "dias": 8,
+   "menor": 265,
+   "mediana": 467
+  },
+  {
+   "origem": "CWB",
+   "destino": "IGU",
+   "dias": 5,
+   "menor": 1122,
+   "mediana": 1708
+  },
+  {
+   "origem": "CWB",
+   "destino": "LDB",
+   "dias": 2,
+   "menor": 635,
+   "mediana": 640
+  },
+  {
+   "origem": "CWB",
+   "destino": "NVT",
+   "dias": 4,
+   "menor": 765,
+   "mediana": 1240
+  },
+  {
+   "origem": "CWB",
+   "destino": "CXJ",
+   "dias": 5,
+   "menor": 943,
+   "mediana": 1128
+  },
+  {
+   "origem": "CWB",
+   "destino": "XAP",
+   "dias": 1,
+   "menor": 682,
+   "mediana": 682
+  },
+  {
+   "origem": "REC",
+   "destino": "MAO",
+   "dias": 1,
+   "menor": 844,
+   "mediana": 844
+  },
+  {
+   "origem": "REC",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 504,
+   "mediana": 504
+  },
+  {
+   "origem": "REC",
+   "destino": "FOR",
+   "dias": 4,
+   "menor": 339,
+   "mediana": 394
+  },
+  {
+   "origem": "REC",
+   "destino": "BSB",
+   "dias": 3,
+   "menor": 526,
+   "mediana": 599
+  },
+  {
+   "origem": "REC",
+   "destino": "GYN",
+   "dias": 3,
+   "menor": 870,
+   "mediana": 1120
+  },
+  {
+   "origem": "REC",
+   "destino": "SLZ",
+   "dias": 2,
+   "menor": 752,
+   "mediana": 842
+  },
+  {
+   "origem": "REC",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 967,
+   "mediana": 967
+  },
+  {
+   "origem": "REC",
+   "destino": "RIO",
+   "dias": 6,
+   "menor": 680,
+   "mediana": 937
+  },
+  {
+   "origem": "REC",
+   "destino": "NAT",
+   "dias": 1,
+   "menor": 730,
+   "mediana": 730
+  },
+  {
+   "origem": "REC",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 1530,
+   "mediana": 1530
+  },
+  {
+   "origem": "REC",
+   "destino": "FLN",
+   "dias": 4,
+   "menor": 732,
+   "mediana": 904
+  },
+  {
+   "origem": "REC",
+   "destino": "SAO",
+   "dias": 9,
+   "menor": 414,
+   "mediana": 770
+  },
+  {
+   "origem": "REC",
+   "destino": "AJU",
+   "dias": 1,
+   "menor": 938,
+   "mediana": 938
+  },
+  {
+   "origem": "REC",
+   "destino": "JDO",
+   "dias": 2,
+   "menor": 693,
+   "mediana": 737
+  },
+  {
+   "origem": "REC",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 737,
+   "mediana": 737
+  },
+  {
+   "origem": "REC",
+   "destino": "MGF",
+   "dias": 1,
+   "menor": 905,
+   "mediana": 905
+  },
+  {
+   "origem": "REC",
+   "destino": "NVT",
+   "dias": 2,
+   "menor": 990,
+   "mediana": 1130
+  },
+  {
+   "origem": "REC",
+   "destino": "CXJ",
+   "dias": 1,
+   "menor": 1568,
+   "mediana": 1568
+  },
+  {
+   "origem": "REC",
+   "destino": "VDC",
+   "dias": 1,
+   "menor": 1108,
+   "mediana": 1108
+  },
+  {
+   "origem": "THE",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 1366,
+   "mediana": 1366
+  },
+  {
+   "origem": "THE",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1127,
+   "mediana": 1127
+  },
+  {
+   "origem": "THE",
+   "destino": "FOR",
+   "dias": 4,
+   "menor": 483,
+   "mediana": 581
+  },
+  {
+   "origem": "THE",
+   "destino": "BSB",
+   "dias": 3,
+   "menor": 834,
+   "mediana": 843
+  },
+  {
+   "origem": "THE",
+   "destino": "GYN",
+   "dias": 2,
+   "menor": 865,
+   "mediana": 979
+  },
+  {
+   "origem": "THE",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 936,
+   "mediana": 936
+  },
+  {
+   "origem": "THE",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1176,
+   "mediana": 1176
+  },
+  {
+   "origem": "THE",
+   "destino": "REC",
+   "dias": 1,
+   "menor": 740,
+   "mediana": 740
+  },
+  {
+   "origem": "THE",
+   "destino": "RIO",
+   "dias": 3,
+   "menor": 995,
+   "mediana": 1017
+  },
+  {
+   "origem": "THE",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 1035,
+   "mediana": 1035
+  },
+  {
+   "origem": "THE",
+   "destino": "SAO",
+   "dias": 7,
+   "menor": 631,
+   "mediana": 735
+  },
+  {
+   "origem": "THE",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 1107,
+   "mediana": 1107
+  },
+  {
+   "origem": "THE",
+   "destino": "MGF",
+   "dias": 1,
+   "menor": 1365,
+   "mediana": 1365
+  },
+  {
+   "origem": "THE",
+   "destino": "JOI",
+   "dias": 1,
+   "menor": 1720,
+   "mediana": 1720
+  },
+  {
+   "origem": "THE",
+   "destino": "IMP",
+   "dias": 2,
+   "menor": 813,
+   "mediana": 891
+  },
+  {
+   "origem": "THE",
+   "destino": "STM",
+   "dias": 2,
+   "menor": 1284,
+   "mediana": 1590
+  },
+  {
+   "origem": "THE",
+   "destino": "VDC",
+   "dias": 1,
+   "menor": 1671,
+   "mediana": 1671
+  },
+  {
+   "origem": "RIO",
+   "destino": "RBR",
+   "dias": 1,
+   "menor": 1657,
+   "mediana": 1657
+  },
+  {
+   "origem": "RIO",
+   "destino": "MCZ",
+   "dias": 4,
+   "menor": 609,
+   "mediana": 696
+  },
+  {
+   "origem": "RIO",
+   "destino": "MAO",
+   "dias": 10,
+   "menor": 1032,
+   "mediana": 1496
+  },
+  {
+   "origem": "RIO",
+   "destino": "SSA",
+   "dias": 4,
+   "menor": 725,
+   "mediana": 987
+  },
+  {
+   "origem": "RIO",
+   "destino": "FOR",
+   "dias": 5,
+   "menor": 563,
+   "mediana": 787
+  },
+  {
+   "origem": "RIO",
+   "destino": "BSB",
+   "dias": 10,
+   "menor": 608,
+   "mediana": 639
+  },
+  {
+   "origem": "RIO",
+   "destino": "VIX",
+   "dias": 5,
+   "menor": 271,
+   "mediana": 365
+  },
+  {
+   "origem": "RIO",
+   "destino": "GYN",
+   "dias": 2,
+   "menor": 742,
+   "mediana": 819
+  },
+  {
+   "origem": "RIO",
+   "destino": "SLZ",
+   "dias": 6,
+   "menor": 491,
+   "mediana": 746
+  },
+  {
+   "origem": "RIO",
+   "destino": "CGB",
+   "dias": 2,
+   "menor": 909,
+   "mediana": 1034
+  },
+  {
+   "origem": "RIO",
+   "destino": "CGR",
+   "dias": 6,
+   "menor": 623,
+   "mediana": 841
+  },
+  {
+   "origem": "RIO",
+   "destino": "BHZ",
+   "dias": 6,
+   "menor": 556,
+   "mediana": 667
+  },
+  {
+   "origem": "RIO",
+   "destino": "BEL",
+   "dias": 3,
+   "menor": 678,
+   "mediana": 779
+  },
+  {
+   "origem": "RIO",
+   "destino": "JPA",
+   "dias": 6,
+   "menor": 874,
+   "mediana": 1060
+  },
+  {
+   "origem": "RIO",
+   "destino": "CWB",
+   "dias": 6,
+   "menor": 429,
+   "mediana": 592
+  },
+  {
+   "origem": "RIO",
+   "destino": "REC",
+   "dias": 5,
+   "menor": 581,
+   "mediana": 881
+  },
+  {
+   "origem": "RIO",
+   "destino": "THE",
+   "dias": 1,
+   "menor": 1063,
+   "mediana": 1063
+  },
+  {
+   "origem": "RIO",
+   "destino": "NAT",
+   "dias": 7,
+   "menor": 670,
+   "mediana": 710
+  },
+  {
+   "origem": "RIO",
+   "destino": "POA",
+   "dias": 9,
+   "menor": 529,
+   "mediana": 672
+  },
+  {
+   "origem": "RIO",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 1821,
+   "mediana": 1821
+  },
+  {
+   "origem": "RIO",
+   "destino": "FLN",
+   "dias": 12,
+   "menor": 424,
+   "mediana": 753
+  },
+  {
+   "origem": "RIO",
+   "destino": "SAO",
+   "dias": 22,
+   "menor": 296,
+   "mediana": 591
+  },
+  {
+   "origem": "RIO",
+   "destino": "AJU",
+   "dias": 3,
+   "menor": 869,
+   "mediana": 1169
+  },
+  {
+   "origem": "RIO",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 828,
+   "mediana": 828
+  },
+  {
+   "origem": "RIO",
+   "destino": "IGU",
+   "dias": 20,
+   "menor": 629,
+   "mediana": 898
+  },
+  {
+   "origem": "RIO",
+   "destino": "BPS",
+   "dias": 2,
+   "menor": 1251,
+   "mediana": 1274
+  },
+  {
+   "origem": "RIO",
+   "destino": "IOS",
+   "dias": 1,
+   "menor": 867,
+   "mediana": 867
+  },
+  {
+   "origem": "RIO",
+   "destino": "JDO",
+   "dias": 2,
+   "menor": 1064,
+   "mediana": 1115
+  },
+  {
+   "origem": "RIO",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 495,
+   "mediana": 495
+  },
+  {
+   "origem": "RIO",
+   "destino": "RAO",
+   "dias": 3,
+   "menor": 688,
+   "mediana": 752
+  },
+  {
+   "origem": "RIO",
+   "destino": "IMP",
+   "dias": 1,
+   "menor": 1399,
+   "mediana": 1399
+  },
+  {
+   "origem": "RIO",
+   "destino": "STM",
+   "dias": 2,
+   "menor": 1779,
+   "mediana": 1854
+  },
+  {
+   "origem": "RIO",
+   "destino": "VDC",
+   "dias": 2,
+   "menor": 907,
+   "mediana": 946
+  },
+  {
+   "origem": "NAT",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 1391,
+   "mediana": 1391
+  },
+  {
+   "origem": "NAT",
+   "destino": "SSA",
+   "dias": 2,
+   "menor": 1206,
+   "mediana": 1238
+  },
+  {
+   "origem": "NAT",
+   "destino": "FOR",
+   "dias": 2,
+   "menor": 636,
+   "mediana": 651
+  },
+  {
+   "origem": "NAT",
+   "destino": "GYN",
+   "dias": 1,
+   "menor": 1151,
+   "mediana": 1151
+  },
+  {
+   "origem": "NAT",
+   "destino": "BEL",
+   "dias": 2,
+   "menor": 1114,
+   "mediana": 1150
+  },
+  {
+   "origem": "NAT",
+   "destino": "JPA",
+   "dias": 1,
+   "menor": 2144,
+   "mediana": 2144
+  },
+  {
+   "origem": "NAT",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 810,
+   "mediana": 810
+  },
+  {
+   "origem": "NAT",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 884,
+   "mediana": 884
+  },
+  {
+   "origem": "NAT",
+   "destino": "SAO",
+   "dias": 4,
+   "menor": 529,
+   "mediana": 1169
+  },
+  {
+   "origem": "NAT",
+   "destino": "AJU",
+   "dias": 2,
+   "menor": 1840,
+   "mediana": 1884
+  },
+  {
+   "origem": "NAT",
+   "destino": "IGU",
+   "dias": 2,
+   "menor": 864,
+   "mediana": 1213
+  },
+  {
+   "origem": "NAT",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 746,
+   "mediana": 746
+  },
+  {
+   "origem": "NAT",
+   "destino": "NVT",
+   "dias": 1,
+   "menor": 1236,
+   "mediana": 1236
+  },
+  {
+   "origem": "NAT",
+   "destino": "CXJ",
+   "dias": 1,
+   "menor": 1766,
+   "mediana": 1766
+  },
+  {
+   "origem": "NAT",
+   "destino": "VDC",
+   "dias": 1,
+   "menor": 1428,
+   "mediana": 1428
+  },
+  {
+   "origem": "POA",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1736,
+   "mediana": 1736
+  },
+  {
+   "origem": "POA",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 778,
+   "mediana": 821
+  },
+  {
+   "origem": "POA",
+   "destino": "GYN",
+   "dias": 1,
+   "menor": 947,
+   "mediana": 947
+  },
+  {
+   "origem": "POA",
+   "destino": "RIO",
+   "dias": 8,
+   "menor": 447,
+   "mediana": 636
+  },
+  {
+   "origem": "POA",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 1775,
+   "mediana": 1775
+  },
+  {
+   "origem": "POA",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 460,
+   "mediana": 460
+  },
+  {
+   "origem": "POA",
+   "destino": "SAO",
+   "dias": 9,
+   "menor": 494,
+   "mediana": 915
+  },
+  {
+   "origem": "POA",
+   "destino": "AJU",
+   "dias": 1,
+   "menor": 1271,
+   "mediana": 1271
+  },
+  {
+   "origem": "POA",
+   "destino": "IGU",
+   "dias": 2,
+   "menor": 959,
+   "mediana": 1166
+  },
+  {
+   "origem": "POA",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 485,
+   "mediana": 485
+  },
+  {
+   "origem": "PVH",
+   "destino": "JPA",
+   "dias": 2,
+   "menor": 1383,
+   "mediana": 1714
+  },
+  {
+   "origem": "PVH",
+   "destino": "NAT",
+   "dias": 10,
+   "menor": 1758,
+   "mediana": 1934
+  },
+  {
+   "origem": "PVH",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 1202,
+   "mediana": 1202
+  },
+  {
+   "origem": "PVH",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 1056,
+   "mediana": 1272
+  },
+  {
+   "origem": "PVH",
+   "destino": "PMW",
+   "dias": 1,
+   "menor": 2028,
+   "mediana": 2028
+  },
+  {
+   "origem": "BVB",
+   "destino": "MCP",
+   "dias": 2,
+   "menor": 1826,
+   "mediana": 1959
+  },
+  {
+   "origem": "BVB",
+   "destino": "MAO",
+   "dias": 2,
+   "menor": 979,
+   "mediana": 1031
+  },
+  {
+   "origem": "BVB",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 1573,
+   "mediana": 1715
+  },
+  {
+   "origem": "BVB",
+   "destino": "CGR",
+   "dias": 1,
+   "menor": 1448,
+   "mediana": 1448
+  },
+  {
+   "origem": "BVB",
+   "destino": "CWB",
+   "dias": 7,
+   "menor": 1870,
+   "mediana": 2303
+  },
+  {
+   "origem": "BVB",
+   "destino": "REC",
+   "dias": 1,
+   "menor": 1511,
+   "mediana": 1511
+  },
+  {
+   "origem": "BVB",
+   "destino": "POA",
+   "dias": 2,
+   "menor": 1484,
+   "mediana": 1812
+  },
+  {
+   "origem": "BVB",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 1868,
+   "mediana": 1868
+  },
+  {
+   "origem": "BVB",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 2478,
+   "mediana": 2478
+  },
+  {
+   "origem": "BVB",
+   "destino": "VDC",
+   "dias": 2,
+   "menor": 1845,
+   "mediana": 2220
+  },
+  {
+   "origem": "FLN",
+   "destino": "RBR",
+   "dias": 1,
+   "menor": 1743,
+   "mediana": 1743
+  },
+  {
+   "origem": "FLN",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1686,
+   "mediana": 1686
+  },
+  {
+   "origem": "FLN",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 879,
+   "mediana": 879
+  },
+  {
+   "origem": "FLN",
+   "destino": "BSB",
+   "dias": 7,
+   "menor": 608,
+   "mediana": 779
+  },
+  {
+   "origem": "FLN",
+   "destino": "GYN",
+   "dias": 1,
+   "menor": 1296,
+   "mediana": 1296
+  },
+  {
+   "origem": "FLN",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 962,
+   "mediana": 962
+  },
+  {
+   "origem": "FLN",
+   "destino": "JPA",
+   "dias": 8,
+   "menor": 631,
+   "mediana": 1104
+  },
+  {
+   "origem": "FLN",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 965,
+   "mediana": 965
+  },
+  {
+   "origem": "FLN",
+   "destino": "REC",
+   "dias": 13,
+   "menor": 795,
+   "mediana": 1147
+  },
+  {
+   "origem": "FLN",
+   "destino": "THE",
+   "dias": 1,
+   "menor": 1386,
+   "mediana": 1386
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "dias": 14,
+   "menor": 385,
+   "mediana": 709
+  },
+  {
+   "origem": "FLN",
+   "destino": "NAT",
+   "dias": 1,
+   "menor": 879,
+   "mediana": 879
+  },
+  {
+   "origem": "FLN",
+   "destino": "POA",
+   "dias": 2,
+   "menor": 454,
+   "mediana": 582
+  },
+  {
+   "origem": "FLN",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 1829,
+   "mediana": 1829
+  },
+  {
+   "origem": "FLN",
+   "destino": "SAO",
+   "dias": 23,
+   "menor": 401,
+   "mediana": 651
+  },
+  {
+   "origem": "FLN",
+   "destino": "AJU",
+   "dias": 1,
+   "menor": 2127,
+   "mediana": 2127
+  },
+  {
+   "origem": "FLN",
+   "destino": "IGU",
+   "dias": 3,
+   "menor": 1002,
+   "mediana": 1368
+  },
+  {
+   "origem": "FLN",
+   "destino": "LDB",
+   "dias": 1,
+   "menor": 779,
+   "mediana": 779
+  },
+  {
+   "origem": "FLN",
+   "destino": "MGF",
+   "dias": 2,
+   "menor": 797,
+   "mediana": 843
+  },
+  {
+   "origem": "FLN",
+   "destino": "JOI",
+   "dias": 1,
+   "menor": 1314,
+   "mediana": 1314
+  },
+  {
+   "origem": "FLN",
+   "destino": "CXJ",
+   "dias": 2,
+   "menor": 1592,
+   "mediana": 1724
+  },
+  {
+   "origem": "FLN",
+   "destino": "XAP",
+   "dias": 3,
+   "menor": 787,
+   "mediana": 876
+  },
+  {
+   "origem": "SAO",
+   "destino": "MCZ",
+   "dias": 3,
+   "menor": 524,
+   "mediana": 891
+  },
+  {
+   "origem": "SAO",
+   "destino": "MCP",
+   "dias": 1,
+   "menor": 819,
+   "mediana": 819
+  },
+  {
+   "origem": "SAO",
+   "destino": "MAO",
+   "dias": 6,
+   "menor": 936,
+   "mediana": 1610
+  },
+  {
+   "origem": "SAO",
+   "destino": "SSA",
+   "dias": 9,
+   "menor": 419,
+   "mediana": 934
+  },
+  {
+   "origem": "SAO",
+   "destino": "FOR",
+   "dias": 14,
+   "menor": 693,
+   "mediana": 912
+  },
+  {
+   "origem": "SAO",
+   "destino": "BSB",
+   "dias": 12,
+   "menor": 470,
+   "mediana": 751
+  },
+  {
+   "origem": "SAO",
+   "destino": "VIX",
+   "dias": 8,
+   "menor": 340,
+   "mediana": 427
+  },
+  {
+   "origem": "SAO",
+   "destino": "GYN",
+   "dias": 4,
+   "menor": 595,
+   "mediana": 664
+  },
+  {
+   "origem": "SAO",
+   "destino": "SLZ",
+   "dias": 6,
+   "menor": 491,
+   "mediana": 707
+  },
+  {
+   "origem": "SAO",
+   "destino": "CGB",
+   "dias": 4,
+   "menor": 431,
+   "mediana": 527
+  },
+  {
+   "origem": "SAO",
+   "destino": "CGR",
+   "dias": 2,
+   "menor": 879,
+   "mediana": 1001
+  },
+  {
+   "origem": "SAO",
+   "destino": "BHZ",
+   "dias": 5,
+   "menor": 325,
+   "mediana": 370
+  },
+  {
+   "origem": "SAO",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1369,
+   "mediana": 1369
+  },
+  {
+   "origem": "SAO",
+   "destino": "JPA",
+   "dias": 25,
+   "menor": 604,
+   "mediana": 845
+  },
+  {
+   "origem": "SAO",
+   "destino": "CWB",
+   "dias": 16,
+   "menor": 246,
+   "mediana": 393
+  },
+  {
+   "origem": "SAO",
+   "destino": "REC",
+   "dias": 17,
+   "menor": 375,
+   "mediana": 510
+  },
+  {
+   "origem": "SAO",
+   "destino": "THE",
+   "dias": 2,
+   "menor": 636,
+   "mediana": 637
+  },
+  {
+   "origem": "SAO",
+   "destino": "RIO",
+   "dias": 28,
+   "menor": 297,
+   "mediana": 530
+  },
+  {
+   "origem": "SAO",
+   "destino": "NAT",
+   "dias": 2,
+   "menor": 1028,
+   "mediana": 1115
+  },
+  {
+   "origem": "SAO",
+   "destino": "POA",
+   "dias": 9,
+   "menor": 460,
+   "mediana": 740
+  },
+  {
+   "origem": "SAO",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 1045,
+   "mediana": 1045
+  },
+  {
+   "origem": "SAO",
+   "destino": "BVB",
+   "dias": 2,
+   "menor": 1096,
+   "mediana": 1141
+  },
+  {
+   "origem": "SAO",
+   "destino": "FLN",
+   "dias": 25,
+   "menor": 378,
+   "mediana": 624
+  },
+  {
+   "origem": "SAO",
+   "destino": "AJU",
+   "dias": 5,
+   "menor": 558,
+   "mediana": 941
+  },
+  {
+   "origem": "SAO",
+   "destino": "PMW",
+   "dias": 2,
+   "menor": 456,
+   "mediana": 549
+  },
+  {
+   "origem": "SAO",
+   "destino": "IGU",
+   "dias": 19,
+   "menor": 490,
+   "mediana": 825
+  },
+  {
+   "origem": "SAO",
+   "destino": "BPS",
+   "dias": 2,
+   "menor": 867,
+   "mediana": 1126
+  },
+  {
+   "origem": "SAO",
+   "destino": "IOS",
+   "dias": 8,
+   "menor": 900,
+   "mediana": 1046
+  },
+  {
+   "origem": "SAO",
+   "destino": "JDO",
+   "dias": 6,
+   "menor": 365,
+   "mediana": 465
+  },
+  {
+   "origem": "SAO",
+   "destino": "LDB",
+   "dias": 4,
+   "menor": 271,
+   "mediana": 526
+  },
+  {
+   "origem": "SAO",
+   "destino": "MGF",
+   "dias": 3,
+   "menor": 338,
+   "mediana": 435
+  },
+  {
+   "origem": "SAO",
+   "destino": "UDI",
+   "dias": 3,
+   "menor": 250,
+   "mediana": 345
+  },
+  {
+   "origem": "SAO",
+   "destino": "RAO",
+   "dias": 3,
+   "menor": 564,
+   "mediana": 579
+  },
+  {
+   "origem": "SAO",
+   "destino": "JOI",
+   "dias": 3,
+   "menor": 558,
+   "mediana": 1125
+  },
+  {
+   "origem": "SAO",
+   "destino": "NVT",
+   "dias": 6,
+   "menor": 895,
+   "mediana": 1100
+  },
+  {
+   "origem": "SAO",
+   "destino": "IMP",
+   "dias": 9,
+   "menor": 739,
+   "mediana": 1242
+  },
+  {
+   "origem": "SAO",
+   "destino": "MAB",
+   "dias": 2,
+   "menor": 943,
+   "mediana": 1166
+  },
+  {
+   "origem": "SAO",
+   "destino": "CXJ",
+   "dias": 6,
+   "menor": 799,
+   "mediana": 966
+  },
+  {
+   "origem": "SAO",
+   "destino": "VDC",
+   "dias": 3,
+   "menor": 429,
+   "mediana": 469
+  },
+  {
+   "origem": "SAO",
+   "destino": "MOC",
+   "dias": 1,
+   "menor": 398,
+   "mediana": 398
+  },
+  {
+   "origem": "SAO",
+   "destino": "XAP",
+   "dias": 4,
+   "menor": 283,
+   "mediana": 348
+  },
+  {
+   "origem": "AJU",
+   "destino": "MCZ",
+   "dias": 1,
+   "menor": 2423,
+   "mediana": 2423
+  },
+  {
+   "origem": "AJU",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1046,
+   "mediana": 1046
+  },
+  {
+   "origem": "AJU",
+   "destino": "FOR",
+   "dias": 3,
+   "menor": 1102,
+   "mediana": 1401
+  },
+  {
+   "origem": "AJU",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 498,
+   "mediana": 498
+  },
+  {
+   "origem": "AJU",
+   "destino": "BHZ",
+   "dias": 2,
+   "menor": 1983,
+   "mediana": 2061
+  },
+  {
+   "origem": "AJU",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1795,
+   "mediana": 1795
+  },
+  {
+   "origem": "AJU",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 569,
+   "mediana": 714
+  },
+  {
+   "origem": "AJU",
+   "destino": "RIO",
+   "dias": 3,
+   "menor": 868,
+   "mediana": 1070
+  },
+  {
+   "origem": "AJU",
+   "destino": "NAT",
+   "dias": 2,
+   "menor": 1855,
+   "mediana": 2292
+  },
+  {
+   "origem": "AJU",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 2103,
+   "mediana": 2103
+  },
+  {
+   "origem": "AJU",
+   "destino": "SAO",
+   "dias": 4,
+   "menor": 599,
+   "mediana": 843
+  },
+  {
+   "origem": "AJU",
+   "destino": "BPS",
+   "dias": 1,
+   "menor": 1717,
+   "mediana": 1717
+  },
+  {
+   "origem": "AJU",
+   "destino": "JDO",
+   "dias": 2,
+   "menor": 1261,
+   "mediana": 1497
+  },
+  {
+   "origem": "AJU",
+   "destino": "VDC",
+   "dias": 2,
+   "menor": 1347,
+   "mediana": 1615
+  },
+  {
+   "origem": "PMW",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1070,
+   "mediana": 1070
+  },
+  {
+   "origem": "PMW",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 992,
+   "mediana": 992
+  },
+  {
+   "origem": "PMW",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 1255,
+   "mediana": 1255
+  },
+  {
+   "origem": "PMW",
+   "destino": "SAO",
+   "dias": 1,
+   "menor": 679,
+   "mediana": 679
+  },
+  {
+   "origem": "PMW",
+   "destino": "IGU",
+   "dias": 2,
+   "menor": 884,
+   "mediana": 1173
+  },
+  {
+   "origem": "PMW",
+   "destino": "JDO",
+   "dias": 1,
+   "menor": 1388,
+   "mediana": 1388
+  },
+  {
+   "origem": "PMW",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 1429,
+   "mediana": 1429
+  },
+  {
+   "origem": "PMW",
+   "destino": "MAB",
+   "dias": 5,
+   "menor": 1056,
+   "mediana": 1153
+  },
+  {
+   "origem": "IGU",
+   "destino": "SSA",
+   "dias": 5,
+   "menor": 764,
+   "mediana": 939
+  },
+  {
+   "origem": "IGU",
+   "destino": "VIX",
+   "dias": 3,
+   "menor": 936,
+   "mediana": 1122
+  },
+  {
+   "origem": "IGU",
+   "destino": "CGR",
+   "dias": 1,
+   "menor": 1406,
+   "mediana": 1406
+  },
+  {
+   "origem": "IGU",
+   "destino": "BHZ",
+   "dias": 2,
+   "menor": 1139,
+   "mediana": 1221
+  },
+  {
+   "origem": "IGU",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 1179,
+   "mediana": 1179
+  },
+  {
+   "origem": "IGU",
+   "destino": "RIO",
+   "dias": 14,
+   "menor": 685,
+   "mediana": 975
+  },
+  {
+   "origem": "IGU",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 1724,
+   "mediana": 1724
+  },
+  {
+   "origem": "IGU",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 2131,
+   "mediana": 2131
+  },
+  {
+   "origem": "IGU",
+   "destino": "SAO",
+   "dias": 19,
+   "menor": 650,
+   "mediana": 875
+  },
+  {
+   "origem": "IGU",
+   "destino": "MGF",
+   "dias": 1,
+   "menor": 1106,
+   "mediana": 1106
+  },
+  {
+   "origem": "IGU",
+   "destino": "NVT",
+   "dias": 3,
+   "menor": 1101,
+   "mediana": 1112
+  },
+  {
+   "origem": "BPS",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 836,
+   "mediana": 836
+  },
+  {
+   "origem": "BPS",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 740,
+   "mediana": 897
+  },
+  {
+   "origem": "IOS",
+   "destino": "SSA",
+   "dias": 2,
+   "menor": 1239,
+   "mediana": 1292
+  },
+  {
+   "origem": "IOS",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 2132,
+   "mediana": 2132
+  },
+  {
+   "origem": "IOS",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 1119,
+   "mediana": 1119
+  },
+  {
+   "origem": "IOS",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 1748,
+   "mediana": 1748
+  },
+  {
+   "origem": "IOS",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 958,
+   "mediana": 958
+  },
+  {
+   "origem": "IOS",
+   "destino": "SAO",
+   "dias": 7,
+   "menor": 745,
+   "mediana": 1145
+  },
+  {
+   "origem": "IOS",
+   "destino": "LDB",
+   "dias": 2,
+   "menor": 1847,
+   "mediana": 1891
+  },
+  {
+   "origem": "JDO",
+   "destino": "FOR",
+   "dias": 3,
+   "menor": 412,
+   "mediana": 654
+  },
+  {
+   "origem": "JDO",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 1327,
+   "mediana": 1327
+  },
+  {
+   "origem": "JDO",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 749,
+   "mediana": 809
+  },
+  {
+   "origem": "JDO",
+   "destino": "THE",
+   "dias": 1,
+   "menor": 1244,
+   "mediana": 1244
+  },
+  {
+   "origem": "JDO",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 1291,
+   "mediana": 1291
+  },
+  {
+   "origem": "JDO",
+   "destino": "NAT",
+   "dias": 1,
+   "menor": 1903,
+   "mediana": 1903
+  },
+  {
+   "origem": "JDO",
+   "destino": "SAO",
+   "dias": 4,
+   "menor": 449,
+   "mediana": 537
+  },
+  {
+   "origem": "JDO",
+   "destino": "PNZ",
+   "dias": 2,
+   "menor": 864,
+   "mediana": 931
+  },
+  {
+   "origem": "PNZ",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 1014,
+   "mediana": 1014
+  },
+  {
+   "origem": "PNZ",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 976,
+   "mediana": 976
+  },
+  {
+   "origem": "PNZ",
+   "destino": "NAT",
+   "dias": 1,
+   "menor": 1424,
+   "mediana": 1424
+  },
+  {
+   "origem": "PNZ",
+   "destino": "SAO",
+   "dias": 2,
+   "menor": 369,
+   "mediana": 377
+  },
+  {
+   "origem": "PNZ",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 1746,
+   "mediana": 1746
+  },
+  {
+   "origem": "PNZ",
+   "destino": "JDO",
+   "dias": 1,
+   "menor": 1126,
+   "mediana": 1126
+  },
+  {
+   "origem": "LDB",
+   "destino": "FOR",
+   "dias": 1,
+   "menor": 1733,
+   "mediana": 1733
+  },
+  {
+   "origem": "LDB",
+   "destino": "VIX",
+   "dias": 1,
+   "menor": 1213,
+   "mediana": 1213
+  },
+  {
+   "origem": "LDB",
+   "destino": "GYN",
+   "dias": 1,
+   "menor": 981,
+   "mediana": 981
+  },
+  {
+   "origem": "LDB",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 916,
+   "mediana": 916
+  },
+  {
+   "origem": "LDB",
+   "destino": "RIO",
+   "dias": 2,
+   "menor": 516,
+   "mediana": 672
+  },
+  {
+   "origem": "LDB",
+   "destino": "FLN",
+   "dias": 2,
+   "menor": 933,
+   "mediana": 1039
+  },
+  {
+   "origem": "LDB",
+   "destino": "SAO",
+   "dias": 5,
+   "menor": 381,
+   "mediana": 412
+  },
+  {
+   "origem": "LDB",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 1379,
+   "mediana": 1379
+  },
+  {
+   "origem": "LDB",
+   "destino": "RAO",
+   "dias": 2,
+   "menor": 1115,
+   "mediana": 1130
+  },
+  {
+   "origem": "LDB",
+   "destino": "JOI",
+   "dias": 1,
+   "menor": 1301,
+   "mediana": 1301
+  },
+  {
+   "origem": "LDB",
+   "destino": "NVT",
+   "dias": 1,
+   "menor": 1054,
+   "mediana": 1054
+  },
+  {
+   "origem": "MGF",
+   "destino": "MCZ",
+   "dias": 3,
+   "menor": 1129,
+   "mediana": 1206
+  },
+  {
+   "origem": "MGF",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 647,
+   "mediana": 647
+  },
+  {
+   "origem": "MGF",
+   "destino": "BVB",
+   "dias": 1,
+   "menor": 1748,
+   "mediana": 1748
+  },
+  {
+   "origem": "MGF",
+   "destino": "FLN",
+   "dias": 1,
+   "menor": 766,
+   "mediana": 766
+  },
+  {
+   "origem": "MGF",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 371,
+   "mediana": 400
+  },
+  {
+   "origem": "UDI",
+   "destino": "MAO",
+   "dias": 1,
+   "menor": 997,
+   "mediana": 997
+  },
+  {
+   "origem": "UDI",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1625,
+   "mediana": 1625
+  },
+  {
+   "origem": "UDI",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 905,
+   "mediana": 905
+  },
+  {
+   "origem": "UDI",
+   "destino": "REC",
+   "dias": 1,
+   "menor": 659,
+   "mediana": 659
+  },
+  {
+   "origem": "UDI",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 599,
+   "mediana": 599
+  },
+  {
+   "origem": "UDI",
+   "destino": "SAO",
+   "dias": 4,
+   "menor": 220,
+   "mediana": 477
+  },
+  {
+   "origem": "UDI",
+   "destino": "IOS",
+   "dias": 1,
+   "menor": 1470,
+   "mediana": 1470
+  },
+  {
+   "origem": "UDI",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 1009,
+   "mediana": 1009
+  },
+  {
+   "origem": "RAO",
+   "destino": "SAO",
+   "dias": 2,
+   "menor": 448,
+   "mediana": 514
+  },
+  {
+   "origem": "JOI",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 1286,
+   "mediana": 1286
+  },
+  {
+   "origem": "JOI",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 1263,
+   "mediana": 1263
+  },
+  {
+   "origem": "JOI",
+   "destino": "REC",
+   "dias": 1,
+   "menor": 1234,
+   "mediana": 1234
+  },
+  {
+   "origem": "JOI",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 790,
+   "mediana": 790
+  },
+  {
+   "origem": "JOI",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 255,
+   "mediana": 474
+  },
+  {
+   "origem": "JOI",
+   "destino": "CXJ",
+   "dias": 4,
+   "menor": 1027,
+   "mediana": 1237
+  },
+  {
+   "origem": "NVT",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 1114,
+   "mediana": 1114
+  },
+  {
+   "origem": "NVT",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 694,
+   "mediana": 694
+  },
+  {
+   "origem": "NVT",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 737,
+   "mediana": 737
+  },
+  {
+   "origem": "NVT",
+   "destino": "JPA",
+   "dias": 1,
+   "menor": 1370,
+   "mediana": 1370
+  },
+  {
+   "origem": "NVT",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 1219,
+   "mediana": 1219
+  },
+  {
+   "origem": "NVT",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 1010,
+   "mediana": 1444
+  },
+  {
+   "origem": "NVT",
+   "destino": "POA",
+   "dias": 2,
+   "menor": 1590,
+   "mediana": 1618
+  },
+  {
+   "origem": "NVT",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 1610,
+   "mediana": 1610
+  },
+  {
+   "origem": "NVT",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 492,
+   "mediana": 761
+  },
+  {
+   "origem": "NVT",
+   "destino": "AJU",
+   "dias": 2,
+   "menor": 974,
+   "mediana": 1039
+  },
+  {
+   "origem": "NVT",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 1097,
+   "mediana": 1097
+  },
+  {
+   "origem": "NVT",
+   "destino": "CXJ",
+   "dias": 1,
+   "menor": 2055,
+   "mediana": 2055
+  },
+  {
+   "origem": "NVT",
+   "destino": "VDC",
+   "dias": 2,
+   "menor": 1009,
+   "mediana": 1174
+  },
+  {
+   "origem": "IMP",
+   "destino": "SSA",
+   "dias": 2,
+   "menor": 1336,
+   "mediana": 1364
+  },
+  {
+   "origem": "IMP",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 1494,
+   "mediana": 1494
+  },
+  {
+   "origem": "IMP",
+   "destino": "THE",
+   "dias": 2,
+   "menor": 1483,
+   "mediana": 1657
+  },
+  {
+   "origem": "IMP",
+   "destino": "CKS",
+   "dias": 2,
+   "menor": 2488,
+   "mediana": 2648
+  },
+  {
+   "origem": "MAB",
+   "destino": "MAO",
+   "dias": 1,
+   "menor": 1182,
+   "mediana": 1182
+  },
+  {
+   "origem": "MAB",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 876,
+   "mediana": 876
+  },
+  {
+   "origem": "MAB",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 1459,
+   "mediana": 1459
+  },
+  {
+   "origem": "MAB",
+   "destino": "BEL",
+   "dias": 1,
+   "menor": 989,
+   "mediana": 989
+  },
+  {
+   "origem": "MAB",
+   "destino": "RIO",
+   "dias": 1,
+   "menor": 829,
+   "mediana": 829
+  },
+  {
+   "origem": "MAB",
+   "destino": "SAO",
+   "dias": 1,
+   "menor": 754,
+   "mediana": 754
+  },
+  {
+   "origem": "STM",
+   "destino": "GYN",
+   "dias": 1,
+   "menor": 1988,
+   "mediana": 1988
+  },
+  {
+   "origem": "STM",
+   "destino": "CGB",
+   "dias": 1,
+   "menor": 2022,
+   "mediana": 2022
+  },
+  {
+   "origem": "STM",
+   "destino": "BEL",
+   "dias": 4,
+   "menor": 1007,
+   "mediana": 1173
+  },
+  {
+   "origem": "STM",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 2103,
+   "mediana": 2103
+  },
+  {
+   "origem": "CXJ",
+   "destino": "CGB",
+   "dias": 1,
+   "menor": 1086,
+   "mediana": 1086
+  },
+  {
+   "origem": "CXJ",
+   "destino": "CWB",
+   "dias": 3,
+   "menor": 957,
+   "mediana": 1035
+  },
+  {
+   "origem": "CXJ",
+   "destino": "REC",
+   "dias": 2,
+   "menor": 1363,
+   "mediana": 1405
+  },
+  {
+   "origem": "CXJ",
+   "destino": "THE",
+   "dias": 1,
+   "menor": 1003,
+   "mediana": 1003
+  },
+  {
+   "origem": "CXJ",
+   "destino": "FLN",
+   "dias": 2,
+   "menor": 947,
+   "mediana": 1149
+  },
+  {
+   "origem": "CXJ",
+   "destino": "SAO",
+   "dias": 6,
+   "menor": 412,
+   "mediana": 887
+  },
+  {
+   "origem": "CXJ",
+   "destino": "JOI",
+   "dias": 2,
+   "menor": 881,
+   "mediana": 996
+  },
+  {
+   "origem": "CXJ",
+   "destino": "VDC",
+   "dias": 1,
+   "menor": 1584,
+   "mediana": 1584
+  },
+  {
+   "origem": "VDC",
+   "destino": "SSA",
+   "dias": 4,
+   "menor": 907,
+   "mediana": 970
+  },
+  {
+   "origem": "VDC",
+   "destino": "BPS",
+   "dias": 2,
+   "menor": 1569,
+   "mediana": 1729
+  },
+  {
+   "origem": "VDC",
+   "destino": "JDO",
+   "dias": 1,
+   "menor": 1572,
+   "mediana": 1572
+  },
+  {
+   "origem": "VDC",
+   "destino": "PNZ",
+   "dias": 1,
+   "menor": 870,
+   "mediana": 870
+  },
+  {
+   "origem": "VDC",
+   "destino": "CXJ",
+   "dias": 1,
+   "menor": 1937,
+   "mediana": 1937
+  },
+  {
+   "origem": "MOC",
+   "destino": "SSA",
+   "dias": 1,
+   "menor": 920,
+   "mediana": 920
+  },
+  {
+   "origem": "MOC",
+   "destino": "BSB",
+   "dias": 2,
+   "menor": 933,
+   "mediana": 1149
+  },
+  {
+   "origem": "MOC",
+   "destino": "VIX",
+   "dias": 1,
+   "menor": 1474,
+   "mediana": 1474
+  },
+  {
+   "origem": "MOC",
+   "destino": "BHZ",
+   "dias": 1,
+   "menor": 1184,
+   "mediana": 1184
+  },
+  {
+   "origem": "MOC",
+   "destino": "SAO",
+   "dias": 3,
+   "menor": 537,
+   "mediana": 610
+  },
+  {
+   "origem": "MOC",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 2115,
+   "mediana": 2115
+  },
+  {
+   "origem": "MOC",
+   "destino": "UDI",
+   "dias": 1,
+   "menor": 884,
+   "mediana": 884
+  },
+  {
+   "origem": "XAP",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 601,
+   "mediana": 601
+  },
+  {
+   "origem": "XAP",
+   "destino": "SLZ",
+   "dias": 1,
+   "menor": 1195,
+   "mediana": 1195
+  },
+  {
+   "origem": "XAP",
+   "destino": "CGR",
+   "dias": 2,
+   "menor": 1131,
+   "mediana": 1400
+  },
+  {
+   "origem": "XAP",
+   "destino": "CWB",
+   "dias": 1,
+   "menor": 1119,
+   "mediana": 1119
+  },
+  {
+   "origem": "XAP",
+   "destino": "THE",
+   "dias": 1,
+   "menor": 793,
+   "mediana": 793
+  },
+  {
+   "origem": "XAP",
+   "destino": "POA",
+   "dias": 1,
+   "menor": 905,
+   "mediana": 905
+  },
+  {
+   "origem": "XAP",
+   "destino": "FLN",
+   "dias": 2,
+   "menor": 759,
+   "mediana": 867
+  },
+  {
+   "origem": "XAP",
+   "destino": "IGU",
+   "dias": 1,
+   "menor": 1101,
+   "mediana": 1101
+  },
+  {
+   "origem": "XAP",
+   "destino": "CXJ",
+   "dias": 1,
+   "menor": 1089,
+   "mediana": 1089
+  },
+  {
+   "origem": "CKS",
+   "destino": "BSB",
+   "dias": 1,
+   "menor": 1254,
+   "mediana": 1254
+  },
+  {
+   "origem": "CKS",
+   "destino": "PVH",
+   "dias": 1,
+   "menor": 3061,
+   "mediana": 3061
+  },
+  {
+   "origem": "CKS",
+   "destino": "SAO",
+   "dias": 1,
+   "menor": 881,
+   "mediana": 881
+  }
+ ]
+}
