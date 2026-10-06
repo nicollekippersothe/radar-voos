@@ -83,7 +83,9 @@ export async function dadosDia({ origem, destino, soDiretos, dia }) {
 export async function referencias(origem, destino) {
   if (!temApi()) return [];
   const r = await chamar("/api/fontes", { origem, destino });
-  return (r?.datas || []).filter((x) => x.referencia > 0 && x.link);
+  // O Aviasales escolhe a moeda pelo país de quem acessa. Força reais, que é o que mostramos.
+  const emReais = (l) => (/[?&]currency=/.test(l) ? l : l + (l.includes("?") ? "&" : "?") + "currency=brl");
+  return (r?.datas || []).filter((x) => x.referencia > 0 && x.link).map((x) => ({ ...x, link: emReais(x.link) }));
 }
 
 /** A oferta do Aviasales que vale mostrar na lista: dentro da janela e do valor, e pelo menos 3% abaixo do Google. */

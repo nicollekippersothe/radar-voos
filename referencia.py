@@ -90,6 +90,8 @@ def menor_por_dia(itens, hoje_iso, limite_iso, marker=""):
             link = it.get("link") or ""
             if link and marker:
                 link += ("&" if "?" in link else "?") + "marker=" + urllib.parse.quote(marker)
+            if link:
+                link += ("&" if "?" in link else "?") + "currency=brl"  # sem isso a página abre em dólar
             melhor[data] = {
                 "preco": preco,
                 "companhia": CIA.get(it.get("airline"), it.get("airline")),
