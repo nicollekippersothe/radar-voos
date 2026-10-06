@@ -6,6 +6,7 @@ import { oportunidades } from "@/lib/oportunidades";
 import { FormHome } from "./filtros";
 import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "./blocos";
 import { Fragment } from "react";
+import { BlocoApoio } from "./apoio";
 import { Button } from "@/components/ui/button";
 import { CalendarDays } from "lucide-react";
 
@@ -150,6 +151,7 @@ export default async function Home({ searchParams }) {
         Os preços mudam a qualquer momento. Cada linha abre o Google Voos no trecho e na data pra você conferir antes de comprar.
       </p>
       <AvisoAfiliado />
+      <BlocoApoio />
     </>
   );
 }

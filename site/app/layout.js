@@ -1,5 +1,6 @@
 import { Instrument_Sans, Space_Mono, Archivo } from "next/font/google";
 import { Nav } from "./nav";
+import { configApoio } from "@/lib/apoio";
 import "./globals.css";
 
 const sans = Instrument_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
@@ -39,6 +40,7 @@ export default function Layout({ children }) {
         <main className="shell flex-1 pb-[6em] pt-[3em]">{children}</main>
         <footer className="shell border-t py-[1.5em] text-[0.85em] text-muted-foreground">
           Radar de Voos. Preços lidos no Google Voos, com horário de leitura. A compra é feita no site da companhia.
+          {configApoio().ativo && <> <a href="/apoie" className="underline underline-offset-4 hover:text-foreground">Apoie o radar</a></>}
         </footer>
       </body>
     </html>
