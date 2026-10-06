@@ -10,6 +10,13 @@ export const CIDADES = {
   SAO: "São Paulo", FLN: "Florianópolis", RIO: "Rio de Janeiro", POA: "Porto Alegre",
   CWB: "Curitiba", BHZ: "Belo Horizonte", BSB: "Brasília", SSA: "Salvador", REC: "Recife",
   FOR: "Fortaleza", CGB: "Cuiabá", GYN: "Goiânia",
+  RBR: "Rio Branco", MCZ: "Maceió", MCP: "Macapá", MAO: "Manaus", VIX: "Vitória", SLZ: "São Luís",
+  CGR: "Campo Grande", BEL: "Belém", JPA: "João Pessoa", THE: "Teresina", NAT: "Natal", PVH: "Porto Velho",
+  BVB: "Boa Vista", AJU: "Aracaju", PMW: "Palmas", IGU: "Foz do Iguaçu", BPS: "Porto Seguro", IOS: "Ilhéus",
+  JDO: "Juazeiro do Norte", PNZ: "Petrolina", LDB: "Londrina", MGF: "Maringá", UDI: "Uberlândia",
+  RAO: "Ribeirão Preto", JOI: "Joinville", NVT: "Navegantes", IMP: "Imperatriz", MAB: "Marabá",
+  STM: "Santarém", CXJ: "Caxias do Sul", VDC: "Vitória da Conquista", MOC: "Montes Claros",
+  XAP: "Chapecó", CKS: "Carajás",
 };
 
 export function nome(codigo) {

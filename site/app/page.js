@@ -94,6 +94,10 @@ export default async function Home({ searchParams }) {
               );
             })}
           </div>
+          <p className="mt-[1.5em] max-w-[60ch] text-[0.95em] text-muted-foreground">
+            Quer um trecho específico, como {nome(origem)} → Curitiba? Escolha o destino na aba{" "}
+            <a className="font-medium text-foreground underline underline-offset-4" href={`/melhor-dia?origem=${origem}`}>Melhor dia</a>.
+          </p>
           <div className="mt-[1em] flex flex-wrap gap-[0.5em]">
             {lista.slice(0, 3).map((v) => (
               <Button key={v.destino} variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" nativeButton={false} render={<a href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`} />}>

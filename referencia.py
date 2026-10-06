@@ -55,7 +55,7 @@ def pedir(origem, destino, mes, token):
         "currency": "brl", "limit": 1000, "page": 1, "token": token,
     })
     ultimo = None
-    for tentativa in range(3):
+    for tentativa in range(4):
         try:
             with urllib.request.urlopen(urllib.request.Request(f"{URL}?{qs}", headers={"Accept": "application/json"}), timeout=30) as r:
                 dados = json.load(r)
@@ -66,6 +66,9 @@ def pedir(origem, destino, mes, token):
             ultimo = RuntimeError(f"HTTP {e.code}")
             if e.code in (400, 401, 403, 404):
                 raise ultimo  # erro de pedido ou de token: repetir não resolve
+            if e.code == 429:
+                time.sleep(5 * (tentativa + 1))  # limite de ritmo: espera mais antes de tentar de novo
+                continue
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
             ultimo = e
         time.sleep(2 ** tentativa)
