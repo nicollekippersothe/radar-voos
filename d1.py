@@ -37,7 +37,7 @@ import urllib.request
 
 BRASILIA = dt.timezone(dt.timedelta(hours=-3))
 RAIZ = os.path.dirname(os.path.abspath(__file__))
-LIMITE_DIARIO = int(os.environ.get("D1_LIMITE_DIARIO", "90000"))
+LIMITE_DIARIO = int(os.environ.get("D1_LIMITE_DIARIO") or "90000")
 SAIU_DA_LISTA = 0
 
 # Custo em linhas escritas (o D1 conta uma por tabela e uma por índice tocado).
