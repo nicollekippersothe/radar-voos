@@ -15,10 +15,10 @@ const JSON_HEADERS = {
 
 // ------------------------------------------------------------------ agendador
 
-async function dispararColeta(env) {
+async function dispararColeta(env, inputs = null) {
   if (!env.GITHUB_TOKEN) {
     console.error("GITHUB_TOKEN não configurado: nada a disparar.");
-    return;
+    return false;
   }
   const url = `https://api.github.com/repos/${env.GITHUB_REPO}/actions/workflows/coletor.yml/dispatches`;
   const r = await fetch(url, {
@@ -29,11 +29,13 @@ async function dispararColeta(env) {
       "user-agent": "radar-voos-agendador",
       "x-github-api-version": "2022-11-28",
     },
-    body: JSON.stringify({ ref: env.GITHUB_REF || "main" }),
+    body: JSON.stringify({ ref: env.GITHUB_REF || "main", ...(inputs ? { inputs } : {}) }),
   });
   if (r.status !== 204) {
     console.error(`GitHub recusou o disparo: ${r.status} ${(await r.text()).slice(0, 200)}`);
+    return false;
   }
+  return true;
 }
 
 // Separa o arquivo .sql em comandos: tira os comentários de linha e corta em ponto e vírgula.
@@ -258,9 +260,33 @@ const rotas = {
     return { status: "na_fila" };
   },
 
+  // Atualização de um trecho, pedida pela página quando alguém abre. Dispara uma leitura só desse trecho
+  // (os dois sentidos). Limites: dado com menos de 8 min não precisa, 1 pedido por trecho a cada 10 min,
+  // no máximo 5 trechos por 10 min no total. Responde: disparado, fresco, recente, ocupado, sem_token ou invalido.
+  async "/api/atualizar"(url, env) {
+    const origem = cod(url.searchParams.get("origem"), "");
+    const destino = cod(url.searchParams.get("destino"), "");
+    if (!CIDADES.has(origem) || !CIDADES.has(destino) || origem === destino) return { status: "invalido" };
+    const agora = Math.floor(Date.now() / 1000);
+    await env.DB.prepare("CREATE TABLE IF NOT EXISTS atualizacoes (origem TEXT NOT NULL, destino TEXT NOT NULL, em INTEGER NOT NULL, PRIMARY KEY (origem, destino))").run();
+    const sync = await env.DB.prepare("SELECT valor FROM meta WHERE chave = 'ultima_sync'").first();
+    if (sync && agora - Number(sync.valor) < 8 * 60) return { status: "fresco", idade_s: agora - Number(sync.valor) };
+    const est = await env.DB.prepare(
+      `SELECT (SELECT em FROM atualizacoes WHERE origem = ?1 AND destino = ?2) AS ultimo,
+              (SELECT COUNT(*) FROM atualizacoes WHERE em > ?3) AS ultimos`
+    ).bind(origem, destino, agora - 600).first();
+    if (est.ultimo && agora - est.ultimo < 600) return { status: "recente", espere_s: 600 - (agora - est.ultimo) };
+    if (est.ultimos >= 5) return { status: "ocupado" };
+    const ok = await dispararColeta(env, { rotas: `${origem}-${destino},${destino}-${origem}` });
+    if (!ok) return { status: "sem_token" };
+    await env.DB.prepare("INSERT INTO atualizacoes (origem, destino, em) VALUES (?1, ?2, ?3) ON CONFLICT(origem, destino) DO UPDATE SET em = excluded.em")
+      .bind(origem, destino, agora).run();
+    return { status: "disparado" };
+  },
+
   // Versão publicada. Serve pra confirmar que o deploy automático (Workers Builds) está funcionando.
   async "/api/versao"() {
-    return { versao: "2026-10-06-c", rotas: Object.keys(rotas).length };
+    return { versao: "2026-10-06-d", rotas: Object.keys(rotas).length };
   },
 
   // Saúde: o que tem no banco e quando foi a última coleta.
@@ -300,7 +326,7 @@ export default {
     try {
       const corpo = await rota(url, env);
       return new Response(JSON.stringify(corpo), {
-        headers: { ...JSON_HEADERS, "cache-control": url.pathname === "/api/pedir" ? "no-store" : "public, max-age=120, s-maxage=300" },
+        headers: { ...JSON_HEADERS, "cache-control": ["/api/pedir", "/api/atualizar"].includes(url.pathname) ? "no-store" : "public, max-age=120, s-maxage=300" },
       });
     } catch (e) {
       console.error(e);

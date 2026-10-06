@@ -260,7 +260,7 @@ def escritas_hoje(banco, agora_ep):
     return int(r[0]["valor"]) if r else 0
 
 
-def sincronizar(linhas, dias, agora, banco=None, verbose=True):
+def sincronizar(linhas, dias, agora, banco=None, verbose=True, marcar_sync=True):
     """Chamado pelo coletor depois de gravar o CSV. Devolve um resumo ou None se desligado."""
     banco = banco or banco_do_ambiente()
     if banco is None:
@@ -297,10 +297,11 @@ def sincronizar(linhas, dias, agora, banco=None, verbose=True):
     for cmd in sql_gravar(novos, mudou, sumiu, agora_ep):
         banco.executar(cmd)
     chave = lit(_chave_cota(agora_ep))
+    # Atualização de um trecho só (pedida pelo site) não marca a "última coleta" geral.
+    marca = (f"INSERT INTO meta (chave, valor) VALUES ('ultima_sync', '{agora_ep}') "
+             "ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;") if marcar_sync else ""
     banco.executar(f"INSERT INTO meta (chave, valor) VALUES ({chave}, '{usado + gasto}') "
-                   "ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;"
-                   f"INSERT INTO meta (chave, valor) VALUES ('ultima_sync', '{agora_ep}') "
-                   "ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;")
+                   "ON CONFLICT(chave) DO UPDATE SET valor = excluded.valor;" + marca)
     resumo = {"novos": len(novos), "mudou": len(mudou), "sumiu": len(sumiu), "escritas": gasto, "adiado": adiado}
     if verbose:
         print(f"D1: {len(novos)} voos novos, {len(mudou)} preços mudaram, {len(sumiu)} saíram da lista "

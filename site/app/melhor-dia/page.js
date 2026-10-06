@@ -4,6 +4,8 @@ import { modelo, veredito } from "@/lib/modelo";
 import { Veredito } from "../veredito";
 import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, linkGoogle } from "@/lib/formato";
 import { FormDia } from "../filtros";
+import { Atualizar } from "../atualizar";
+import { temApi } from "@/lib/api";
 import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "../blocos";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -59,6 +61,8 @@ export default async function MelhorDia({ searchParams }) {
         destinos={todasAsCidades(destinos, destino)}
         diretos={soDiretos}
       />
+
+      {!erro && temApi() && origem !== destino && <Atualizar origem={origem} destino={destino} />}
 
       {erro ? (
         <Erro href={base} />

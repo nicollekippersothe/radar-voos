@@ -9,12 +9,16 @@ on:
         description: "Forçar a leitura de 30 dias à frente"
         type: boolean
         default: false
+      rotas:
+        description: "Só esses trechos, no formato SAO-FLN,FLN-SAO (atualização pedida pelo site)"
+        type: string
+        default: ""
 
 permissions:
   contents: write
 
 concurrency:
-  group: coletor
+  group: ${{ inputs.rotas && 'coletor-trecho' || 'coletor' }}
   cancel-in-progress: false
 
 jobs:
@@ -29,6 +33,7 @@ jobs:
       - run: python coletor.py
         env:
           FORCAR_LONGA: ${{ inputs.longa && '1' || '' }}
+          ROTAS: ${{ inputs.rotas }}
           # Opcionais. Sem eles o coletor só grava os CSV, como antes.
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

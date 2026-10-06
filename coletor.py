@@ -98,7 +98,8 @@ def main():
     # A janela longa roda quando a última leitura longa tem mais de 20 h (ou nunca rodou),
     # em vez de depender de o cron cair entre 6h00 e 6h29, que o GitHub não garante.
     ultima = ultima_leitura_longa()
-    longa = os.environ.get("FORCAR_LONGA") == "1" or ultima is None or agora - ultima > dt.timedelta(hours=20)
+    so_trechos = bool(os.environ.get("ROTAS"))  # atualização de trechos pedida pelo site: só leitura curta
+    longa = os.environ.get("FORCAR_LONGA") == "1" or (not so_trechos and (ultima is None or agora - ultima > dt.timedelta(hours=20)))
     dias = JANELA_LONGA if longa else JANELA_CURTA
     datas = [(hoje + dt.timedelta(days=i)).isoformat() for i in range(dias + 1)]
 
@@ -146,9 +147,10 @@ def main():
     with gzip.open(caminho, "wt", encoding="utf-8") as f:
         f.write(buf.getvalue())
     # Cópia com nome fixo pro site ler sem precisar listar a pasta.
-    nome_fixo = "ultimo-30d.csv.gz" if longa else "ultimo.csv.gz"
-    with gzip.open(os.path.join(PASTA, "..", nome_fixo), "wt", encoding="utf-8") as f:
-        f.write(buf.getvalue())
+    if not so_trechos:  # a cópia de nome fixo é da leitura completa; atualização de trecho não pode sobrescrevê-la
+        nome_fixo = "ultimo-30d.csv.gz" if longa else "ultimo.csv.gz"
+        with gzip.open(os.path.join(PASTA, "..", nome_fixo), "wt", encoding="utf-8") as f:
+            f.write(buf.getvalue())
     print(f"{len(linhas)} voos gravados em {os.path.relpath(caminho)} ({vazias} buscas vazias)")
 
     # Banco D1 (Cloudflare) e segunda fonte. Qualquer falha aqui só avisa: o CSV acima já está
@@ -157,7 +159,7 @@ def main():
         import d1
         # Com trechos novos da fila a janela é de 30 dias, mas só eles foram lidos além do curto.
         # Isso é seguro: o D1 só marca como "saiu" o que estava numa busca feita agora.
-        d1.sincronizar(linhas, JANELA_LONGA if fila else dias, agora)
+        d1.sincronizar(linhas, JANELA_LONGA if fila else dias, agora, marcar_sync=not so_trechos)
         if fila:
             d1.concluir_fila(d1.banco_do_ambiente(), fila, int(agora.timestamp()))
             print(f"fila: {len(fila)} trechos passaram a ser vigiados.")
