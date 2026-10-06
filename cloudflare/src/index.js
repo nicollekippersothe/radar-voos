@@ -227,6 +227,11 @@ const rotas = {
     return { origem, destino, datas: results };
   },
 
+  // Versão publicada. Serve pra confirmar que o deploy automático (Workers Builds) está funcionando.
+  async "/api/versao"() {
+    return { versao: "2026-10-06-a", rotas: Object.keys(rotas).length };
+  },
+
   // Saúde: o que tem no banco e quando foi a última coleta.
   async "/api/saude"(url, env) {
     const q = (sql) => env.DB.prepare(sql).first();
