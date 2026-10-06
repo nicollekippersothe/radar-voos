@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const LINKS = [
   ["/", "Pra onde"],
   ["/melhor-dia", "Melhor dia"],
-  ["/relatorio", "Vai cair?"],
+  ["/relatorio", "Vai baixar?"],
 ];
 
 export function Nav() {

@@ -27,6 +27,8 @@ import os
 import statistics
 import sys
 
+import limpeza
+
 BRASILIA = dt.timezone(dt.timedelta(hours=-3))
 RAIZ = os.path.dirname(os.path.abspath(__file__))
 PASTA_LEITURAS = os.path.join(RAIZ, "dados", "leituras")
@@ -44,8 +46,13 @@ def carregar():
                 chave = (r["origem"], r["destino"], r["data_voo"], r["companhia"], r["h_saida"], int(r["paradas"]))
                 lido = dt.datetime.strptime(r["lido_em"], "%Y-%m-%d %H:%M").replace(tzinfo=BRASILIA)
                 series[chave].append((lido, int(r["preco"])))
-    for s in series.values():
-        s.sort()
+    # Um preço por instante (o menor, como o D1) e sem os picos de leitura. Ver limpeza.py.
+    for chave, s in list(series.items()):
+        menor = {}
+        for t, p in s:
+            if t not in menor or p < menor[t]:
+                menor[t] = p
+        series[chave] = limpeza.limpar(sorted(menor.items()))
     return series, len(arquivos)
 
 

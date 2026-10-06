@@ -2,6 +2,7 @@ import { nome } from "@/lib/dados";
 import { dadosHome, referencias, melhorReferencia } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, linkGoogle, hojeIso, somaDias } from "@/lib/formato";
+import { oportunidades } from "@/lib/oportunidades";
 import { FormHome } from "./filtros";
 import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "./blocos";
 import { Fragment } from "react";
@@ -19,12 +20,33 @@ const JANELAS = [
   ["30", "30 dias"],
 ];
 
+function Achado({ o, i }) {
+  const queda = o.base && o.preco < o.base ? Math.round(100 * (1 - o.preco / o.base)) : 0;
+  const etiqueta = o.tipo === "queda" && queda ? `${queda}% abaixo do que estava` : "bem abaixo do normal da rota";
+  const quando = o.horas_ate_saida < 1 ? "sai em menos de 1 h" : `sai em ${Math.round(o.horas_ate_saida)} h`;
+  return (
+    <Linha
+      href={linkGoogle(o.origem, o.destino, o.data)}
+      indice={i + 1}
+      titulo={nome(o.destino)}
+      etiqueta={etiqueta}
+      boa
+      detalhe={`${diaCurto(o.data)} · ${o.companhia} · ${quando}`}
+      horario={o.chegada ? intervalo(o.saida, o.chegada) : o.saida}
+      preco={reais(o.preco)}
+      aria={`${nome(o.destino)}, ${reais(o.preco)}, ${etiqueta}, ${quando}. Abre no Google Voos`}
+    />
+  );
+}
+
 export default async function Home({ searchParams }) {
   const sp = await searchParams;
   const origem = (sp.origem || "SAO").toUpperCase();
   const valor = Number(sp.valor || 500);
   const dias = Number(sp.dias || 3);
-  const [{ lista, origens, lidoEm, erro, semLeituras }, m] = await Promise.all([dadosHome({ origem, valor, dias }), modelo()]);
+  const [{ lista, origens, lidoEm, erro, semLeituras }, m, ops] = await Promise.all([dadosHome({ origem, valor, dias }), modelo(), oportunidades()]);
+  const achados = ops.lista.filter((o) => o.origem === origem);
+  const achadosOutros = ops.lista.filter((o) => o.origem !== origem).slice(0, 3);
   const hoje = hojeIso();
   const limite = somaDias(hoje, dias);
   const refsPorDestino = new Map(await Promise.all(lista.map(async (v) => [v.destino, await referencias(origem, v.destino)])));
@@ -42,6 +64,22 @@ export default async function Home({ searchParams }) {
       </section>
 
       <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} />
+
+      {!erro && (
+        <>
+          <Secao rotulo="Fora do normal agora" titulo={`Saindo de ${nome(origem)}`} />
+          {achados.length > 0 ? (
+            <div className="divide-y rounded-lg border bg-card">
+              {achados.map((o, i) => <Achado key={o.id} o={o} i={i} />)}
+            </div>
+          ) : (
+            <p className="max-w-[60ch] text-muted-foreground">
+              Nenhum voo de {nome(origem)} está muito abaixo do normal nas próximas 24 h.
+              {achadosOutros.length > 0 && " Em outras cidades: " + achadosOutros.map((o) => `${nome(o.origem)} → ${nome(o.destino)} por ${reais(o.preco)}`).join(", ") + "."}
+            </p>
+          )}
+        </>
+      )}
 
       {erro ? (
         <Erro href={`/?origem=${origem}&valor=${valor}&dias=${dias}`} />

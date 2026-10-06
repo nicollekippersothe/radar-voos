@@ -49,11 +49,11 @@ export function veredito(m, v) {
   if (!e) return null;
   const abaixo = t?.tipico ? 1 - v.preco / t.tipico : null;
   const jaCaiu = s && s.ref && v.preco <= s.ref * (1 - (m.limiar || 0.3));
-  if (jaCaiu) return { tom: "bom", curto: "já caiu", longo: `Já caiu ${Math.round(100 * (1 - v.preco / s.ref))}% em relação ao que custava antes. É o momento.`, e, abaixo };
+  if (jaCaiu) return { tom: "bom", curto: "já baixou", longo: `Já baixou ${Math.round(100 * (1 - v.preco / s.ref))}% em relação ao que custava antes. É o momento.`, e, abaixo };
   if (abaixo !== null && abaixo >= 0.15) return { tom: "bom", curto: `${Math.round(100 * abaixo)}% abaixo do comum`, longo: `Está ${Math.round(100 * abaixo)}% abaixo do que esse trecho costuma custar (R$ ${t.tipico}). Compra.`, e, abaixo };
   const faixaRs = e.de && e.pra ? ` Quando cai, vai de R$ ${e.de} pra R$ ${e.pra}.` : "";
-  if (e.p >= 0.2) return { tom: "espera", curto: `cai ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim caíram ${Math.round(100 * e.p)}% das vezes nas 48 h antes de sair, uns ${Math.round(e.horas_antes_med || 0)} h antes.${faixaRs} Se não precisa decidir agora, dá pra esperar.`, e, abaixo };
-  return { tom: "neutro", curto: `cai ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim raramente caem na última hora (${Math.round(100 * e.p)}% das vezes). Esperar costuma não compensar.`, e, abaixo };
+  if (e.p >= 0.2) return { tom: "espera", curto: `baixa ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim baixaram de preço ${Math.round(100 * e.p)}% das vezes nas 48 h antes de sair, uns ${Math.round(e.horas_antes_med || 0)} h antes.${faixaRs} Se não precisa decidir agora, dá pra esperar.`, e, abaixo };
+  return { tom: "neutro", curto: `baixa ${Math.round(100 * e.p)}% das vezes`, longo: `Voos assim raramente baixam de preço na última hora (${Math.round(100 * e.p)}% das vezes). Esperar costuma não compensar.`, e, abaixo };
 }
 
 /** Curva de preço por antecedência do trecho; cai na curva geral se o trecho tem pouca base. */

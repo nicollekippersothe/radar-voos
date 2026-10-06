@@ -16,6 +16,8 @@ import json
 import os
 import statistics as st
 
+import limpeza
+
 PASTA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dados", "leituras")
 
 
@@ -29,7 +31,14 @@ def carregar():
                 continue
             if p > 0:
                 series[(r[1], r[2], r[3], r[4], r[5], r[7])].append((dt.datetime.strptime(r[0], "%Y-%m-%d %H:%M"), p))
-    return {k: sorted(v) for k, v in series.items()}
+    limpa = {}
+    for k, v in series.items():
+        menor = {}
+        for t, p in v:  # um preço por instante (o menor, como o D1)
+            if t not in menor or p < menor[t]:
+                menor[t] = p
+        limpa[k] = limpeza.limpar(sorted(menor.items()))
+    return limpa
 
 
 def saida(k):

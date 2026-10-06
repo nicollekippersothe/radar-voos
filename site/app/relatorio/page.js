@@ -22,7 +22,7 @@ export default async function Padroes({ searchParams }) {
   const cabecalho = (
     <section className="mb-[2.5em] flex flex-col gap-[1em]">
       <span className="t-kicker text-brand">Viagens de última hora</span>
-      <h1 className="t-display max-w-[10ch]">Vai cair<br />ou não vai?</h1>
+      <h1 className="t-display max-w-[10ch]">Vai baixar<br />o preço?</h1>
       <p className="t-lead max-w-[42ch] text-muted-foreground">
         O radar acompanha cada voo até decolar e anota quando o preço despenca nas últimas 48 horas. Isto é o que ele aprendeu até agora.
       </p>
@@ -68,11 +68,11 @@ export default async function Padroes({ searchParams }) {
       />
 
       <div className="mt-[3em] grid gap-[1em] sm:grid-cols-3">
-        <Numero rotulo="Chance de cair 30% ou mais" valor={`${Math.round(100 * e.p)}%`} nota={`${e.k} de ${e.n} voos de ${e.nivel}`} destaque />
+        <Numero rotulo="Chance de baixar 30% ou mais" valor={`${Math.round(100 * e.p)}%`} nota={`${e.k} de ${e.n} voos de ${e.nivel}`} destaque />
         <Numero
           rotulo="Quando cai, vai de quanto pra quanto"
           valor={e.de ? `${reais(e.de)} → ${reais(e.pra)}` : "sem caso"}
-          nota={e.de ? (e.pra_p25 ? `metade dos casos termina entre ${reais(e.pra_p25)} e ${reais(e.pra_p75)}` : `queda mediana de ${Math.round(100 * e.queda_med)}%`) : "nenhum voo caiu ainda"}
+          nota={e.de ? (e.pra_p25 ? `metade dos casos termina entre ${reais(e.pra_p25)} e ${reais(e.pra_p75)}` : `queda mediana de ${Math.round(100 * e.queda_med)}%`) : "nenhum voo baixou ainda"}
           pequeno
         />
         <Numero rotulo="Quando o mínimo aparece" valor={e.horas_antes_med ? `${Math.round(e.horas_antes_med)} h antes` : "sem caso"} nota="mediana, antes da partida" />
@@ -80,7 +80,7 @@ export default async function Padroes({ searchParams }) {
       {rota && (
         <p className="mt-[1em] max-w-[60ch] text-muted-foreground">
           Nesse trecho, o voo mais barato do dia costuma sair por {reais(rota.tipico)}. O menor preço já visto foi {reais(rota.menor_visto)}.
-          {e.p >= 0.2 ? " Vale acompanhar: um em cada " + Math.round(1 / e.p) + " voos cai antes de decolar." : " Queda de última hora é rara aqui; se o preço está bom, não espere."}
+          {e.p >= 0.2 ? " Vale acompanhar: um em cada " + Math.round(1 / e.p) + " voos baixa de preço antes de decolar." : " A baixa de última hora é rara aqui; se o preço está bom, não espere."}
         </p>
       )}
 

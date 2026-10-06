@@ -37,11 +37,14 @@ jobs:
           D1_LIMITE_DIARIO: ${{ vars.D1_LIMITE_DIARIO }}
           TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
           TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
+      - name: Oportunidades (passagens fora do normal)
+        continue-on-error: true
+        run: python oportunidades.py
       - name: Guardar leituras no repositório
         run: |
           git config user.name "nicollekippersothe"
           git config user.email "167126609+nicollekippersothe@users.noreply.github.com"
-          git add dados
+          git add dados relatorios/oportunidades.json
           git diff --cached --quiet && exit 0
           git commit -m "leituras $(TZ=America/Sao_Paulo date '+%Y-%m-%d %H:%M')"
           for i in 1 2 3 4; do
