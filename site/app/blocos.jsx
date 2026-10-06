@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight, Plane, RefreshCw } from "lucide-react";
+import { ArrowUpRight, Plane, RefreshCw, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Secao({ rotulo, titulo }) {
@@ -75,5 +75,34 @@ export function Sinal({ tom, curto }) {
     >
       {curto}
     </Badge>
+  );
+}
+
+/** Faixa com o preço visto no Aviasales. Link de afiliado, por isso rel="sponsored". */
+export function OfertaAviasales({ href, preco, dia, companhia, diferenca, aria }) {
+  const mais = diferenca < 0;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="sponsored noopener noreferrer"
+      aria-label={aria}
+      className={cn("entra flex min-h-[44px] flex-wrap items-center gap-x-[0.75em] gap-y-[0.25em] px-[1.25em] py-[0.75em] text-[0.9em] transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:ring-inset", mais ? "bg-muted/40 hover:bg-muted/70" : "bg-brand/8 hover:bg-brand/14")}
+    >
+      <Tag className="size-[1em] text-brand" aria-hidden="true" />
+      <span className="font-medium">Aviasales viu {preco}</span>
+      <span className="text-muted-foreground">
+        {dia}{companhia ? ` · ${companhia}` : ""}{diferenca ? ` · ${Math.abs(diferenca)}% ${mais ? "mais caro" : "mais barato"} que o Google` : ""}
+      </span>
+      <span className="ml-auto flex items-center gap-[0.25em] font-medium text-brand">Ver oferta <ArrowUpRight className="size-[1em]" aria-hidden="true" /></span>
+    </a>
+  );
+}
+
+export function AvisoAfiliado() {
+  return (
+    <p className="mt-[1em] max-w-[60ch] text-[0.85em] leading-[1.4] text-muted-foreground">
+      Alguns links levam ao Aviasales, nosso parceiro: se você comprar por ele, podemos receber uma comissão, sem custo extra pra você. O preço do Aviasales é o menor visto nas últimas 48 h e pode ter mudado.
+    </p>
   );
 }

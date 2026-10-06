@@ -1,10 +1,10 @@
 import { nome } from "@/lib/dados";
-import { dadosDia } from "@/lib/fonte";
+import { dadosDia, referencias } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { Veredito } from "../veredito";
 import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, linkGoogle } from "@/lib/formato";
 import { FormDia } from "../filtros";
-import { Vazio, Linha, Secao, Erro } from "../blocos";
+import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "../blocos";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +19,8 @@ export default async function MelhorDia({ searchParams }) {
     dadosDia({ origem, destino, soDiretos, dia: sp.dia }),
     modelo(),
   ]);
+  const refs = await referencias(origem, destino);
+  const refDia = refs.find((x) => x.data_voo === diaSel);
   const menor = dias.length ? Math.min(...dias.map((d) => d.preco)) : 0;
   const maior = dias.length ? Math.max(...dias.map((d) => d.preco)) : 1;
   const mostrarTodos = sp.todos === "1";
@@ -50,7 +52,7 @@ export default async function MelhorDia({ searchParams }) {
         <Vazio
           titulo={`Sem leituras pra ${nome(origem)} → ${nome(destino)}`}
           texto="Esse trecho pode não estar na lista vigiada, ou o coletor ainda não passou por ele."
-          acao={<Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" render={<a href="/" />}>Ver pra onde dá pra ir</Button>}
+          acao={<Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" nativeButton={false} render={<a href="/" />}>Ver pra onde dá pra ir</Button>}
         />
       ) : (
         <>
@@ -93,7 +95,17 @@ export default async function MelhorDia({ searchParams }) {
             <>
               <Secao rotulo="Voos do dia" titulo={diaLongo(diaSel)} />
               <Veredito m={m} voo={voosDoDia[0]} />
-              <div className="divide-y rounded-lg border bg-card">
+              <div className="divide-y overflow-hidden rounded-lg border bg-card">
+                {refDia && (
+                  <OfertaAviasales
+                    href={refDia.link}
+                    preco={reais(refDia.referencia)}
+                    dia={diaCurto(refDia.data_voo)}
+                    companhia={refDia.companhia}
+                    diferenca={voosDoDia[0] ? Math.round((100 * (voosDoDia[0].preco - refDia.referencia)) / voosDoDia[0].preco) : 0}
+                    aria={`Aviasales viu ${reais(refDia.referencia)} em ${diaCurto(refDia.data_voo)}. Abre o Aviasales`}
+                  />
+                )}
                 {voosDoDia.map((v, i) => (
                   <Linha
                     key={i}
@@ -112,7 +124,7 @@ export default async function MelhorDia({ searchParams }) {
               </div>
               {todosDoDia.length > voosDoDia.length && (
                 <div className="mt-[1em]">
-                  <Button variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" render={<a href={`${base}&dia=${diaSel}&todos=1`} />}>
+                  <Button variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" nativeButton={false} render={<a href={`${base}&dia=${diaSel}&todos=1`} />}>
                     Ver todos os {todosDoDia.length} voos
                   </Button>
                 </div>
@@ -122,6 +134,7 @@ export default async function MelhorDia({ searchParams }) {
         </>
       )}
 
+      {refs.length > 0 && <AvisoAfiliado />}
     </>
   );
 }

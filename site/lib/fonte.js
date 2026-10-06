@@ -78,3 +78,21 @@ export async function dadosDia({ origem, destino, soDiretos, dia }) {
     lidoEm, erro,
   };
 }
+
+/** Segunda fonte (Aviasales): menor preço visto nas últimas 48 h por dia, num trecho. Vazio sem API. */
+export async function referencias(origem, destino) {
+  if (!temApi()) return [];
+  const r = await chamar("/api/fontes", { origem, destino });
+  return (r?.datas || []).filter((x) => x.referencia > 0 && x.link);
+}
+
+/** A oferta do Aviasales que vale mostrar na lista: dentro da janela e do valor, e pelo menos 3% abaixo do Google. */
+export function melhorReferencia(refs, { hoje, limite, valor, precoGoogle }) {
+  let melhor = null;
+  for (const x of refs) {
+    if (x.data_voo < hoje || x.data_voo > limite || x.referencia > valor) continue;
+    if (x.referencia > precoGoogle * 0.97) continue;
+    if (!melhor || x.referencia < melhor.referencia) melhor = x;
+  }
+  return melhor;
+}
