@@ -135,10 +135,11 @@ def gravar_d1(linhas, agora, banco=None):
     if banco is None or not linhas:
         return 0
     ts = int(agora.timestamp())
-    for k in range(0, len(linhas), 300):
+    # Lotes de 50: com o link de afiliado (~600 bytes) cada linha pesa; 300 estourava o limite de 100 KB por comando do D1.
+    for k in range(0, len(linhas), 50):
         vals = ",".join(
             "(" + ",".join(d1.lit(x) for x in (FONTE, o, d, data, preco, cia, paradas, link, ts)) + ")"
-            for o, d, data, preco, cia, paradas, link in linhas[k:k + 300])
+            for o, d, data, preco, cia, paradas, link in linhas[k:k + 50])
         banco.executar("INSERT OR REPLACE INTO referencia "
                        f"(fonte, origem, destino, data_voo, preco, companhia, paradas, link, lido_em) VALUES {vals};")
     return len(linhas)
