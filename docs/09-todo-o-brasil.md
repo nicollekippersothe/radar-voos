@@ -58,3 +58,19 @@ igual. A série por voo (necessária pra "Vai cair?") fica só na camada A.
 - Aprovar a Fase 0 (muda o que o coletor vigia, é reversível).
 - Aceitar gastar ~US$ 5/mês na Cloudflare a partir da Fase 1.
 - Escolher as 8 cidades-hub da camada B (a sugestão acima é só um começo).
+
+## Camada C no ar: trechos sob demanda (6/out/2026)
+
+Quem abre "Melhor dia" pode escolher qualquer par das 46 cidades. Se o trecho ainda não é vigiado:
+
+1. O site chama o Worker em `/api/pedir`, que valida as cidades, recusa pedido fora da lista e do teto
+   de 150 trechos novos, e põe o par na tabela `fila` do D1.
+2. Na próxima rodada o coletor lê a `fila`, busca o trecho com 30 dias de uma vez e o move pra `vigiadas`.
+   Daí em diante ele entra em todas as rodadas (3 dias a cada 30 min, 30 dias a cada 20 h).
+3. O site avisa "entrou na fila" e, quando o trecho já tem dado, mostra os preços normalmente.
+
+Limite do D1 gratuito: se a cota do dia estiver cheia, o trecho passa a ser vigiado mas os voos só
+entram no banco depois das 00:00 UTC.
+
+Publicação: o Worker é publicado sozinho pelo Cloudflare (Workers Builds) quando algo muda em `cloudflare/`.
+Teste do deploy: `https://radar-voos.nicollesothe.workers.dev/api/versao`.
