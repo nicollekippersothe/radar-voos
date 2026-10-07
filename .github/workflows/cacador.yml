@@ -1,0 +1,43 @@
+name: Caçador de tarifas (Florianópolis)
+
+on:
+  schedule:
+    - cron: "20,50 * * * *" # varre a cada 5 min durante ~25 min, a cada meia hora
+  workflow_dispatch:
+    inputs:
+      origem:
+        description: "Código da cidade de origem"
+        type: string
+        default: "FLN"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cacador
+  cancel-in-progress: false
+
+jobs:
+  cacar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python cacador.py varrer ${{ inputs.origem || 'FLN' }}
+      - run: python cacador.py relatorio ${{ inputs.origem || 'FLN' }}
+        continue-on-error: true
+      - name: Guardar no repositório
+        run: |
+          git config user.name "nicollekippersothe"
+          git config user.email "167126609+nicollekippersothe@users.noreply.github.com"
+          git add dados/cacador relatorios
+          git diff --cached --quiet && exit 0
+          git commit -m "caçador $(TZ=America/Sao_Paulo date '+%Y-%m-%d %H:%M') [vercel skip]"
+          for i in 1 2 3 4; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
