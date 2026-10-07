@@ -45,11 +45,13 @@ jobs:
       - name: Oportunidades (passagens fora do normal)
         continue-on-error: true
         run: python oportunidades.py
-      - name: Avisar por e-mail
+      - name: Avisar (Telegram e e-mail)
         continue-on-error: true
         run: python avisar.py
         env:
-          # Opcionais. Sem eles não envia nada.
+          # Opcionais. Cada canal só liga se os segredos existirem.
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           EMAIL_USUARIO: ${{ secrets.EMAIL_USUARIO }}
           EMAIL_SENHA: ${{ secrets.EMAIL_SENHA }}
           EMAIL_DESTINO: ${{ secrets.EMAIL_DESTINO }}
