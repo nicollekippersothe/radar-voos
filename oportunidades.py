@@ -39,6 +39,8 @@ BARATO_FATOR = 0.45
 BARATO_TETO = 500
 MIN_LEITURAS_BASE = 6
 MIN_VOOS_ROTA = 8
+MIN_VOOS_GRUPO = 8       # voos da companhia na origem pra testar queda geral
+QUEDA_GERAL_PCT = 0.12   # acima disso, a companhia caiu em bloco: falha de leitura, não oferta
 GUARDAR_DIAS = 7
 
 
@@ -94,13 +96,29 @@ def detectar(series, meta, agora):
         por_rota[(k[0], k[1])].append(p)
     med_rota = {r: st.median(v) for r, v in por_rota.items() if len(v) >= MIN_VOOS_ROTA}
 
+    bases = {}
+    for k, (p, s) in atual.items():
+        base_pts = [q for t, q in s if t <= agora - dt.timedelta(hours=3)]
+        bases[k] = st.median(base_pts) if len(base_pts) >= MIN_LEITURAS_BASE else None
+
+    # Queda em bloco: se muitos voos da mesma companhia na mesma origem caem juntos, o buscador
+    # devolveu preço diferente naquela leitura (comum de madrugada na Azul). Não é oferta.
+    grupos = collections.defaultdict(lambda: [0, 0])
+    for k, (p, _) in atual.items():
+        if bases[k]:
+            g = grupos[(k[0], k[3])]
+            g[1] += 1
+            g[0] += p <= (1 - QUEDA_MIN) * bases[k]
+    em_bloco = {g for g, (q, n) in grupos.items() if n >= MIN_VOOS_GRUPO and q / n >= QUEDA_GERAL_PCT}
+
     achados = []
     for k, (p, s) in atual.items():
         h = (partida(k) - agora).total_seconds() / 3600
         if h > HORIZONTE_H:
             continue
-        base_pts = [q for t, q in s if t <= agora - dt.timedelta(hours=3)]
-        base = st.median(base_pts) if len(base_pts) >= MIN_LEITURAS_BASE else None
+        if (k[0], k[3]) in em_bloco:
+            continue
+        base = bases[k]
         tipo = None
         mr = med_rota.get((k[0], k[1]))
         if base and 1 - p / base >= QUEDA_MIN and (mr is None or p <= QUEDA_FATOR_ROTA * mr):
