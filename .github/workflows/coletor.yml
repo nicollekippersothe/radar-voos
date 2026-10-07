@@ -45,6 +45,15 @@ jobs:
       - name: Oportunidades (passagens fora do normal)
         continue-on-error: true
         run: python oportunidades.py
+      - name: Avisar por e-mail
+        continue-on-error: true
+        run: python avisar.py
+        env:
+          # Opcionais. Sem eles não envia nada.
+          EMAIL_USUARIO: ${{ secrets.EMAIL_USUARIO }}
+          EMAIL_SENHA: ${{ secrets.EMAIL_SENHA }}
+          EMAIL_DESTINO: ${{ secrets.EMAIL_DESTINO }}
+          AVISAR_ORIGENS: ${{ vars.AVISAR_ORIGENS }}
       - name: Guardar leituras no repositório
         run: |
           git config user.name "nicollekippersothe"
