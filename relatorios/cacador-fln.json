@@ -1,14 +1,14 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-10-08 06:27",
- "voos_observados": 3330,
- "eventos": 28,
+ "gerado_em": "2026-10-08 13:56",
+ "voos_observados": 3348,
+ "eventos": 29,
  "duracao_min": {
   "mediana": 30,
   "p25": 30,
   "p75": 75
  },
- "uma_leitura_so_pct": 54,
+ "uma_leitura_so_pct": 52,
  "inicio_por_hora": {
   "00h": 2,
   "01h": 0,
@@ -20,7 +20,7 @@
   "07h": 0,
   "08h": 0,
   "09h": 2,
-  "10h": 1,
+  "10h": 2,
   "11h": 3,
   "12h": 2,
   "13h": 2,
@@ -36,12 +36,12 @@
   "23h": 4
  },
  "por_companhia": {
-  "Gol": 21,
+  "Gol": 22,
   "LATAM": 6,
   "Azul": 1
  },
  "por_destino": {
-  "SAO": 8,
+  "SAO": 9,
   "RIO": 4,
   "POA": 9,
   "CWB": 2,
@@ -101,6 +101,23 @@
   },
   {
    "origem": "FLN",
+   "destino": "SAO",
+   "data": "2026-10-10",
+   "saida": "10:00",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-10-08 10:01",
+   "fim": "2026-10-08 12:01",
+   "leituras": 6,
+   "duracao_min": 150,
+   "menor_preco": 1619,
+   "preco_normal": 3648,
+   "queda_pct": 56,
+   "horas_ate_partida": 48.0,
+   "hora_do_inicio": 10
+  },
+  {
+   "origem": "FLN",
    "destino": "XAP",
    "data": "2026-10-08",
    "saida": "15:15",
@@ -152,6 +169,23 @@
   }
  ],
  "recentes": [
+  {
+   "origem": "FLN",
+   "destino": "SAO",
+   "data": "2026-10-10",
+   "saida": "10:00",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-10-08 10:01",
+   "fim": "2026-10-08 12:01",
+   "leituras": 6,
+   "duracao_min": 150,
+   "menor_preco": 1619,
+   "preco_normal": 3648,
+   "queda_pct": 56,
+   "horas_ate_partida": 48.0,
+   "hora_do_inicio": 10
+  },
   {
    "origem": "FLN",
    "destino": "POA",
@@ -474,23 +508,6 @@
    "queda_pct": 56,
    "horas_ate_partida": 50.7,
    "hora_do_inicio": 19
-  },
-  {
-   "origem": "FLN",
-   "destino": "RIO",
-   "data": "2026-10-07",
-   "saida": "10:40",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-10-06 11:00",
-   "fim": "2026-10-06 11:30",
-   "leituras": 3,
-   "duracao_min": 60,
-   "menor_preco": 1219,
-   "preco_normal": 2396,
-   "queda_pct": 49,
-   "horas_ate_partida": 23.7,
-   "hora_do_inicio": 11
   }
  ]
 }
