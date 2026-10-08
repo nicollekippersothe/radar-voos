@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 
 const LINKS = [
   ["/", "Pra onde"],
+  ["/planejar", "Meu orçamento"],
   ["/melhor-dia", "Melhor dia"],
   ["/relatorio", "Vai baixar?"],
 ];

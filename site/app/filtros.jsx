@@ -91,3 +91,29 @@ export function FormRota({ origem, origens, destino, destinos, cia, cias, faixa,
     </form>
   );
 }
+
+export function FormPlanejar({ origem, origens, destino, destinos, valor }) {
+  return (
+    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+      <Campo rotulo="Saindo de">
+        <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
+      </Campo>
+      <Campo rotulo="Pra">
+        <Escolha name="destino" valor={destino} opcoes={destinos} rotuloAria="Destino" />
+      </Campo>
+      <Campo rotulo="Posso gastar até">
+        <div className="relative">
+          <span className="pointer-events-none absolute inset-y-0 left-[1em] flex items-center text-muted-foreground">R$</span>
+          <Input
+            type="number" name="valor" defaultValue={valor} min="100" step="50" inputMode="numeric"
+            aria-label="Orçamento em reais"
+            className="h-[44px] rounded-md bg-card pl-[2.5em] text-[1em] t-num"
+          />
+        </div>
+      </Campo>
+      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+        Planejar <ArrowRight data-icon="inline-end" />
+      </Button>
+    </form>
+  );
+}

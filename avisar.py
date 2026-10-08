@@ -6,8 +6,10 @@ Roda depois de oportunidades.py. Cada canal só liga se os segredos existirem; s
   EMAIL_USUARIO     conta que envia (Gmail com senha de app, SMTP smtp.gmail.com:465)
   EMAIL_SENHA       senha de app, nunca a senha da conta
   EMAIL_DESTINO     quem recebe o e-mail (padrão: a própria conta)
-  AVISAR_ORIGENS    códigos separados por vírgula (padrão: FLN)
-Cada oportunidade é avisada uma vez; o registro guarda "avisado_em".
+  AVISAR_ORIGENS    códigos separados por vírgula (padrão: FLN), vale pras quedas fora do normal
+  AVISAR_TETO       reais (padrão 300): qualquer voo de qualquer origem a esse preço ou menos, nas próximas 72 h,
+                    em duas leituras seguidas. 0 desliga.
+Cada oportunidade é avisada uma vez; o registro guarda "avisado_em" (e "baratos" pros avisos de teto).
 """
 
 import datetime as dt
@@ -69,6 +71,28 @@ def enviar_telegram(token, chat, novos):
             raise RuntimeError(f"Telegram respondeu {r.status}")
 
 
+def baratos(reg, teto, agora):
+    """Voos a `teto` reais ou menos, em duas leituras seguidas, ainda não avisados."""
+    import oportunidades
+    series, meta = oportunidades.carregar(dias=2, ate=agora)
+    ja = reg.setdefault("baratos", {})
+    achados = []
+    for k, d in series.items():
+        h = (oportunidades.partida(k) - agora).total_seconds() / 3600
+        if not (oportunidades.MIN_ANTES_H <= h <= 72):
+            continue
+        ts = sorted(d)
+        if len(ts) < 2 or ts[-1] < agora - dt.timedelta(minutes=45) or d[ts[-1]] > teto or d[ts[-2]] > teto:
+            continue
+        chave = "|".join(map(str, k))
+        if chave in ja:
+            continue
+        achados.append({"origem": k[0], "destino": k[1], "data": k[2], "saida": k[4], "chegada": meta.get(k, ""),
+                        "companhia": k[3], "paradas": k[5], "preco": d[ts[-1]], "horas_ate_saida": round(h, 1),
+                        "_chave": chave})
+    return achados
+
+
 def principal():
     usuario, senha = os.environ.get("EMAIL_USUARIO"), os.environ.get("EMAIL_SENHA")
     destino = os.environ.get("EMAIL_DESTINO") or usuario
@@ -82,6 +106,17 @@ def principal():
         return
     novos = [e for e in reg.get("eventos", {}).values()
              if e.get("status") == "aberta" and e["origem"] in origens and not e.get("avisado_em")]
+    agora_dt = dt.datetime.now(BRASILIA).replace(tzinfo=None, second=0, microsecond=0)
+    teto = int(os.environ.get("AVISAR_TETO") or 300)
+    lista_teto = []
+    if teto > 0:
+        try:
+            lista_teto = baratos(reg, teto, agora_dt)
+        except Exception as e:
+            print(f"avisar: não consegui checar o teto ({e})", file=sys.stderr)
+    ja_vistos = {(e["origem"], e["destino"], e["data"], e["saida"], e["companhia"]) for e in novos}
+    lista_teto = [b for b in lista_teto if (b["origem"], b["destino"], b["data"], b["saida"], b["companhia"]) not in ja_vistos]
+    novos = novos + lista_teto
     if not novos:
         print("avisar: nada novo.")
         return
@@ -105,7 +140,12 @@ def principal():
         sys.exit(1)  # não marca como avisado: tenta de novo na próxima rodada
     agora = dt.datetime.now(BRASILIA).strftime("%Y-%m-%d %H:%M")
     for e in novos:
-        e["avisado_em"] = agora
+        if "_chave" in e:
+            reg.setdefault("baratos", {})[e["_chave"]] = agora
+        else:
+            e["avisado_em"] = agora
+    corte = (agora_dt - dt.timedelta(days=5)).strftime("%Y-%m-%d")
+    reg["baratos"] = {c: t for c, t in reg.get("baratos", {}).items() if t[:10] >= corte}
     with open(ARQ, "w", encoding="utf-8") as f:
         json.dump(reg, f, ensure_ascii=False, indent=1, sort_keys=True)
     print(f"avisar: {len(novos)} oportunidade(s) enviada(s) por {' e '.join(enviados)}.")

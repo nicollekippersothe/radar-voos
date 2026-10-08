@@ -305,6 +305,31 @@ def curva_antecedencia(series):
     return saida
 
 
+def horas_por_rota(series, minimo=60, dia_denso=8):
+    """Preço relativo por hora de leitura, por trecho: média de preço/mediana do voo naquele dia.
+
+    Abaixo de 1 = a hora em que o preço costuma estar mais barato que o resto do dia. Só entram dias
+    com leitura densa (voos dos próximos 3 dias, lidos de 30 em 30 min)."""
+    acum = collections.defaultdict(lambda: [[0.0, 0] for _ in range(24)])
+    for chave, serie in series.items():
+        rota = f"{chave[0]}-{chave[1]}"
+        por_dia = collections.defaultdict(list)
+        for t, p in serie:
+            por_dia[t.date()].append((t.hour, p))
+        for lst in por_dia.values():
+            if len(lst) < dia_denso:
+                continue
+            med = statistics.median(p for _, p in lst)
+            for h, p in lst:
+                acum[rota][h][0] += p / med
+                acum[rota][h][1] += 1
+    saida = {}
+    for rota, a in acum.items():
+        if sum(x[1] for x in a) >= minimo:
+            saida[rota] = [round(x[0] / x[1], 3) if x[1] >= 5 else None for x in a]
+    return saida
+
+
 def modelo(voos, series, agora):
     """Monta o modelo hierárquico e o estado dos voos ainda abertos."""
     geral = _no(voos, LIMIAR_QUEDA if not voos else sum(1 for v in voos if v["queda_48h"] >= LIMIAR_QUEDA) / len(voos))
@@ -378,6 +403,8 @@ def modelo(voos, series, agora):
         "nos": nos,
         "cortes": cortes,
         "hora_do_min": {str(h): n for h, n in sorted(hora_do_min.items())},
+        "horas": horas_por_rota(series),
+        "desde": min(t for serie in series.values() for t, _ in serie).strftime("%Y-%m-%d"),
         "rotas": rotas,
         "curva": curva_antecedencia(series),
         "abertos": abertos,

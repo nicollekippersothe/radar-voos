@@ -1,7 +1,7 @@
 import { nome } from "@/lib/dados";
 import { dadosHome, referencias, melhorReferencia } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
-import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, linkGoogle, hojeIso, somaDias } from "@/lib/formato";
+import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, lidoCurto, lidoVoo, linkGoogle, hojeIso, somaDias } from "@/lib/formato";
 import { oportunidades } from "@/lib/oportunidades";
 import { FormHome } from "./filtros";
 import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "./blocos";
@@ -31,7 +31,7 @@ function Achado({ o, i }) {
       titulo={nome(o.destino)}
       etiqueta={etiqueta}
       boa
-      detalhe={`${diaCurto(o.data)} · ${o.companhia} · ${quando}`}
+      detalhe={`${diaCurto(o.data)} · ${o.companhia} · ${quando} · ${lidoCurto(o.ultima_vista)}`}
       horario={o.chegada ? intervalo(o.saida, o.chegada) : o.saida}
       preco={reais(o.preco)}
       aria={`${nome(o.destino)}, ${reais(o.preco)}, ${etiqueta}, ${quando}. Abre no Google Voos`}
@@ -113,7 +113,7 @@ export default async function Home({ searchParams }) {
                 etiqueta={v.paradas === 0 ? "direto" : paradas(v.paradas)}
                 boa={v.paradas === 0}
                 sinal={(() => { const r = veredito(m, v); return r && r.tom === "bom" ? r : null; })()}
-                detalhe={`${diaCurto(v.data_voo)} · ${v.companhia} · ${duracao(v.duracao_min)}`}
+                detalhe={`${diaCurto(v.data_voo)} · ${v.companhia} · ${duracao(v.duracao_min)} · ${lidoVoo(v, lidoEm)}`}
                 horario={intervalo(v.h_saida, v.h_chegada)}
                 preco={reais(v.preco)}
                 aria={`${nome(v.destino)}, ${reais(v.preco)}, ${diaCurto(v.data_voo)}, ${v.companhia}, ${paradas(v.paradas)}. Abre no Google Voos`}

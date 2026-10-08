@@ -2,12 +2,13 @@ import { nome, CIDADES } from "@/lib/dados";
 import { dadosDia, referencias, pedirTrecho } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { Veredito } from "../veredito";
-import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, linkGoogle } from "@/lib/formato";
+import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, lidoCurto, lidoVoo, linkGoogle } from "@/lib/formato";
 import { FormDia } from "../filtros";
 import { Atualizar } from "../atualizar";
 import { temApi } from "@/lib/api";
 import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "../blocos";
 import { Button } from "@/components/ui/button";
+import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
@@ -82,19 +83,22 @@ export default async function MelhorDia({ searchParams }) {
             </div>
           </div>
 
-          <Secao rotulo={`${dias.length} dias com leitura`} />
+          <Secao rotulo={`${dias.length} dias com leitura`} titulo="Preço por dia do voo" />
+          <p className="-mt-[0.5em] mb-[1em] max-w-[62ch] text-[0.9em] text-muted-foreground">
+            Cada linha é o menor preço que existe agora pra viajar naquele dia, e você compra hoje. Toque no dia pra ver os voos dele, ou em Comprar pra abrir a busca no Google Voos. Ao abrir, confira o valor: o preço pode ter mudado desde a leitura{lidoEm ? ` (${lidoCurto(lidoEm)})` : ""}, e os dias depois do terceiro são lidos só uma vez por dia.
+          </p>
           <ol className="entra flex flex-col gap-[0.25em] rounded-lg border bg-card p-[0.75em]">
             {dias.map((d) => {
               const sel = d.data_voo === diaSel;
               const top = d.preco === menor;
               return (
-                <li key={d.data_voo}>
+                <li key={d.data_voo} className="flex items-center gap-[0.25em]">
                   <a
                     href={`${base}&dia=${d.data_voo}`}
                     aria-current={sel ? "true" : undefined}
                     aria-label={`${diaLongo(d.data_voo)}, ${reais(d.preco)}${top ? ", o mais barato" : ""}`}
                     className={cn(
-                      "grid min-h-[44px] grid-cols-[5.5em_1fr_auto] items-center gap-[1em] rounded-md px-[0.75em] py-[0.5em] transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
+                      "grid flex-1 min-h-[44px] grid-cols-[5.5em_1fr_auto] items-center gap-[1em] rounded-md px-[0.75em] py-[0.5em] transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
                       sel && "bg-muted"
                     )}
                   >
@@ -103,6 +107,15 @@ export default async function MelhorDia({ searchParams }) {
                       <i className={cn("block h-full rounded-sm", top ? "bg-brand" : "bg-foreground/70")} style={{ width: `${Math.max(4, (100 * d.preco) / maior)}%` }} />
                     </span>
                     <span className={cn("t-num font-display text-[1.1em] font-semibold tracking-[-0.03em]", top && "text-brand")}>{reais(d.preco)}{top && <span className="sr-only"> (mais barato)</span>}</span>
+                  </a>
+                  <a
+                    href={linkGoogle(origem, destino, d.data_voo)}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={`Comprar ${diaCurto(d.data_voo)} no Google Voos`}
+                    className="flex min-h-[44px] shrink-0 items-center gap-[0.25em] rounded-md px-[0.75em] text-[0.85em] font-medium text-brand hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50"
+                  >
+                    Comprar <ArrowUpRight className="size-[1em]" aria-hidden="true" />
                   </a>
                 </li>
               );
@@ -133,7 +146,7 @@ export default async function MelhorDia({ searchParams }) {
                     etiqueta={v.paradas === 0 ? "direto" : paradas(v.paradas)}
                     boa={v.paradas === 0}
                     sinal={veredito(m, v)}
-                    detalhe={duracao(v.duracao_min)}
+                    detalhe={`${duracao(v.duracao_min)} · ${lidoVoo(v, lidoEm)}`}
                     horario={intervalo(v.h_saida, v.h_chegada)}
                     preco={reais(v.preco)}
                     aria={`${v.companhia}, ${intervalo(v.h_saida, v.h_chegada)}, ${paradas(v.paradas)}, ${reais(v.preco)}. Abre no Google Voos`}

@@ -53,3 +53,17 @@ export function linkGoogle(origem, destino, data) {
   const q = `Flights to ${destino} from ${origem} on ${data} one way`;
   return `https://www.google.com/travel/flights?q=${encodeURIComponent(q)}&curr=BRL&hl=pt-BR`;
 }
+
+/** "lido 13:30" se foi hoje, "lido 07/10 13:30" se não. Vazio sem horário. */
+export function lidoCurto(lidoEm) {
+  if (!lidoEm || lidoEm.length < 16) return "";
+  const hora = lidoEm.slice(11, 16);
+  return lidoEm.slice(0, 10) === hojeIso() ? `lido ${hora}` : `lido ${lidoEm.slice(8, 10)}/${lidoEm.slice(5, 7)} ${hora}`;
+}
+
+/** Horário de leitura de um voo. Voos depois de 3 dias só entram na leitura diária, então o horário geral não vale pra eles. */
+export function lidoVoo(v, lidoEm) {
+  if (v.lido_em) return lidoCurto(v.lido_em);
+  if (v.data_voo && v.data_voo > somaDias(hojeIso(), 3)) return "lido 1 vez por dia";
+  return lidoCurto(lidoEm);
+}
