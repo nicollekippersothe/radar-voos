@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-09 15:31",
+ "atualizado_em": "2026-10-09 15:58",
  "eventos": {
   "01f84d42a8": {
    "base": 1447,
@@ -785,9 +785,9 @@
    "data": "2026-10-09",
    "destino": "RIO",
    "detectado_em": "2026-10-08 13:36",
-   "horas_ate_saida": 5.8,
+   "horas_ate_saida": 5.4,
    "id": "4d463115ee",
-   "mediana_rota": 2780,
+   "mediana_rota": 2370,
    "menor_preco": 1409,
    "origem": "SAO",
    "paradas": 0,
@@ -796,7 +796,7 @@
    "saida": "21:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 1
   },
   "4f4a0c4aab": {
@@ -890,7 +890,7 @@
    "data": "2026-10-09",
    "destino": "CWB",
    "detectado_em": "2026-10-08 11:31",
-   "horas_ate_saida": 4.7,
+   "horas_ate_saida": 4.3,
    "id": "5b70395b28",
    "mediana_rota": 1657,
    "menor_preco": 761,
@@ -901,7 +901,7 @@
    "saida": "20:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 2
   },
   "5bf23c957c": {
@@ -1142,7 +1142,7 @@
    "data": "2026-10-10",
    "destino": "SAO",
    "detectado_em": "2026-10-09 13:02",
-   "horas_ate_saida": 14.2,
+   "horas_ate_saida": 13.8,
    "id": "6d4fdf19f1",
    "mediana_rota": 2329,
    "menor_preco": 901,
@@ -1153,7 +1153,7 @@
    "saida": "05:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 0
   },
   "6e19b56faf": {
@@ -1520,7 +1520,7 @@
    "data": "2026-10-09",
    "destino": "SAO",
    "detectado_em": "2026-10-08 10:01",
-   "horas_ate_saida": 3.8,
+   "horas_ate_saida": 3.4,
    "id": "94e3e2752f",
    "mediana_rota": 2675,
    "menor_preco": 993,
@@ -1531,7 +1531,7 @@
    "saida": "19:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 0
   },
   "96944ec9f8": {
@@ -1681,6 +1681,27 @@
    "ultima_vista": "2026-10-08 11:01",
    "voos_parecidos": 0
   },
+  "a793f291ab": {
+   "base": 1747,
+   "chegada": "17:20",
+   "companhia": "Azul",
+   "data": "2026-10-10",
+   "destino": "SAO",
+   "detectado_em": "2026-10-09 15:58",
+   "horas_ate_saida": 23.9,
+   "id": "a793f291ab",
+   "mediana_rota": 1658,
+   "menor_preco": 866,
+   "origem": "UDI",
+   "paradas": 0,
+   "preco": 866,
+   "preco_inicial": 866,
+   "saida": "15:50",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-09 15:58",
+   "voos_parecidos": 0
+  },
   "a9d6dda997": {
    "base": 918,
    "chegada": "22:45",
@@ -1765,6 +1786,27 @@
    "ultima_vista": "2026-10-06 19:31",
    "voos_parecidos": 0
   },
+  "ad07a1d707": {
+   "base": 3835,
+   "chegada": "17:45",
+   "companhia": "LATAM",
+   "data": "2026-10-10",
+   "destino": "SSA",
+   "detectado_em": "2026-10-09 15:58",
+   "horas_ate_saida": 19.4,
+   "id": "ad07a1d707",
+   "mediana_rota": 2705,
+   "menor_preco": 1536,
+   "origem": "BHZ",
+   "paradas": 1,
+   "preco": 1536,
+   "preco_inicial": 1536,
+   "saida": "11:25",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-09 15:58",
+   "voos_parecidos": 0
+  },
   "ad6acecbe7": {
    "base": 2351,
    "chegada": "09:35",
@@ -1814,7 +1856,7 @@
    "data": "2026-10-10",
    "destino": "SAO",
    "detectado_em": "2026-10-09 15:01",
-   "horas_ate_saida": 23.5,
+   "horas_ate_saida": 23.0,
    "id": "af4870172d",
    "mediana_rota": 1406,
    "menor_preco": 931,
@@ -1825,7 +1867,7 @@
    "saida": "15:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 1
   },
   "b0252f5bc3": {
@@ -1835,7 +1877,7 @@
    "data": "2026-10-10",
    "destino": "RIO",
    "detectado_em": "2026-10-09 13:31",
-   "horas_ate_saida": 21.6,
+   "horas_ate_saida": 21.2,
    "id": "b0252f5bc3",
    "mediana_rota": 2545,
    "menor_preco": 1186,
@@ -1846,7 +1888,7 @@
    "saida": "13:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 0
   },
   "b35fabe2ff": {
@@ -2143,6 +2185,27 @@
    "ultima_vista": "2026-10-07 15:31",
    "voos_parecidos": 0
   },
+  "cf014840bc": {
+   "base": 3099,
+   "chegada": "17:50",
+   "companhia": "LATAM",
+   "data": "2026-10-10",
+   "destino": "SSA",
+   "detectado_em": "2026-10-09 15:58",
+   "horas_ate_saida": 23.5,
+   "id": "cf014840bc",
+   "mediana_rota": 2293,
+   "menor_preco": 1524,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1524,
+   "preco_inicial": 1524,
+   "saida": "15:30",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-09 15:58",
+   "voos_parecidos": 0
+  },
   "cf5c8d0d63": {
    "base": 1257,
    "chegada": "12:00",
@@ -2213,7 +2276,7 @@
    "data": "2026-10-09",
    "destino": "SAO",
    "detectado_em": "2026-10-09 15:01",
-   "horas_ate_saida": 5.7,
+   "horas_ate_saida": 5.2,
    "id": "d62d2755a9",
    "mediana_rota": 1406,
    "menor_preco": 820,
@@ -2224,7 +2287,7 @@
    "saida": "21:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 0
   },
   "d7c706f587": {
@@ -2291,25 +2354,25 @@
    "voos_parecidos": 0
   },
   "df3bef8aff": {
-   "base": 2848,
-   "chegada": "04:25",
+   "base": 3141,
+   "chegada": "13:15",
    "companhia": "Azul",
    "data": "2026-10-10",
    "destino": "RIO",
    "detectado_em": "2026-10-09 10:07",
-   "horas_ate_saida": 11.8,
+   "horas_ate_saida": 20.2,
    "id": "df3bef8aff",
-   "mediana_rota": 2780,
-   "menor_preco": 1403,
+   "mediana_rota": 2370,
+   "menor_preco": 860,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1403,
+   "preco": 860,
    "preco_inicial": 1403,
-   "saida": "03:20",
+   "saida": "12:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-10-09 15:58",
+   "voos_parecidos": 2
   },
   "e177145307": {
    "base": 3694,
@@ -2339,9 +2402,9 @@
    "data": "2026-10-10",
    "destino": "VIX",
    "detectado_em": "2026-10-09 11:31",
-   "horas_ate_saida": 15.5,
+   "horas_ate_saida": 15.0,
    "id": "e5b331105f",
-   "mediana_rota": 1972,
+   "mediana_rota": 2202,
    "menor_preco": 1241,
    "origem": "SAO",
    "paradas": 0,
@@ -2350,7 +2413,7 @@
    "saida": "07:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
+   "ultima_vista": "2026-10-09 15:58",
    "voos_parecidos": 0
   },
   "ea72d8f80f": {
@@ -2549,9 +2612,9 @@
    "data": "2026-10-09",
    "destino": "GYN",
    "detectado_em": "2026-10-08 18:31",
-   "horas_ate_saida": 5.2,
+   "horas_ate_saida": 4.7,
    "id": "fdca4cc2c3",
-   "mediana_rota": 1266,
+   "mediana_rota": 1264,
    "menor_preco": 688,
    "origem": "SAO",
    "paradas": 0,
@@ -2560,8 +2623,8 @@
    "saida": "20:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-09 15:31",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-10-09 15:58",
+   "voos_parecidos": 2
   },
   "fdd186dcde": {
    "base": 3055,
