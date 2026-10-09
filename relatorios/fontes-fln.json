@@ -1,0 +1,104 @@
+{
+ "origem": "FLN",
+ "gerado_em": "2026-10-09 17:50",
+ "rotas": {
+  "POA": {
+   "dias_aviasales": 4,
+   "dias_google": 30,
+   "dias_com_os_dois": 4,
+   "mediana_aviasales_sobre_google": 0.75,
+   "aviasales_mais_barato_3pct": 3,
+   "aviasales_mais_caro_15pct": 0,
+   "muito_abaixo_do_google_30pct": [
+    {
+     "data": "2026-10-16",
+     "aviasales": 628,
+     "google": 1046
+    }
+   ]
+  },
+  "RIO": {
+   "dias_aviasales": 14,
+   "dias_google": 29,
+   "dias_com_os_dois": 13,
+   "mediana_aviasales_sobre_google": 0.79,
+   "aviasales_mais_barato_3pct": 10,
+   "aviasales_mais_caro_15pct": 0,
+   "muito_abaixo_do_google_30pct": [
+    {
+     "data": "2026-10-15",
+     "aviasales": 699,
+     "google": 1226
+    },
+    {
+     "data": "2026-10-23",
+     "aviasales": 546,
+     "google": 923
+    },
+    {
+     "data": "2026-10-25",
+     "aviasales": 568,
+     "google": 859
+    },
+    {
+     "data": "2026-10-31",
+     "aviasales": 436,
+     "google": 686
+    }
+   ]
+  },
+  "SAO": {
+   "dias_aviasales": 23,
+   "dias_google": 30,
+   "dias_com_os_dois": 22,
+   "mediana_aviasales_sobre_google": 0.99,
+   "aviasales_mais_barato_3pct": 9,
+   "aviasales_mais_caro_15pct": 2,
+   "muito_abaixo_do_google_30pct": [
+    {
+     "data": "2026-10-11",
+     "aviasales": 748,
+     "google": 1338
+    },
+    {
+     "data": "2026-10-15",
+     "aviasales": 622,
+     "google": 1147
+    },
+    {
+     "data": "2026-10-29",
+     "aviasales": 499,
+     "google": 783
+    }
+   ]
+  },
+  "XAP": {
+   "dias_aviasales": 3,
+   "dias_google": 31,
+   "dias_com_os_dois": 3,
+   "mediana_aviasales_sobre_google": 0.55,
+   "aviasales_mais_barato_3pct": 3,
+   "aviasales_mais_caro_15pct": 0,
+   "muito_abaixo_do_google_30pct": [
+    {
+     "data": "2026-10-14",
+     "aviasales": 787,
+     "google": 1521
+    },
+    {
+     "data": "2026-10-16",
+     "aviasales": 697,
+     "google": 1278
+    }
+   ]
+  }
+ },
+ "geral": {
+  "pares": 42,
+  "mediana": 0.87,
+  "p25": 0.71,
+  "p75": 1.02,
+  "aviasales_mais_barato_3pct": 60,
+  "aviasales_mais_caro_15pct": 5
+ }
+}
