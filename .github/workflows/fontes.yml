@@ -1,0 +1,38 @@
+name: Comparar fontes (Aviasales x Google)
+
+on:
+  workflow_dispatch:
+    inputs:
+      origem:
+        description: "Código da cidade de origem"
+        type: string
+        default: "FLN"
+
+permissions:
+  contents: write
+
+jobs:
+  comparar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python comparar_fontes.py ${{ inputs.origem || 'FLN' }}
+        env:
+          TRAVELPAYOUTS_TOKEN: ${{ secrets.TRAVELPAYOUTS_TOKEN }}
+          TRAVELPAYOUTS_MARKER: ${{ secrets.TRAVELPAYOUTS_MARKER }}
+      - name: Guardar o relatório
+        run: |
+          git config user.name "nicollekippersothe"
+          git config user.email "167126609+nicollekippersothe@users.noreply.github.com"
+          git add relatorios/fontes-*.json
+          git diff --cached --quiet && exit 0
+          git commit -m "comparação de fontes [vercel skip]"
+          for i in 1 2 3 4; do
+            git pull --rebase && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
