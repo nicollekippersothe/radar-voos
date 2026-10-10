@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-10 03:02",
+ "atualizado_em": "2026-10-10 03:31",
  "eventos": {
   "01f84d42a8": {
    "base": 1447,
@@ -449,9 +449,9 @@
    "data": "2026-10-10",
    "destino": "SAO",
    "detectado_em": "2026-10-10 01:02",
-   "horas_ate_saida": 15.4,
+   "horas_ate_saida": 14.9,
    "id": "36028cc2be",
-   "mediana_rota": 1666,
+   "mediana_rota": 1641,
    "menor_preco": 935,
    "origem": "SSA",
    "paradas": 0,
@@ -460,7 +460,7 @@
    "saida": "18:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 1
   },
   "382a03ea6a": {
@@ -1037,7 +1037,7 @@
    "data": "2026-10-10",
    "destino": "REC",
    "detectado_em": "2026-10-10 00:31",
-   "horas_ate_saida": 17.7,
+   "horas_ate_saida": 17.2,
    "id": "61d2f9fb22",
    "mediana_rota": 2473,
    "menor_preco": 1189,
@@ -1048,7 +1048,7 @@
    "saida": "20:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 0
   },
   "62d801c930": {
@@ -1472,15 +1472,15 @@
    "voos_parecidos": 0
   },
   "885bfb8bf2": {
-   "base": 1117,
+   "base": 501,
    "chegada": "19:55",
    "companhia": "LATAM",
    "data": "2026-10-10",
    "destino": "FOR",
    "detectado_em": "2026-10-09 18:31",
-   "horas_ate_saida": 15.5,
+   "horas_ate_saida": 15.0,
    "id": "885bfb8bf2",
-   "mediana_rota": 2739,
+   "mediana_rota": 2716,
    "menor_preco": 457,
    "origem": "REC",
    "paradas": 0,
@@ -1488,8 +1488,8 @@
    "preco_inicial": 501,
    "saida": "18:30",
    "status": "aberta",
-   "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "tipo": "barato",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 0
   },
   "88f5e1d248": {
@@ -1499,7 +1499,7 @@
    "data": "2026-10-10",
    "destino": "SSA",
    "detectado_em": "2026-10-09 17:31",
-   "horas_ate_saida": 12.8,
+   "horas_ate_saida": 12.3,
    "id": "88f5e1d248",
    "mediana_rota": 1499,
    "menor_preco": 786,
@@ -1510,7 +1510,7 @@
    "saida": "15:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 1
   },
   "88f6776358": {
@@ -1772,7 +1772,7 @@
    "data": "2026-10-10",
    "destino": "SAO",
    "detectado_em": "2026-10-10 00:31",
-   "horas_ate_saida": 16.3,
+   "horas_ate_saida": 15.8,
    "id": "a0b7f5b9fd",
    "mediana_rota": 2401,
    "menor_preco": 1017,
@@ -1783,7 +1783,7 @@
    "saida": "19:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 0
   },
   "a2d870e78f": {
@@ -2018,25 +2018,25 @@
    "voos_parecidos": 0
   },
   "af4870172d": {
-   "base": 3294,
-   "chegada": "14:00",
-   "companhia": "Gol",
+   "base": 3298,
+   "chegada": "15:05",
+   "companhia": "LATAM",
    "data": "2026-10-10",
    "destino": "SAO",
    "detectado_em": "2026-10-09 15:01",
-   "horas_ate_saida": 9.9,
+   "horas_ate_saida": 10.4,
    "id": "af4870172d",
    "mediana_rota": 2948,
-   "menor_preco": 924,
+   "menor_preco": 846,
    "origem": "RIO",
    "paradas": 0,
-   "preco": 924,
+   "preco": 846,
    "preco_inicial": 931,
-   "saida": "12:55",
+   "saida": "13:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
-   "voos_parecidos": 2
+   "ultima_vista": "2026-10-10 03:31",
+   "voos_parecidos": 3
   },
   "b0252f5bc3": {
    "base": 2441,
@@ -2165,13 +2165,13 @@
    "voos_parecidos": 0
   },
   "bed2e38923": {
-   "base": 2207,
+   "base": 2196,
    "chegada": "15:35",
    "companhia": "Gol",
    "data": "2026-10-10",
    "destino": "SAO",
    "detectado_em": "2026-10-10 02:31",
-   "horas_ate_saida": 10.6,
+   "horas_ate_saida": 10.1,
    "id": "bed2e38923",
    "mediana_rota": 2271,
    "menor_preco": 1024,
@@ -2182,7 +2182,7 @@
    "saida": "13:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 1
   },
   "bed6ef4e4f": {
@@ -2249,13 +2249,13 @@
    "voos_parecidos": 0
   },
   "c1b0799e84": {
-   "base": 1501,
-   "chegada": "20:35",
+   "base": 2302,
+   "chegada": "10:15",
    "companhia": "LATAM",
    "data": "2026-10-10",
    "destino": "CGB",
    "detectado_em": "2026-10-09 19:31",
-   "horas_ate_saida": 16.2,
+   "horas_ate_saida": 5.4,
    "id": "c1b0799e84",
    "mediana_rota": 1650,
    "menor_preco": 473,
@@ -2263,10 +2263,10 @@
    "paradas": 0,
    "preco": 473,
    "preco_inicial": 519,
-   "saida": "19:15",
+   "saida": "08:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 2
   },
   "c2a33dd752": {
@@ -2507,9 +2507,9 @@
    "data": "2026-10-10",
    "destino": "BSB",
    "detectado_em": "2026-10-10 00:31",
-   "horas_ate_saida": 11.5,
+   "horas_ate_saida": 11.0,
    "id": "d2dfd68d09",
-   "mediana_rota": 2355,
+   "mediana_rota": 1973,
    "menor_preco": 925,
    "origem": "SAO",
    "paradas": 0,
@@ -2518,7 +2518,7 @@
    "saida": "14:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 1
   },
   "d62d2755a9": {
@@ -2627,24 +2627,24 @@
    "voos_parecidos": 0
   },
   "df3bef8aff": {
-   "base": 3268,
-   "chegada": "22:50",
-   "companhia": "Gol",
+   "base": 3862,
+   "chegada": "12:30",
+   "companhia": "LATAM",
    "data": "2026-10-10",
    "destino": "RIO",
    "detectado_em": "2026-10-09 10:07",
-   "horas_ate_saida": 18.8,
+   "horas_ate_saida": 8.0,
    "id": "df3bef8aff",
    "mediana_rota": 2831,
-   "menor_preco": 860,
+   "menor_preco": 846,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 873,
+   "preco": 846,
    "preco_inicial": 1403,
-   "saida": "21:50",
+   "saida": "11:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-10 03:02",
+   "ultima_vista": "2026-10-10 03:31",
    "voos_parecidos": 1
   },
   "e177145307": {
