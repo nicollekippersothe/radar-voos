@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-12 10:31",
+ "atualizado_em": "2026-10-12 11:02",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -680,7 +680,7 @@
    "data": "2026-10-12",
    "destino": "SAO",
    "detectado_em": "2026-10-11 19:01",
-   "horas_ate_saida": 2.9,
+   "horas_ate_saida": 2.4,
    "id": "3795a2faff",
    "mediana_rota": 2460,
    "menor_preco": 1426,
@@ -691,7 +691,7 @@
    "saida": "13:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-12 10:31",
+   "ultima_vista": "2026-10-12 11:02",
    "voos_parecidos": 0
   },
   "382a03ea6a": {
@@ -2387,10 +2387,10 @@
    "menor_preco": 859,
    "origem": "VIX",
    "paradas": 0,
-   "preco": 859,
+   "preco": 2006,
    "preco_inicial": 859,
    "saida": "04:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-12 10:31",
    "voos_parecidos": 0
