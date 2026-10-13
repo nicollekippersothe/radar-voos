@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-13 08:31",
+ "atualizado_em": "2026-10-13 09:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -4361,10 +4361,10 @@
    "menor_preco": 852,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 983,
+   "preco": 3184,
    "preco_inicial": 981,
    "saida": "18:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-13 08:31",
    "voos_parecidos": 0
