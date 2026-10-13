@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-13 04:02",
+ "atualizado_em": "2026-10-13 04:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2339,7 +2339,7 @@
    "data": "2026-10-13",
    "destino": "JOI",
    "detectado_em": "2026-10-13 03:31",
-   "horas_ate_saida": 4.4,
+   "horas_ate_saida": 3.9,
    "id": "8ee77a20a0",
    "mediana_rota": 2257,
    "menor_preco": 968,
@@ -2350,7 +2350,7 @@
    "saida": "08:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-13 04:02",
+   "ultima_vista": "2026-10-13 04:31",
    "voos_parecidos": 0
   },
   "90de039734": {
@@ -3419,7 +3419,7 @@
    "preco": 1003,
    "preco_inicial": 907,
    "saida": "06:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-13 04:02",
    "voos_parecidos": 0
@@ -4313,7 +4313,7 @@
    "data": "2026-10-13",
    "destino": "SSA",
    "detectado_em": "2026-10-12 15:31",
-   "horas_ate_saida": 11.2,
+   "horas_ate_saida": 10.7,
    "id": "feb1929f07",
    "mediana_rota": 1726,
    "menor_preco": 852,
@@ -4324,7 +4324,7 @@
    "saida": "15:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-13 04:02",
+   "ultima_vista": "2026-10-13 04:31",
    "voos_parecidos": 1
   },
   "ffb322c406": {
