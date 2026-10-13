@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-13 06:31",
+ "atualizado_em": "2026-10-13 07:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2348,7 +2348,7 @@
    "preco": 968,
    "preco_inicial": 968,
    "saida": "08:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-13 06:31",
    "voos_parecidos": 0
@@ -4334,7 +4334,7 @@
    "data": "2026-10-13",
    "destino": "SSA",
    "detectado_em": "2026-10-12 15:31",
-   "horas_ate_saida": 11.7,
+   "horas_ate_saida": 11.2,
    "id": "feb1929f07",
    "mediana_rota": 1726,
    "menor_preco": 852,
@@ -4345,7 +4345,7 @@
    "saida": "18:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-13 06:31",
+   "ultima_vista": "2026-10-13 07:01",
    "voos_parecidos": 0
   },
   "ffb322c406": {
