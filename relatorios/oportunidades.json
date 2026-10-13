@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-13 06:01",
+ "atualizado_em": "2026-10-13 06:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2334,12 +2334,12 @@
   },
   "8ee77a20a0": {
    "base": 4430,
-   "chegada": "09:35",
+   "chegada": "09:42",
    "companhia": "LATAM",
    "data": "2026-10-13",
    "destino": "JOI",
    "detectado_em": "2026-10-13 03:31",
-   "horas_ate_saida": 2.9,
+   "horas_ate_saida": 1.9,
    "id": "8ee77a20a0",
    "mediana_rota": 2752,
    "menor_preco": 968,
@@ -2348,9 +2348,9 @@
    "preco": 968,
    "preco_inicial": 968,
    "saida": "08:25",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-13 05:31",
+   "ultima_vista": "2026-10-13 06:31",
    "voos_parecidos": 0
   },
   "90de039734": {
@@ -2705,7 +2705,7 @@
    "preco": 932,
    "preco_inicial": 932,
    "saida": "23:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-13 06:01",
    "voos_parecidos": 0
@@ -4328,25 +4328,25 @@
    "voos_parecidos": 0
   },
   "feb1929f07": {
-   "base": 2728,
-   "chegada": "17:35",
-   "companhia": "Gol",
+   "base": 2869,
+   "chegada": "20:35",
+   "companhia": "LATAM",
    "data": "2026-10-13",
    "destino": "SSA",
    "detectado_em": "2026-10-12 15:31",
-   "horas_ate_saida": 9.2,
+   "horas_ate_saida": 11.7,
    "id": "feb1929f07",
    "mediana_rota": 1726,
    "menor_preco": 852,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 981,
+   "preco": 983,
    "preco_inicial": 981,
-   "saida": "15:15",
+   "saida": "18:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-13 06:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-10-13 06:31",
+   "voos_parecidos": 0
   },
   "ffb322c406": {
    "base": 2182,
