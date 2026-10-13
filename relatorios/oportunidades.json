@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-12 21:01",
+ "atualizado_em": "2026-10-12 21:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -1214,7 +1214,7 @@
    "preco": 887,
    "preco_inicial": 981,
    "saida": "23:30",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-10-12 21:01",
    "voos_parecidos": 0
@@ -1373,7 +1373,7 @@
    "data": "2026-10-13",
    "destino": "SAO",
    "detectado_em": "2026-10-12 16:31",
-   "horas_ate_saida": 19.3,
+   "horas_ate_saida": 18.8,
    "id": "58e53c7003",
    "mediana_rota": 2084,
    "menor_preco": 824,
@@ -1384,7 +1384,7 @@
    "saida": "16:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-12 21:01",
+   "ultima_vista": "2026-10-12 21:31",
    "voos_parecidos": 0
   },
   "59736e46dd": {
@@ -2360,18 +2360,18 @@
    "data": "2026-10-13",
    "destino": "XAP",
    "detectado_em": "2026-10-12 19:01",
-   "horas_ate_saida": 23.2,
+   "horas_ate_saida": 20.7,
    "id": "931836e803",
-   "mediana_rota": 1902,
+   "mediana_rota": 1297,
    "menor_preco": 475,
    "origem": "SAO",
    "paradas": 0,
    "preco": 475,
    "preco_inicial": 475,
    "saida": "18:15",
-   "status": "sumiu",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-12 19:01",
+   "ultima_vista": "2026-10-12 21:31",
    "voos_parecidos": 0
   },
   "9388a06ec5": {
@@ -3053,9 +3053,9 @@
    "data": "2026-10-13",
    "destino": "SLZ",
    "detectado_em": "2026-10-12 12:13",
-   "horas_ate_saida": 10.3,
+   "horas_ate_saida": 9.8,
    "id": "b6b795936d",
-   "mediana_rota": 1642,
+   "mediana_rota": 1705,
    "menor_preco": 1041,
    "origem": "SAO",
    "paradas": 0,
@@ -3064,7 +3064,7 @@
    "saida": "07:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-12 21:01",
+   "ultima_vista": "2026-10-12 21:31",
    "voos_parecidos": 0
   },
   "bb352779d0": {
@@ -3089,13 +3089,13 @@
    "voos_parecidos": 0
   },
   "bbf112325e": {
-   "base": 2201,
+   "base": 2113,
    "chegada": "14:15",
    "companhia": "Gol",
    "data": "2026-10-13",
    "destino": "SAO",
    "detectado_em": "2026-10-12 12:13",
-   "horas_ate_saida": 16.1,
+   "horas_ate_saida": 15.7,
    "id": "bbf112325e",
    "mediana_rota": 2377,
    "menor_preco": 962,
@@ -3106,8 +3106,8 @@
    "saida": "13:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-12 21:01",
-   "voos_parecidos": 2
+   "ultima_vista": "2026-10-12 21:31",
+   "voos_parecidos": 3
   },
   "bc46832a9a": {
    "base": 2565,
@@ -3374,10 +3374,10 @@
    "menor_preco": 907,
    "origem": "SSA",
    "paradas": 0,
-   "preco": 907,
+   "preco": 2889,
    "preco_inicial": 907,
    "saida": "06:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-12 21:01",
    "voos_parecidos": 0
@@ -3788,9 +3788,9 @@
    "data": "2026-10-13",
    "destino": "BSB",
    "detectado_em": "2026-10-12 12:02",
-   "horas_ate_saida": 8.7,
+   "horas_ate_saida": 8.2,
    "id": "e3dd93e2d1",
-   "mediana_rota": 2785,
+   "mediana_rota": 2043,
    "menor_preco": 1406,
    "origem": "SAO",
    "paradas": 0,
@@ -3799,7 +3799,7 @@
    "saida": "05:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-12 21:01",
+   "ultima_vista": "2026-10-12 21:31",
    "voos_parecidos": 0
   },
   "e5b331105f": {
@@ -3965,7 +3965,7 @@
    "preco": 1317,
    "preco_inicial": 1317,
    "saida": "11:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-12 21:01",
    "voos_parecidos": 1
@@ -4154,7 +4154,7 @@
    "preco": 729,
    "preco_inicial": 709,
    "saida": "23:15",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-10-12 21:01",
    "voos_parecidos": 0
@@ -4271,7 +4271,7 @@
    "data": "2026-10-13",
    "destino": "SSA",
    "detectado_em": "2026-10-12 15:31",
-   "horas_ate_saida": 18.2,
+   "horas_ate_saida": 17.7,
    "id": "feb1929f07",
    "mediana_rota": 1559,
    "menor_preco": 852,
@@ -4282,7 +4282,7 @@
    "saida": "15:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-12 21:01",
+   "ultima_vista": "2026-10-12 21:31",
    "voos_parecidos": 0
   },
   "ffb322c406": {
