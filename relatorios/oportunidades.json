@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 00:32",
+ "atualizado_em": "2026-10-14 01:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -1841,10 +1841,10 @@
    "menor_preco": 928,
    "origem": "RIO",
    "paradas": 0,
-   "preco": 928,
+   "preco": 2274,
    "preco_inicial": 928,
    "saida": "16:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-14 00:32",
    "voos_parecidos": 0
@@ -2807,10 +2807,10 @@
    "menor_preco": 949,
    "origem": "FLN",
    "paradas": 0,
-   "preco": 949,
+   "preco": 2295,
    "preco_inicial": 949,
    "saida": "06:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-14 00:32",
    "voos_parecidos": 2
@@ -3158,7 +3158,7 @@
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 12:32",
-   "horas_ate_saida": 19.9,
+   "horas_ate_saida": 19.4,
    "id": "bbf5363842",
    "mediana_rota": 1841,
    "menor_preco": 379,
@@ -3169,7 +3169,7 @@
    "saida": "20:25",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 00:32",
+   "ultima_vista": "2026-10-14 01:01",
    "voos_parecidos": 0
   },
   "bc46832a9a": {
@@ -3725,18 +3725,18 @@
    "data": "2026-10-14",
    "destino": "UDI",
    "detectado_em": "2026-10-13 12:02",
-   "horas_ate_saida": 10.8,
+   "horas_ate_saida": 9.8,
    "id": "dad65306d5",
-   "mediana_rota": 987,
+   "mediana_rota": 1900,
    "menor_preco": 351,
    "origem": "SAO",
    "paradas": 0,
    "preco": 351,
    "preco_inicial": 351,
    "saida": "10:50",
-   "status": "sumiu",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 00:01",
+   "ultima_vista": "2026-10-14 01:01",
    "voos_parecidos": 1
   },
   "dae1340205": {
@@ -3998,7 +3998,7 @@
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 19:01",
-   "horas_ate_saida": 10.8,
+   "horas_ate_saida": 10.3,
    "id": "edd0c892fb",
    "mediana_rota": 917,
    "menor_preco": 332,
@@ -4009,7 +4009,7 @@
    "saida": "11:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 00:32",
+   "ultima_vista": "2026-10-14 01:01",
    "voos_parecidos": 0
   },
   "ef1b3fbf60": {
