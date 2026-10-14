@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 10:01",
+ "atualizado_em": "2026-10-14 10:04",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -255,23 +255,23 @@
   },
   "142d49c8e5": {
    "base": 2006,
-   "chegada": "06:15",
+   "chegada": "19:10",
    "companhia": "LATAM",
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 07:31",
-   "horas_ate_saida": 5.2,
+   "horas_ate_saida": 7.5,
    "id": "142d49c8e5",
    "mediana_rota": 2133,
    "menor_preco": 770,
    "origem": "VIX",
    "paradas": 0,
-   "preco": 1125,
+   "preco": 911,
    "preco_inicial": 950,
-   "saida": "04:45",
-   "status": "voltou",
+   "saida": "17:35",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-13 23:31",
+   "ultima_vista": "2026-10-14 10:04",
    "voos_parecidos": 0
   },
   "16e2d80afc": {
@@ -3736,8 +3736,8 @@
    "saida": "10:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 10:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-10-14 10:04",
+   "voos_parecidos": 2
   },
   "dae1340205": {
    "base": 2288,
