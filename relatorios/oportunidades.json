@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 05:31",
+ "atualizado_em": "2026-10-14 06:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2612,9 +2612,9 @@
    "data": "2026-10-14",
    "destino": "IGU",
    "detectado_em": "2026-10-13 20:01",
-   "horas_ate_saida": 6.6,
+   "horas_ate_saida": 6.1,
    "id": "9f181ac41a",
-   "mediana_rota": 2132,
+   "mediana_rota": 2136,
    "menor_preco": 1119,
    "origem": "SAO",
    "paradas": 0,
@@ -2623,7 +2623,7 @@
    "saida": "12:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-14 05:31",
+   "ultima_vista": "2026-10-14 06:01",
    "voos_parecidos": 0
   },
   "9fbba2af54": {
@@ -3167,7 +3167,7 @@
    "preco": 379,
    "preco_inicial": 481,
    "saida": "20:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-14 05:31",
    "voos_parecidos": 0
@@ -3725,7 +3725,7 @@
    "data": "2026-10-14",
    "destino": "UDI",
    "detectado_em": "2026-10-13 12:02",
-   "horas_ate_saida": 5.3,
+   "horas_ate_saida": 4.8,
    "id": "dad65306d5",
    "mediana_rota": 1336,
    "menor_preco": 351,
@@ -3736,7 +3736,7 @@
    "saida": "10:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 05:31",
+   "ultima_vista": "2026-10-14 06:01",
    "voos_parecidos": 1
   },
   "dae1340205": {
@@ -4007,7 +4007,7 @@
    "preco": 400,
    "preco_inicial": 332,
    "saida": "11:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-14 05:31",
    "voos_parecidos": 0
