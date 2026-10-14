@@ -4,9 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-function Campo({ rotulo, children }) {
+function Campo({ rotulo, children, cheio }) {
   return (
-    <div className="flex flex-col gap-[0.5em]">
+    <div className={"flex flex-col gap-[0.5em]" + (cheio ? " col-span-2 sm:col-span-1" : "")}>
       <span className="t-label text-muted-foreground">{rotulo}</span>
       {children}
     </div>
@@ -30,8 +30,8 @@ function Escolha({ name, valor, opcoes, rotuloAria }) {
 
 export function FormHome({ origem, origens, valor, dias, janelas }) {
   return (
-    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
-      <Campo rotulo="Saindo de">
+    <form method="get" className="grid grid-cols-2 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+      <Campo rotulo="Saindo de" cheio>
         <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
       </Campo>
       <Campo rotulo="Com até">
@@ -47,7 +47,7 @@ export function FormHome({ origem, origens, valor, dias, janelas }) {
       <Campo rotulo="Nos próximos">
         <Escolha name="dias" valor={String(dias)} opcoes={janelas} rotuloAria="Janela de dias" />
       </Campo>
-      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+      <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Ver destinos <ArrowRight data-icon="inline-end" />
       </Button>
     </form>
@@ -56,17 +56,17 @@ export function FormHome({ origem, origens, valor, dias, janelas }) {
 
 export function FormDia({ origem, origens, destino, destinos, diretos }) {
   return (
-    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+    <form method="get" className="grid grid-cols-2 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
       <Campo rotulo="De">
         <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
       </Campo>
       <Campo rotulo="Pra">
         <Escolha name="destino" valor={destino} opcoes={destinos} rotuloAria="Destino" />
       </Campo>
-      <Campo rotulo="Voos">
+      <Campo rotulo="Voos" cheio>
         <Escolha name="diretos" valor={diretos ? "1" : "0"} opcoes={[["1", "Só diretos"], ["0", "Com paradas também"]]} rotuloAria="Tipo de voo" />
       </Campo>
-      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+      <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Comparar dias <ArrowRight data-icon="inline-end" />
       </Button>
     </form>
@@ -75,17 +75,17 @@ export function FormDia({ origem, origens, destino, destinos, diretos }) {
 
 export function FormRota({ origem, origens, destino, destinos, cia, cias, faixa, data, minData }) {
   return (
-    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
+    <form method="get" className="grid grid-cols-2 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-2 lg:grid-cols-4 lg:items-end">
       <Campo rotulo="De"><Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" /></Campo>
       <Campo rotulo="Pra"><Escolha name="destino" valor={destino} opcoes={destinos} rotuloAria="Destino" /></Campo>
       <Campo rotulo="Companhia"><Escolha name="cia" valor={cia} opcoes={cias} rotuloAria="Companhia" /></Campo>
       <Campo rotulo="Horário do voo">
         <Escolha name="faixa" valor={faixa} opcoes={[["", "Qualquer hora"], ["madrugada", "Madrugada"], ["manha", "Manhã"], ["tarde", "Tarde"], ["noite", "Noite"]]} rotuloAria="Horário" />
       </Campo>
-      <Campo rotulo="Quero voar em">
+      <Campo rotulo="Quero voar em" cheio>
         <Input type="date" name="data" defaultValue={data} min={minData} aria-label="Data do voo" className="h-[44px] rounded-md bg-card text-[1em]" />
       </Campo>
-      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90 sm:col-span-2 lg:col-span-3 lg:justify-self-start">
+      <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90 lg:col-span-3 lg:justify-self-start">
         Ver chance e melhor data <ArrowRight data-icon="inline-end" />
       </Button>
     </form>
@@ -94,14 +94,14 @@ export function FormRota({ origem, origens, destino, destinos, cia, cias, faixa,
 
 export function FormPlanejar({ origem, origens, destino, destinos, valor }) {
   return (
-    <form method="get" className="grid grid-cols-1 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+    <form method="get" className="grid grid-cols-2 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
       <Campo rotulo="Saindo de">
         <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
       </Campo>
       <Campo rotulo="Pra">
         <Escolha name="destino" valor={destino} opcoes={destinos} rotuloAria="Destino" />
       </Campo>
-      <Campo rotulo="Posso gastar até">
+      <Campo rotulo="Posso gastar até" cheio>
         <div className="relative">
           <span className="pointer-events-none absolute inset-y-0 left-[1em] flex items-center text-muted-foreground">R$</span>
           <Input
@@ -111,7 +111,7 @@ export function FormPlanejar({ origem, origens, destino, destinos, valor }) {
           />
         </div>
       </Campo>
-      <Button type="submit" size="lg" className="h-[44px] rounded-md bg-brand px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
+      <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Planejar <ArrowRight data-icon="inline-end" />
       </Button>
     </form>

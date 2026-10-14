@@ -4,6 +4,7 @@ import { modelo, curvaRota } from "@/lib/modelo";
 import { reais, diaCurto, diaLongo, lidoCurto, lidoVoo, linkGoogle, hojeIso } from "@/lib/formato";
 import { FormPlanejar } from "../filtros";
 import { Compra } from "../compra";
+import { Compartilhar } from "../compartilhar";
 import { Horas } from "../horas";
 import { Vazio, Secao, Erro } from "../blocos";
 import { ArrowUpRight } from "lucide-react";
@@ -42,8 +43,9 @@ export default async function Planejar({ searchParams }) {
         <span className="t-kicker text-brand">Sem data definida</span>
         <h1 className="t-display max-w-[10ch]">Quando dá pra ir?</h1>
         <p className="t-lead max-w-[44ch] text-muted-foreground">
-          Escolha o destino e quanto pode gastar. O Radar mostra os dias em que a passagem cabe no orçamento e quando vale comprar{lidoEm ? `, com leitura ${lidoCurto(lidoEm).replace("lido ", "de ")}` : ""}.
+          Escolha o destino e quanto pode gastar. Mostramos os dias em que a passagem cabe no orçamento e quando vale comprar{lidoEm ? `. Preços lidos ${lidoCurto(lidoEm).replace("lido ", "às ")}` : ""}.
         </p>
+        <Compartilhar titulo="Quando dá pra ir? Radar de Voos" />
       </section>
 
       <FormPlanejar origem={origem} origens={cidades(origens, origem)} destino={destino} destinos={cidades(destinos, destino)} valor={valor} />

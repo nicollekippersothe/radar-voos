@@ -4,6 +4,7 @@ import { modelo, veredito } from "@/lib/modelo";
 import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, lidoCurto, lidoVoo, linkGoogle, hojeIso, somaDias } from "@/lib/formato";
 import { oportunidades } from "@/lib/oportunidades";
 import { FormHome } from "./filtros";
+import { Compartilhar } from "./compartilhar";
 import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "./blocos";
 import { Fragment } from "react";
 import { Button } from "@/components/ui/button";
@@ -59,8 +60,9 @@ export default async function Home({ searchParams }) {
         <span className="t-kicker text-brand">Viagens de última hora</span>
         <h1 className="t-display max-w-[10ch]">Pra onde<br />dá pra ir?</h1>
         <p className="t-lead max-w-[42ch] text-muted-foreground">
-          Diga quanto tem e quando quer sair. A lista mostra o destino mais barato de cada cidade, só de ida{lidoEm ? `, lido no Google Voos ${horaLeitura(lidoEm)}` : ""}.
+          Diga quanto quer gastar e em quantos dias quer viajar. Mostramos o destino mais barato de cada cidade, só de ida{lidoEm ? `. Preços lidos ${horaLeitura(lidoEm)}` : ""}.
         </p>
+        <Compartilhar titulo="Pra onde dá pra ir? Radar de Voos" />
       </section>
 
       <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} />
