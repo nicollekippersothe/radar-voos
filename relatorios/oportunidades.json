@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 03:31",
+ "atualizado_em": "2026-10-14 04:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2612,18 +2612,18 @@
    "data": "2026-10-14",
    "destino": "IGU",
    "detectado_em": "2026-10-13 20:01",
-   "horas_ate_saida": 12.1,
+   "horas_ate_saida": 8.1,
    "id": "9f181ac41a",
-   "mediana_rota": 1716,
+   "mediana_rota": 2132,
    "menor_preco": 1119,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1119,
+   "preco": 1480,
    "preco_inicial": 1119,
    "saida": "12:05",
-   "status": "sumiu",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-14 00:01",
+   "ultima_vista": "2026-10-14 04:01",
    "voos_parecidos": 0
   },
   "9fbba2af54": {
@@ -3158,7 +3158,7 @@
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 12:32",
-   "horas_ate_saida": 16.9,
+   "horas_ate_saida": 16.4,
    "id": "bbf5363842",
    "mediana_rota": 1979,
    "menor_preco": 379,
@@ -3169,7 +3169,7 @@
    "saida": "20:25",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 03:31",
+   "ultima_vista": "2026-10-14 04:01",
    "voos_parecidos": 0
   },
   "bc46832a9a": {
@@ -3725,7 +3725,7 @@
    "data": "2026-10-14",
    "destino": "UDI",
    "detectado_em": "2026-10-13 12:02",
-   "horas_ate_saida": 7.3,
+   "horas_ate_saida": 6.8,
    "id": "dad65306d5",
    "mediana_rota": 1802,
    "menor_preco": 351,
@@ -3736,7 +3736,7 @@
    "saida": "10:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 03:31",
+   "ultima_vista": "2026-10-14 04:01",
    "voos_parecidos": 1
   },
   "dae1340205": {
@@ -3998,7 +3998,7 @@
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 19:01",
-   "horas_ate_saida": 7.8,
+   "horas_ate_saida": 7.3,
    "id": "edd0c892fb",
    "mediana_rota": 917,
    "menor_preco": 332,
@@ -4009,7 +4009,7 @@
    "saida": "11:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 03:31",
+   "ultima_vista": "2026-10-14 04:01",
    "voos_parecidos": 0
   },
   "ef1b3fbf60": {
