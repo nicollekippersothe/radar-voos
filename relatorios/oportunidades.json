@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-14 05:01",
+ "atualizado_em": "2026-10-14 05:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2612,7 +2612,7 @@
    "data": "2026-10-14",
    "destino": "IGU",
    "detectado_em": "2026-10-13 20:01",
-   "horas_ate_saida": 7.1,
+   "horas_ate_saida": 6.6,
    "id": "9f181ac41a",
    "mediana_rota": 2132,
    "menor_preco": 1119,
@@ -2623,7 +2623,7 @@
    "saida": "12:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-14 05:01",
+   "ultima_vista": "2026-10-14 05:31",
    "voos_parecidos": 0
   },
   "9fbba2af54": {
@@ -3158,7 +3158,7 @@
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 12:32",
-   "horas_ate_saida": 15.9,
+   "horas_ate_saida": 14.9,
    "id": "bbf5363842",
    "mediana_rota": 1979,
    "menor_preco": 379,
@@ -3167,9 +3167,9 @@
    "preco": 379,
    "preco_inicial": 481,
    "saida": "20:25",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 04:31",
+   "ultima_vista": "2026-10-14 05:31",
    "voos_parecidos": 0
   },
   "bc46832a9a": {
@@ -3725,9 +3725,9 @@
    "data": "2026-10-14",
    "destino": "UDI",
    "detectado_em": "2026-10-13 12:02",
-   "horas_ate_saida": 5.8,
+   "horas_ate_saida": 5.3,
    "id": "dad65306d5",
-   "mediana_rota": 1724,
+   "mediana_rota": 1336,
    "menor_preco": 351,
    "origem": "SAO",
    "paradas": 0,
@@ -3736,7 +3736,7 @@
    "saida": "10:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 05:01",
+   "ultima_vista": "2026-10-14 05:31",
    "voos_parecidos": 1
   },
   "dae1340205": {
@@ -3998,7 +3998,7 @@
    "data": "2026-10-14",
    "destino": "SAO",
    "detectado_em": "2026-10-13 19:01",
-   "horas_ate_saida": 6.8,
+   "horas_ate_saida": 5.8,
    "id": "edd0c892fb",
    "mediana_rota": 917,
    "menor_preco": 332,
@@ -4007,9 +4007,9 @@
    "preco": 400,
    "preco_inicial": 332,
    "saida": "11:20",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-14 04:31",
+   "ultima_vista": "2026-10-14 05:31",
    "voos_parecidos": 0
   },
   "ef1b3fbf60": {
