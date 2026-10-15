@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-15 06:31",
+ "atualizado_em": "2026-10-15 07:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -1037,7 +1037,7 @@
    "data": "2026-10-15",
    "destino": "UDI",
    "detectado_em": "2026-10-14 12:35",
-   "horas_ate_saida": 3.6,
+   "horas_ate_saida": 3.1,
    "id": "46f9d55fa2",
    "mediana_rota": 2156,
    "menor_preco": 337,
@@ -1048,7 +1048,7 @@
    "saida": "10:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-15 06:31",
+   "ultima_vista": "2026-10-15 07:01",
    "voos_parecidos": 0
   },
   "4777414609": {
@@ -1499,7 +1499,7 @@
    "data": "2026-10-15",
    "destino": "XAP",
    "detectado_em": "2026-10-14 22:01",
-   "horas_ate_saida": 15.2,
+   "horas_ate_saida": 14.7,
    "id": "60884b74c8",
    "mediana_rota": 3521,
    "menor_preco": 381,
@@ -1510,7 +1510,7 @@
    "saida": "21:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-15 06:31",
+   "ultima_vista": "2026-10-15 07:01",
    "voos_parecidos": 0
   },
   "61d2f9fb22": {
@@ -2348,7 +2348,7 @@
    "preco": 300,
    "preco_inicial": 286,
    "saida": "11:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-15 06:31",
    "voos_parecidos": 1
