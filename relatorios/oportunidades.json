@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-15 08:31",
+ "atualizado_em": "2026-10-15 09:04",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -1046,7 +1046,7 @@
    "preco": 634,
    "preco_inicial": 482,
    "saida": "10:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-15 08:31",
    "voos_parecidos": 0
@@ -1505,10 +1505,10 @@
    "menor_preco": 381,
    "origem": "FLN",
    "paradas": 0,
-   "preco": 487,
+   "preco": 2175,
    "preco_inicial": 462,
    "saida": "21:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-15 08:31",
    "voos_parecidos": 0
