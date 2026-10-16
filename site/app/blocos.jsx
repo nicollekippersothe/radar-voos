@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { ArrowUpRight, Plane, RefreshCw, Tag } from "lucide-react";
+import { ArrowUpRight, Info, Plane, RefreshCw, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function Secao({ rotulo, titulo }) {
@@ -104,5 +104,18 @@ export function AvisoAfiliado() {
     <p className="mt-[1em] max-w-[60ch] text-[0.85em] leading-[1.4] text-muted-foreground">
       Alguns links levam ao Aviasales, nosso parceiro: se você comprar por ele, podemos receber uma comissão, sem custo extra pra você. O preço do Aviasales é o menor visto nas últimas 48 h e pode ter mudado.
     </p>
+  );
+}
+
+/** Aviso de que o preço mostrado é o da última leitura, não o de agora. */
+export function AvisoPreco({ detalhe }) {
+  return (
+    <aside className="mt-[1.5em] flex max-w-[68ch] gap-[0.75em] rounded-lg border bg-muted/40 p-[1em] text-[0.9em] leading-[1.45] text-muted-foreground" aria-label="Sobre os preços">
+      <Info className="mt-[0.2em] size-[1.1em] shrink-0" aria-hidden="true" />
+      <p>
+        <b className="font-medium text-foreground">O preço pode estar diferente ao abrir o link.</b> Mostramos o valor da última leitura, feita a cada 30 minutos (dias mais distantes, uma vez por dia). A tarifa pode mudar ou acabar nesse intervalo.
+        {detalhe ? " " + detalhe : ""} Confira sempre o valor final no site de quem vende.
+      </p>
+    </aside>
   );
 }

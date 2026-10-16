@@ -6,7 +6,9 @@ import { FormPlanejar } from "../filtros";
 import { Compra } from "../compra";
 import { Compartilhar } from "../compartilhar";
 import { Horas } from "../horas";
-import { Vazio, Secao, Erro } from "../blocos";
+import { Vazio, Secao, Erro, AvisoPreco } from "../blocos";
+import { Atualizar } from "../atualizar";
+import { temApi } from "@/lib/api";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -49,6 +51,8 @@ export default async function Planejar({ searchParams }) {
       </section>
 
       <FormPlanejar origem={origem} origens={cidades(origens, origem)} destino={destino} destinos={cidades(destinos, destino)} valor={valor} />
+      {origem !== destino && temApi() && <Atualizar origem={origem} destino={destino} />}
+      <AvisoPreco detalhe={temApi() ? "Pra ver o preço de agora, use Atualizar: o Radar relê esse trecho na hora." : undefined} />
 
       {erro ? (
         <Erro href={`?origem=${origem}&destino=${destino}&valor=${valor}`} />
@@ -78,12 +82,12 @@ export default async function Planejar({ searchParams }) {
             )}
           </div>
 
-          <Secao rotulo={`${futuros.length} dias com leitura`} titulo={cabem.length ? "Dias que cabem" : "Os dias mais baratos"} />
+          <Secao rotulo={`${futuros.length} dias com leitura, até ${diaCurto(futuros[futuros.length - 1].data_voo)}`} titulo={cabem.length ? (cabem.length > 14 ? "Os 14 dias mais baratos que cabem" : "Dias que cabem") : "Os dias mais baratos"} />
           <p className="-mt-[0.5em] mb-[1em] max-w-[62ch] text-[0.9em] text-muted-foreground">
             Preço de ida, com ou sem parada, lido no Google Voos. Você compra agora, o voo sai na data da linha. Os próximos 3 dias atualizam a cada 30 minutos. Dias mais distantes são lidos uma vez por dia, então o preço pode estar defasado até 24 horas. Confira ao abrir.
           </p>
           <ol className="entra flex flex-col gap-[0.25em] rounded-lg border bg-card p-[0.75em]">
-            {(cabem.length ? cabem : [...futuros].sort((a, b) => a.preco - b.preco).slice(0, 5))
+            {[...(cabem.length ? cabem : futuros)].sort((a, b) => a.preco - b.preco).slice(0, cabem.length ? 14 : 5)
               .sort((a, b) => a.data_voo.localeCompare(b.data_voo))
               .map((d) => {
                 const top = melhor && d.data_voo === melhor.data_voo;

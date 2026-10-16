@@ -100,7 +100,7 @@ const rotas = {
   async "/api/destinos"(url, env) {
     const origem = cod(url.searchParams.get("origem"), "SAO");
     const valor = inteiro(url.searchParams.get("valor"), 500, 50, 20000);
-    const dias = inteiro(url.searchParams.get("dias"), 3, 0, 30);
+    const dias = inteiro(url.searchParams.get("dias"), 3, 0, 90);
     const hoje = hojeBrasilia();
     // Junta com a lista de trechos pra buscar cada destino pelo índice (origem, destino, data).
     // CROSS JOIN fixa a ordem (trechos primeiro): com JOIN comum o SQLite varre todos os voos da
@@ -286,7 +286,7 @@ const rotas = {
 
   // Versão publicada. Serve pra confirmar que o deploy automático (Workers Builds) está funcionando.
   async "/api/versao"() {
-    return { versao: "2026-10-06-e", rotas: Object.keys(rotas).length };
+    return { versao: "2026-10-16-a", rotas: Object.keys(rotas).length };
   },
 
   // Saúde: o que tem no banco e quando foi a última coleta.

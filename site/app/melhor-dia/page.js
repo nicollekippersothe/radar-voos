@@ -6,7 +6,7 @@ import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, li
 import { FormDia } from "../filtros";
 import { Atualizar } from "../atualizar";
 import { temApi } from "@/lib/api";
-import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "../blocos";
+import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado, AvisoPreco } from "../blocos";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -64,6 +64,7 @@ export default async function MelhorDia({ searchParams }) {
       />
 
       {!erro && temApi() && origem !== destino && <Atualizar origem={origem} destino={destino} />}
+      {!erro && <AvisoPreco detalhe={temApi() ? "Pra ver o preço de agora, use Atualizar: o Radar relê esse trecho na hora." : undefined} />}
 
       {erro ? (
         <Erro href={base} />

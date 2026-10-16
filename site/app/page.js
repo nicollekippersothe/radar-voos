@@ -1,11 +1,11 @@
-import { nome } from "@/lib/dados";
+import { nome, ORIGENS_90D } from "@/lib/dados";
 import { dadosHome, referencias, melhorReferencia } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, lidoCurto, lidoVoo, linkGoogle, hojeIso, somaDias } from "@/lib/formato";
 import { oportunidades } from "@/lib/oportunidades";
 import { FormHome } from "./filtros";
 import { Compartilhar } from "./compartilhar";
-import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado } from "./blocos";
+import { Vazio, Linha, Secao, Erro, OfertaAviasales, AvisoAfiliado, AvisoPreco } from "./blocos";
 import { Fragment } from "react";
 import { Button } from "@/components/ui/button";
 import { CalendarDays } from "lucide-react";
@@ -19,6 +19,8 @@ const JANELAS = [
   ["7", "7 dias"],
   ["14", "14 dias"],
   ["30", "30 dias"],
+  ["60", "60 dias"],
+  ["90", "90 dias"],
 ];
 
 function Achado({ o, i }) {
@@ -66,6 +68,12 @@ export default async function Home({ searchParams }) {
       </section>
 
       <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} />
+      {dias > 30 && !ORIGENS_90D.includes(origem) && (
+        <p className="mt-[1em] max-w-[62ch] text-[0.9em] text-muted-foreground">
+          Por enquanto só lemos além de 30 dias os voos saindo de {ORIGENS_90D.map(nome).join(", ")}. Saindo de {nome(origem)}, a lista vai até 30 dias.
+        </p>
+      )}
+      <AvisoPreco />
 
       {!erro && (
         <>
