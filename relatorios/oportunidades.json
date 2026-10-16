@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-16 10:31",
+ "atualizado_em": "2026-10-16 11:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -443,25 +443,25 @@
    "voos_parecidos": 0
   },
   "27c5ff582b": {
-   "base": 1732,
-   "chegada": "13:35",
-   "companhia": "LATAM",
+   "base": 1488,
+   "chegada": "23:30",
+   "companhia": "Gol",
    "data": "2026-10-16",
    "destino": "UDI",
    "detectado_em": "2026-10-15 17:31",
-   "horas_ate_saida": 1.8,
+   "horas_ate_saida": 11.1,
    "id": "27c5ff582b",
    "mediana_rota": 2154,
    "menor_preco": 438,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 631,
+   "preco": 585,
    "preco_inicial": 438,
-   "saida": "12:20",
+   "saida": "22:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 10:31",
-   "voos_parecidos": 0
+   "ultima_vista": "2026-10-16 11:01",
+   "voos_parecidos": 1
   },
   "2835da49eb": {
    "base": 2969,
