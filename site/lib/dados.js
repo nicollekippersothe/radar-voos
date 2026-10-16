@@ -6,7 +6,7 @@ const REPO = process.env.RADAR_REPO || "nicollekippersothe/radar-voos";
 const RAMO = process.env.RADAR_RAMO || "main";
 const BASE = `https://raw.githubusercontent.com/${REPO}/${RAMO}`;
 
-// Origens lidas até 90 dias à frente (as outras ficam em 30). Espelha ORIGENS_ESTENDIDAS do coletor.
+// Origens lidas todos os dias de 31 a 90 (as outras, de 3 em 3 dias). Espelha ORIGENS_ESTENDIDAS do coletor.
 export const ORIGENS_90D = ["FLN"];
 
 export const CIDADES = {

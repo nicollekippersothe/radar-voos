@@ -70,7 +70,7 @@ export default async function Home({ searchParams }) {
       <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} />
       {dias > 30 && !ORIGENS_90D.includes(origem) && (
         <p className="mt-[1em] max-w-[62ch] text-[0.9em] text-muted-foreground">
-          Por enquanto só lemos além de 30 dias os voos saindo de {ORIGENS_90D.map(nome).join(", ")}. Saindo de {nome(origem)}, a lista vai até 30 dias.
+          Depois de 30 dias, lemos os voos de {nome(origem)} de 3 em 3 dias e uma vez por dia. Saindo de {ORIGENS_90D.map(nome).join(", ")}, lemos todos os dias até 90.
         </p>
       )}
       <AvisoPreco />

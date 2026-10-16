@@ -10,7 +10,8 @@ linha por voo lido. O analise.py junta tudo.
 Variáveis de ambiente:
   JANELA_CURTA   dias à frente lidos em toda execução (padrão 2, ou seja hoje, amanhã e depois)
   JANELA_LONGA   dias à frente lidos a cada 20 h, ou quando FORCAR_LONGA=1 (padrão 30)
-  JANELA_ESTENDIDA / ORIGENS_ESTENDIDAS   até onde ler (padrão 90 dias) nas origens listadas (padrão FLN)
+  JANELA_ESTENDIDA   até onde ler (padrão 90 dias), uma vez por dia
+  ORIGENS_ESTENDIDAS   origens que leem todos os dias de 31 a 90 (padrão FLN); as outras leem de PASSO_ESTENDIDO em PASSO_ESTENDIDO (padrão 3)
   ROTAS          lista "SAO-FLN,FLN-SAO" pra sobrescrever rotas.py (útil pra testar)
   THREADS        buscas em paralelo (padrão 6)
 """
@@ -30,9 +31,11 @@ from rotas import ROTAS
 BRASILIA = dt.timezone(dt.timedelta(hours=-3))
 JANELA_CURTA = int(os.environ.get("JANELA_CURTA", "2"))
 JANELA_LONGA = int(os.environ.get("JANELA_LONGA", "30"))
-# Além dos 30 dias, só pras origens listadas, uma vez por dia (na leitura longa). Custa uma busca por data.
+# Além dos 30 dias, uma vez por dia (na leitura longa). Custa uma busca por data, então as origens
+# prioritárias leem todos os dias e as demais de PASSO_ESTENDIDO em PASSO_ESTENDIDO dias.
 JANELA_ESTENDIDA = int(os.environ.get("JANELA_ESTENDIDA", "90"))
-ORIGENS_ESTENDIDAS = {o for o in (os.environ.get("ORIGENS_ESTENDIDAS") or "FLN").replace(" ", "").split(",") if o}
+ORIGENS_PRIORITARIAS = {o for o in (os.environ.get("ORIGENS_ESTENDIDAS") or "FLN").replace(" ", "").split(",") if o}
+PASSO_ESTENDIDO = max(1, int(os.environ.get("PASSO_ESTENDIDO") or "3"))
 THREADS = int(os.environ.get("THREADS", "6"))
 PASTA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dados", "leituras")
 
@@ -126,8 +129,13 @@ def main():
     datas_longas = [(hoje + dt.timedelta(days=i)).isoformat() for i in range(JANELA_LONGA + 1)]
     datas_ext = [(hoje + dt.timedelta(days=i)).isoformat() for i in range(JANELA_LONGA + 1, JANELA_ESTENDIDA + 1)]
     estende = longa and not so_trechos
+
+    def extras(o):
+        if not estende:
+            return []
+        return datas_ext if o in ORIGENS_PRIORITARIAS else datas_ext[::PASSO_ESTENDIDO]
     pares = [(o, d, data, lido_em) for o, d in rotas
-             for data in ((datas_longas if (o, d) in fila else datas) + (datas_ext if estende and o in ORIGENS_ESTENDIDAS else []))]
+             for data in ((datas_longas if (o, d) in fila else datas) + extras(o))]
 
     print(f"{lido_em}: {len(rotas)} rotas × {len(datas)} datas = {len(pares)} buscas"
           + (f" (inclui {len(fila)} trechos novos da fila, 30 dias cada)" if fila else ""))
@@ -165,7 +173,7 @@ def main():
         import d1
         # Com trechos novos da fila a janela é de 30 dias, mas só eles foram lidos além do curto.
         # Isso é seguro: o D1 só marca como "saiu" o que estava numa busca feita agora.
-        janela_sync = max(dias, JANELA_LONGA if fila else 0, JANELA_ESTENDIDA if estende and ORIGENS_ESTENDIDAS else 0)
+        janela_sync = max(dias, JANELA_LONGA if fila else 0, JANELA_ESTENDIDA if estende else 0)
         d1.sincronizar(linhas, janela_sync, agora, marcar_sync=not so_trechos)
         if fila:
             d1.concluir_fila(d1.banco_do_ambiente(), fila, int(agora.timestamp()))
