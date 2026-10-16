@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-16 08:31",
+ "atualizado_em": "2026-10-16 09:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -455,10 +455,10 @@
    "menor_preco": 438,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 631,
+   "preco": 2154,
    "preco_inicial": 438,
    "saida": "12:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-16 08:31",
    "voos_parecidos": 0
@@ -1079,7 +1079,7 @@
    "data": "2026-10-17",
    "destino": "UDI",
    "detectado_em": "2026-10-16 08:31",
-   "horas_ate_saida": 23.6,
+   "horas_ate_saida": 23.1,
    "id": "4b4be33c60",
    "mediana_rota": 2154,
    "menor_preco": 631,
@@ -1090,7 +1090,7 @@
    "saida": "08:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 08:31",
+   "ultima_vista": "2026-10-16 09:01",
    "voos_parecidos": 0
   },
   "4bf1149025": {
@@ -2978,7 +2978,7 @@
    "preco": 906,
    "preco_inicial": 928,
    "saida": "12:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-16 08:31",
    "voos_parecidos": 0
