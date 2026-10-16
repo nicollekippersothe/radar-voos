@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-16 17:01",
+ "atualizado_em": "2026-10-16 17:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -134,7 +134,7 @@
    "data": "2026-10-17",
    "destino": "VIX",
    "detectado_em": "2026-10-16 16:15",
-   "horas_ate_saida": 23.2,
+   "horas_ate_saida": 22.7,
    "id": "0ecb682424",
    "mediana_rota": 1984,
    "menor_preco": 809,
@@ -145,7 +145,7 @@
    "saida": "16:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 17:01",
+   "ultima_vista": "2026-10-16 17:31",
    "voos_parecidos": 0
   },
   "10cbd9d79a": {
@@ -470,7 +470,7 @@
    "data": "2026-10-17",
    "destino": "NAT",
    "detectado_em": "2026-10-16 13:31",
-   "horas_ate_saida": 20.2,
+   "horas_ate_saida": 19.7,
    "id": "27842624be",
    "mediana_rota": 3030,
    "menor_preco": 1369,
@@ -481,7 +481,7 @@
    "saida": "13:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 17:01",
+   "ultima_vista": "2026-10-16 17:31",
    "voos_parecidos": 0
   },
   "27c5ff582b": {
@@ -491,9 +491,9 @@
    "data": "2026-10-16",
    "destino": "UDI",
    "detectado_em": "2026-10-15 17:31",
-   "horas_ate_saida": 5.1,
+   "horas_ate_saida": 4.6,
    "id": "27c5ff582b",
-   "mediana_rota": 2154,
+   "mediana_rota": 2559,
    "menor_preco": 438,
    "origem": "SAO",
    "paradas": 0,
@@ -502,8 +502,8 @@
    "saida": "22:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 17:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-10-16 17:31",
+   "voos_parecidos": 0
   },
   "2835da49eb": {
    "base": 2969,
@@ -1037,7 +1037,7 @@
    "data": "2026-10-17",
    "destino": "RIO",
    "detectado_em": "2026-10-16 13:31",
-   "horas_ate_saida": 19.1,
+   "horas_ate_saida": 18.6,
    "id": "448f0e2e72",
    "mediana_rota": 3205,
    "menor_preco": 1382,
@@ -1048,8 +1048,8 @@
    "saida": "12:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 17:01",
-   "voos_parecidos": 0
+   "ultima_vista": "2026-10-16 17:31",
+   "voos_parecidos": 1
   },
   "46f9d55fa2": {
    "base": 1804,
@@ -1199,15 +1199,15 @@
    "voos_parecidos": 0
   },
   "4b4be33c60": {
-   "base": 2609,
+   "base": 1961,
    "chegada": "11:35",
    "companhia": "LATAM",
    "data": "2026-10-17",
    "destino": "UDI",
    "detectado_em": "2026-10-16 08:31",
-   "horas_ate_saida": 17.2,
+   "horas_ate_saida": 16.7,
    "id": "4b4be33c60",
-   "mediana_rota": 2154,
+   "mediana_rota": 2559,
    "menor_preco": 631,
    "origem": "SAO",
    "paradas": 0,
@@ -1216,7 +1216,7 @@
    "saida": "10:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-16 17:01",
+   "ultima_vista": "2026-10-16 17:31",
    "voos_parecidos": 0
   },
   "4bf1149025": {
