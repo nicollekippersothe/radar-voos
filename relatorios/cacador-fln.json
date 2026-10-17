@@ -1,14 +1,14 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-10-17 16:13",
- "voos_observados": 9657,
- "eventos": 127,
+ "gerado_em": "2026-10-17 18:51",
+ "voos_observados": 9658,
+ "eventos": 129,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
   "p75": 61
  },
- "uma_leitura_so_pct": 46,
+ "uma_leitura_so_pct": 47,
  "inicio_por_hora": {
   "00h": 21,
   "01h": 1,
@@ -27,8 +27,8 @@
   "14h": 3,
   "15h": 3,
   "16h": 3,
-  "17h": 4,
-  "18h": 4,
+  "17h": 5,
+  "18h": 5,
   "19h": 10,
   "20h": 7,
   "21h": 10,
@@ -38,11 +38,11 @@
  "por_companhia": {
   "Gol": 92,
   "LATAM": 32,
-  "Azul": 3
+  "Azul": 5
  },
  "por_destino": {
   "SAO": 30,
-  "RIO": 41,
+  "RIO": 43,
   "POA": 24,
   "CWB": 7,
   "XAP": 17,
@@ -393,6 +393,40 @@
  "recentes": [
   {
    "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-10-19",
+   "saida": "05:45",
+   "companhia": "Azul",
+   "paradas": 1,
+   "inicio": "2026-10-17 18:01",
+   "fim": "2026-10-17 18:50",
+   "leituras": 6,
+   "duracao_min": 79,
+   "menor_preco": 2620,
+   "preco_normal": 4454,
+   "queda_pct": 41,
+   "horas_ate_partida": 35.7,
+   "hora_do_inicio": 18
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-10-19",
+   "saida": "05:45",
+   "companhia": "Azul",
+   "paradas": 1,
+   "inicio": "2026-10-17 17:01",
+   "fim": "2026-10-17 17:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 2620,
+   "preco_normal": 4454,
+   "queda_pct": 41,
+   "horas_ate_partida": 36.7,
+   "hora_do_inicio": 17
+  },
+  {
+   "origem": "FLN",
    "destino": "POA",
    "data": "2026-10-17",
    "saida": "15:25",
@@ -696,40 +730,6 @@
    "queda_pct": 49,
    "horas_ate_partida": 45.9,
    "hora_do_inicio": 12
-  },
-  {
-   "origem": "FLN",
-   "destino": "POA",
-   "data": "2026-10-15",
-   "saida": "17:05",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-10-15 12:46",
-   "fim": "2026-10-15 16:01",
-   "leituras": 11,
-   "duracao_min": 225,
-   "menor_preco": 1865,
-   "preco_normal": 3856,
-   "queda_pct": 52,
-   "horas_ate_partida": 4.3,
-   "hora_do_inicio": 12
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-10-15",
-   "saida": "21:40",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-10-15 08:00",
-   "fim": "2026-10-15 08:00",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 487,
-   "preco_normal": 2175,
-   "queda_pct": 78,
-   "horas_ate_partida": 13.7,
-   "hora_do_inicio": 8
   }
  ]
 }
