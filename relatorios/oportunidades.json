@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-17 01:01",
+ "atualizado_em": "2026-10-17 01:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -155,7 +155,7 @@
    "data": "2026-10-17",
    "destino": "SAO",
    "detectado_em": "2026-10-16 23:31",
-   "horas_ate_saida": 10.5,
+   "horas_ate_saida": 10.0,
    "id": "12c126cec5",
    "mediana_rota": 743,
    "menor_preco": 288,
@@ -166,7 +166,7 @@
    "saida": "11:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 01:01",
+   "ultima_vista": "2026-10-17 01:31",
    "voos_parecidos": 0
   },
   "142d49c8e5": {
@@ -1025,7 +1025,7 @@
    "preco": 829,
    "preco_inicial": 631,
    "saida": "10:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-17 01:01",
    "voos_parecidos": 0
@@ -1079,7 +1079,7 @@
    "data": "2026-10-17",
    "destino": "SAO",
    "detectado_em": "2026-10-16 14:01",
-   "horas_ate_saida": 5.9,
+   "horas_ate_saida": 5.4,
    "id": "4d4c4b4e1a",
    "mediana_rota": 907,
    "menor_preco": 281,
@@ -1090,7 +1090,7 @@
    "saida": "06:55",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 01:01",
+   "ultima_vista": "2026-10-17 01:31",
    "voos_parecidos": 0
   },
   "53ef501db1": {
@@ -1394,7 +1394,7 @@
    "data": "2026-10-17",
    "destino": "XAP",
    "detectado_em": "2026-10-17 01:01",
-   "horas_ate_saida": 8.3,
+   "horas_ate_saida": 7.8,
    "id": "682ecd8545",
    "mediana_rota": 1091,
    "menor_preco": 281,
@@ -1405,7 +1405,7 @@
    "saida": "09:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 01:01",
+   "ultima_vista": "2026-10-17 01:31",
    "voos_parecidos": 0
   },
   "6b7be6f1b2": {
@@ -2969,7 +2969,7 @@
    "data": "2026-10-17",
    "destino": "FLN",
    "detectado_em": "2026-10-16 23:01",
-   "horas_ate_saida": 10.5,
+   "horas_ate_saida": 10.0,
    "id": "d710dda08f",
    "mediana_rota": 3519,
    "menor_preco": 320,
@@ -2980,7 +2980,7 @@
    "saida": "11:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-17 01:01",
+   "ultima_vista": "2026-10-17 01:31",
    "voos_parecidos": 0
   },
   "d7bd3b7e2f": {
