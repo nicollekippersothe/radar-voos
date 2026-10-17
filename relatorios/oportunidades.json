@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-17 01:57",
+ "atualizado_em": "2026-10-17 02:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -155,7 +155,7 @@
    "data": "2026-10-17",
    "destino": "SAO",
    "detectado_em": "2026-10-16 23:31",
-   "horas_ate_saida": 9.6,
+   "horas_ate_saida": 9.0,
    "id": "12c126cec5",
    "mediana_rota": 743,
    "menor_preco": 288,
@@ -166,7 +166,7 @@
    "saida": "11:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 01:57",
+   "ultima_vista": "2026-10-17 02:31",
    "voos_parecidos": 0
   },
   "142d49c8e5": {
@@ -1085,10 +1085,10 @@
    "menor_preco": 281,
    "origem": "UDI",
    "paradas": 0,
-   "preco": 293,
+   "preco": 1884,
    "preco_inicial": 635,
    "saida": "06:55",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-17 01:57",
    "voos_parecidos": 0
@@ -1394,7 +1394,7 @@
    "data": "2026-10-17",
    "destino": "XAP",
    "detectado_em": "2026-10-17 01:01",
-   "horas_ate_saida": 7.4,
+   "horas_ate_saida": 6.8,
    "id": "682ecd8545",
    "mediana_rota": 1091,
    "menor_preco": 281,
@@ -1405,7 +1405,7 @@
    "saida": "09:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 01:57",
+   "ultima_vista": "2026-10-17 02:31",
    "voos_parecidos": 0
   },
   "6b7be6f1b2": {
@@ -2978,7 +2978,7 @@
    "preco": 334,
    "preco_inicial": 320,
    "saida": "11:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-17 01:57",
    "voos_parecidos": 0
