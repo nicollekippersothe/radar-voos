@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-17 04:31",
+ "atualizado_em": "2026-10-17 05:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -1394,7 +1394,7 @@
    "data": "2026-10-17",
    "destino": "XAP",
    "detectado_em": "2026-10-17 01:01",
-   "horas_ate_saida": 4.8,
+   "horas_ate_saida": 4.3,
    "id": "682ecd8545",
    "mediana_rota": 1091,
    "menor_preco": 281,
@@ -1405,7 +1405,7 @@
    "saida": "09:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 04:31",
+   "ultima_vista": "2026-10-17 05:01",
    "voos_parecidos": 0
   },
   "6b7be6f1b2": {
@@ -2978,7 +2978,7 @@
    "preco": 334,
    "preco_inicial": 320,
    "saida": "11:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-17 04:31",
    "voos_parecidos": 0
