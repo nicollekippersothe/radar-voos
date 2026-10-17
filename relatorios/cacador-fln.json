@@ -1,7 +1,7 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-10-17 18:51",
- "voos_observados": 9658,
+ "gerado_em": "2026-10-17 20:50",
+ "voos_observados": 9659,
  "eventos": 129,
  "duracao_min": {
   "mediana": 45,
@@ -399,9 +399,9 @@
    "companhia": "Azul",
    "paradas": 1,
    "inicio": "2026-10-17 18:01",
-   "fim": "2026-10-17 18:50",
-   "leituras": 6,
-   "duracao_min": 79,
+   "fim": "2026-10-17 19:31",
+   "leituras": 9,
+   "duracao_min": 120,
    "menor_preco": 2620,
    "preco_normal": 4454,
    "queda_pct": 41,
