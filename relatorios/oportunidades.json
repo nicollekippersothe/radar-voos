@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-17 09:01",
+ "atualizado_em": "2026-10-17 09:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -92,9 +92,9 @@
    "data": "2026-10-18",
    "destino": "XAP",
    "detectado_em": "2026-10-17 09:01",
-   "horas_ate_saida": 24.0,
+   "horas_ate_saida": 23.5,
    "id": "0d7a7b2d08",
-   "mediana_rota": 1690,
+   "mediana_rota": 1697,
    "menor_preco": 469,
    "origem": "SAO",
    "paradas": 0,
@@ -103,7 +103,7 @@
    "saida": "09:00",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 09:01",
+   "ultima_vista": "2026-10-17 09:31",
    "voos_parecidos": 1
   },
   "0dcdace88e": {
@@ -185,7 +185,7 @@
    "preco": 300,
    "preco_inicial": 288,
    "saida": "11:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-17 09:01",
    "voos_parecidos": 0
@@ -281,7 +281,7 @@
    "data": "2026-10-18",
    "destino": "SAO",
    "detectado_em": "2026-10-17 05:31",
-   "horas_ate_saida": 20.1,
+   "horas_ate_saida": 19.6,
    "id": "1be3525eb1",
    "mediana_rota": 1179,
    "menor_preco": 445,
@@ -292,7 +292,7 @@
    "saida": "05:10",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 09:01",
+   "ultima_vista": "2026-10-17 09:31",
    "voos_parecidos": 0
   },
   "1c0e6d0a49": {
@@ -1064,10 +1064,10 @@
    "menor_preco": 631,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 829,
+   "preco": 3862,
    "preco_inicial": 631,
    "saida": "10:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-17 09:01",
    "voos_parecidos": 0
@@ -1436,9 +1436,9 @@
    "data": "2026-10-17",
    "destino": "XAP",
    "detectado_em": "2026-10-17 01:01",
-   "horas_ate_saida": 3.5,
+   "horas_ate_saida": 3.0,
    "id": "682ecd8545",
-   "mediana_rota": 1690,
+   "mediana_rota": 1697,
    "menor_preco": 281,
    "origem": "SAO",
    "paradas": 0,
@@ -1447,8 +1447,8 @@
    "saida": "12:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 09:01",
-   "voos_parecidos": 2
+   "ultima_vista": "2026-10-17 09:31",
+   "voos_parecidos": 1
   },
   "6b7be6f1b2": {
    "base": 2757,
@@ -3020,7 +3020,7 @@
    "preco": 334,
    "preco_inicial": 320,
    "saida": "11:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-17 09:01",
    "voos_parecidos": 0
