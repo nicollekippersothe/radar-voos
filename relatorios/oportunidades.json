@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-17 05:31",
+ "atualizado_em": "2026-10-17 06:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -269,7 +269,7 @@
    "preco": 445,
    "preco_inicial": 445,
    "saida": "05:10",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-17 05:31",
    "voos_parecidos": 0
@@ -1424,7 +1424,7 @@
    "preco": 281,
    "preco_inicial": 281,
    "saida": "09:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-17 05:31",
    "voos_parecidos": 0
