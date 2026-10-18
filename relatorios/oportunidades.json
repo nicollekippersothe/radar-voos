@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-18 02:31",
+ "atualizado_em": "2026-10-18 03:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -2570,9 +2570,9 @@
    "data": "2026-10-18",
    "destino": "SAO",
    "detectado_em": "2026-10-17 20:31",
-   "horas_ate_saida": 18.0,
+   "horas_ate_saida": 17.5,
    "id": "dc42803f95",
-   "mediana_rota": 1127,
+   "mediana_rota": 906,
    "menor_preco": 300,
    "origem": "XAP",
    "paradas": 0,
@@ -2581,7 +2581,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-18 02:31",
+   "ultima_vista": "2026-10-18 03:01",
    "voos_parecidos": 0
   },
   "dc64500f6e": {
@@ -2759,7 +2759,7 @@
    "data": "2026-10-18",
    "destino": "XAP",
    "detectado_em": "2026-10-17 22:01",
-   "horas_ate_saida": 19.1,
+   "horas_ate_saida": 18.6,
    "id": "edb03a96e0",
    "mediana_rota": 3521,
    "menor_preco": 336,
@@ -2770,7 +2770,7 @@
    "saida": "21:40",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-18 02:31",
+   "ultima_vista": "2026-10-18 03:01",
    "voos_parecidos": 0
   },
   "edcc1c67dd": {
