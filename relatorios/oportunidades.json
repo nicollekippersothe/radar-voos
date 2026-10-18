@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-18 07:01",
+ "atualizado_em": "2026-10-18 07:31",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -101,7 +101,7 @@
    "preco": 281,
    "preco_inicial": 469,
    "saida": "09:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-18 07:01",
    "voos_parecidos": 2
@@ -1247,7 +1247,7 @@
    "data": "2026-10-18",
    "destino": "REC",
    "detectado_em": "2026-10-18 03:31",
-   "horas_ate_saida": 15.8,
+   "horas_ate_saida": 15.3,
    "id": "66be80ef3e",
    "mediana_rota": 3036,
    "menor_preco": 1168,
@@ -1258,7 +1258,7 @@
    "saida": "22:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-18 07:01",
+   "ultima_vista": "2026-10-18 07:31",
    "voos_parecidos": 0
   },
   "670b2a29f1": {
@@ -2591,7 +2591,7 @@
    "data": "2026-10-18",
    "destino": "SAO",
    "detectado_em": "2026-10-17 20:31",
-   "horas_ate_saida": 13.5,
+   "horas_ate_saida": 13.0,
    "id": "dc42803f95",
    "mediana_rota": 1127,
    "menor_preco": 300,
@@ -2602,7 +2602,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-18 07:01",
+   "ultima_vista": "2026-10-18 07:31",
    "voos_parecidos": 0
   },
   "dc64500f6e": {
@@ -2786,10 +2786,10 @@
    "menor_preco": 336,
    "origem": "FLN",
    "paradas": 0,
-   "preco": 336,
+   "preco": 1157,
    "preco_inicial": 336,
    "saida": "21:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-18 07:01",
    "voos_parecidos": 0
@@ -3074,7 +3074,7 @@
    "data": "2026-10-19",
    "destino": "FLN",
    "detectado_em": "2026-10-18 06:01",
-   "horas_ate_saida": 23.0,
+   "horas_ate_saida": 22.5,
    "id": "fe0b1be094",
    "mediana_rota": 3519,
    "menor_preco": 334,
@@ -3085,7 +3085,7 @@
    "saida": "06:00",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-18 07:01",
+   "ultima_vista": "2026-10-18 07:31",
    "voos_parecidos": 0
   },
   "fe18dfd1a3": {
