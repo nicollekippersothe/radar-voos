@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-17 20:59",
+ "atualizado_em": "2026-10-17 21:01",
  "eventos": {
   "012adf94d7": {
    "base": 2691,
@@ -86,7 +86,7 @@
    "voos_parecidos": 0
   },
   "0d7a7b2d08": {
-   "base": 548,
+   "base": 535,
    "chegada": "10:35",
    "companhia": "Gol",
    "data": "2026-10-18",
@@ -103,7 +103,7 @@
    "saida": "09:00",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 20:59",
+   "ultima_vista": "2026-10-17 21:01",
    "voos_parecidos": 3
   },
   "0dcdace88e": {
@@ -3169,7 +3169,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-17 20:59",
+   "ultima_vista": "2026-10-17 21:01",
    "voos_parecidos": 0
   },
   "dc64500f6e": {
