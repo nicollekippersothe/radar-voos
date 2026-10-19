@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-19 11:01",
+ "atualizado_em": "2026-10-19 11:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1366,6 +1366,27 @@
    "ultima_vista": "2026-10-18 17:31",
    "voos_parecidos": 0
   },
+  "8a94ca0205": {
+   "base": 3895,
+   "chegada": "21:55",
+   "companhia": "Azul",
+   "data": "2026-10-19",
+   "destino": "REC",
+   "detectado_em": "2026-10-19 11:31",
+   "horas_ate_saida": 7.7,
+   "id": "8a94ca0205",
+   "mediana_rota": 2363,
+   "menor_preco": 1649,
+   "origem": "RIO",
+   "paradas": 0,
+   "preco": 1649,
+   "preco_inicial": 1649,
+   "saida": "19:10",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-19 11:31",
+   "voos_parecidos": 0
+  },
   "8bc4327e5a": {
    "base": 2873,
    "chegada": "15:56",
@@ -1541,7 +1562,7 @@
    "data": "2026-10-20",
    "destino": "SAO",
    "detectado_em": "2026-10-19 11:01",
-   "horas_ate_saida": 21.5,
+   "horas_ate_saida": 21.0,
    "id": "968e947537",
    "mediana_rota": 2413,
    "menor_preco": 1493,
@@ -1552,7 +1573,7 @@
    "saida": "08:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-19 11:01",
+   "ultima_vista": "2026-10-19 11:31",
    "voos_parecidos": 0
   },
   "9705a1bc50": {
@@ -1751,9 +1772,9 @@
    "data": "2026-10-19",
    "destino": "SSA",
    "detectado_em": "2026-10-19 10:01",
-   "horas_ate_saida": 5.3,
+   "horas_ate_saida": 4.8,
    "id": "a9911c3668",
-   "mediana_rota": 3633,
+   "mediana_rota": 3456,
    "menor_preco": 1462,
    "origem": "SAO",
    "paradas": 0,
@@ -1762,8 +1783,8 @@
    "saida": "16:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-19 11:01",
-   "voos_parecidos": 0
+   "ultima_vista": "2026-10-19 11:31",
+   "voos_parecidos": 2
   },
   "a9c143abd7": {
    "base": 1584,
@@ -2717,9 +2738,9 @@
    "data": "2026-10-20",
    "destino": "SSA",
    "detectado_em": "2026-10-19 10:01",
-   "horas_ate_saida": 19.2,
+   "horas_ate_saida": 18.7,
    "id": "fb3a6aa872",
-   "mediana_rota": 3633,
+   "mediana_rota": 3456,
    "menor_preco": 1462,
    "origem": "SAO",
    "paradas": 0,
@@ -2728,7 +2749,7 @@
    "saida": "06:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-19 11:01",
+   "ultima_vista": "2026-10-19 11:31",
    "voos_parecidos": 1
   },
   "fc720e2edc": {
