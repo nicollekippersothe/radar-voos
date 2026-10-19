@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-19 08:01",
+ "atualizado_em": "2026-10-19 08:13",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -707,10 +707,10 @@
    "menor_preco": 586,
    "origem": "FOR",
    "paradas": 0,
-   "preco": 649,
+   "preco": 3763,
    "preco_inicial": 586,
    "saida": "09:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-19 08:01",
    "voos_parecidos": 0
@@ -1190,10 +1190,10 @@
    "menor_preco": 1168,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1168,
+   "preco": 1693,
    "preco_inicial": 1168,
    "saida": "12:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-19 08:01",
    "voos_parecidos": 0
