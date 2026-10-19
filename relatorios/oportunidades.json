@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-19 07:31",
+ "atualizado_em": "2026-10-19 08:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -701,9 +701,9 @@
    "data": "2026-10-19",
    "destino": "REC",
    "detectado_em": "2026-10-18 12:01",
-   "horas_ate_saida": 1.5,
+   "horas_ate_saida": 1.0,
    "id": "39640505b3",
-   "mediana_rota": 3763,
+   "mediana_rota": 3811,
    "menor_preco": 586,
    "origem": "FOR",
    "paradas": 0,
@@ -712,7 +712,7 @@
    "saida": "09:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-19 07:31",
+   "ultima_vista": "2026-10-19 08:01",
    "voos_parecidos": 0
   },
   "3b69b3dddd": {
@@ -1184,7 +1184,7 @@
    "data": "2026-10-19",
    "destino": "REC",
    "detectado_em": "2026-10-18 12:31",
-   "horas_ate_saida": 5.0,
+   "horas_ate_saida": 4.5,
    "id": "6f8c5e8e9c",
    "mediana_rota": 3036,
    "menor_preco": 1168,
@@ -1195,7 +1195,7 @@
    "saida": "12:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-19 07:31",
+   "ultima_vista": "2026-10-19 08:01",
    "voos_parecidos": 0
   },
   "7140e28056": {
@@ -2012,7 +2012,7 @@
    "preco": 860,
    "preco_inicial": 860,
    "saida": "22:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-19 07:31",
    "voos_parecidos": 0
