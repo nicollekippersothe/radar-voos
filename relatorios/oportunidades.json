@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-19 09:01",
+ "atualizado_em": "2026-10-19 09:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1184,18 +1184,18 @@
    "data": "2026-10-19",
    "destino": "REC",
    "detectado_em": "2026-10-18 12:31",
-   "horas_ate_saida": 4.5,
+   "horas_ate_saida": 3.0,
    "id": "6f8c5e8e9c",
    "mediana_rota": 3036,
    "menor_preco": 1168,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1693,
+   "preco": 1168,
    "preco_inicial": 1168,
    "saida": "12:30",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-19 08:01",
+   "ultima_vista": "2026-10-19 09:31",
    "voos_parecidos": 0
   },
   "7140e28056": {
