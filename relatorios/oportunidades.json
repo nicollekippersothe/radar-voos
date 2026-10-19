@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-19 09:31",
+ "atualizado_em": "2026-10-19 10:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1190,10 +1190,10 @@
    "menor_preco": 1168,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1168,
+   "preco": 1693,
    "preco_inicial": 1168,
    "saida": "12:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-19 09:31",
    "voos_parecidos": 0
@@ -1721,6 +1721,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-14 17:31",
+   "voos_parecidos": 0
+  },
+  "a9911c3668": {
+   "base": 3994,
+   "chegada": "18:40",
+   "companhia": "Azul",
+   "data": "2026-10-19",
+   "destino": "SSA",
+   "detectado_em": "2026-10-19 10:01",
+   "horas_ate_saida": 6.3,
+   "id": "a9911c3668",
+   "mediana_rota": 3633,
+   "menor_preco": 1462,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1462,
+   "preco_inicial": 1462,
+   "saida": "16:20",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-19 10:01",
    "voos_parecidos": 0
   },
   "a9c143abd7": {
@@ -2667,6 +2688,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-10-11 16:31",
    "voos_parecidos": 0
+  },
+  "fb3a6aa872": {
+   "base": 3994,
+   "chegada": "08:35",
+   "companhia": "Azul",
+   "data": "2026-10-20",
+   "destino": "SSA",
+   "detectado_em": "2026-10-19 10:01",
+   "horas_ate_saida": 20.2,
+   "id": "fb3a6aa872",
+   "mediana_rota": 3633,
+   "menor_preco": 1462,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1462,
+   "preco_inicial": 1462,
+   "saida": "06:15",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-19 10:01",
+   "voos_parecidos": 1
   },
   "fc720e2edc": {
    "base": 1596,
