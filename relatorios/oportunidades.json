@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-20 14:30",
+ "atualizado_em": "2026-10-20 14:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -40,7 +40,7 @@
    "saida": "18:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 0
   },
   "089969667b": {
@@ -176,7 +176,7 @@
    "data": "2026-10-20",
    "destino": "SSA",
    "detectado_em": "2026-10-19 17:31",
-   "horas_ate_saida": 8.8,
+   "horas_ate_saida": 8.7,
    "id": "129ef652d5",
    "mediana_rota": 1450,
    "menor_preco": 701,
@@ -187,7 +187,7 @@
    "saida": "23:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 0
   },
   "12c126cec5": {
@@ -449,7 +449,7 @@
    "data": "2026-10-20",
    "destino": "FLN",
    "detectado_em": "2026-10-19 12:01",
-   "horas_ate_saida": 7.8,
+   "horas_ate_saida": 7.7,
    "id": "23a58cfdd4",
    "mediana_rota": 2236,
    "menor_preco": 920,
@@ -460,7 +460,7 @@
    "saida": "22:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 1
   },
   "23a7841200": {
@@ -880,7 +880,7 @@
    "saida": "15:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 2
   },
   "43589ae524": {
@@ -892,7 +892,7 @@
    "detectado_em": "2026-10-20 10:31",
    "horas_ate_saida": 17.8,
    "id": "43589ae524",
-   "mediana_rota": 2916,
+   "mediana_rota": 2914,
    "menor_preco": 1733,
    "origem": "SAO",
    "paradas": 0,
@@ -901,7 +901,7 @@
    "saida": "08:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 0
   },
   "448f0e2e72": {
@@ -1027,7 +1027,7 @@
    "saida": "19:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 0
   },
   "4b4be33c60": {
@@ -1237,7 +1237,7 @@
    "saida": "10:05",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 0
   },
   "650a0f6671": {
@@ -1972,7 +1972,7 @@
    "saida": "21:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 14:30",
+   "ultima_vista": "2026-10-20 14:31",
    "voos_parecidos": 0
   },
   "abf42b9fbc": {
