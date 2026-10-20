@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-20 09:31",
+ "atualizado_em": "2026-10-20 10:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -29,7 +29,7 @@
    "data": "2026-10-20",
    "destino": "UDI",
    "detectado_em": "2026-10-19 17:31",
-   "horas_ate_saida": 12.6,
+   "horas_ate_saida": 12.1,
    "id": "005c82ace5",
    "mediana_rota": 2154,
    "menor_preco": 338,
@@ -40,7 +40,7 @@
    "saida": "22:05",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 0
   },
   "089969667b": {
@@ -155,9 +155,9 @@
    "data": "2026-10-21",
    "destino": "BSB",
    "detectado_em": "2026-10-20 06:01",
-   "horas_ate_saida": 20.2,
+   "horas_ate_saida": 19.7,
    "id": "0f51366be0",
-   "mediana_rota": 1709,
+   "mediana_rota": 1811,
    "menor_preco": 696,
    "origem": "SSA",
    "paradas": 0,
@@ -166,7 +166,7 @@
    "saida": "05:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 0
   },
   "129ef652d5": {
@@ -176,7 +176,7 @@
    "data": "2026-10-20",
    "destino": "SSA",
    "detectado_em": "2026-10-19 17:31",
-   "horas_ate_saida": 13.7,
+   "horas_ate_saida": 13.2,
    "id": "129ef652d5",
    "mediana_rota": 1450,
    "menor_preco": 701,
@@ -187,7 +187,7 @@
    "saida": "23:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 0
   },
   "12c126cec5": {
@@ -491,9 +491,9 @@
    "data": "2026-10-20",
    "destino": "SAO",
    "detectado_em": "2026-10-19 14:45",
-   "horas_ate_saida": 2.6,
+   "horas_ate_saida": 2.1,
    "id": "2665558de1",
-   "mediana_rota": 3077,
+   "mediana_rota": 3013,
    "menor_preco": 859,
    "origem": "BPS",
    "paradas": 1,
@@ -502,7 +502,7 @@
    "saida": "12:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 0
   },
   "26b3053766": {
@@ -848,7 +848,7 @@
    "data": "2026-10-20",
    "destino": "FOR",
    "detectado_em": "2026-10-19 12:31",
-   "horas_ate_saida": 6.1,
+   "horas_ate_saida": 5.6,
    "id": "425b4948ec",
    "mediana_rota": 2123,
    "menor_preco": 1016,
@@ -859,7 +859,7 @@
    "saida": "15:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 2
   },
   "448f0e2e72": {
@@ -923,6 +923,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-15 21:01",
+   "voos_parecidos": 0
+  },
+  "47b626b4e3": {
+   "base": 461,
+   "chegada": "11:05",
+   "companhia": "Gol",
+   "data": "2026-10-21",
+   "destino": "SAO",
+   "detectado_em": "2026-10-20 10:01",
+   "horas_ate_saida": 23.7,
+   "id": "47b626b4e3",
+   "mediana_rota": 2161,
+   "menor_preco": 461,
+   "origem": "UDI",
+   "paradas": 0,
+   "preco": 461,
+   "preco_inicial": 461,
+   "saida": "09:45",
+   "status": "aberta",
+   "tipo": "barato",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 0
   },
   "48a1347f30": {
@@ -1856,7 +1877,7 @@
    "data": "2026-10-20",
    "destino": "SSA",
    "detectado_em": "2026-10-19 22:01",
-   "horas_ate_saida": 12.2,
+   "horas_ate_saida": 11.7,
    "id": "ab9aea11e6",
    "mediana_rota": 1461,
    "menor_preco": 675,
@@ -1867,7 +1888,7 @@
    "saida": "21:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 0
   },
   "abf42b9fbc": {
@@ -2843,7 +2864,7 @@
    "data": "2026-10-20",
    "destino": "SSA",
    "detectado_em": "2026-10-19 10:01",
-   "horas_ate_saida": 6.8,
+   "horas_ate_saida": 6.3,
    "id": "fb3a6aa872",
    "mediana_rota": 3102,
    "menor_preco": 1022,
@@ -2854,7 +2875,7 @@
    "saida": "16:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-20 09:31",
+   "ultima_vista": "2026-10-20 10:01",
    "voos_parecidos": 1
   },
   "fc720e2edc": {
