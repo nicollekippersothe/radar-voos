@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-21 04:01",
+ "atualizado_em": "2026-10-21 04:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -2045,7 +2045,7 @@
    "data": "2026-10-21",
    "destino": "SAO",
    "detectado_em": "2026-10-20 20:31",
-   "horas_ate_saida": 16.5,
+   "horas_ate_saida": 16.0,
    "id": "b9a8c3aaa3",
    "mediana_rota": 2044,
    "menor_preco": 421,
@@ -2056,7 +2056,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-21 04:01",
+   "ultima_vista": "2026-10-21 04:31",
    "voos_parecidos": 0
   },
   "bbf5363842": {
