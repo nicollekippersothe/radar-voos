@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-21 11:31",
+ "atualizado_em": "2026-10-21 12:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1744,6 +1744,27 @@
    "ultima_vista": "2026-10-14 20:31",
    "voos_parecidos": 0
   },
+  "a2e400e9d1": {
+   "base": 2626,
+   "chegada": "14:00",
+   "companhia": "LATAM",
+   "data": "2026-10-22",
+   "destino": "SLZ",
+   "detectado_em": "2026-10-21 12:01",
+   "horas_ate_saida": 22.5,
+   "id": "a2e400e9d1",
+   "mediana_rota": 2854,
+   "menor_preco": 1063,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1063,
+   "preco_inicial": 1063,
+   "saida": "10:30",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-21 12:01",
+   "voos_parecidos": 0
+  },
   "a423502ebf": {
    "base": 587,
    "chegada": "19:55",
@@ -2045,7 +2066,7 @@
    "data": "2026-10-21",
    "destino": "SAO",
    "detectado_em": "2026-10-20 20:31",
-   "horas_ate_saida": 9.0,
+   "horas_ate_saida": 8.5,
    "id": "b9a8c3aaa3",
    "mediana_rota": 1978,
    "menor_preco": 421,
@@ -2056,7 +2077,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-21 11:31",
+   "ultima_vista": "2026-10-21 12:01",
    "voos_parecidos": 0
   },
   "bbf5363842": {
