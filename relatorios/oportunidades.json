@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-21 08:31",
+ "atualizado_em": "2026-10-21 09:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -2054,7 +2054,7 @@
    "preco": 421,
    "preco_inicial": 421,
    "saida": "20:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-21 08:31",
    "voos_parecidos": 0
