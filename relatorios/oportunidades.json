@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-21 16:31",
+ "atualizado_em": "2026-10-21 16:34",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1751,9 +1751,9 @@
    "data": "2026-10-22",
    "destino": "SLZ",
    "detectado_em": "2026-10-21 12:01",
-   "horas_ate_saida": 18.0,
+   "horas_ate_saida": 17.9,
    "id": "a2e400e9d1",
-   "mediana_rota": 2960,
+   "mediana_rota": 2991,
    "menor_preco": 1063,
    "origem": "SAO",
    "paradas": 0,
@@ -1762,7 +1762,7 @@
    "saida": "10:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 16:31",
+   "ultima_vista": "2026-10-21 16:34",
    "voos_parecidos": 0
   },
   "a423502ebf": {
