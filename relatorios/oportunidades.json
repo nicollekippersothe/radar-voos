@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-21 23:01",
+ "atualizado_em": "2026-10-21 23:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1415,9 +1415,9 @@
    "data": "2026-10-22",
    "destino": "CGR",
    "detectado_em": "2026-10-21 19:31",
-   "horas_ate_saida": 17.9,
+   "horas_ate_saida": 17.4,
    "id": "7019925a0f",
-   "mediana_rota": 2133,
+   "mediana_rota": 2492,
    "menor_preco": 860,
    "origem": "SAO",
    "paradas": 0,
@@ -1426,7 +1426,7 @@
    "saida": "16:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 23:01",
+   "ultima_vista": "2026-10-21 23:31",
    "voos_parecidos": 1
   },
   "7140e28056": {
@@ -1772,7 +1772,7 @@
    "data": "2026-10-22",
    "destino": "SLZ",
    "detectado_em": "2026-10-21 12:01",
-   "horas_ate_saida": 11.5,
+   "horas_ate_saida": 11.0,
    "id": "a2e400e9d1",
    "mediana_rota": 2736,
    "menor_preco": 1063,
@@ -1783,7 +1783,7 @@
    "saida": "10:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 23:01",
+   "ultima_vista": "2026-10-21 23:31",
    "voos_parecidos": 0
   },
   "a423502ebf": {
@@ -1982,18 +1982,18 @@
    "data": "2026-10-22",
    "destino": "GYN",
    "detectado_em": "2026-10-21 19:31",
-   "horas_ate_saida": 14.8,
+   "horas_ate_saida": 13.8,
    "id": "adcd9d47b8",
-   "mediana_rota": 1904,
+   "mediana_rota": 2253,
    "menor_preco": 766,
    "origem": "SAO",
    "paradas": 0,
    "preco": 766,
    "preco_inicial": 766,
    "saida": "13:20",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 22:31",
+   "ultima_vista": "2026-10-21 23:31",
    "voos_parecidos": 2
   },
   "ae4a1c3c2c": {
@@ -2264,7 +2264,7 @@
    "preco": 526,
    "preco_inicial": 526,
    "saida": "21:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-21 23:01",
    "voos_parecidos": 0
@@ -2411,7 +2411,7 @@
    "preco": 1050,
    "preco_inicial": 1050,
    "saida": "14:45",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-21 23:01",
    "voos_parecidos": 0
