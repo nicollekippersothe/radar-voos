@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-21 22:01",
+ "atualizado_em": "2026-10-21 22:27",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1415,7 +1415,7 @@
    "data": "2026-10-22",
    "destino": "CGR",
    "detectado_em": "2026-10-21 19:31",
-   "horas_ate_saida": 18.9,
+   "horas_ate_saida": 18.5,
    "id": "7019925a0f",
    "mediana_rota": 2133,
    "menor_preco": 860,
@@ -1426,7 +1426,7 @@
    "saida": "16:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 22:01",
+   "ultima_vista": "2026-10-21 22:27",
    "voos_parecidos": 0
   },
   "7140e28056": {
@@ -1772,7 +1772,7 @@
    "data": "2026-10-22",
    "destino": "SLZ",
    "detectado_em": "2026-10-21 12:01",
-   "horas_ate_saida": 12.5,
+   "horas_ate_saida": 12.1,
    "id": "a2e400e9d1",
    "mediana_rota": 2736,
    "menor_preco": 1063,
@@ -1783,7 +1783,7 @@
    "saida": "10:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 22:01",
+   "ultima_vista": "2026-10-21 22:27",
    "voos_parecidos": 0
   },
   "a423502ebf": {
@@ -1982,7 +1982,7 @@
    "data": "2026-10-22",
    "destino": "GYN",
    "detectado_em": "2026-10-21 19:31",
-   "horas_ate_saida": 15.3,
+   "horas_ate_saida": 14.9,
    "id": "adcd9d47b8",
    "mediana_rota": 1904,
    "menor_preco": 766,
@@ -1993,7 +1993,7 @@
    "saida": "13:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 22:01",
+   "ultima_vista": "2026-10-21 22:27",
    "voos_parecidos": 2
   },
   "ae4a1c3c2c": {
@@ -2255,7 +2255,7 @@
    "data": "2026-10-22",
    "destino": "XAP",
    "detectado_em": "2026-10-21 22:01",
-   "horas_ate_saida": 23.6,
+   "horas_ate_saida": 23.2,
    "id": "c605a1ff71",
    "mediana_rota": 2952,
    "menor_preco": 526,
@@ -2266,7 +2266,7 @@
    "saida": "21:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 22:01",
+   "ultima_vista": "2026-10-21 22:27",
    "voos_parecidos": 0
   },
   "c63ac067d9": {
@@ -2402,7 +2402,7 @@
    "data": "2026-10-22",
    "destino": "SAO",
    "detectado_em": "2026-10-21 20:31",
-   "horas_ate_saida": 16.7,
+   "horas_ate_saida": 16.3,
    "id": "d142b49396",
    "mediana_rota": 3064,
    "menor_preco": 1050,
@@ -2413,7 +2413,7 @@
    "saida": "14:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-21 22:01",
+   "ultima_vista": "2026-10-21 22:27",
    "voos_parecidos": 0
   },
   "d4aad005f8": {
@@ -2621,7 +2621,7 @@
    "preco": 754,
    "preco_inicial": 754,
    "saida": "15:55",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-21 22:01",
    "voos_parecidos": 2
