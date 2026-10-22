@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-22 09:01",
+ "atualizado_em": "2026-10-22 09:22",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1295,10 +1295,10 @@
    "menor_preco": 860,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 860,
+   "preco": 2246,
    "preco_inicial": 860,
    "saida": "16:55",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-22 09:01",
    "voos_parecidos": 1
@@ -1562,7 +1562,7 @@
    "data": "2026-10-22",
    "destino": "SLZ",
    "detectado_em": "2026-10-21 12:01",
-   "horas_ate_saida": 1.5,
+   "horas_ate_saida": 1.1,
    "id": "a2e400e9d1",
    "mediana_rota": 2960,
    "menor_preco": 1063,
@@ -1573,7 +1573,7 @@
    "saida": "10:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-22 09:01",
+   "ultima_vista": "2026-10-22 09:22",
    "voos_parecidos": 0
   },
   "a423502ebf": {
@@ -1925,10 +1925,10 @@
    "menor_preco": 526,
    "origem": "FLN",
    "paradas": 0,
-   "preco": 526,
+   "preco": 1963,
    "preco_inicial": 526,
    "saida": "21:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-22 09:01",
    "voos_parecidos": 0
@@ -2045,7 +2045,7 @@
    "data": "2026-10-22",
    "destino": "SAO",
    "detectado_em": "2026-10-21 20:31",
-   "horas_ate_saida": 5.7,
+   "horas_ate_saida": 5.4,
    "id": "d142b49396",
    "mediana_rota": 2830,
    "menor_preco": 1050,
@@ -2056,7 +2056,7 @@
    "saida": "14:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-22 09:01",
+   "ultima_vista": "2026-10-22 09:22",
    "voos_parecidos": 0
   },
   "d3cfe79ab3": {
