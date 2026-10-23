@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-23 10:01",
+ "atualizado_em": "2026-10-23 10:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -434,10 +434,10 @@
    "menor_preco": 1608,
    "origem": "SSA",
    "paradas": 0,
-   "preco": 1608,
+   "preco": 3267,
    "preco_inicial": 1608,
    "saida": "04:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-23 10:01",
    "voos_parecidos": 0
@@ -932,7 +932,7 @@
    "data": "2026-10-24",
    "destino": "SAO",
    "detectado_em": "2026-10-23 05:01",
-   "horas_ate_saida": 19.0,
+   "horas_ate_saida": 18.5,
    "id": "48455d9056",
    "mediana_rota": 1948,
    "menor_preco": 403,
@@ -943,7 +943,7 @@
    "saida": "05:00",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-23 10:01",
+   "ultima_vista": "2026-10-23 10:31",
    "voos_parecidos": 0
   },
   "49bc1ca868": {
@@ -1114,6 +1114,27 @@
    "ultima_vista": "2026-10-16 16:15",
    "voos_parecidos": 0
   },
+  "60b7c0dfb3": {
+   "base": 2326,
+   "chegada": "07:50",
+   "companhia": "Gol",
+   "data": "2026-10-24",
+   "destino": "BHZ",
+   "detectado_em": "2026-10-23 10:31",
+   "horas_ate_saida": 20.0,
+   "id": "60b7c0dfb3",
+   "mediana_rota": 2326,
+   "menor_preco": 864,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 864,
+   "preco_inicial": 864,
+   "saida": "06:30",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-23 10:31",
+   "voos_parecidos": 0
+  },
   "61a3bea1ba": {
    "base": 480,
    "chegada": "12:15",
@@ -1235,7 +1256,7 @@
    "preco": 1555,
    "preco_inicial": 1555,
    "saida": "06:35",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-23 10:01",
    "voos_parecidos": 1
@@ -1331,7 +1352,7 @@
    "data": "2026-10-23",
    "destino": "SAO",
    "detectado_em": "2026-10-22 17:01",
-   "horas_ate_saida": 10.5,
+   "horas_ate_saida": 10.0,
    "id": "78f356a477",
    "mediana_rota": 1836,
    "menor_preco": 466,
@@ -1342,7 +1363,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-23 10:01",
+   "ultima_vista": "2026-10-23 10:31",
    "voos_parecidos": 0
   },
   "7a6956ceaf": {
@@ -1598,13 +1619,13 @@
    "voos_parecidos": 0
   },
   "9fce5c27ac": {
-   "base": 2277,
+   "base": 2276,
    "chegada": "08:40",
    "companhia": "Gol",
    "data": "2026-10-24",
    "destino": "SAO",
    "detectado_em": "2026-10-23 06:31",
-   "horas_ate_saida": 21.3,
+   "horas_ate_saida": 20.8,
    "id": "9fce5c27ac",
    "mediana_rota": 2299,
    "menor_preco": 837,
@@ -1615,7 +1636,7 @@
    "saida": "07:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-23 10:01",
+   "ultima_vista": "2026-10-23 10:31",
    "voos_parecidos": 1
   },
   "a2d5991881": {
@@ -1688,7 +1709,7 @@
    "data": "2026-10-24",
    "destino": "SAO",
    "detectado_em": "2026-10-23 06:31",
-   "horas_ate_saida": 20.1,
+   "horas_ate_saida": 19.6,
    "id": "a4d64fc37f",
    "mediana_rota": 2895,
    "menor_preco": 836,
@@ -1699,8 +1720,8 @@
    "saida": "06:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-23 10:01",
-   "voos_parecidos": 0
+   "ultima_vista": "2026-10-23 10:31",
+   "voos_parecidos": 1
   },
   "a68fb45fd2": {
    "base": 2880,
@@ -1919,7 +1940,7 @@
    "data": "2026-10-23",
    "destino": "SAO",
    "detectado_em": "2026-10-22 20:31",
-   "horas_ate_saida": 10.4,
+   "horas_ate_saida": 9.9,
    "id": "b7f524fd3a",
    "mediana_rota": 1948,
    "menor_preco": 437,
@@ -1930,7 +1951,7 @@
    "saida": "20:25",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-23 10:01",
+   "ultima_vista": "2026-10-23 10:31",
    "voos_parecidos": 0
   },
   "b9201dc27c": {
@@ -1988,10 +2009,10 @@
    "menor_preco": 1060,
    "origem": "BSB",
    "paradas": 0,
-   "preco": 1060,
+   "preco": 3026,
    "preco_inicial": 1060,
    "saida": "09:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-23 10:01",
    "voos_parecidos": 0
