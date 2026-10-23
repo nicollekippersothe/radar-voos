@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-23 02:31",
+ "atualizado_em": "2026-10-23 03:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1268,7 +1268,7 @@
    "data": "2026-10-23",
    "destino": "SAO",
    "detectado_em": "2026-10-22 17:01",
-   "horas_ate_saida": 18.0,
+   "horas_ate_saida": 17.5,
    "id": "78f356a477",
    "mediana_rota": 1836,
    "menor_preco": 466,
@@ -1279,7 +1279,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-23 02:31",
+   "ultima_vista": "2026-10-23 03:01",
    "voos_parecidos": 1
   },
   "7a6956ceaf": {
@@ -1547,10 +1547,10 @@
    "menor_preco": 1886,
    "origem": "IGU",
    "paradas": 0,
-   "preco": 1886,
+   "preco": 2141,
    "preco_inicial": 1886,
    "saida": "05:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-23 02:31",
    "voos_parecidos": 0
@@ -1787,13 +1787,13 @@
    "voos_parecidos": 0
   },
   "b7f524fd3a": {
-   "base": 403,
+   "base": 420,
    "chegada": "21:45",
    "companhia": "Gol",
    "data": "2026-10-23",
    "destino": "SAO",
    "detectado_em": "2026-10-22 20:31",
-   "horas_ate_saida": 17.9,
+   "horas_ate_saida": 17.4,
    "id": "b7f524fd3a",
    "mediana_rota": 1948,
    "menor_preco": 437,
@@ -1804,7 +1804,7 @@
    "saida": "20:25",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-23 02:31",
+   "ultima_vista": "2026-10-23 03:01",
    "voos_parecidos": 0
   },
   "b9201dc27c": {
