@@ -1,72 +1,72 @@
 {
- "voos_partidos": 41488,
+ "voos_partidos": 43891,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 1.1,
-  "voos_afetados_pct": 10.6
+  "voos_afetados_pct": 10.2
  },
- "voos_avaliados": 27459,
+ "voos_avaliados": 29040,
  "queda_sustentada": {
-  "20pct": 6.9,
-  "30pct": 4.1
+  "20pct": 7.0,
+  "30pct": 4.0
  },
- "alta_sustentada_30pct": 11.8,
+ "alta_sustentada_30pct": 11.4,
  "por_companhia": {
-  "Gol": {
-   "voos": 8364,
-   "queda20_pct": 7.6
-  },
   "LATAM": {
-   "voos": 12302,
-   "queda20_pct": 6.8
+   "voos": 12935,
+   "queda20_pct": 7.0
+  },
+  "Gol": {
+   "voos": 8872,
+   "queda20_pct": 7.7
   },
   "Azul": {
-   "voos": 6782,
-   "queda20_pct": 6.2
+   "voos": 7221,
+   "queda20_pct": 6.3
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 486,
-   "queda20_pct": 4.9
+   "voos": 509,
+   "queda20_pct": 4.7
   },
   "03-05h": {
-   "voos": 2169,
-   "queda20_pct": 7.5
-  },
-  "06-08h": {
-   "voos": 3901,
-   "queda20_pct": 4.8
-  },
-  "09-11h": {
-   "voos": 4375,
-   "queda20_pct": 4.0
-  },
-  "12-14h": {
-   "voos": 4242,
-   "queda20_pct": 6.0
-  },
-  "15-17h": {
-   "voos": 5019,
+   "voos": 2298,
    "queda20_pct": 7.4
   },
+  "06-08h": {
+   "voos": 4135,
+   "queda20_pct": 4.9
+  },
+  "09-11h": {
+   "voos": 4610,
+   "queda20_pct": 3.9
+  },
+  "12-14h": {
+   "voos": 4491,
+   "queda20_pct": 5.9
+  },
+  "15-17h": {
+   "voos": 5296,
+   "queda20_pct": 7.6
+  },
   "18-20h": {
-   "voos": 4754,
-   "queda20_pct": 8.9
+   "voos": 5045,
+   "queda20_pct": 9.5
   },
   "21-23h": {
-   "voos": 2513,
-   "queda20_pct": 11.7
+   "voos": 2656,
+   "queda20_pct": 11.9
   }
  },
- "achados": 70,
- "achados_pct": 0.3,
+ "achados": 72,
+ "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2536,
+  "mediana": 2542,
   "ate_500_pct": 0.7
  },
  "floripa": {
-  "voos": 1720,
-  "menor_final": 295
+  "voos": 1822,
+  "menor_final": 270
  },
  "melhores_achados": [
   {
@@ -92,6 +92,14 @@
    "cia": "Gol",
    "base": 2173,
    "final": 334
+  },
+  {
+   "trecho": "FLN-POA",
+   "data": "2026-10-23",
+   "saida": "21:40",
+   "cia": "Gol",
+   "base": 1683,
+   "final": 270
   },
   {
    "trecho": "POA-FLN",
@@ -180,18 +188,10 @@
    "cia": "Gol",
    "base": 1584,
    "final": 339
-  },
-  {
-   "trecho": "SAO-GYN",
-   "data": "2026-10-15",
-   "saida": "20:40",
-   "cia": "Gol",
-   "base": 1596,
-   "final": 346
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-10-23T11:01"
+  "2026-10-24T10:31"
  ]
 }
