@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-25 10:31",
+ "atualizado_em": "2026-10-25 11:01",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -407,7 +407,7 @@
    "data": "2026-10-25",
    "destino": "SAO",
    "detectado_em": "2026-10-25 00:01",
-   "horas_ate_saida": 9.7,
+   "horas_ate_saida": 9.2,
    "id": "1e4f4258da",
    "mediana_rota": 1896,
    "menor_preco": 325,
@@ -418,7 +418,7 @@
    "saida": "20:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-25 10:31",
+   "ultima_vista": "2026-10-25 11:01",
    "voos_parecidos": 0
   },
   "216bae97d3": {
@@ -596,7 +596,7 @@
    "data": "2026-10-25",
    "destino": "SAO",
    "detectado_em": "2026-10-24 09:01",
-   "horas_ate_saida": 6.4,
+   "horas_ate_saida": 5.9,
    "id": "287ba8f98e",
    "mediana_rota": 2700,
    "menor_preco": 1060,
@@ -607,7 +607,7 @@
    "saida": "16:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-25 10:31",
+   "ultima_vista": "2026-10-25 11:01",
    "voos_parecidos": 0
   },
   "2c37658d34": {
@@ -1016,18 +1016,18 @@
    "data": "2026-10-26",
    "destino": "XAP",
    "detectado_em": "2026-10-25 08:01",
-   "horas_ate_saida": 21.7,
+   "horas_ate_saida": 20.7,
    "id": "611d52fceb",
    "mediana_rota": 1815,
    "menor_preco": 306,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1937,
+   "preco": 306,
    "preco_inicial": 306,
    "saida": "07:45",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-25 10:01",
+   "ultima_vista": "2026-10-25 11:01",
    "voos_parecidos": 0
   },
   "61a3bea1ba": {
@@ -1115,25 +1115,25 @@
    "voos_parecidos": 0
   },
   "6bca838881": {
-   "base": 1944,
-   "chegada": "22:20",
-   "companhia": "Azul",
+   "base": 2277,
+   "chegada": "14:45",
+   "companhia": "Gol",
    "data": "2026-10-25",
    "destino": "RIO",
    "detectado_em": "2026-10-24 09:01",
-   "horas_ate_saida": 11.3,
+   "horas_ate_saida": 2.6,
    "id": "6bca838881",
-   "mediana_rota": 1942,
+   "mediana_rota": 1941,
    "menor_preco": 821,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 889,
+   "preco": 821,
    "preco_inicial": 1341,
-   "saida": "21:20",
-   "status": "voltou",
+   "saida": "13:40",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-25 10:01",
-   "voos_parecidos": 4
+   "ultima_vista": "2026-10-25 11:01",
+   "voos_parecidos": 5
   },
   "6f179c3b31": {
    "base": 2757,
@@ -1310,7 +1310,7 @@
    "data": "2026-10-26",
    "destino": "FLN",
    "detectado_em": "2026-10-25 06:01",
-   "horas_ate_saida": 19.5,
+   "horas_ate_saida": 19.0,
    "id": "7cf5fbd54c",
    "mediana_rota": 3171,
    "menor_preco": 305,
@@ -1321,7 +1321,7 @@
    "saida": "06:00",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-25 10:31",
+   "ultima_vista": "2026-10-25 11:01",
    "voos_parecidos": 0
   },
   "83ae61dca8": {
@@ -1442,10 +1442,10 @@
    "menor_preco": 800,
    "origem": "CWB",
    "paradas": 0,
-   "preco": 800,
+   "preco": 797,
    "preco_inicial": 808,
    "saida": "21:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-25 10:31",
    "voos_parecidos": 2
@@ -2066,7 +2066,7 @@
    "data": "2026-10-25",
    "destino": "JPA",
    "detectado_em": "2026-10-25 09:01",
-   "horas_ate_saida": 2.6,
+   "horas_ate_saida": 2.1,
    "id": "ca78e26da3",
    "mediana_rota": 2644,
    "menor_preco": 1312,
@@ -2077,7 +2077,7 @@
    "saida": "13:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-25 10:31",
+   "ultima_vista": "2026-10-25 11:01",
    "voos_parecidos": 0
   },
   "d003eecc50": {
@@ -2129,7 +2129,7 @@
    "data": "2026-10-25",
    "destino": "XAP",
    "detectado_em": "2026-10-24 22:01",
-   "horas_ate_saida": 11.3,
+   "horas_ate_saida": 10.8,
    "id": "d2371d3901",
    "mediana_rota": 3173,
    "menor_preco": 307,
@@ -2140,7 +2140,7 @@
    "saida": "21:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-25 10:31",
+   "ultima_vista": "2026-10-25 11:01",
    "voos_parecidos": 0
   },
   "d3cfe79ab3": {
