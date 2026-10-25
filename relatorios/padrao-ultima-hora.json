@@ -1,71 +1,71 @@
 {
- "voos_partidos": 43891,
+ "voos_partidos": 45872,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 1.1,
   "voos_afetados_pct": 10.2
  },
- "voos_avaliados": 29040,
+ "voos_avaliados": 30331,
  "queda_sustentada": {
-  "20pct": 7.0,
-  "30pct": 4.0
+  "20pct": 7.1,
+  "30pct": 4.1
  },
- "alta_sustentada_30pct": 11.4,
+ "alta_sustentada_30pct": 11.2,
  "por_companhia": {
   "LATAM": {
-   "voos": 12935,
+   "voos": 13511,
    "queda20_pct": 7.0
   },
-  "Gol": {
-   "voos": 8872,
-   "queda20_pct": 7.7
-  },
   "Azul": {
-   "voos": 7221,
-   "queda20_pct": 6.3
+   "voos": 7558,
+   "queda20_pct": 6.6
+  },
+  "Gol": {
+   "voos": 9250,
+   "queda20_pct": 7.6
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 509,
-   "queda20_pct": 4.7
+   "voos": 524,
+   "queda20_pct": 4.6
   },
   "03-05h": {
-   "voos": 2298,
-   "queda20_pct": 7.4
+   "voos": 2380,
+   "queda20_pct": 7.3
   },
   "06-08h": {
-   "voos": 4135,
-   "queda20_pct": 4.9
+   "voos": 4335,
+   "queda20_pct": 4.8
   },
   "09-11h": {
-   "voos": 4610,
-   "queda20_pct": 3.9
+   "voos": 4864,
+   "queda20_pct": 4.2
   },
   "12-14h": {
-   "voos": 4491,
-   "queda20_pct": 5.9
+   "voos": 4716,
+   "queda20_pct": 6.1
   },
   "15-17h": {
-   "voos": 5296,
-   "queda20_pct": 7.6
+   "voos": 5515,
+   "queda20_pct": 7.8
   },
   "18-20h": {
-   "voos": 5045,
-   "queda20_pct": 9.5
+   "voos": 5237,
+   "queda20_pct": 9.4
   },
   "21-23h": {
-   "voos": 2656,
-   "queda20_pct": 11.9
+   "voos": 2760,
+   "queda20_pct": 12.0
   }
  },
- "achados": 72,
+ "achados": 75,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2542,
+  "mediana": 2537,
   "ate_500_pct": 0.7
  },
  "floripa": {
-  "voos": 1822,
+  "voos": 1904,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -86,12 +86,28 @@
    "final": 351
   },
   {
+   "trecho": "XAP-SAO",
+   "data": "2026-10-24",
+   "saida": "14:50",
+   "cia": "LATAM",
+   "base": 2291,
+   "final": 325
+  },
+  {
    "trecho": "XAP-FLN",
    "data": "2026-10-17",
    "saida": "11:30",
    "cia": "Gol",
    "base": 2173,
    "final": 334
+  },
+  {
+   "trecho": "SAO-XAP",
+   "data": "2026-10-25",
+   "saida": "07:30",
+   "cia": "LATAM",
+   "base": 1937,
+   "final": 306
   },
   {
    "trecho": "FLN-POA",
@@ -108,6 +124,14 @@
    "cia": "Gol",
    "base": 1871,
    "final": 301
+  },
+  {
+   "trecho": "XAP-SAO",
+   "data": "2026-10-24",
+   "saida": "19:55",
+   "cia": "LATAM",
+   "base": 1956,
+   "final": 325
   },
   {
    "trecho": "JPA-SAO",
@@ -164,34 +188,10 @@
    "cia": "Gol",
    "base": 1829,
    "final": 379
-  },
-  {
-   "trecho": "GYN-SAO",
-   "data": "2026-10-15",
-   "saida": "19:20",
-   "cia": "Gol",
-   "base": 1603,
-   "final": 334
-  },
-  {
-   "trecho": "GYN-SAO",
-   "data": "2026-10-14",
-   "saida": "17:55",
-   "cia": "Gol",
-   "base": 1584,
-   "final": 339
-  },
-  {
-   "trecho": "GYN-SAO",
-   "data": "2026-10-14",
-   "saida": "19:20",
-   "cia": "Gol",
-   "base": 1584,
-   "final": 339
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-10-24T10:31"
+  "2026-10-25T10:31"
  ]
 }
