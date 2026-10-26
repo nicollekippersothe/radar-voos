@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-26 10:01",
+ "atualizado_em": "2026-10-26 10:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -2366,10 +2366,10 @@
    "menor_preco": 1136,
    "origem": "RIO",
    "paradas": 0,
-   "preco": 1136,
+   "preco": 2425,
    "preco_inicial": 1136,
    "saida": "17:35",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-26 10:01",
    "voos_parecidos": 0
