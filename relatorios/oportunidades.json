@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-26 00:01",
+ "atualizado_em": "2026-10-26 00:31",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -875,10 +875,10 @@
    "menor_preco": 1425,
    "origem": "RIO",
    "paradas": 0,
-   "preco": 1425,
+   "preco": 3258,
    "preco_inicial": 1425,
    "saida": "21:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-26 00:01",
    "voos_parecidos": 0
@@ -1037,7 +1037,7 @@
    "data": "2026-10-26",
    "destino": "XAP",
    "detectado_em": "2026-10-25 08:01",
-   "horas_ate_saida": 15.4,
+   "horas_ate_saida": 14.9,
    "id": "611d52fceb",
    "mediana_rota": 1815,
    "menor_preco": 306,
@@ -1048,7 +1048,7 @@
    "saida": "15:25",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-26 00:01",
+   "ultima_vista": "2026-10-26 00:31",
    "voos_parecidos": 2
   },
   "61a3bea1ba": {
@@ -1337,10 +1337,10 @@
    "menor_preco": 305,
    "origem": "XAP",
    "paradas": 0,
-   "preco": 305,
+   "preco": 1768,
    "preco_inicial": 305,
    "saida": "06:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-10-26 00:01",
    "voos_parecidos": 0
@@ -1499,9 +1499,9 @@
    "data": "2026-10-26",
    "destino": "SAO",
    "detectado_em": "2026-10-25 17:45",
-   "horas_ate_saida": 17.7,
+   "horas_ate_saida": 17.2,
    "id": "966fa9c574",
-   "mediana_rota": 1836,
+   "mediana_rota": 1950,
    "menor_preco": 325,
    "origem": "XAP",
    "paradas": 0,
@@ -1510,8 +1510,8 @@
    "saida": "17:45",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-26 00:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-10-26 00:31",
+   "voos_parecidos": 0
   },
   "968e947537": {
    "base": 3176,
@@ -2408,10 +2408,10 @@
    "menor_preco": 796,
    "origem": "CWB",
    "paradas": 0,
-   "preco": 796,
+   "preco": 2609,
    "preco_inicial": 807,
    "saida": "06:10",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-26 00:01",
    "voos_parecidos": 1
