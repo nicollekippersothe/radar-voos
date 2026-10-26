@@ -1,8 +1,8 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-10-26 04:23",
- "voos_observados": 15174,
- "eventos": 167,
+ "gerado_em": "2026-10-26 11:43",
+ "voos_observados": 15179,
+ "eventos": 169,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
@@ -32,11 +32,11 @@
   "19h": 10,
   "20h": 9,
   "21h": 11,
-  "22h": 16,
+  "22h": 18,
   "23h": 14
  },
  "por_companhia": {
-  "Gol": 125,
+  "Gol": 127,
   "LATAM": 36,
   "Azul": 5,
   "LATAM e Aerolineas Argentinas": 1
@@ -46,7 +46,7 @@
   "RIO": 56,
   "POA": 32,
   "CWB": 7,
-  "XAP": 28,
+  "XAP": 30,
   "SSA": 8
  },
  "melhores": [
@@ -394,6 +394,40 @@
  "recentes": [
   {
    "origem": "FLN",
+   "destino": "XAP",
+   "data": "2026-10-28",
+   "saida": "06:25",
+   "companhia": "Gol",
+   "paradas": 1,
+   "inicio": "2026-10-25 22:32",
+   "fim": "2026-10-25 22:42",
+   "leituras": 3,
+   "duracao_min": 40,
+   "menor_preco": 1045,
+   "preco_normal": 1770,
+   "queda_pct": 41,
+   "horas_ate_partida": 55.9,
+   "hora_do_inicio": 22
+  },
+  {
+   "origem": "FLN",
+   "destino": "XAP",
+   "data": "2026-10-28",
+   "saida": "22:35",
+   "companhia": "Gol",
+   "paradas": 2,
+   "inicio": "2026-10-25 22:32",
+   "fim": "2026-10-25 22:42",
+   "leituras": 3,
+   "duracao_min": 40,
+   "menor_preco": 1045,
+   "preco_normal": 1770,
+   "queda_pct": 41,
+   "horas_ate_partida": 72.0,
+   "hora_do_inicio": 22
+  },
+  {
+   "origem": "FLN",
    "destino": "POA",
    "data": "2026-10-28",
    "saida": "22:35",
@@ -697,40 +731,6 @@
    "queda_pct": 84,
    "horas_ate_partida": 69.7,
    "hora_do_inicio": 0
-  },
-  {
-   "origem": "FLN",
-   "destino": "POA",
-   "data": "2026-10-23",
-   "saida": "21:40",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-10-20 22:31",
-   "fim": "2026-10-20 22:31",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 248,
-   "preco_normal": 1504,
-   "queda_pct": 84,
-   "horas_ate_partida": 71.2,
-   "hora_do_inicio": 22
-  },
-  {
-   "origem": "FLN",
-   "destino": "POA",
-   "data": "2026-10-23",
-   "saida": "21:40",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-10-20 21:10",
-   "fim": "2026-10-20 21:30",
-   "leituras": 5,
-   "duracao_min": 50,
-   "menor_preco": 248,
-   "preco_normal": 1504,
-   "queda_pct": 84,
-   "horas_ate_partida": 72.5,
-   "hora_do_inicio": 21
   }
  ]
 }
