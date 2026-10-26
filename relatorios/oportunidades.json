@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-26 12:01",
+ "atualizado_em": "2026-10-26 12:08",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -1492,6 +1492,27 @@
    "ultima_vista": "2026-10-23 00:01",
    "voos_parecidos": 0
   },
+  "962b7ba911": {
+   "base": 2156,
+   "chegada": "20:45",
+   "companhia": "Gol",
+   "data": "2026-10-26",
+   "destino": "SAO",
+   "detectado_em": "2026-10-26 12:08",
+   "horas_ate_saida": 7.0,
+   "id": "962b7ba911",
+   "mediana_rota": 2159,
+   "menor_preco": 826,
+   "origem": "VIX",
+   "paradas": 0,
+   "preco": 826,
+   "preco_inicial": 826,
+   "saida": "19:05",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-26 12:08",
+   "voos_parecidos": 0
+  },
   "966fa9c574": {
    "base": 325,
    "chegada": "19:20",
@@ -2435,6 +2456,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-20 19:01",
+   "voos_parecidos": 0
+  },
+  "e9ce492003": {
+   "base": 2138,
+   "chegada": "16:35",
+   "companhia": "Gol",
+   "data": "2026-10-27",
+   "destino": "VIX",
+   "detectado_em": "2026-10-26 12:08",
+   "horas_ate_saida": 23.5,
+   "id": "e9ce492003",
+   "mediana_rota": 2141,
+   "menor_preco": 808,
+   "origem": "SAO",
+   "paradas": 1,
+   "preco": 808,
+   "preco_inicial": 808,
+   "saida": "11:40",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-26 12:08",
    "voos_parecidos": 0
   },
   "ec0ba0fec3": {
