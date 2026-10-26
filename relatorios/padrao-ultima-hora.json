@@ -1,71 +1,71 @@
 {
- "voos_partidos": 45872,
+ "voos_partidos": 48299,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 1.1,
-  "voos_afetados_pct": 10.2
+  "voos_afetados_pct": 10.0
  },
- "voos_avaliados": 30331,
+ "voos_avaliados": 31887,
  "queda_sustentada": {
-  "20pct": 7.1,
-  "30pct": 4.1
+  "20pct": 7.0,
+  "30pct": 4.0
  },
- "alta_sustentada_30pct": 11.2,
+ "alta_sustentada_30pct": 11.0,
  "por_companhia": {
   "LATAM": {
-   "voos": 13511,
-   "queda20_pct": 7.0
-  },
-  "Azul": {
-   "voos": 7558,
-   "queda20_pct": 6.6
+   "voos": 14163,
+   "queda20_pct": 6.9
   },
   "Gol": {
-   "voos": 9250,
-   "queda20_pct": 7.6
+   "voos": 9755,
+   "queda20_pct": 7.4
+  },
+  "Azul": {
+   "voos": 7957,
+   "queda20_pct": 6.6
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 524,
-   "queda20_pct": 4.6
+   "voos": 550,
+   "queda20_pct": 4.4
   },
   "03-05h": {
-   "voos": 2380,
-   "queda20_pct": 7.3
+   "voos": 2493,
+   "queda20_pct": 7.0
   },
   "06-08h": {
-   "voos": 4335,
-   "queda20_pct": 4.8
+   "voos": 4600,
+   "queda20_pct": 4.6
   },
   "09-11h": {
-   "voos": 4864,
-   "queda20_pct": 4.2
+   "voos": 5218,
+   "queda20_pct": 4.1
   },
   "12-14h": {
-   "voos": 4716,
+   "voos": 4898,
    "queda20_pct": 6.1
   },
   "15-17h": {
-   "voos": 5515,
-   "queda20_pct": 7.8
+   "voos": 5736,
+   "queda20_pct": 7.7
   },
   "18-20h": {
-   "voos": 5237,
-   "queda20_pct": 9.4
+   "voos": 5490,
+   "queda20_pct": 9.3
   },
   "21-23h": {
-   "voos": 2760,
-   "queda20_pct": 12.0
+   "voos": 2902,
+   "queda20_pct": 11.7
   }
  },
- "achados": 75,
+ "achados": 77,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2537,
+  "mediana": 2538,
   "ate_500_pct": 0.7
  },
  "floripa": {
-  "voos": 1904,
+  "voos": 1999,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -105,6 +105,14 @@
    "trecho": "SAO-XAP",
    "data": "2026-10-25",
    "saida": "07:30",
+   "cia": "LATAM",
+   "base": 1937,
+   "final": 306
+  },
+  {
+   "trecho": "SAO-XAP",
+   "data": "2026-10-25",
+   "saida": "10:50",
    "cia": "LATAM",
    "base": 1937,
    "final": 306
@@ -180,18 +188,10 @@
    "cia": "Azul",
    "base": 2694,
    "final": 533
-  },
-  {
-   "trecho": "CGR-SAO",
-   "data": "2026-10-14",
-   "saida": "15:15",
-   "cia": "Gol",
-   "base": 1829,
-   "final": 379
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-10-25T10:31"
+  "2026-10-26T13:01"
  ]
 }
