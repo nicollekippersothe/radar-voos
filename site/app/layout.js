@@ -1,5 +1,6 @@
 import { Instrument_Sans, Space_Mono, Archivo } from "next/font/google";
 import { Nav } from "./nav";
+import { Analytics } from "./analytics";
 import "./globals.css";
 
 const AUTOR = process.env.NEXT_PUBLIC_AUTOR || "Nicolle";
@@ -66,6 +67,7 @@ export default function Layout({ children }) {
             . © {new Date().getFullYear()}
           </p>
         </footer>
+        <Analytics />
       </body>
     </html>
   );

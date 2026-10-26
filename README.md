@@ -31,6 +31,8 @@ A pasta `site/` tem a interface: "Pra onde ir" (origem, valor máximo e janela d
 
 Pra publicar: em vercel.com, **Add New → Project**, importe este repositório e, em **Root Directory**, escolha `site`. Os commits automáticos do coletor usam a identidade da dona do repositório (o plano Hobby da Vercel bloqueia deploy de commit de outro autor), e o `site/vercel.json` pula o build quando o commit só altera dados. Não precisa de variável de ambiente se o branch de produção for `main`. Pra testar outro branch, crie a variável `RADAR_RAMO` com o nome do branch. Opcional: `GITHUB_TOKEN` (um token de leitura do GitHub) sobe o limite da API de 60 pra 5.000 pedidos por hora, caso o endereço raw falhe.
 
+Analytics: defina `NEXT_PUBLIC_GA_ID` (o ID de medição do GA4, tipo `G-XXXXXXXXXX`) nas variáveis da Vercel e faça um novo deploy. Sem a variável, o Google Analytics não carrega.
+
 Pra rodar local:
 
 ```sh

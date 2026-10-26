@@ -4,7 +4,7 @@ export default function Privacidade() {
   return (
     <article className="mx-auto max-w-[42em] space-y-[1.25em] leading-relaxed">
       <h1 className="font-display text-[2em] font-semibold tracking-[-0.03em]">Política de privacidade</h1>
-      <p>Resumo: o Radar não pede cadastro e não guarda dados pessoais seus.</p>
+      <p>Resumo: o Radar não pede cadastro e não guarda dados pessoais seus. Só mede o uso do site, de forma agregada, com o Google Analytics.</p>
       <h2 className="font-display text-[1.25em] font-semibold">O que o site coleta</h2>
       <p>
         Não há conta nem formulário. Quando você abre um trecho, o site pode registrar a rota pedida (origem e destino)
@@ -13,7 +13,10 @@ export default function Privacidade() {
       </p>
       <h2 className="font-display text-[1.25em] font-semibold">Cookies e afiliados</h2>
       <p>
-        O Radar não usa cookies próprios de rastreamento. Ao clicar num link de afiliado, o site de destino (como o
+        O Radar usa o Google Analytics 4 pra contar visitas e ver quais páginas são mais usadas. Ele grava cookies no seu
+        navegador e envia ao Google dados de uso, como páginas vistas, tipo de aparelho e localização aproximada, com o
+        endereço IP anonimizado. Não usamos isso pra identificar você. Pra bloquear, use uma extensão de bloqueio ou o
+        complemento oficial do Google (tools.google.com/dlpage/gaoptout). Ao clicar num link de afiliado, o site de destino (como o
         Aviasales) pode gravar cookies pra identificar a origem da compra. Isso segue a política de privacidade deles.
       </p>
       <h2 className="font-display text-[1.25em] font-semibold">Seus direitos (LGPD)</h2>
