@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-27 08:01",
+ "atualizado_em": "2026-10-27 08:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -197,7 +197,7 @@
    "data": "2026-10-27",
    "destino": "CGR",
    "detectado_em": "2026-10-26 16:31",
-   "horas_ate_saida": 2.6,
+   "horas_ate_saida": 2.1,
    "id": "10164fa491",
    "mediana_rota": 2021,
    "menor_preco": 1191,
@@ -208,7 +208,7 @@
    "saida": "10:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 08:01",
+   "ultima_vista": "2026-10-27 08:31",
    "voos_parecidos": 2
   },
   "129ef652d5": {
@@ -1457,7 +1457,7 @@
    "data": "2026-10-28",
    "destino": "CGR",
    "detectado_em": "2026-10-27 06:31",
-   "horas_ate_saida": 22.1,
+   "horas_ate_saida": 21.6,
    "id": "a19ee417ca",
    "mediana_rota": 2021,
    "menor_preco": 1191,
@@ -1468,7 +1468,7 @@
    "saida": "06:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 08:01",
+   "ultima_vista": "2026-10-27 08:31",
    "voos_parecidos": 0
   },
   "a2d5991881": {
@@ -2255,7 +2255,7 @@
    "data": "2026-10-27",
    "destino": "VIX",
    "detectado_em": "2026-10-26 12:08",
-   "horas_ate_saida": 5.2,
+   "horas_ate_saida": 4.7,
    "id": "e9ce492003",
    "mediana_rota": 2136,
    "menor_preco": 808,
@@ -2266,7 +2266,7 @@
    "saida": "13:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 08:01",
+   "ultima_vista": "2026-10-27 08:31",
    "voos_parecidos": 0
   },
   "ec0ba0fec3": {
