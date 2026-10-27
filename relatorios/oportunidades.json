@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-27 10:01",
+ "atualizado_em": "2026-10-27 10:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -2108,7 +2108,7 @@
    "data": "2026-10-27",
    "destino": "XAP",
    "detectado_em": "2026-10-27 10:01",
-   "horas_ate_saida": 5.2,
+   "horas_ate_saida": 4.7,
    "id": "df0e4df71c",
    "mediana_rota": 2858,
    "menor_preco": 682,
@@ -2119,7 +2119,7 @@
    "saida": "15:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 10:01",
+   "ultima_vista": "2026-10-27 10:31",
    "voos_parecidos": 0
   },
   "e02d5eff4d": {
