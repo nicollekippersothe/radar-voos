@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-27 13:01",
+ "atualizado_em": "2026-10-27 13:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -659,9 +659,9 @@
    "data": "2026-10-27",
    "destino": "SAO",
    "detectado_em": "2026-10-26 20:01",
-   "horas_ate_saida": 5.2,
+   "horas_ate_saida": 4.7,
    "id": "42a11ac426",
-   "mediana_rota": 1864,
+   "mediana_rota": 1909,
    "menor_preco": 911,
    "origem": "GYN",
    "paradas": 0,
@@ -670,7 +670,7 @@
    "saida": "18:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 13:01",
+   "ultima_vista": "2026-10-27 13:31",
    "voos_parecidos": 0
   },
   "43589ae524": {
@@ -1184,9 +1184,9 @@
    "data": "2026-10-28",
    "destino": "FOR",
    "detectado_em": "2026-10-27 11:31",
-   "horas_ate_saida": 18.9,
+   "horas_ate_saida": 18.4,
    "id": "7d41da7e45",
-   "mediana_rota": 2430,
+   "mediana_rota": 2432,
    "menor_preco": 1072,
    "origem": "RIO",
    "paradas": 0,
@@ -1195,7 +1195,7 @@
    "saida": "07:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 13:01",
+   "ultima_vista": "2026-10-27 13:31",
    "voos_parecidos": 1
   },
   "822e59f10d": {
@@ -2108,7 +2108,7 @@
    "data": "2026-10-27",
    "destino": "FLN",
    "detectado_em": "2026-10-27 13:01",
-   "horas_ate_saida": 4.0,
+   "horas_ate_saida": 3.5,
    "id": "db6f5cb41d",
    "mediana_rota": 2856,
    "menor_preco": 680,
@@ -2119,7 +2119,7 @@
    "saida": "17:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 13:01",
+   "ultima_vista": "2026-10-27 13:31",
    "voos_parecidos": 0
   },
   "dea05766ec": {
@@ -2318,7 +2318,7 @@
    "data": "2026-10-27",
    "destino": "VIX",
    "detectado_em": "2026-10-26 12:08",
-   "horas_ate_saida": 6.2,
+   "horas_ate_saida": 5.7,
    "id": "e9ce492003",
    "mediana_rota": 2136,
    "menor_preco": 808,
@@ -2329,7 +2329,7 @@
    "saida": "19:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-27 13:01",
+   "ultima_vista": "2026-10-27 13:31",
    "voos_parecidos": 0
   },
   "ec0ba0fec3": {
