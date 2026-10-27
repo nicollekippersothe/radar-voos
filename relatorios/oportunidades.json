@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-26 21:01",
+ "atualizado_em": "2026-10-26 21:30",
  "eventos": {
   "00046068b4": {
    "base": 3360,
@@ -806,7 +806,7 @@
    "data": "2026-10-27",
    "destino": "SAO",
    "detectado_em": "2026-10-26 20:01",
-   "horas_ate_saida": 21.1,
+   "horas_ate_saida": 20.7,
    "id": "42a11ac426",
    "mediana_rota": 1820,
    "menor_preco": 937,
@@ -817,7 +817,7 @@
    "saida": "18:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-26 21:01",
+   "ultima_vista": "2026-10-26 21:30",
    "voos_parecidos": 0
   },
   "43589ae524": {
@@ -2222,7 +2222,7 @@
    "preco": 808,
    "preco_inicial": 1158,
    "saida": "23:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-26 21:01",
    "voos_parecidos": 0
@@ -2591,7 +2591,7 @@
    "data": "2026-10-27",
    "destino": "VIX",
    "detectado_em": "2026-10-26 12:08",
-   "horas_ate_saida": 23.5,
+   "horas_ate_saida": 23.0,
    "id": "e9ce492003",
    "mediana_rota": 1158,
    "menor_preco": 808,
@@ -2602,7 +2602,7 @@
    "saida": "20:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-26 21:01",
+   "ultima_vista": "2026-10-26 21:30",
    "voos_parecidos": 4
   },
   "ec0ba0fec3": {
