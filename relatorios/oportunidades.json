@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-28 08:01",
+ "atualizado_em": "2026-10-28 08:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -470,18 +470,18 @@
    "data": "2026-10-28",
    "destino": "FLN",
    "detectado_em": "2026-10-27 17:01",
-   "horas_ate_saida": 16.5,
+   "horas_ate_saida": 8.5,
    "id": "381c8e98f0",
    "mediana_rota": 2996,
    "menor_preco": 680,
    "origem": "XAP",
    "paradas": 0,
-   "preco": 2032,
+   "preco": 680,
    "preco_inicial": 680,
    "saida": "17:00",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 00:31",
+   "ultima_vista": "2026-10-28 08:31",
    "voos_parecidos": 0
   },
   "3fdd9e4721": {
@@ -827,7 +827,7 @@
    "data": "2026-10-28",
    "destino": "UDI",
    "detectado_em": "2026-10-27 17:01",
-   "horas_ate_saida": 8.9,
+   "horas_ate_saida": 8.4,
    "id": "61a1fd1e86",
    "mediana_rota": 1833,
    "menor_preco": 324,
@@ -838,7 +838,7 @@
    "saida": "16:55",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-10-28 08:01",
+   "ultima_vista": "2026-10-28 08:31",
    "voos_parecidos": 0
   },
   "61a3bea1ba": {
@@ -869,7 +869,7 @@
    "data": "2026-10-28",
    "destino": "POA",
    "detectado_em": "2026-10-28 00:01",
-   "horas_ate_saida": 14.6,
+   "horas_ate_saida": 14.1,
    "id": "61af2527a5",
    "mediana_rota": 1590,
    "menor_preco": 396,
@@ -880,7 +880,7 @@
    "saida": "22:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 08:01",
+   "ultima_vista": "2026-10-28 08:31",
    "voos_parecidos": 0
   },
   "626e9a35a6": {
@@ -1100,7 +1100,7 @@
    "data": "2026-10-28",
    "destino": "FOR",
    "detectado_em": "2026-10-27 11:31",
-   "horas_ate_saida": 1.9,
+   "horas_ate_saida": 1.4,
    "id": "7d41da7e45",
    "mediana_rota": 2120,
    "menor_preco": 1072,
@@ -1111,7 +1111,7 @@
    "saida": "09:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 08:01",
+   "ultima_vista": "2026-10-28 08:31",
    "voos_parecidos": 0
   },
   "822e59f10d": {
