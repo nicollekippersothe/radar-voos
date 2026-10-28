@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-28 11:01",
+ "atualizado_em": "2026-10-28 11:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -470,7 +470,7 @@
    "data": "2026-10-28",
    "destino": "FLN",
    "detectado_em": "2026-10-27 17:01",
-   "horas_ate_saida": 6.0,
+   "horas_ate_saida": 5.5,
    "id": "381c8e98f0",
    "mediana_rota": 2983,
    "menor_preco": 680,
@@ -481,7 +481,7 @@
    "saida": "17:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 11:01",
+   "ultima_vista": "2026-10-28 11:31",
    "voos_parecidos": 0
   },
   "3fdd9e4721": {
@@ -869,7 +869,7 @@
    "data": "2026-10-28",
    "destino": "POA",
    "detectado_em": "2026-10-28 00:01",
-   "horas_ate_saida": 2.2,
+   "horas_ate_saida": 1.7,
    "id": "61af2527a5",
    "mediana_rota": 1590,
    "menor_preco": 396,
@@ -880,7 +880,7 @@
    "saida": "13:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 11:01",
+   "ultima_vista": "2026-10-28 11:31",
    "voos_parecidos": 1
   },
   "626e9a35a6": {
@@ -1241,13 +1241,13 @@
    "voos_parecidos": 0
   },
   "902fcfd727": {
-   "base": 2150,
+   "base": 2129,
    "chegada": "16:20",
    "companhia": "Azul",
    "data": "2026-10-28",
    "destino": "XAP",
    "detectado_em": "2026-10-27 15:31",
-   "horas_ate_saida": 4.2,
+   "horas_ate_saida": 3.7,
    "id": "902fcfd727",
    "mediana_rota": 2984,
    "menor_preco": 679,
@@ -1258,7 +1258,7 @@
    "saida": "15:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 11:01",
+   "ultima_vista": "2026-10-28 11:31",
    "voos_parecidos": 0
   },
   "92d9ee67dd": {
@@ -1484,10 +1484,10 @@
    "menor_preco": 386,
    "origem": "UDI",
    "paradas": 0,
-   "preco": 387,
+   "preco": 1840,
    "preco_inicial": 386,
    "saida": "19:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-28 11:01",
    "voos_parecidos": 0
