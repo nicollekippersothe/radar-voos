@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-28 18:01",
+ "atualizado_em": "2026-10-28 18:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -182,10 +182,10 @@
    "menor_preco": 421,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 421,
+   "preco": 955,
    "preco_inicial": 421,
    "saida": "21:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-28 18:01",
    "voos_parecidos": 0
@@ -596,7 +596,7 @@
    "data": "2026-10-29",
    "destino": "FLN",
    "detectado_em": "2026-10-28 17:31",
-   "horas_ate_saida": 12.1,
+   "horas_ate_saida": 11.6,
    "id": "41d26924d1",
    "mediana_rota": 1596,
    "menor_preco": 402,
@@ -607,7 +607,7 @@
    "saida": "06:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 18:01",
+   "ultima_vista": "2026-10-28 18:31",
    "voos_parecidos": 0
   },
   "42a11ac426": {
@@ -869,7 +869,7 @@
    "data": "2026-10-28",
    "destino": "SAO",
    "detectado_em": "2026-10-28 18:01",
-   "horas_ate_saida": 1.7,
+   "horas_ate_saida": 1.2,
    "id": "531d36a06b",
    "mediana_rota": 1909,
    "menor_preco": 825,
@@ -880,7 +880,7 @@
    "saida": "19:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 18:01",
+   "ultima_vista": "2026-10-28 18:31",
    "voos_parecidos": 0
   },
   "5a1b07e658": {
@@ -995,7 +995,7 @@
    "data": "2026-10-28",
    "destino": "POA",
    "detectado_em": "2026-10-28 00:01",
-   "horas_ate_saida": 4.6,
+   "horas_ate_saida": 4.1,
    "id": "61af2527a5",
    "mediana_rota": 1590,
    "menor_preco": 396,
@@ -1006,7 +1006,7 @@
    "saida": "22:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-28 18:01",
+   "ultima_vista": "2026-10-28 18:31",
    "voos_parecidos": 0
   },
   "626e9a35a6": {
@@ -1757,10 +1757,10 @@
    "menor_preco": 392,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 392,
+   "preco": 1033,
    "preco_inicial": 392,
    "saida": "08:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-28 18:01",
    "voos_parecidos": 0
@@ -2457,6 +2457,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-10-28 00:31",
    "voos_parecidos": 5
+  },
+  "fa38ffea40": {
+   "base": 1805,
+   "chegada": "13:15",
+   "companhia": "LATAM",
+   "data": "2026-10-29",
+   "destino": "GYN",
+   "detectado_em": "2026-10-28 18:31",
+   "horas_ate_saida": 17.1,
+   "id": "fa38ffea40",
+   "mediana_rota": 1396,
+   "menor_preco": 810,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 810,
+   "preco_inicial": 810,
+   "saida": "11:40",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-28 18:31",
+   "voos_parecidos": 3
   },
   "fc371b32c8": {
    "base": 3019,
