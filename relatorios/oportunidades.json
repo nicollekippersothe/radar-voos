@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-29 19:31",
+ "atualizado_em": "2026-10-29 20:01",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -350,10 +350,10 @@
    "menor_preco": 666,
    "origem": "FLN",
    "paradas": 1,
-   "preco": 666,
+   "preco": 3892,
    "preco_inicial": 666,
    "saida": "20:45",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-29 19:31",
    "voos_parecidos": 0
@@ -1625,9 +1625,9 @@
    "data": "2026-10-30",
    "destino": "XAP",
    "detectado_em": "2026-10-29 18:31",
-   "horas_ate_saida": 10.0,
+   "horas_ate_saida": 9.5,
    "id": "ab730d1297",
-   "mediana_rota": 1567,
+   "mediana_rota": 2268,
    "menor_preco": 630,
    "origem": "FLN",
    "paradas": 1,
@@ -1636,7 +1636,7 @@
    "saida": "05:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-29 19:31",
+   "ultima_vista": "2026-10-29 20:01",
    "voos_parecidos": 0
   },
   "adcd9d47b8": {
