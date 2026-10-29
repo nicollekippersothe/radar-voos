@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-29 20:01",
+ "atualizado_em": "2026-10-29 20:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -1634,7 +1634,7 @@
    "preco": 630,
    "preco_inicial": 630,
    "saida": "05:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-29 20:01",
    "voos_parecidos": 0
