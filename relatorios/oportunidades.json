@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-29 11:31",
+ "atualizado_em": "2026-10-29 12:02",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -2246,6 +2246,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-27 17:57",
+   "voos_parecidos": 0
+  },
+  "f2b89e7378": {
+   "base": 2555,
+   "chegada": "13:20",
+   "companhia": "LATAM",
+   "data": "2026-10-30",
+   "destino": "FOR",
+   "detectado_em": "2026-10-29 12:02",
+   "horas_ate_saida": 22.1,
+   "id": "f2b89e7378",
+   "mediana_rota": 2555,
+   "menor_preco": 1072,
+   "origem": "RIO",
+   "paradas": 0,
+   "preco": 1072,
+   "preco_inicial": 1072,
+   "saida": "10:10",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-29 12:02",
    "voos_parecidos": 0
   },
   "f305b95364": {
