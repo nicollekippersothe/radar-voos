@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-29 02:31",
+ "atualizado_em": "2026-10-29 03:01",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -533,7 +533,7 @@
    "data": "2026-10-29",
    "destino": "FLN",
    "detectado_em": "2026-10-28 17:31",
-   "horas_ate_saida": 3.6,
+   "horas_ate_saida": 3.1,
    "id": "41d26924d1",
    "mediana_rota": 1596,
    "menor_preco": 402,
@@ -544,7 +544,7 @@
    "saida": "06:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-29 02:31",
+   "ultima_vista": "2026-10-29 03:01",
    "voos_parecidos": 0
   },
   "42a11ac426": {
