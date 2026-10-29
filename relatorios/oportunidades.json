@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-29 18:01",
+ "atualizado_em": "2026-10-29 18:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -336,6 +336,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-10-23 00:31",
    "voos_parecidos": 2
+  },
+  "2232c38e9d": {
+   "base": 3034,
+   "chegada": "09:15",
+   "companhia": "LATAM",
+   "data": "2026-10-29",
+   "destino": "XAP",
+   "detectado_em": "2026-10-29 18:31",
+   "horas_ate_saida": 2.2,
+   "id": "2232c38e9d",
+   "mediana_rota": 2998,
+   "menor_preco": 666,
+   "origem": "FLN",
+   "paradas": 1,
+   "preco": 666,
+   "preco_inicial": 666,
+   "saida": "20:45",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-29 18:31",
+   "voos_parecidos": 0
   },
   "22a31f836d": {
    "base": 3267,
@@ -1574,6 +1595,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-22 16:31",
+   "voos_parecidos": 0
+  },
+  "ab730d1297": {
+   "base": 2998,
+   "chegada": "09:15",
+   "companhia": "LATAM",
+   "data": "2026-10-30",
+   "destino": "XAP",
+   "detectado_em": "2026-10-29 18:31",
+   "horas_ate_saida": 11.0,
+   "id": "ab730d1297",
+   "mediana_rota": 2998,
+   "menor_preco": 630,
+   "origem": "FLN",
+   "paradas": 1,
+   "preco": 630,
+   "preco_inicial": 630,
+   "saida": "05:30",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-29 18:31",
    "voos_parecidos": 0
   },
   "adcd9d47b8": {
