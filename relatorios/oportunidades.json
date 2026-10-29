@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-29 12:02",
+ "atualizado_em": "2026-10-29 12:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -2255,7 +2255,7 @@
    "data": "2026-10-30",
    "destino": "FOR",
    "detectado_em": "2026-10-29 12:02",
-   "horas_ate_saida": 22.1,
+   "horas_ate_saida": 21.6,
    "id": "f2b89e7378",
    "mediana_rota": 2555,
    "menor_preco": 1072,
@@ -2266,7 +2266,7 @@
    "saida": "10:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-29 12:02",
+   "ultima_vista": "2026-10-29 12:31",
    "voos_parecidos": 0
   },
   "f305b95364": {
