@@ -1,12 +1,12 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-10-29 22:28",
- "voos_observados": 16558,
- "eventos": 212,
+ "gerado_em": "2026-10-30 04:36",
+ "voos_observados": 16562,
+ "eventos": 210,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
-  "p75": 70
+  "p75": 64
  },
  "uma_leitura_so_pct": 43,
  "inicio_por_hora": {
@@ -28,16 +28,16 @@
   "15h": 3,
   "16h": 4,
   "17h": 5,
-  "18h": 8,
+  "18h": 7,
   "19h": 12,
-  "20h": 12,
+  "20h": 11,
   "21h": 11,
   "22h": 19,
   "23h": 14
  },
  "por_companhia": {
   "Gol": 157,
-  "LATAM": 43,
+  "LATAM": 41,
   "Azul": 11,
   "LATAM e Aerolineas Argentinas": 1
  },
@@ -46,7 +46,7 @@
   "RIO": 71,
   "POA": 35,
   "CWB": 7,
-  "XAP": 42,
+  "XAP": 40,
   "SSA": 19
  },
  "melhores": [
@@ -83,23 +83,6 @@
    "queda_pct": 78,
    "horas_ate_partida": 3.0,
    "hora_do_inicio": 18
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-10-31",
-   "saida": "20:50",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-10-29 20:01",
-   "fim": "2026-10-29 22:27",
-   "leituras": 10,
-   "duracao_min": 176,
-   "menor_preco": 666,
-   "preco_normal": 3034,
-   "queda_pct": 78,
-   "horas_ate_partida": 48.8,
-   "hora_do_inicio": 20
   },
   {
    "origem": "FLN",
@@ -389,6 +372,23 @@
    "queda_pct": 56,
    "horas_ate_partida": 2.7,
    "hora_do_inicio": 15
+  },
+  {
+   "origem": "FLN",
+   "destino": "POA",
+   "data": "2026-10-14",
+   "saida": "21:40",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-10-13 21:01",
+   "fim": "2026-10-13 23:31",
+   "leituras": 11,
+   "duracao_min": 180,
+   "menor_preco": 452,
+   "preco_normal": 1008,
+   "queda_pct": 55,
+   "horas_ate_partida": 24.6,
+   "hora_do_inicio": 21
   }
  ],
  "recentes": [
@@ -442,40 +442,6 @@
    "queda_pct": 78,
    "horas_ate_partida": 24.7,
    "hora_do_inicio": 20
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-10-31",
-   "saida": "20:50",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-10-29 20:01",
-   "fim": "2026-10-29 22:27",
-   "leituras": 10,
-   "duracao_min": 176,
-   "menor_preco": 666,
-   "preco_normal": 3034,
-   "queda_pct": 78,
-   "horas_ate_partida": 48.8,
-   "hora_do_inicio": 20
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-10-30",
-   "saida": "05:30",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-10-29 18:01",
-   "fim": "2026-10-29 18:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 630,
-   "preco_normal": 1814,
-   "queda_pct": 65,
-   "horas_ate_partida": 11.5,
-   "hora_do_inicio": 18
   },
   {
    "origem": "FLN",
@@ -730,6 +696,40 @@
    "preco_normal": 2496,
    "queda_pct": 57,
    "horas_ate_partida": 63.6,
+   "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-10-30",
+   "saida": "21:40",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-10-28 00:01",
+   "fim": "2026-10-28 00:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 1081,
+   "preco_normal": 2496,
+   "queda_pct": 57,
+   "horas_ate_partida": 69.7,
+   "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-10-30",
+   "saida": "05:35",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-10-28 00:01",
+   "fim": "2026-10-28 00:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 1081,
+   "preco_normal": 2496,
+   "queda_pct": 57,
+   "horas_ate_partida": 53.6,
    "hora_do_inicio": 0
   }
  ]
