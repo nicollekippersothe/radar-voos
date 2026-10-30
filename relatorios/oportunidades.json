@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-30 00:01",
+ "atualizado_em": "2026-10-30 00:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -1877,7 +1877,7 @@
    "data": "2026-10-30",
    "destino": "NAT",
    "detectado_em": "2026-10-30 00:01",
-   "horas_ate_saida": 23.9,
+   "horas_ate_saida": 23.4,
    "id": "dc03de543e",
    "mediana_rota": 2451,
    "menor_preco": 1270,
@@ -1888,7 +1888,7 @@
    "saida": "23:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-30 00:01",
+   "ultima_vista": "2026-10-30 00:31",
    "voos_parecidos": 0
   },
   "dea05766ec": {
