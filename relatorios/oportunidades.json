@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-10-30 08:01",
+ "atualizado_em": "2026-10-30 08:31",
  "eventos": {
   "004fd00446": {
    "base": 2220,
@@ -92,7 +92,7 @@
    "data": "2026-10-31",
    "destino": "CGR",
    "detectado_em": "2026-10-30 07:09",
-   "horas_ate_saida": 22.6,
+   "horas_ate_saida": 22.1,
    "id": "03180db3dc",
    "mediana_rota": 2121,
    "menor_preco": 1030,
@@ -103,7 +103,7 @@
    "saida": "06:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-30 08:01",
+   "ultima_vista": "2026-10-30 08:31",
    "voos_parecidos": 0
   },
   "10164fa491": {
@@ -482,6 +482,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-28 16:05",
+   "voos_parecidos": 0
+  },
+  "3bcdba9a5b": {
+   "base": 3047,
+   "chegada": "09:45",
+   "companhia": "Azul",
+   "data": "2026-10-31",
+   "destino": "BSB",
+   "detectado_em": "2026-10-30 08:31",
+   "horas_ate_saida": 23.6,
+   "id": "3bcdba9a5b",
+   "mediana_rota": 2857,
+   "menor_preco": 1065,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1065,
+   "preco_inicial": 1065,
+   "saida": "08:10",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-10-30 08:31",
    "voos_parecidos": 0
   },
   "3fdd9e4721": {
@@ -1898,7 +1919,7 @@
    "data": "2026-10-30",
    "destino": "NAT",
    "detectado_em": "2026-10-30 00:01",
-   "horas_ate_saida": 15.9,
+   "horas_ate_saida": 15.4,
    "id": "dc03de543e",
    "mediana_rota": 2451,
    "menor_preco": 1270,
@@ -1909,7 +1930,7 @@
    "saida": "23:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-10-30 08:01",
+   "ultima_vista": "2026-10-30 08:31",
    "voos_parecidos": 0
   },
   "dea05766ec": {
@@ -2072,10 +2093,10 @@
    "menor_preco": 892,
    "origem": "BHZ",
    "paradas": 0,
-   "preco": 892,
+   "preco": 3299,
    "preco_inicial": 892,
    "saida": "03:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-30 08:01",
    "voos_parecidos": 0
