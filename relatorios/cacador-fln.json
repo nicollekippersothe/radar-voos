@@ -1,8 +1,8 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-01 06:45",
- "voos_observados": 17479,
- "eventos": 226,
+ "gerado_em": "2026-11-01 13:48",
+ "voos_observados": 17482,
+ "eventos": 227,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
@@ -23,7 +23,7 @@
   "10h": 12,
   "11h": 27,
   "12h": 24,
-  "13h": 5,
+  "13h": 6,
   "14h": 7,
   "15h": 3,
   "16h": 4,
@@ -37,14 +37,14 @@
  },
  "por_companhia": {
   "Gol": 163,
-  "LATAM": 50,
+  "LATAM": 51,
   "Azul": 12,
   "LATAM e Aerolineas Argentinas": 1
  },
  "por_destino": {
   "SAO": 40,
   "RIO": 72,
-  "POA": 39,
+  "POA": 40,
   "CWB": 8,
   "XAP": 48,
   "SSA": 19
@@ -395,6 +395,23 @@
   {
    "origem": "FLN",
    "destino": "POA",
+   "data": "2026-11-01",
+   "saida": "13:10",
+   "companhia": "LATAM",
+   "paradas": 0,
+   "inicio": "2026-11-01 13:01",
+   "fim": "2026-11-01 13:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 396,
+   "preco_normal": 928,
+   "queda_pct": 57,
+   "horas_ate_partida": 0.1,
+   "hora_do_inicio": 13
+  },
+  {
+   "origem": "FLN",
+   "destino": "POA",
    "data": "2026-10-31",
    "saida": "13:15",
    "companhia": "LATAM",
@@ -714,23 +731,6 @@
    "queda_pct": 78,
    "horas_ate_partida": 24.7,
    "hora_do_inicio": 20
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-10-29",
-   "saida": "20:45",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-10-29 18:01",
-   "fim": "2026-10-29 19:31",
-   "leituras": 10,
-   "duracao_min": 120,
-   "menor_preco": 666,
-   "preco_normal": 3034,
-   "queda_pct": 78,
-   "horas_ate_partida": 2.7,
-   "hora_do_inicio": 18
   }
  ]
 }
