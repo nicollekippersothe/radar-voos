@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-02 10:31",
+ "atualizado_em": "2026-11-02 11:01",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -605,7 +605,7 @@
    "preco": 402,
    "preco_inicial": 402,
    "saida": "06:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-02 10:31",
    "voos_parecidos": 0
