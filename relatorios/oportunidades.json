@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-02 11:09",
+ "atualizado_em": "2026-11-02 11:31",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -596,7 +596,7 @@
    "data": "2026-11-03",
    "destino": "FLN",
    "detectado_em": "2026-11-02 06:23",
-   "horas_ate_saida": 19.6,
+   "horas_ate_saida": 18.6,
    "id": "50372eaaab",
    "mediana_rota": 1596,
    "menor_preco": 402,
@@ -605,9 +605,9 @@
    "preco": 402,
    "preco_inicial": 402,
    "saida": "06:05",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-02 10:31",
+   "ultima_vista": "2026-11-02 11:31",
    "voos_parecidos": 0
   },
   "508a492931": {
@@ -1637,6 +1637,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-26 21:01",
+   "voos_parecidos": 0
+  },
+  "cb58f7dabf": {
+   "base": 2171,
+   "chegada": "12:35",
+   "companhia": "LATAM",
+   "data": "2026-11-03",
+   "destino": "BHZ",
+   "detectado_em": "2026-11-02 11:31",
+   "horas_ate_saida": 23.8,
+   "id": "cb58f7dabf",
+   "mediana_rota": 1857,
+   "menor_preco": 1036,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1036,
+   "preco_inicial": 1036,
+   "saida": "11:20",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-02 11:31",
    "voos_parecidos": 0
   },
   "cc81c1a568": {
