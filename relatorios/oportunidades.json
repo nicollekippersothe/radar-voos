@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03 12:01",
+ "atualizado_em": "2026-11-03 12:31",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -881,6 +881,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-31 18:01",
+   "voos_parecidos": 0
+  },
+  "76dbcfd55b": {
+   "base": 4063,
+   "chegada": "14:00",
+   "companhia": "Azul",
+   "data": "2026-11-04",
+   "destino": "IGU",
+   "detectado_em": "2026-11-03 12:31",
+   "horas_ate_saida": 23.6,
+   "id": "76dbcfd55b",
+   "mediana_rota": 2605,
+   "menor_preco": 1795,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1795,
+   "preco_inicial": 1795,
+   "saida": "12:10",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-03 12:31",
    "voos_parecidos": 0
   },
   "789746e70e": {
