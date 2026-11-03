@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03 00:31",
+ "atualizado_em": "2026-11-03 01:01",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -297,12 +297,12 @@
   },
   "32f56d2c76": {
    "base": 2883,
-   "chegada": "17:25",
+   "chegada": "02:25",
    "companhia": "LATAM",
    "data": "2026-11-03",
    "destino": "MAO",
    "detectado_em": "2026-11-02 21:01",
-   "horas_ate_saida": 17.6,
+   "horas_ate_saida": 17.1,
    "id": "32f56d2c76",
    "mediana_rota": 2131,
    "menor_preco": 1275,
@@ -313,7 +313,7 @@
    "saida": "18:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-03 00:31",
+   "ultima_vista": "2026-11-03 01:01",
    "voos_parecidos": 0
   },
   "35c3f7fbcf": {
@@ -323,9 +323,9 @@
    "data": "2026-11-03",
    "destino": "RIO",
    "detectado_em": "2026-11-02 12:32",
-   "horas_ate_saida": 2.0,
+   "horas_ate_saida": 1.5,
    "id": "35c3f7fbcf",
-   "mediana_rota": 2277,
+   "mediana_rota": 2579,
    "menor_preco": 1096,
    "origem": "FOR",
    "paradas": 0,
@@ -334,7 +334,7 @@
    "saida": "02:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-03 00:31",
+   "ultima_vista": "2026-11-03 01:01",
    "voos_parecidos": 0
   },
   "381c8e98f0": {
