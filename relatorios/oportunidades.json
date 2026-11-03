@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03 01:31",
+ "atualizado_em": "2026-11-03 02:01",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -329,10 +329,10 @@
    "menor_preco": 1096,
    "origem": "FOR",
    "paradas": 0,
-   "preco": 1096,
+   "preco": 3287,
    "preco_inicial": 1096,
    "saida": "02:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-03 01:31",
    "voos_parecidos": 0
