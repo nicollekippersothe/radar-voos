@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03 05:31",
+ "atualizado_em": "2026-11-03 06:01",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -323,7 +323,7 @@
    "data": "2026-11-03",
    "destino": "RIO",
    "detectado_em": "2026-11-02 12:32",
-   "horas_ate_saida": 3.5,
+   "horas_ate_saida": 3.0,
    "id": "35c3f7fbcf",
    "mediana_rota": 2579,
    "menor_preco": 1096,
@@ -334,7 +334,7 @@
    "saida": "09:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-03 05:31",
+   "ultima_vista": "2026-11-03 06:01",
    "voos_parecidos": 0
   },
   "381c8e98f0": {
