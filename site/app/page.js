@@ -1,7 +1,7 @@
 import { nome, ORIGENS_90D } from "@/lib/dados";
 import { dadosHome, referencias, melhorReferencia } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
-import { reais, intervalo, duracao, paradas, diaCurto, horaLeitura, lidoCurto, lidoVoo, linkGoogle, hojeIso, somaDias } from "@/lib/formato";
+import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, lidoCurto, lidoVoo, linkGoogle, hojeIso, somaDias, distancia, lerData } from "@/lib/formato";
 import { oportunidades } from "@/lib/oportunidades";
 import { FormHome } from "./filtros";
 import { Compartilhar } from "./compartilhar";
@@ -47,11 +47,15 @@ export default async function Home({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const valor = Number(sp.valor || 500);
   const dias = Number(sp.dias || 3);
-  const [{ lista, origens, lidoEm, erro, semLeituras }, m, ops] = await Promise.all([dadosHome({ origem, valor, dias }), modelo(), oportunidades()]);
+  const hoje = hojeIso();
+  const { data, folga } = lerData(sp, 1);
+  // Com data exata, a janela vai de (data - folga) até (data + folga).
+  const de = data ? somaDias(data, -folga) : undefined;
+  const ate = data ? somaDias(data, folga) : undefined;
+  const [{ lista, origens, lidoEm, erro, semLeituras }, m, ops] = await Promise.all([dadosHome({ origem, valor, dias, de, ate }), modelo(), oportunidades()]);
   const achados = ops.lista.filter((o) => o.origem === origem);
   const achadosOutros = ops.lista.filter((o) => o.origem !== origem).slice(0, 3);
-  const hoje = hojeIso();
-  const limite = somaDias(hoje, dias);
+  const limite = data ? ate : somaDias(hoje, dias);
   const refsPorDestino = new Map(await Promise.all(lista.map(async (v) => [v.destino, await referencias(origem, v.destino)])));
   const opcoesOrigem = (origens.length ? origens : [origem]).map((o) => [o, nome(o)]);
   const sugestao = Math.round((valor * 1.5) / 50) * 50;
@@ -62,13 +66,13 @@ export default async function Home({ searchParams }) {
         <span className="t-kicker text-brand">Viagens de última hora</span>
         <h1 className="t-display max-w-[10ch]">Pra onde<br />dá pra ir?</h1>
         <p className="t-lead max-w-[42ch] text-muted-foreground">
-          Diga quanto quer gastar e em quantos dias quer viajar. Mostramos o destino mais barato de cada cidade, só de ida{lidoEm ? `. Preços lidos ${horaLeitura(lidoEm)}` : ""}.
+          Diga quanto quer gastar e quando quer viajar, em quantos dias ou numa data exata. Mostramos o voo mais barato de cada destino, só de ida{lidoEm ? `. Preços lidos ${horaLeitura(lidoEm)}` : ""}.
         </p>
         <Compartilhar titulo="Pra onde dá pra ir? Radar de Voos" />
       </section>
 
-      <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} />
-      {dias > 30 && !ORIGENS_90D.includes(origem) && (
+      <FormHome origem={origem} origens={opcoesOrigem} valor={valor} dias={dias} janelas={JANELAS} data={data} folga={folga} minData={hoje} />
+      {!data && dias > 30 && !ORIGENS_90D.includes(origem) && (
         <p className="mt-[1em] max-w-[62ch] text-[0.9em] text-muted-foreground">
           Depois de 30 dias, lemos os voos de {nome(origem)} de 3 em 3 dias e uma vez por dia. Saindo de {ORIGENS_90D.map(nome).join(", ")}, lemos todos os dias até 90.
         </p>
@@ -92,16 +96,18 @@ export default async function Home({ searchParams }) {
       )}
 
       {erro ? (
-        <Erro href={`/?origem=${origem}&valor=${valor}&dias=${dias}`} />
+        <Erro href={`/?origem=${origem}&valor=${valor}&${data ? `data=${data}&folga=${folga}` : `dias=${dias}`}`} />
       ) : lista.length === 0 ? (
         <Vazio
           titulo={semLeituras ? "Ainda sem leituras" : `Nada por até ${reais(valor)}`}
           texto={semLeituras
             ? "O coletor grava a primeira leitura assim que começar a rodar. Volte em alguns minutos."
-            : `Saindo de ${nome(origem)} nesse período, nenhum voo coube no valor. Tente um valor maior ou uma janela mais longa.`}
+            : data
+              ? `Saindo de ${nome(origem)} em ${diaLongo(data)}${folga ? ` (com ${folga} ${folga === 1 ? "dia" : "dias"} de folga)` : ""}, nenhum voo coube no valor. Tente um valor maior ou mais dias de folga.`
+              : `Saindo de ${nome(origem)} nesse período, nenhum voo coube no valor. Tente um valor maior ou uma janela mais longa.`}
           acao={!semLeituras && (
-            <Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" nativeButton={false} render={<a href={`/?origem=${origem}&valor=${sugestao}&dias=${Math.max(dias, 7)}`} />}>
-              Tentar com {reais(sugestao)} em 7 dias
+            <Button variant="outline" size="lg" className="h-[44px] rounded-md text-[1em]" nativeButton={false} render={<a href={data ? `/?origem=${origem}&valor=${sugestao}&data=${data}&folga=3` : `/?origem=${origem}&valor=${sugestao}&dias=${Math.max(dias, 7)}`} />}>
+              {data ? `Tentar com ${reais(sugestao)} e 3 dias de folga` : `Tentar com ${reais(sugestao)} em 7 dias`}
             </Button>
           )}
         />
@@ -113,7 +119,7 @@ export default async function Home({ searchParams }) {
           />
           <div className="divide-y rounded-lg border bg-card">
             {lista.map((v, i) => {
-              const ref = melhorReferencia(refsPorDestino.get(v.destino) || [], { hoje, limite, valor, precoGoogle: v.preco });
+              const ref = melhorReferencia(refsPorDestino.get(v.destino) || [], { hoje: data ? de : hoje, limite, valor, precoGoogle: v.preco });
               return (
               <Fragment key={v.destino}>
               <Linha
@@ -123,7 +129,7 @@ export default async function Home({ searchParams }) {
                 etiqueta={v.paradas === 0 ? "direto" : paradas(v.paradas)}
                 boa={v.paradas === 0}
                 sinal={(() => { const r = veredito(m, v); return r && r.tom === "bom" ? r : null; })()}
-                detalhe={`${diaCurto(v.data_voo)} · ${v.companhia} · ${duracao(v.duracao_min)} · ${lidoVoo(v, lidoEm)}`}
+                detalhe={`${diaCurto(v.data_voo)}${data ? ` (${distancia(v.data_voo, data)})` : ""} · ${v.companhia} · ${duracao(v.duracao_min)} · ${lidoVoo(v, lidoEm)}`}
                 horario={intervalo(v.h_saida, v.h_chegada)}
                 preco={reais(v.preco)}
                 aria={`${nome(v.destino)}, ${reais(v.preco)}, ${diaCurto(v.data_voo)}, ${v.companhia}, ${paradas(v.paradas)}. Abre no Google Voos`}
@@ -148,8 +154,8 @@ export default async function Home({ searchParams }) {
           </p>
           <div className="mt-[1em] flex flex-wrap gap-[0.5em]">
             {lista.slice(0, 3).map((v) => (
-              <Button key={v.destino} variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" nativeButton={false} render={<a href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}`} />}>
-                <CalendarDays data-icon="inline-start" /> Vale esperar? {nome(v.destino)}
+              <Button key={v.destino} variant="outline" className="h-[44px] rounded-full px-[1em] text-[0.9em]" nativeButton={false} render={<a href={`/melhor-dia?origem=${v.origem}&destino=${v.destino}${data ? `&data=${data}&folga=${Math.max(folga, 1)}` : ""}`} />}>
+                <CalendarDays data-icon="inline-start" /> {data ? "Comparar dias:" : "Vale esperar?"} {nome(v.destino)}
               </Button>
             ))}
           </div>

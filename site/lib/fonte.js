@@ -6,10 +6,10 @@ import { chamar, temApi } from "./api";
 import { hojeIso, somaDias } from "./formato";
 
 /** Pra tela "Pra onde dá pra ir?": o voo mais barato de cada destino. */
-export async function dadosHome({ origem, valor, dias }) {
+export async function dadosHome({ origem, valor, dias, de, ate }) {
   if (temApi()) {
     const [r, t] = await Promise.all([
-      chamar("/api/destinos", { origem, valor, dias }),
+      chamar("/api/destinos", de && ate ? { origem, valor, de, ate } : { origem, valor, dias }),
       chamar("/api/trechos"),
     ]);
     const origens = [...new Set((t?.trechos || []).map((x) => x.origem))].sort();
@@ -26,10 +26,11 @@ export async function dadosHome({ origem, valor, dias }) {
   }
   const { voos, lidoEm, erro } = await leituras();
   const hoje = hojeIso();
-  const limite = somaDias(hoje, dias);
+  const inicio = de && de > hoje ? de : hoje;
+  const limite = ate || somaDias(hoje, dias);
   const porDestino = new Map();
   for (const v of voos) {
-    if (v.origem !== origem || v.preco > valor || v.data_voo < hoje || v.data_voo > limite) continue;
+    if (v.origem !== origem || v.preco > valor || v.data_voo < inicio || v.data_voo > limite) continue;
     const atual = porDestino.get(v.destino);
     if (!atual || v.preco < atual.preco || (v.preco === atual.preco && v.paradas < atual.paradas)) porDestino.set(v.destino, v);
   }

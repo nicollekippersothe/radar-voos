@@ -2,7 +2,7 @@ import { nome, CIDADES } from "@/lib/dados";
 import { dadosDia, referencias, pedirTrecho } from "@/lib/fonte";
 import { modelo, veredito } from "@/lib/modelo";
 import { Veredito } from "../veredito";
-import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, lidoCurto, lidoVoo, linkGoogle } from "@/lib/formato";
+import { reais, intervalo, duracao, paradas, diaCurto, diaLongo, horaLeitura, lidoCurto, lidoVoo, linkGoogle, hojeIso, somaDias, distancia, lerData } from "@/lib/formato";
 import { FormDia } from "../filtros";
 import { Atualizar } from "../atualizar";
 import { temApi } from "@/lib/api";
@@ -31,8 +31,10 @@ export default async function MelhorDia({ searchParams }) {
   const origem = (sp.origem || "SAO").toUpperCase();
   const destino = (sp.destino || "FLN").toUpperCase();
   const soDiretos = sp.diretos !== "0";
+  const hoje = hojeIso();
+  const { data, folga } = lerData(sp, 2);
   const [{ dias, diaSel, todosDoDia, origens, destinos, lidoEm, erro }, m] = await Promise.all([
-    dadosDia({ origem, destino, soDiretos, dia: sp.dia }),
+    dadosDia({ origem, destino, soDiretos, dia: sp.dia || data || undefined }),
     modelo(),
   ]);
   const refs = await referencias(origem, destino);
@@ -42,7 +44,19 @@ export default async function MelhorDia({ searchParams }) {
   const maior = dias.length ? Math.max(...dias.map((d) => d.preco)) : 1;
   const mostrarTodos = sp.todos === "1";
   const voosDoDia = mostrarTodos ? todosDoDia : todosDoDia.slice(0, 10);
-  const base = `?origem=${origem}&destino=${destino}&diretos=${soDiretos ? 1 : 0}`;
+  const base = `?origem=${origem}&destino=${destino}&diretos=${soDiretos ? 1 : 0}${data ? `&data=${data}&folga=${folga}` : ""}`;
+  // Comparação com a data que a pessoa quer: um item por dia da janela (data ± folga).
+  const precoDoDia = new Map(dias.map((d) => [d.data_voo, d.preco]));
+  const precoQuero = data ? precoDoDia.get(data) : undefined;
+  const janela = data
+    ? Array.from({ length: 2 * folga + 1 }, (_, i) => somaDias(data, i - folga))
+        .filter((d) => d >= hoje)
+        .map((d) => ({ data_voo: d, preco: precoDoDia.get(d) }))
+    : [];
+  const comPreco = janela.filter((j) => j.preco !== undefined);
+  const melhorJanela = comPreco.length ? comPreco.reduce((a, b) => (b.preco < a.preco ? b : a)) : null;
+  const economia = melhorJanela && precoQuero !== undefined ? precoQuero - melhorJanela.preco : 0;
+  const dentro = new Set(janela.map((j) => j.data_voo));
   const diaMaisBarato = dias.find((d) => d.preco === menor);
 
   return (
@@ -61,6 +75,7 @@ export default async function MelhorDia({ searchParams }) {
         destino={destino}
         destinos={todasAsCidades(destinos, destino)}
         diretos={soDiretos}
+        data={data} folga={folga} minData={hoje}
       />
 
       {!erro && temApi() && origem !== destino && <Atualizar origem={origem} destino={destino} />}
@@ -84,6 +99,47 @@ export default async function MelhorDia({ searchParams }) {
             </div>
           </div>
 
+          {data && (
+            <>
+              <Secao rotulo={`${diaLongo(data)} ± ${folga} ${folga === 1 ? "dia" : "dias"}`} titulo="Quanto muda se eu mexer na data" />
+              <p className="-mt-[0.5em] mb-[1em] max-w-[62ch] text-[0.95em]">
+                {precoQuero === undefined
+                  ? `Não temos voo lido pra ${diaLongo(data)} nesse trecho.${melhorJanela ? ` O mais barato por perto é ${diaLongo(melhorJanela.data_voo)} (${distancia(melhorJanela.data_voo, data)}), por ${reais(melhorJanela.preco)}.` : " Tente mais dias de folga."}`
+                  : economia > 0
+                    ? `Em ${diaLongo(melhorJanela.data_voo)} (${distancia(melhorJanela.data_voo, data)}) sai por ${reais(melhorJanela.preco)}, ${reais(economia)} a menos que no dia que você quer (${reais(precoQuero)}).`
+                    : `No dia que você quer (${reais(precoQuero)}) já é o mais barato desses ${janela.length} dias.`}
+              </p>
+              <ol className="entra grid gap-[0.5em] sm:grid-cols-[repeat(auto-fit,minmax(8.5em,1fr))]">
+                {janela.map((j) => {
+                  const quero = j.data_voo === data;
+                  const melhor = melhorJanela && j.data_voo === melhorJanela.data_voo && economia > 0;
+                  const delta = precoQuero !== undefined && j.preco !== undefined ? j.preco - precoQuero : null;
+                  return (
+                    <li key={j.data_voo}>
+                      <a
+                        href={`${base.replace(/&dia=[^&]*/, "")}&dia=${j.data_voo}`}
+                        aria-label={`${diaLongo(j.data_voo)}, ${distancia(j.data_voo, data)}, ${j.preco === undefined ? "sem leitura" : reais(j.preco)}`}
+                        className={cn(
+                          "flex min-h-[44px] flex-col gap-[0.25em] rounded-lg border bg-card p-[0.75em] transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
+                          quero && "border-foreground", melhor && "border-brand"
+                        )}
+                      >
+                        <span className="t-label text-muted-foreground">{quero ? "Seu dia" : distancia(j.data_voo, data)}</span>
+                        <span className="text-[0.9em]">{diaCurto(j.data_voo)}</span>
+                        <span className={cn("t-num font-display text-[1.3em] font-semibold tracking-[-0.03em]", melhor && "text-brand")}>{j.preco === undefined ? "sem leitura" : reais(j.preco)}</span>
+                        {delta !== null && !quero && (
+                          <span className={cn("t-num text-[0.85em]", delta < 0 ? "text-good" : "text-muted-foreground")}>
+                            {delta === 0 ? "igual ao seu dia" : `${delta < 0 ? "−" : "+"}${reais(Math.abs(delta))}`}
+                          </span>
+                        )}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            </>
+          )}
+
           <Secao rotulo={`${dias.length} dias com leitura`} titulo="Preço por dia do voo" />
           <p className="-mt-[0.5em] mb-[1em] max-w-[62ch] text-[0.9em] text-muted-foreground">
             Cada linha é o menor preço que existe agora pra viajar naquele dia, e você compra hoje. Toque no dia pra ver os voos dele, ou em Comprar pra abrir a busca no Google Voos. Ao abrir, confira o valor: o preço pode ter mudado desde a leitura{lidoEm ? ` (${lidoCurto(lidoEm)})` : ""}, e os dias depois do terceiro são lidos só uma vez por dia.
@@ -100,10 +156,11 @@ export default async function MelhorDia({ searchParams }) {
                     aria-label={`${diaLongo(d.data_voo)}, ${reais(d.preco)}${top ? ", o mais barato" : ""}`}
                     className={cn(
                       "grid flex-1 min-h-[44px] grid-cols-[5.5em_1fr_auto] items-center gap-[1em] rounded-md px-[0.75em] py-[0.5em] transition-colors hover:bg-muted/70 focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
-                      sel && "bg-muted"
+                      sel && "bg-muted",
+                      data && !dentro.has(d.data_voo) && "opacity-60"
                     )}
                   >
-                    <span className={cn("text-[0.9em]", top ? "font-medium text-foreground" : "text-muted-foreground")}>{diaCurto(d.data_voo)}</span>
+                    <span className={cn("text-[0.9em]", top || d.data_voo === data ? "font-medium text-foreground" : "text-muted-foreground")}>{diaCurto(d.data_voo)}{d.data_voo === data && <span className="block text-[0.8em] text-brand">seu dia</span>}</span>
                     <span className="h-[0.75em] overflow-hidden rounded-sm bg-muted">
                       <i className={cn("block h-full rounded-sm", top ? "bg-brand" : "bg-foreground/70")} style={{ width: `${Math.max(4, (100 * d.preco) / maior)}%` }} />
                     </span>
