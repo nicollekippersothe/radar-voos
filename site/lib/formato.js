@@ -67,3 +67,25 @@ export function lidoVoo(v, lidoEm) {
   if (v.data_voo && v.data_voo > somaDias(hojeIso(), 3)) return "lido 1 vez por dia";
   return lidoCurto(lidoEm);
 }
+
+/** Diferença em dias entre duas datas ISO (b - a). */
+export function diasEntre(a, b) {
+  return Math.round((new Date(b + "T12:00:00Z") - new Date(a + "T12:00:00Z")) / 86400000);
+}
+
+/** "no dia", "2 dias antes", "1 dia depois", em relação à data que a pessoa quer. */
+export function distancia(dataVoo, dataQuero) {
+  const n = diasEntre(dataQuero, dataVoo);
+  if (n === 0) return "no dia que você quer";
+  const q = Math.abs(n);
+  return `${q}${NBSP}${q === 1 ? "dia" : "dias"} ${n < 0 ? "antes" : "depois"}`;
+}
+
+/** Valida ?data=AAAA-MM-DD e ?folga=0..3. Data no passado ou inválida vira "". */
+export function lerData(sp, padraoFolga) {
+  const hoje = hojeIso();
+  const data = /^\d{4}-\d{2}-\d{2}$/.test(sp.data || "") && sp.data >= hoje ? sp.data : "";
+  const f = Number(sp.folga);
+  const folga = Number.isInteger(f) && f >= 0 && f <= 3 ? f : padraoFolga;
+  return { data, folga };
+}

@@ -1,8 +1,10 @@
 "use client";
+import { useState } from "react";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 function Campo({ rotulo, children, cheio }) {
   return (
@@ -28,9 +30,30 @@ function Escolha({ name, valor, opcoes, rotuloAria }) {
   );
 }
 
-export function FormHome({ origem, origens, valor, dias, janelas }) {
+export const FOLGAS = [["0", "Só esse dia"], ["1", "1 dia pra cada lado"], ["2", "2 dias pra cada lado"], ["3", "3 dias pra cada lado"]];
+
+function Modo({ modo, setModo }) {
+  const itens = [["janela", "Próximos dias"], ["data", "Data exata"]];
+  return (
+    <div role="radiogroup" aria-label="Como escolher a data" className="col-span-2 flex w-fit gap-0.5 rounded-full bg-muted p-0.5 sm:col-span-full">
+      {itens.map(([v, r]) => (
+        <button
+          key={v} type="button" role="radio" aria-checked={modo === v} onClick={() => setModo(v)}
+          className={cn(
+            "min-h-[44px] rounded-full px-[1em] text-[0.9em] font-medium transition-colors focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-ring/50",
+            modo === v ? "bg-card text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
+          )}
+        >{r}</button>
+      ))}
+    </div>
+  );
+}
+
+export function FormHome({ origem, origens, valor, dias, janelas, data = "", folga = 1, minData }) {
+  const [modo, setModo] = useState(data ? "data" : "janela");
   return (
     <form method="get" className="grid grid-cols-2 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
+      <Modo modo={modo} setModo={setModo} />
       <Campo rotulo="Saindo de" cheio>
         <Escolha name="origem" valor={origem} opcoes={origens} rotuloAria="Origem" />
       </Campo>
@@ -44,9 +67,20 @@ export function FormHome({ origem, origens, valor, dias, janelas }) {
           />
         </div>
       </Campo>
-      <Campo rotulo="Nos próximos">
-        <Escolha name="dias" valor={String(dias)} opcoes={janelas} rotuloAria="Janela de dias" />
-      </Campo>
+      {modo === "janela" ? (
+        <Campo rotulo="Nos próximos">
+          <Escolha name="dias" valor={String(dias)} opcoes={janelas} rotuloAria="Janela de dias" />
+        </Campo>
+      ) : (
+        <>
+          <Campo rotulo="Quero ir em">
+            <Input type="date" name="data" required defaultValue={data} min={minData} aria-label="Data da viagem" className="h-[44px] rounded-md bg-card text-[1em]" />
+          </Campo>
+          <Campo rotulo="Posso mexer" cheio>
+            <Escolha name="folga" valor={String(folga)} opcoes={FOLGAS} rotuloAria="Folga em dias" />
+          </Campo>
+        </>
+      )}
       <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Ver destinos <ArrowRight data-icon="inline-end" />
       </Button>
@@ -54,7 +88,7 @@ export function FormHome({ origem, origens, valor, dias, janelas }) {
   );
 }
 
-export function FormDia({ origem, origens, destino, destinos, diretos }) {
+export function FormDia({ origem, origens, destino, destinos, diretos, data = "", folga = 2, minData }) {
   return (
     <form method="get" className="grid grid-cols-2 gap-[1em] rounded-lg border bg-card/60 p-[1.5em] sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
       <Campo rotulo="De">
@@ -65,6 +99,12 @@ export function FormDia({ origem, origens, destino, destinos, diretos }) {
       </Campo>
       <Campo rotulo="Voos" cheio>
         <Escolha name="diretos" valor={diretos ? "1" : "0"} opcoes={[["1", "Só diretos"], ["0", "Com paradas também"]]} rotuloAria="Tipo de voo" />
+      </Campo>
+      <Campo rotulo="Quero ir em (opcional)">
+        <Input type="date" name="data" defaultValue={data} min={minData} aria-label="Data que eu quero" className="h-[44px] rounded-md bg-card text-[1em]" />
+      </Campo>
+      <Campo rotulo="Comparar com" cheio>
+        <Escolha name="folga" valor={String(folga)} opcoes={FOLGAS.slice(1)} rotuloAria="Quantos dias comparar" />
       </Campo>
       <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Comparar dias <ArrowRight data-icon="inline-end" />

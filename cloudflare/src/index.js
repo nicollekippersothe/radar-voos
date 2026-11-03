@@ -102,6 +102,12 @@ const rotas = {
     const valor = inteiro(url.searchParams.get("valor"), 500, 50, 20000);
     const dias = inteiro(url.searchParams.get("dias"), 3, 0, 90);
     const hoje = hojeBrasilia();
+    // Janela por datas exatas (de, ate) tem prioridade sobre "dias". Nunca começa antes de hoje.
+    const iso = (x) => (/^\d{4}-\d{2}-\d{2}$/.test(x || "") ? x : null);
+    const de = iso(url.searchParams.get("de"));
+    const ate = iso(url.searchParams.get("ate"));
+    const inicio = de && de > hoje ? de : hoje;
+    const fim = ate || somaDias(hoje, dias);
     // Junta com a lista de trechos pra buscar cada destino pelo índice (origem, destino, data).
     // CROSS JOIN fixa a ordem (trechos primeiro): com JOIN comum o SQLite varre todos os voos da
     // origem, umas 9 mil linhas, em vez de buscar por destino.
@@ -120,8 +126,8 @@ const rotas = {
          )
         WHERE rn = 1
         ORDER BY preco`
-    ).bind(origem, valor, hoje, somaDias(hoje, dias)).all();
-    return { origem, valor, dias, lido_em: await ultimaColeta(env), destinos: results };
+    ).bind(origem, valor, inicio, fim).all();
+    return { origem, valor, dias, de: inicio, ate: fim, lido_em: await ultimaColeta(env), destinos: results };
   },
 
   // Menor preço por dia de um trecho: a tela "Qual dia é mais barato?".
