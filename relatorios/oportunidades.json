@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-04 18:31",
+ "atualizado_em": "2026-11-04 19:01",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -1072,6 +1072,27 @@
    "ultima_vista": "2026-10-28 13:32",
    "voos_parecidos": 0
   },
+  "91cbbce973": {
+   "base": 1353,
+   "chegada": "23:35",
+   "companhia": "Gol",
+   "data": "2026-11-04",
+   "destino": "POA",
+   "detectado_em": "2026-11-04 19:01",
+   "horas_ate_saida": 3.6,
+   "id": "91cbbce973",
+   "mediana_rota": 1590,
+   "menor_preco": 388,
+   "origem": "FLN",
+   "paradas": 0,
+   "preco": 388,
+   "preco_inicial": 388,
+   "saida": "22:35",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-04 19:01",
+   "voos_parecidos": 0
+  },
   "940931990b": {
    "base": 2241,
    "chegada": "01:06",
@@ -1532,6 +1553,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-01 10:31",
+   "voos_parecidos": 0
+  },
+  "d2f40f50ac": {
+   "base": 1596,
+   "chegada": "07:05",
+   "companhia": "Gol",
+   "data": "2026-11-05",
+   "destino": "FLN",
+   "detectado_em": "2026-11-04 19:01",
+   "horas_ate_saida": 11.1,
+   "id": "d2f40f50ac",
+   "mediana_rota": 1596,
+   "menor_preco": 394,
+   "origem": "POA",
+   "paradas": 0,
+   "preco": 394,
+   "preco_inicial": 394,
+   "saida": "06:05",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-04 19:01",
    "voos_parecidos": 0
   },
   "d92d24fba0": {
