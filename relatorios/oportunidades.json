@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-04 19:01",
+ "atualizado_em": "2026-11-04 19:31",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -1079,9 +1079,9 @@
    "data": "2026-11-04",
    "destino": "POA",
    "detectado_em": "2026-11-04 19:01",
-   "horas_ate_saida": 3.6,
+   "horas_ate_saida": 3.1,
    "id": "91cbbce973",
-   "mediana_rota": 1590,
+   "mediana_rota": 1582,
    "menor_preco": 388,
    "origem": "FLN",
    "paradas": 0,
@@ -1090,7 +1090,7 @@
    "saida": "22:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-04 19:01",
+   "ultima_vista": "2026-11-04 19:31",
    "voos_parecidos": 0
   },
   "940931990b": {
@@ -1562,9 +1562,9 @@
    "data": "2026-11-05",
    "destino": "FLN",
    "detectado_em": "2026-11-04 19:01",
-   "horas_ate_saida": 11.1,
+   "horas_ate_saida": 10.6,
    "id": "d2f40f50ac",
-   "mediana_rota": 1596,
+   "mediana_rota": 1587,
    "menor_preco": 394,
    "origem": "POA",
    "paradas": 0,
@@ -1573,7 +1573,7 @@
    "saida": "06:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-04 19:01",
+   "ultima_vista": "2026-11-04 19:31",
    "voos_parecidos": 0
   },
   "d92d24fba0": {
