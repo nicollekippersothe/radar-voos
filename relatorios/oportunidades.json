@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-04 00:01",
+ "atualizado_em": "2026-11-04 00:13",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -155,9 +155,9 @@
    "data": "2026-11-04",
    "destino": "SAO",
    "detectado_em": "2026-11-03 23:31",
-   "horas_ate_saida": 21.6,
+   "horas_ate_saida": 21.4,
    "id": "16b39b86ea",
-   "mediana_rota": 3048,
+   "mediana_rota": 3077,
    "menor_preco": 1083,
    "origem": "BSB",
    "paradas": 0,
@@ -166,7 +166,7 @@
    "saida": "21:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-04 00:01",
+   "ultima_vista": "2026-11-04 00:13",
    "voos_parecidos": 1
   },
   "1819923060": {
