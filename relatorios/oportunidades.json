@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-03 23:01",
+ "atualizado_em": "2026-11-03 23:31",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -168,6 +168,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-10-28 20:31",
    "voos_parecidos": 0
+  },
+  "16b39b86ea": {
+   "base": 2270,
+   "chegada": "23:10",
+   "companhia": "Gol",
+   "data": "2026-11-04",
+   "destino": "SAO",
+   "detectado_em": "2026-11-03 23:31",
+   "horas_ate_saida": 22.1,
+   "id": "16b39b86ea",
+   "mediana_rota": 2858,
+   "menor_preco": 1083,
+   "origem": "BSB",
+   "paradas": 0,
+   "preco": 1083,
+   "preco_inicial": 1083,
+   "saida": "21:35",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-03 23:31",
+   "voos_parecidos": 1
   },
   "1819923060": {
    "base": 2771,
