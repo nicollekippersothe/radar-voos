@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-04 22:31",
+ "atualizado_em": "2026-11-04 23:01",
  "eventos": {
   "00aac221cb": {
    "base": 2137,
@@ -1562,7 +1562,7 @@
    "data": "2026-11-05",
    "destino": "FLN",
    "detectado_em": "2026-11-04 19:01",
-   "horas_ate_saida": 8.1,
+   "horas_ate_saida": 7.1,
    "id": "d2f40f50ac",
    "mediana_rota": 1587,
    "menor_preco": 394,
@@ -1571,9 +1571,9 @@
    "preco": 394,
    "preco_inicial": 394,
    "saida": "06:05",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-04 22:01",
+   "ultima_vista": "2026-11-04 23:01",
    "voos_parecidos": 0
   },
   "d92d24fba0": {
