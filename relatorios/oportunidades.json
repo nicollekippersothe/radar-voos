@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-06 14:34",
+ "atualizado_em": "2026-11-06 15:01",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -125,6 +125,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-10-31 14:31",
+   "voos_parecidos": 0
+  },
+  "198068169c": {
+   "base": 1725,
+   "chegada": "16:40",
+   "companhia": "LATAM",
+   "data": "2026-11-07",
+   "destino": "SSA",
+   "detectado_em": "2026-11-06 15:01",
+   "horas_ate_saida": 23.7,
+   "id": "198068169c",
+   "mediana_rota": 1404,
+   "menor_preco": 711,
+   "origem": "BSB",
+   "paradas": 0,
+   "preco": 711,
+   "preco_inicial": 711,
+   "saida": "14:45",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-06 15:01",
    "voos_parecidos": 0
   },
   "1d95d3fb0f": {
@@ -407,7 +428,7 @@
    "data": "2026-11-07",
    "destino": "BSB",
    "detectado_em": "2026-11-06 12:31",
-   "horas_ate_saida": 14.9,
+   "horas_ate_saida": 14.5,
    "id": "572b01d69f",
    "mediana_rota": 1425,
    "menor_preco": 732,
@@ -418,7 +439,7 @@
    "saida": "05:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-06 14:34",
+   "ultima_vista": "2026-11-06 15:01",
    "voos_parecidos": 0
   },
   "5bebab0be3": {
@@ -1058,7 +1079,7 @@
    "data": "2026-11-06",
    "destino": "SAO",
    "detectado_em": "2026-11-06 12:01",
-   "horas_ate_saida": 6.3,
+   "horas_ate_saida": 5.9,
    "id": "c6b04d3a59",
    "mediana_rota": 2897,
    "menor_preco": 1276,
@@ -1069,7 +1090,7 @@
    "saida": "20:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-06 14:34",
+   "ultima_vista": "2026-11-06 15:01",
    "voos_parecidos": 0
   },
   "cb58f7dabf": {
@@ -1310,7 +1331,7 @@
    "data": "2026-11-07",
    "destino": "FOR",
    "detectado_em": "2026-11-06 07:01",
-   "horas_ate_saida": 16.4,
+   "horas_ate_saida": 16.0,
    "id": "f456cbdf87",
    "mediana_rota": 2668,
    "menor_preco": 1250,
@@ -1321,7 +1342,7 @@
    "saida": "07:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-06 14:34",
+   "ultima_vista": "2026-11-06 15:01",
    "voos_parecidos": 0
   },
   "f6adf5f18c": {
