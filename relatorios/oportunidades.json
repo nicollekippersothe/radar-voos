@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-06 04:01",
+ "atualizado_em": "2026-11-06 04:32",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -209,6 +209,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-03 08:01",
+   "voos_parecidos": 0
+  },
+  "3894139821": {
+   "base": 2668,
+   "chegada": "09:41",
+   "companhia": "LATAM",
+   "data": "2026-11-06",
+   "destino": "FOR",
+   "detectado_em": "2026-11-06 04:32",
+   "horas_ate_saida": 2.5,
+   "id": "3894139821",
+   "mediana_rota": 2668,
+   "menor_preco": 1250,
+   "origem": "BSB",
+   "paradas": 0,
+   "preco": 1250,
+   "preco_inicial": 1250,
+   "saida": "07:00",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-06 04:32",
    "voos_parecidos": 0
   },
   "3bcdba9a5b": {
@@ -1085,10 +1106,10 @@
    "menor_preco": 1275,
    "origem": "FOR",
    "paradas": 0,
-   "preco": 1275,
+   "preco": 3287,
    "preco_inicial": 1275,
    "saida": "05:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-06 04:01",
    "voos_parecidos": 0
