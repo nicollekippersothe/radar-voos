@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-06 17:01",
+ "atualizado_em": "2026-11-06 17:31",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -423,12 +423,12 @@
   },
   "572b01d69f": {
    "base": 1746,
-   "chegada": "13:20",
+   "chegada": "19:25",
    "companhia": "LATAM",
    "data": "2026-11-07",
    "destino": "BSB",
    "detectado_em": "2026-11-06 12:31",
-   "horas_ate_saida": 18.3,
+   "horas_ate_saida": 23.9,
    "id": "572b01d69f",
    "mediana_rota": 1425,
    "menor_preco": 732,
@@ -436,11 +436,11 @@
    "paradas": 0,
    "preco": 732,
    "preco_inicial": 732,
-   "saida": "11:20",
+   "saida": "17:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-06 17:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-11-06 17:31",
+   "voos_parecidos": 2
   },
   "5bebab0be3": {
    "base": 2816,
