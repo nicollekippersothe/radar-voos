@@ -1,7 +1,7 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-05 15:27",
- "voos_observados": 18637,
+ "gerado_em": "2026-11-05 21:03",
+ "voos_observados": 18651,
  "eventos": 253,
  "duracao_min": {
   "mediana": 45,
@@ -404,7 +404,7 @@
    "leituras": 5,
    "duracao_min": 135,
    "menor_preco": 1590,
-   "preco_normal": 3855,
+   "preco_normal": 3856,
    "queda_pct": 59,
    "horas_ate_partida": 2.9,
    "hora_do_inicio": 12
