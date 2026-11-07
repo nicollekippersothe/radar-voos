@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-07 12:54",
+ "atualizado_em": "2026-11-07 13:01",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -71,18 +71,18 @@
    "data": "2026-11-07",
    "destino": "FOR",
    "detectado_em": "2026-11-07 07:01",
-   "horas_ate_saida": 5.6,
+   "horas_ate_saida": 4.6,
    "id": "0d87669d99",
-   "mediana_rota": 2560,
+   "mediana_rota": 2591,
    "menor_preco": 1072,
    "origem": "RIO",
    "paradas": 0,
    "preco": 1072,
    "preco_inicial": 1072,
    "saida": "17:35",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-07 12:01",
+   "ultima_vista": "2026-11-07 13:01",
    "voos_parecidos": 0
   },
   "140b5d974b": {
@@ -491,7 +491,7 @@
    "data": "2026-11-07",
    "destino": "RIO",
    "detectado_em": "2026-11-06 18:01",
-   "horas_ate_saida": 4.9,
+   "horas_ate_saida": 4.8,
    "id": "584aaef256",
    "mediana_rota": 2579,
    "menor_preco": 1096,
@@ -502,7 +502,7 @@
    "saida": "17:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-07 12:54",
+   "ultima_vista": "2026-11-07 13:01",
    "voos_parecidos": 0
   },
   "5bebab0be3": {
