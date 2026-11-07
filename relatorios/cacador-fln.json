@@ -1,8 +1,8 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-06 20:54",
- "voos_observados": 19038,
- "eventos": 256,
+ "gerado_em": "2026-11-07 00:36",
+ "voos_observados": 19174,
+ "eventos": 254,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
@@ -30,13 +30,13 @@
   "17h": 11,
   "18h": 9,
   "19h": 15,
-  "20h": 14,
+  "20h": 12,
   "21h": 17,
   "22h": 19,
   "23h": 17
  },
  "por_companhia": {
-  "Gol": 172,
+  "Gol": 170,
   "LATAM": 60,
   "Azul": 23,
   "LATAM e Aerolineas Argentinas": 1
@@ -44,9 +44,9 @@
  "por_destino": {
   "SAO": 40,
   "RIO": 77,
-  "POA": 44,
+  "POA": 43,
   "CWB": 8,
-  "XAP": 68,
+  "XAP": 67,
   "SSA": 19
  },
  "melhores": [
@@ -395,40 +395,6 @@
   {
    "origem": "FLN",
    "destino": "POA",
-   "data": "2026-11-09",
-   "saida": "22:35",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-11-06 20:33",
-   "fim": "2026-11-06 20:53",
-   "leituras": 5,
-   "duracao_min": 50,
-   "menor_preco": 388,
-   "preco_normal": 989,
-   "queda_pct": 61,
-   "horas_ate_partida": 74.0,
-   "hora_do_inicio": 20
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-11-09",
-   "saida": "06:25",
-   "companhia": "Gol",
-   "paradas": 1,
-   "inicio": "2026-11-06 20:33",
-   "fim": "2026-11-06 20:53",
-   "leituras": 5,
-   "duracao_min": 50,
-   "menor_preco": 1157,
-   "preco_normal": 2606,
-   "queda_pct": 56,
-   "horas_ate_partida": 57.9,
-   "hora_do_inicio": 20
-  },
-  {
-   "origem": "FLN",
-   "destino": "POA",
    "data": "2026-11-06",
    "saida": "22:35",
    "companhia": "Gol",
@@ -731,6 +697,40 @@
    "queda_pct": 50,
    "horas_ate_partida": 5.6,
    "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
+   "destino": "XAP",
+   "data": "2026-11-05",
+   "saida": "15:15",
+   "companhia": "Azul",
+   "paradas": 0,
+   "inicio": "2026-11-03 00:01",
+   "fim": "2026-11-03 00:31",
+   "leituras": 2,
+   "duracao_min": 60,
+   "menor_preco": 679,
+   "preco_normal": 1715,
+   "queda_pct": 60,
+   "horas_ate_partida": 63.2,
+   "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-11-05",
+   "saida": "05:35",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-11-02 21:09",
+   "fim": "2026-11-02 21:24",
+   "leituras": 4,
+   "duracao_min": 45,
+   "menor_preco": 789,
+   "preco_normal": 2496,
+   "queda_pct": 68,
+   "horas_ate_partida": 56.4,
+   "hora_do_inicio": 21
   }
  ]
 }
