@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-07 06:13",
+ "atualizado_em": "2026-11-07 06:31",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -449,7 +449,7 @@
    "data": "2026-11-07",
    "destino": "BSB",
    "detectado_em": "2026-11-06 12:31",
-   "horas_ate_saida": 5.1,
+   "horas_ate_saida": 4.8,
    "id": "572b01d69f",
    "mediana_rota": 1544,
    "menor_preco": 732,
@@ -460,7 +460,7 @@
    "saida": "11:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-07 06:13",
+   "ultima_vista": "2026-11-07 06:31",
    "voos_parecidos": 0
   },
   "584aaef256": {
@@ -470,7 +470,7 @@
    "data": "2026-11-07",
    "destino": "RIO",
    "detectado_em": "2026-11-06 18:01",
-   "horas_ate_saida": 11.6,
+   "horas_ate_saida": 11.3,
    "id": "584aaef256",
    "mediana_rota": 2579,
    "menor_preco": 1096,
@@ -481,7 +481,7 @@
    "saida": "17:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-07 06:13",
+   "ultima_vista": "2026-11-07 06:31",
    "voos_parecidos": 0
   },
   "5bebab0be3": {
