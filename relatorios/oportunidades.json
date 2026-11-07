@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-07 19:01",
+ "atualizado_em": "2026-11-07 19:38",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -626,7 +626,7 @@
    "preco": 606,
    "preco_inicial": 606,
    "saida": "17:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-07 19:01",
    "voos_parecidos": 0
@@ -1400,10 +1400,10 @@
    "menor_preco": 671,
    "origem": "BPS",
    "paradas": 0,
-   "preco": 671,
+   "preco": 2673,
    "preco_inicial": 671,
    "saida": "07:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-07 19:01",
    "voos_parecidos": 0
