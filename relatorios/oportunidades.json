@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08 00:31",
+ "atualizado_em": "2026-11-08 01:01",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -386,18 +386,18 @@
    "data": "2026-11-08",
    "destino": "SAO",
    "detectado_em": "2026-11-07 18:01",
-   "horas_ate_saida": 22.0,
+   "horas_ate_saida": 16.0,
    "id": "5f9689c211",
-   "mediana_rota": 1630,
+   "mediana_rota": 1831,
    "menor_preco": 606,
    "origem": "XAP",
    "paradas": 1,
    "preco": 606,
    "preco_inicial": 606,
    "saida": "17:00",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-07 19:01",
+   "ultima_vista": "2026-11-08 01:01",
    "voos_parecidos": 0
   },
   "6bc46502aa": {
