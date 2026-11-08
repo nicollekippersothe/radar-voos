@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08 11:31",
+ "atualizado_em": "2026-11-08 12:01",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -134,7 +134,7 @@
    "data": "2026-11-09",
    "destino": "FOR",
    "detectado_em": "2026-11-08 11:31",
-   "horas_ate_saida": 19.5,
+   "horas_ate_saida": 19.0,
    "id": "2a887f0c2a",
    "mediana_rota": 2404,
    "menor_preco": 1250,
@@ -145,7 +145,7 @@
    "saida": "07:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 11:31",
+   "ultima_vista": "2026-11-08 12:01",
    "voos_parecidos": 0
   },
   "32f56d2c76": {
@@ -659,9 +659,9 @@
    "data": "2026-11-08",
    "destino": "FOR",
    "detectado_em": "2026-11-08 11:01",
-   "horas_ate_saida": 10.7,
+   "horas_ate_saida": 10.2,
    "id": "b818a20529",
-   "mediana_rota": 2618,
+   "mediana_rota": 2555,
    "menor_preco": 1072,
    "origem": "RIO",
    "paradas": 0,
@@ -670,7 +670,7 @@
    "saida": "22:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 11:31",
+   "ultima_vista": "2026-11-08 12:01",
    "voos_parecidos": 0
   },
   "b8e027318b": {
@@ -799,6 +799,27 @@
    "ultima_vista": "2026-11-05 05:01",
    "voos_parecidos": 0
   },
+  "d5bc183c47": {
+   "base": 3046,
+   "chegada": "23:25",
+   "companhia": "LATAM",
+   "data": "2026-11-08",
+   "destino": "SAO",
+   "detectado_em": "2026-11-08 12:01",
+   "horas_ate_saida": 7.8,
+   "id": "d5bc183c47",
+   "mediana_rota": 2801,
+   "menor_preco": 1276,
+   "origem": "FOR",
+   "paradas": 0,
+   "preco": 1276,
+   "preco_inicial": 1276,
+   "saida": "19:50",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-08 12:01",
+   "voos_parecidos": 0
+  },
   "d8b1bf7de7": {
    "base": 4455,
    "chegada": "18:00",
@@ -806,7 +827,7 @@
    "data": "2026-11-08",
    "destino": "FLN",
    "detectado_em": "2026-11-08 07:31",
-   "horas_ate_saida": 5.5,
+   "horas_ate_saida": 5.0,
    "id": "d8b1bf7de7",
    "mediana_rota": 1371,
    "menor_preco": 421,
@@ -817,7 +838,7 @@
    "saida": "17:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 11:31",
+   "ultima_vista": "2026-11-08 12:01",
    "voos_parecidos": 0
   },
   "dac011ef6f": {
