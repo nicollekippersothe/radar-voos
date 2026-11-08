@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08 15:29",
+ "atualizado_em": "2026-11-08 15:31",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -134,7 +134,7 @@
    "data": "2026-11-09",
    "destino": "XAP",
    "detectado_em": "2026-11-08 15:29",
-   "horas_ate_saida": 23.8,
+   "horas_ate_saida": 23.7,
    "id": "27cf114a8e",
    "mediana_rota": 1157,
    "menor_preco": 463,
@@ -145,7 +145,7 @@
    "saida": "15:15",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-08 15:29",
+   "ultima_vista": "2026-11-08 15:31",
    "voos_parecidos": 0
   },
   "2a887f0c2a": {
@@ -166,7 +166,7 @@
    "saida": "07:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 15:29",
+   "ultima_vista": "2026-11-08 15:31",
    "voos_parecidos": 0
   },
   "32f56d2c76": {
@@ -680,7 +680,7 @@
    "data": "2026-11-08",
    "destino": "FOR",
    "detectado_em": "2026-11-08 11:01",
-   "horas_ate_saida": 6.8,
+   "horas_ate_saida": 6.7,
    "id": "b818a20529",
    "mediana_rota": 2675,
    "menor_preco": 1072,
@@ -691,7 +691,7 @@
    "saida": "22:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 15:29",
+   "ultima_vista": "2026-11-08 15:31",
    "voos_parecidos": 0
   },
   "b8e027318b": {
@@ -838,11 +838,11 @@
    "saida": "19:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 15:29",
+   "ultima_vista": "2026-11-08 15:31",
    "voos_parecidos": 0
   },
   "d8b1bf7de7": {
-   "base": 2922,
+   "base": 1390,
    "chegada": "18:00",
    "companhia": "Azul",
    "data": "2026-11-08",
@@ -859,7 +859,7 @@
    "saida": "17:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 15:29",
+   "ultima_vista": "2026-11-08 15:31",
    "voos_parecidos": 0
   },
   "dac011ef6f": {
