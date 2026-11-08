@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-08 07:01",
+ "atualizado_em": "2026-11-08 07:31",
  "eventos": {
   "02d29c425c": {
    "base": 2561,
@@ -380,13 +380,13 @@
    "voos_parecidos": 0
   },
   "5f9689c211": {
-   "base": 2944,
+   "base": 1775,
    "chegada": "09:30",
    "companhia": "Azul",
    "data": "2026-11-08",
    "destino": "SAO",
    "detectado_em": "2026-11-07 18:01",
-   "horas_ate_saida": 10.0,
+   "horas_ate_saida": 9.5,
    "id": "5f9689c211",
    "mediana_rota": 1630,
    "menor_preco": 606,
@@ -397,7 +397,7 @@
    "saida": "17:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-08 07:01",
+   "ultima_vista": "2026-11-08 07:31",
    "voos_parecidos": 0
   },
   "6bc46502aa": {
@@ -755,6 +755,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-05 05:01",
+   "voos_parecidos": 0
+  },
+  "d8b1bf7de7": {
+   "base": 4455,
+   "chegada": "18:00",
+   "companhia": "Azul",
+   "data": "2026-11-08",
+   "destino": "FLN",
+   "detectado_em": "2026-11-08 07:31",
+   "horas_ate_saida": 9.5,
+   "id": "d8b1bf7de7",
+   "mediana_rota": 1588,
+   "menor_preco": 421,
+   "origem": "XAP",
+   "paradas": 0,
+   "preco": 421,
+   "preco_inicial": 421,
+   "saida": "17:00",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-08 07:31",
    "voos_parecidos": 0
   },
   "dac011ef6f": {
