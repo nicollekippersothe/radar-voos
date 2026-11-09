@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-09 13:01",
+ "atualizado_em": "2026-11-09 13:31",
  "eventos": {
   "0d87669d99": {
    "base": 2177,
@@ -101,7 +101,7 @@
    "preco": 431,
    "preco_inicial": 463,
    "saida": "15:15",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-09 13:01",
    "voos_parecidos": 0
@@ -722,7 +722,7 @@
    "data": "2026-11-10",
    "destino": "FOR",
    "detectado_em": "2026-11-09 12:01",
-   "horas_ate_saida": 18.0,
+   "horas_ate_saida": 17.5,
    "id": "f68c763963",
    "mediana_rota": 2668,
    "menor_preco": 1250,
@@ -733,7 +733,7 @@
    "saida": "07:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-09 13:01",
+   "ultima_vista": "2026-11-09 13:31",
    "voos_parecidos": 0
   },
   "f6adf5f18c": {
