@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-09 19:01",
+ "atualizado_em": "2026-11-09 19:31",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -8,9 +8,9 @@
    "data": "2026-11-09",
    "destino": "BSB",
    "detectado_em": "2026-11-09 17:31",
-   "horas_ate_saida": 2.3,
+   "horas_ate_saida": 1.8,
    "id": "094b7d4a33",
-   "mediana_rota": 1461,
+   "mediana_rota": 1441,
    "menor_preco": 902,
    "origem": "SSA",
    "paradas": 0,
@@ -19,7 +19,7 @@
    "saida": "21:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-09 19:01",
+   "ultima_vista": "2026-11-09 19:31",
    "voos_parecidos": 0
   },
   "0d87669d99": {
@@ -113,7 +113,7 @@
    "data": "2026-11-10",
    "destino": "SAO",
    "detectado_em": "2026-11-09 17:31",
-   "horas_ate_saida": 22.5,
+   "horas_ate_saida": 22.0,
    "id": "2458bdcbe7",
    "mediana_rota": 2619,
    "menor_preco": 1782,
@@ -124,7 +124,7 @@
    "saida": "17:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-09 19:01",
+   "ultima_vista": "2026-11-09 19:31",
    "voos_parecidos": 0
   },
   "27cf114a8e": {
@@ -302,7 +302,7 @@
    "data": "2026-11-10",
    "destino": "REC",
    "detectado_em": "2026-11-09 17:31",
-   "horas_ate_saida": 22.5,
+   "horas_ate_saida": 22.0,
    "id": "4ffab32e08",
    "mediana_rota": 2345,
    "menor_preco": 1600,
@@ -313,7 +313,7 @@
    "saida": "17:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-09 19:01",
+   "ultima_vista": "2026-11-09 19:31",
    "voos_parecidos": 0
   },
   "50372eaaab": {
@@ -344,9 +344,9 @@
    "data": "2026-11-10",
    "destino": "RIO",
    "detectado_em": "2026-11-09 14:31",
-   "horas_ate_saida": 19.1,
+   "horas_ate_saida": 18.6,
    "id": "525687f25a",
-   "mediana_rota": 2117,
+   "mediana_rota": 2027,
    "menor_preco": 1096,
    "origem": "FOR",
    "paradas": 0,
@@ -355,7 +355,7 @@
    "saida": "14:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-09 19:01",
+   "ultima_vista": "2026-11-09 19:31",
    "voos_parecidos": 0
   },
   "572b01d69f": {
@@ -815,7 +815,7 @@
    "preco": 1250,
    "preco_inicial": 1250,
    "saida": "07:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-09 19:01",
    "voos_parecidos": 0
