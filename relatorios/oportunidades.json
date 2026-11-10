@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-10 20:02",
+ "atualizado_em": "2026-11-10 20:31",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -50,7 +50,7 @@
    "data": "2026-11-10",
    "destino": "CWB",
    "detectado_em": "2026-11-10 19:31",
-   "horas_ate_saida": 2.9,
+   "horas_ate_saida": 2.4,
    "id": "150bf5745e",
    "mediana_rota": 2749,
    "menor_preco": 777,
@@ -61,7 +61,7 @@
    "saida": "22:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-10 20:02",
+   "ultima_vista": "2026-11-10 20:31",
    "voos_parecidos": 0
   },
   "16b39b86ea": {
@@ -500,7 +500,7 @@
    "preco": 777,
    "preco_inicial": 917,
    "saida": "17:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-10 20:02",
    "voos_parecidos": 6
@@ -533,7 +533,7 @@
    "data": "2026-11-11",
    "destino": "BHZ",
    "detectado_em": "2026-11-10 20:02",
-   "horas_ate_saida": 14.6,
+   "horas_ate_saida": 14.2,
    "id": "779a74ee58",
    "mediana_rota": 2091,
    "menor_preco": 816,
@@ -544,8 +544,8 @@
    "saida": "10:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-10 20:02",
-   "voos_parecidos": 8
+   "ultima_vista": "2026-11-10 20:31",
+   "voos_parecidos": 9
   },
   "91cbbce973": {
    "base": 1590,
@@ -584,7 +584,7 @@
    "preco": 432,
    "preco_inicial": 432,
    "saida": "17:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-10 20:02",
    "voos_parecidos": 0
