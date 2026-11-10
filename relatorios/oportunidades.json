@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-10 05:01",
+ "atualizado_em": "2026-11-10 05:31",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -86,13 +86,13 @@
    "voos_parecidos": 0
   },
   "2458bdcbe7": {
-   "base": 4044,
+   "base": 3594,
    "chegada": "19:20",
    "companhia": "LATAM",
    "data": "2026-11-10",
    "destino": "SAO",
    "detectado_em": "2026-11-09 17:31",
-   "horas_ate_saida": 12.5,
+   "horas_ate_saida": 12.0,
    "id": "2458bdcbe7",
    "mediana_rota": 2619,
    "menor_preco": 1782,
@@ -103,7 +103,7 @@
    "saida": "17:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-10 05:01",
+   "ultima_vista": "2026-11-10 05:31",
    "voos_parecidos": 0
   },
   "27cf114a8e": {
@@ -302,7 +302,7 @@
    "data": "2026-11-10",
    "destino": "REC",
    "detectado_em": "2026-11-09 17:31",
-   "horas_ate_saida": 12.5,
+   "horas_ate_saida": 12.0,
    "id": "4ffab32e08",
    "mediana_rota": 2344,
    "menor_preco": 1600,
@@ -313,7 +313,7 @@
    "saida": "17:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-10 05:01",
+   "ultima_vista": "2026-11-10 05:31",
    "voos_parecidos": 0
   },
   "50372eaaab": {
@@ -344,7 +344,7 @@
    "data": "2026-11-10",
    "destino": "RIO",
    "detectado_em": "2026-11-09 14:31",
-   "horas_ate_saida": 9.2,
+   "horas_ate_saida": 8.7,
    "id": "525687f25a",
    "mediana_rota": 2579,
    "menor_preco": 1096,
@@ -355,7 +355,7 @@
    "saida": "14:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-10 05:01",
+   "ultima_vista": "2026-11-10 05:31",
    "voos_parecidos": 0
   },
   "572b01d69f": {
@@ -764,7 +764,7 @@
    "data": "2026-11-10",
    "destino": "FOR",
    "detectado_em": "2026-11-09 12:01",
-   "horas_ate_saida": 2.0,
+   "horas_ate_saida": 1.5,
    "id": "f68c763963",
    "mediana_rota": 2668,
    "menor_preco": 1250,
@@ -775,7 +775,7 @@
    "saida": "07:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-10 05:01",
+   "ultima_vista": "2026-11-10 05:31",
    "voos_parecidos": 0
   },
   "f7dfc30c84": {
