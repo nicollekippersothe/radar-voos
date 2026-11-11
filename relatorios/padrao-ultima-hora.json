@@ -1,71 +1,71 @@
 {
- "voos_partidos": 83559,
+ "voos_partidos": 85999,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 0.9,
-  "voos_afetados_pct": 8.5
+  "voos_afetados_pct": 8.4
  },
- "voos_avaliados": 55278,
+ "voos_avaliados": 56897,
  "queda_sustentada": {
   "20pct": 6.0,
-  "30pct": 3.3
+  "30pct": 3.2
  },
- "alta_sustentada_30pct": 10.1,
+ "alta_sustentada_30pct": 9.9,
  "por_companhia": {
   "LATAM": {
-   "voos": 24575,
+   "voos": 25242,
    "queda20_pct": 6.2
   },
   "Gol": {
-   "voos": 16770,
-   "queda20_pct": 5.9
+   "voos": 17306,
+   "queda20_pct": 5.7
   },
   "Azul": {
-   "voos": 13918,
-   "queda20_pct": 5.9
+   "voos": 14334,
+   "queda20_pct": 5.8
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 952,
-   "queda20_pct": 3.7
+   "voos": 979,
+   "queda20_pct": 3.6
   },
   "03-05h": {
-   "voos": 4240,
+   "voos": 4352,
    "queda20_pct": 5.9
   },
   "06-08h": {
-   "voos": 8223,
+   "voos": 8488,
    "queda20_pct": 4.2
   },
   "09-11h": {
-   "voos": 9298,
+   "voos": 9574,
    "queda20_pct": 3.7
   },
   "12-14h": {
-   "voos": 8313,
-   "queda20_pct": 5.3
+   "voos": 8558,
+   "queda20_pct": 5.2
   },
   "15-17h": {
-   "voos": 9856,
-   "queda20_pct": 6.5
+   "voos": 10140,
+   "queda20_pct": 6.4
   },
   "18-20h": {
-   "voos": 9440,
+   "voos": 9704,
    "queda20_pct": 8.2
   },
   "21-23h": {
-   "voos": 4956,
-   "queda20_pct": 10.0
+   "voos": 5102,
+   "queda20_pct": 9.9
   }
  },
- "achados": 92,
+ "achados": 93,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2563,
+  "mediana": 2566,
   "ate_500_pct": 0.4
  },
  "floripa": {
-  "voos": 3654,
+  "voos": 3755,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -100,6 +100,14 @@
    "cia": "Gol",
    "base": 2173,
    "final": 334
+  },
+  {
+   "trecho": "XAP-FLN",
+   "data": "2026-11-10",
+   "saida": "17:00",
+   "cia": "Azul",
+   "base": 2793,
+   "final": 432
   },
   {
    "trecho": "SAO-XAP",
@@ -180,18 +188,10 @@
    "cia": "LATAM",
    "base": 2419,
    "final": 457
-  },
-  {
-   "trecho": "REC-FOR",
-   "data": "2026-10-11",
-   "saida": "22:25",
-   "cia": "Azul",
-   "base": 2694,
-   "final": 533
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-11-10T14:01"
+  "2026-11-11T14:01"
  ]
 }
