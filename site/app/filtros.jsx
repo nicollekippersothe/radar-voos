@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { DataFolga } from "./data-folga";
 
 function Campo({ rotulo, children, cheio }) {
   return (
@@ -29,8 +30,6 @@ function Escolha({ name, valor, opcoes, rotuloAria }) {
     </Select>
   );
 }
-
-export const FOLGAS = [["0", "Só esse dia"], ["1", "1 dia pra cada lado"], ["2", "2 dias pra cada lado"], ["3", "3 dias pra cada lado"]];
 
 function Modo({ modo, setModo }) {
   const itens = [["janela", "Próximos dias"], ["data", "Data exata"]];
@@ -72,14 +71,7 @@ export function FormHome({ origem, origens, valor, dias, janelas, data = "", fol
           <Escolha name="dias" valor={String(dias)} opcoes={janelas} rotuloAria="Janela de dias" />
         </Campo>
       ) : (
-        <>
-          <Campo rotulo="Quero ir em">
-            <Input type="date" name="data" required defaultValue={data} min={minData} aria-label="Data da viagem" className="h-[44px] rounded-md bg-card text-[1em]" />
-          </Campo>
-          <Campo rotulo="Posso mexer" cheio>
-            <Escolha name="folga" valor={String(folga)} opcoes={FOLGAS} rotuloAria="Folga em dias" />
-          </Campo>
-        </>
+        <DataFolga data={data} folga={folga} minData={minData} obrigatoria />
       )}
       <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Ver destinos <ArrowRight data-icon="inline-end" />
@@ -100,12 +92,7 @@ export function FormDia({ origem, origens, destino, destinos, diretos, data = ""
       <Campo rotulo="Voos" cheio>
         <Escolha name="diretos" valor={diretos ? "1" : "0"} opcoes={[["1", "Só diretos"], ["0", "Com paradas também"]]} rotuloAria="Tipo de voo" />
       </Campo>
-      <Campo rotulo="Quero ir em (opcional)">
-        <Input type="date" name="data" defaultValue={data} min={minData} aria-label="Data que eu quero" className="h-[44px] rounded-md bg-card text-[1em]" />
-      </Campo>
-      <Campo rotulo="Comparar com" cheio>
-        <Escolha name="folga" valor={String(folga)} opcoes={FOLGAS.slice(1)} rotuloAria="Quantos dias comparar" />
-      </Campo>
+      <DataFolga data={data} folga={folga} minData={minData} rotuloData="Quero ir em (opcional)" rotuloFolga="Comparar com os dias" folgas={[[1, "± 1 dia"], [2, "± 2 dias"], [3, "± 3 dias"]]} />
       <Button type="submit" size="lg" className="col-span-2 h-[44px] rounded-md bg-brand sm:col-span-1 px-[1.5em] text-[1em] text-brand-foreground hover:bg-brand/90">
         Comparar dias <ArrowRight data-icon="inline-end" />
       </Button>

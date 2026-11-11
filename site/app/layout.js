@@ -37,6 +37,12 @@ export default function Layout({ children }) {
       </head>
       <body className="min-h-dvh flex flex-col">
         <a href="#conteudo" className="sr-only focus:not-sr-only focus:fixed focus:left-[1em] focus:top-[1em] focus:z-50 focus:rounded-md focus:bg-card focus:px-[1em] focus:py-[0.75em] focus:shadow-lg">Pular pro conteúdo</a>
+        <div role="note" className="border-b bg-muted text-[0.85em]">
+          <p className="shell flex min-h-[2.75em] items-center py-[0.5em] text-muted-foreground">
+            <span className="mr-[0.75em] rounded-full bg-brand px-[0.6em] py-[0.1em] text-[0.8em] font-bold uppercase tracking-[0.08em] text-brand-foreground">Demo</span>
+            <span>Ainda estamos testando. Preços e comparações podem errar: confira no site de quem vende antes de comprar.</span>
+          </p>
+        </div>
         <header className="sticky top-0 z-20 border-b bg-background">
           <div className="shell flex h-[3.75em] items-center justify-between gap-4">
             <a href="/" className="flex min-h-[44px] items-center font-display text-[1.1em] font-semibold tracking-[-0.03em]">
