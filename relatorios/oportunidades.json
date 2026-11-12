@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-12 18:01",
+ "atualizado_em": "2026-11-12 18:31",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -470,9 +470,9 @@
    "data": "2026-11-12",
    "destino": "XAP",
    "detectado_em": "2026-11-12 00:31",
-   "horas_ate_saida": 3.8,
+   "horas_ate_saida": 3.3,
    "id": "662b0cad01",
-   "mediana_rota": 1590,
+   "mediana_rota": 1608,
    "menor_preco": 324,
    "origem": "FLN",
    "paradas": 0,
@@ -481,7 +481,7 @@
    "saida": "21:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-12 18:01",
+   "ultima_vista": "2026-11-12 18:31",
    "voos_parecidos": 0
   },
   "72e2265c1e": {
@@ -716,13 +716,13 @@
    "voos_parecidos": 0
   },
   "c6166d2cc0": {
-   "base": 2210,
+   "base": 2402,
    "chegada": "01:45",
    "companhia": "LATAM",
    "data": "2026-11-12",
    "destino": "SLZ",
    "detectado_em": "2026-11-12 18:01",
-   "horas_ate_saida": 4.3,
+   "horas_ate_saida": 3.8,
    "id": "c6166d2cc0",
    "mediana_rota": 2594,
    "menor_preco": 655,
@@ -733,7 +733,7 @@
    "saida": "22:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-12 18:01",
+   "ultima_vista": "2026-11-12 18:31",
    "voos_parecidos": 0
   },
   "c6b04d3a59": {
@@ -827,7 +827,7 @@
    "data": "2026-11-13",
    "destino": "FLN",
    "detectado_em": "2026-11-12 06:01",
-   "horas_ate_saida": 12.0,
+   "horas_ate_saida": 11.5,
    "id": "d724b5b042",
    "mediana_rota": 1588,
    "menor_preco": 322,
@@ -838,7 +838,7 @@
    "saida": "06:00",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-12 18:01",
+   "ultima_vista": "2026-11-12 18:31",
    "voos_parecidos": 0
   },
   "d8b1bf7de7": {
@@ -878,7 +878,7 @@
    "preco": 1276,
    "preco_inicial": 1276,
    "saida": "19:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-12 18:01",
    "voos_parecidos": 1
@@ -899,7 +899,7 @@
    "preco": 577,
    "preco_inicial": 532,
    "saida": "11:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-12 18:01",
    "voos_parecidos": 0
@@ -966,6 +966,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-11-10 19:01",
    "voos_parecidos": 0
+  },
+  "f0c4d5eff3": {
+   "base": 2210,
+   "chegada": "10:20",
+   "companhia": "LATAM",
+   "data": "2026-11-13",
+   "destino": "SLZ",
+   "detectado_em": "2026-11-12 18:31",
+   "horas_ate_saida": 12.4,
+   "id": "f0c4d5eff3",
+   "mediana_rota": 2594,
+   "menor_preco": 655,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 655,
+   "preco_inicial": 655,
+   "saida": "06:55",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-12 18:31",
+   "voos_parecidos": 1
   },
   "f37be76874": {
    "base": 2579,
