@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-12 00:20",
+ "atualizado_em": "2026-11-12 00:31",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -463,6 +463,27 @@
    "ultima_vista": "2026-11-08 07:31",
    "voos_parecidos": 0
   },
+  "662b0cad01": {
+   "base": 357,
+   "chegada": "23:00",
+   "companhia": "Gol",
+   "data": "2026-11-12",
+   "destino": "XAP",
+   "detectado_em": "2026-11-12 00:31",
+   "horas_ate_saida": 21.3,
+   "id": "662b0cad01",
+   "mediana_rota": 742,
+   "menor_preco": 324,
+   "origem": "FLN",
+   "paradas": 0,
+   "preco": 324,
+   "preco_inicial": 324,
+   "saida": "21:50",
+   "status": "aberta",
+   "tipo": "barato",
+   "ultima_vista": "2026-11-12 00:31",
+   "voos_parecidos": 0
+  },
   "72e2265c1e": {
    "base": 2136,
    "chegada": "10:35",
@@ -476,10 +497,10 @@
    "menor_preco": 865,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 980,
+   "preco": 2136,
    "preco_inicial": 865,
    "saida": "09:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-12 00:20",
    "voos_parecidos": 0
@@ -869,9 +890,9 @@
    "data": "2026-11-12",
    "destino": "RIO",
    "detectado_em": "2026-11-11 13:31",
-   "horas_ate_saida": 11.6,
+   "horas_ate_saida": 11.4,
    "id": "f37be76874",
-   "mediana_rota": 2436,
+   "mediana_rota": 2579,
    "menor_preco": 991,
    "origem": "FOR",
    "paradas": 0,
@@ -880,7 +901,7 @@
    "saida": "11:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-12 00:20",
+   "ultima_vista": "2026-11-12 00:31",
    "voos_parecidos": 2
   },
   "f456cbdf87": {
@@ -911,7 +932,7 @@
    "data": "2026-11-12",
    "destino": "FOR",
    "detectado_em": "2026-11-11 13:01",
-   "horas_ate_saida": 13.0,
+   "horas_ate_saida": 12.8,
    "id": "f4d1db800e",
    "mediana_rota": 2555,
    "menor_preco": 967,
@@ -922,7 +943,7 @@
    "saida": "13:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-12 00:20",
+   "ultima_vista": "2026-11-12 00:31",
    "voos_parecidos": 0
   },
   "f68c763963": {
