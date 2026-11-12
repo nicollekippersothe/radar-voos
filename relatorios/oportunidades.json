@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-12 01:01",
+ "atualizado_em": "2026-11-12 01:38",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -470,7 +470,7 @@
    "data": "2026-11-12",
    "destino": "XAP",
    "detectado_em": "2026-11-12 00:31",
-   "horas_ate_saida": 20.8,
+   "horas_ate_saida": 20.2,
    "id": "662b0cad01",
    "mediana_rota": 742,
    "menor_preco": 324,
@@ -481,7 +481,7 @@
    "saida": "21:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-12 01:01",
+   "ultima_vista": "2026-11-12 01:38",
    "voos_parecidos": 0
   },
   "72e2265c1e": {
@@ -890,9 +890,9 @@
    "data": "2026-11-12",
    "destino": "RIO",
    "detectado_em": "2026-11-11 13:31",
-   "horas_ate_saida": 10.9,
+   "horas_ate_saida": 10.3,
    "id": "f37be76874",
-   "mediana_rota": 2579,
+   "mediana_rota": 2656,
    "menor_preco": 991,
    "origem": "FOR",
    "paradas": 0,
@@ -901,7 +901,7 @@
    "saida": "11:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-12 01:01",
+   "ultima_vista": "2026-11-12 01:38",
    "voos_parecidos": 2
   },
   "f456cbdf87": {
@@ -938,10 +938,10 @@
    "menor_preco": 967,
    "origem": "RIO",
    "paradas": 0,
-   "preco": 967,
+   "preco": 2675,
    "preco_inicial": 1072,
    "saida": "13:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-12 01:01",
    "voos_parecidos": 0
