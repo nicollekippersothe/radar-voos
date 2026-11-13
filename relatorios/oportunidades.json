@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-13 12:01",
+ "atualizado_em": "2026-11-13 12:31",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -374,7 +374,7 @@
    "preco": 315,
    "preco_inicial": 315,
    "saida": "07:45",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-13 12:01",
    "voos_parecidos": 0
@@ -568,6 +568,27 @@
    "ultima_vista": "2026-11-12 20:01",
    "voos_parecidos": 0
   },
+  "66cd40155d": {
+   "base": 3248,
+   "chegada": "20:05",
+   "companhia": "LATAM",
+   "data": "2026-11-13",
+   "destino": "REC",
+   "detectado_em": "2026-11-13 12:31",
+   "horas_ate_saida": 5.0,
+   "id": "66cd40155d",
+   "mediana_rota": 2344,
+   "menor_preco": 1600,
+   "origem": "BSB",
+   "paradas": 0,
+   "preco": 1600,
+   "preco_inicial": 1600,
+   "saida": "17:30",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-13 12:31",
+   "voos_parecidos": 0
+  },
   "6cf93242f6": {
    "base": 3046,
    "chegada": "00:30",
@@ -584,7 +605,7 @@
    "preco": 1276,
    "preco_inicial": 1276,
    "saida": "20:55",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-13 12:01",
    "voos_parecidos": 1
@@ -743,9 +764,9 @@
    "data": "2026-11-14",
    "destino": "SAO",
    "detectado_em": "2026-11-13 05:01",
-   "horas_ate_saida": 18.0,
+   "horas_ate_saida": 17.5,
    "id": "97dba0dfd2",
-   "mediana_rota": 1954,
+   "mediana_rota": 2018,
    "menor_preco": 253,
    "origem": "JOI",
    "paradas": 0,
@@ -754,7 +775,7 @@
    "saida": "06:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-13 12:01",
+   "ultima_vista": "2026-11-13 12:31",
    "voos_parecidos": 0
   },
   "9cf9116b02": {
