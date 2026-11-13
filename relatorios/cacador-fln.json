@@ -1,8 +1,8 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-13 04:16",
- "voos_observados": 21228,
- "eventos": 280,
+ "gerado_em": "2026-11-13 12:50",
+ "voos_observados": 21234,
+ "eventos": 282,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
@@ -21,8 +21,8 @@
   "08h": 14,
   "09h": 6,
   "10h": 13,
-  "11h": 31,
-  "12h": 27,
+  "11h": 32,
+  "12h": 28,
   "13h": 9,
   "14h": 8,
   "15h": 4,
@@ -38,11 +38,11 @@
  "por_companhia": {
   "Gol": 172,
   "LATAM": 68,
-  "Azul": 39,
+  "Azul": 41,
   "LATAM e Aerolineas Argentinas": 1
  },
  "por_destino": {
-  "SAO": 40,
+  "SAO": 42,
   "RIO": 81,
   "POA": 47,
   "CWB": 8,
@@ -394,6 +394,40 @@
  "recentes": [
   {
    "origem": "FLN",
+   "destino": "SAO",
+   "data": "2026-11-15",
+   "saida": "05:45",
+   "companhia": "Azul",
+   "paradas": 0,
+   "inicio": "2026-11-13 12:29",
+   "fim": "2026-11-13 12:49",
+   "leituras": 2,
+   "duracao_min": 50,
+   "menor_preco": 2621,
+   "preco_normal": 4454,
+   "queda_pct": 41,
+   "horas_ate_partida": 41.3,
+   "hora_do_inicio": 12
+  },
+  {
+   "origem": "FLN",
+   "destino": "SAO",
+   "data": "2026-11-15",
+   "saida": "05:45",
+   "companhia": "Azul",
+   "paradas": 0,
+   "inicio": "2026-11-13 11:31",
+   "fim": "2026-11-13 11:31",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 2621,
+   "preco_normal": 4454,
+   "queda_pct": 41,
+   "horas_ate_partida": 42.2,
+   "hora_do_inicio": 11
+  },
+  {
+   "origem": "FLN",
    "destino": "XAP",
    "data": "2026-11-12",
    "saida": "20:45",
@@ -697,40 +731,6 @@
    "queda_pct": 85,
    "horas_ate_partida": 4.2,
    "hora_do_inicio": 11
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-11-10",
-   "saida": "15:15",
-   "companhia": "Azul",
-   "paradas": 0,
-   "inicio": "2026-11-09 10:01",
-   "fim": "2026-11-09 10:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 420,
-   "preco_normal": 2792,
-   "queda_pct": 85,
-   "horas_ate_partida": 29.2,
-   "hora_do_inicio": 10
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-11-11",
-   "saida": "15:15",
-   "companhia": "Azul",
-   "paradas": 0,
-   "inicio": "2026-11-09 08:01",
-   "fim": "2026-11-09 08:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 420,
-   "preco_normal": 2792,
-   "queda_pct": 85,
-   "horas_ate_partida": 55.2,
-   "hora_do_inicio": 8
   }
  ]
 }
