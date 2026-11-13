@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-13 18:01",
+ "atualizado_em": "2026-11-13 18:37",
  "eventos": {
   "094b7d4a33": {
    "base": 2125,
@@ -596,7 +596,7 @@
    "data": "2026-11-13",
    "destino": "SAO",
    "detectado_em": "2026-11-12 23:31",
-   "horas_ate_saida": 2.9,
+   "horas_ate_saida": 2.3,
    "id": "6cf93242f6",
    "mediana_rota": 2856,
    "menor_preco": 1276,
@@ -607,7 +607,7 @@
    "saida": "20:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-13 18:01",
+   "ultima_vista": "2026-11-13 18:37",
    "voos_parecidos": 1
   },
   "72e2265c1e": {
@@ -773,7 +773,7 @@
    "preco": 253,
    "preco_inicial": 253,
    "saida": "06:00",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-13 18:01",
    "voos_parecidos": 0
@@ -941,7 +941,7 @@
    "preco": 421,
    "preco_inicial": 421,
    "saida": "17:00",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "barato",
    "ultima_vista": "2026-11-13 18:01",
    "voos_parecidos": 0
