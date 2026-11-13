@@ -1,71 +1,71 @@
 {
- "voos_partidos": 88476,
+ "voos_partidos": 90831,
  "ruido": {
-  "leituras_acima_2x_mediana_pct": 0.9,
-  "voos_afetados_pct": 8.3
+  "leituras_acima_2x_mediana_pct": 0.8,
+  "voos_afetados_pct": 8.2
  },
- "voos_avaliados": 58549,
+ "voos_avaliados": 60110,
  "queda_sustentada": {
-  "20pct": 6.0,
+  "20pct": 5.9,
   "30pct": 3.2
  },
- "alta_sustentada_30pct": 9.7,
+ "alta_sustentada_30pct": 9.6,
  "por_companhia": {
   "Gol": {
-   "voos": 17829,
+   "voos": 18343,
    "queda20_pct": 5.8
   },
   "Azul": {
-   "voos": 14749,
-   "queda20_pct": 5.8
+   "voos": 15123,
+   "queda20_pct": 5.9
   },
   "LATAM": {
-   "voos": 25956,
-   "queda20_pct": 6.1
+   "voos": 26629,
+   "queda20_pct": 6.0
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 1005,
+   "voos": 1034,
    "queda20_pct": 3.5
   },
   "03-05h": {
-   "voos": 4473,
-   "queda20_pct": 5.9
+   "voos": 4582,
+   "queda20_pct": 5.8
   },
   "06-08h": {
-   "voos": 8754,
-   "queda20_pct": 4.2
+   "voos": 9008,
+   "queda20_pct": 4.1
   },
   "09-11h": {
-   "voos": 9849,
+   "voos": 10109,
    "queda20_pct": 3.7
   },
   "12-14h": {
-   "voos": 8842,
+   "voos": 9070,
    "queda20_pct": 5.2
   },
   "15-17h": {
-   "voos": 10426,
+   "voos": 10700,
    "queda20_pct": 6.4
   },
   "18-20h": {
-   "voos": 9965,
-   "queda20_pct": 8.2
+   "voos": 10236,
+   "queda20_pct": 8.1
   },
   "21-23h": {
-   "voos": 5235,
-   "queda20_pct": 9.9
+   "voos": 5371,
+   "queda20_pct": 9.8
   }
  },
- "achados": 93,
+ "achados": 96,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2566,
+  "mediana": 2564,
   "ate_500_pct": 0.4
  },
  "floripa": {
-  "voos": 3866,
+  "voos": 3965,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -76,6 +76,14 @@
    "cia": "LATAM",
    "base": 4030,
    "final": 420
+  },
+  {
+   "trecho": "JOI-SAO",
+   "data": "2026-11-13",
+   "saida": "08:25",
+   "cia": "Gol",
+   "base": 1952,
+   "final": 253
   },
   {
    "trecho": "SAO-UDI",
@@ -180,18 +188,10 @@
    "cia": "Gol",
    "base": 1752,
    "final": 329
-  },
-  {
-   "trecho": "REC-FOR",
-   "data": "2026-10-11",
-   "saida": "18:30",
-   "cia": "LATAM",
-   "base": 2419,
-   "final": 457
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-11-12T14:31"
+  "2026-11-13T14:01"
  ]
 }
