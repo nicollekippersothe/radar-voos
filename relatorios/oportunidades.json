@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-14 05:31",
+ "atualizado_em": "2026-11-14 06:01",
  "eventos": {
   "01bed36adf": {
    "base": 2426,
@@ -8,9 +8,9 @@
    "data": "2026-11-14",
    "destino": "MAO",
    "detectado_em": "2026-11-13 22:01",
-   "horas_ate_saida": 16.4,
+   "horas_ate_saida": 15.9,
    "id": "01bed36adf",
-   "mediana_rota": 2473,
+   "mediana_rota": 2520,
    "menor_preco": 1193,
    "origem": "SAO",
    "paradas": 0,
@@ -19,7 +19,7 @@
    "saida": "21:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 0
   },
   "0803fc18d5": {
@@ -29,9 +29,9 @@
    "data": "2026-11-14",
    "destino": "VIX",
    "detectado_em": "2026-11-13 19:01",
-   "horas_ate_saida": 11.4,
+   "horas_ate_saida": 10.9,
    "id": "0803fc18d5",
-   "mediana_rota": 2144,
+   "mediana_rota": 2149,
    "menor_preco": 323,
    "origem": "SAO",
    "paradas": 0,
@@ -40,7 +40,7 @@
    "saida": "16:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 2
   },
   "094b7d4a33": {
@@ -122,7 +122,7 @@
    "preco": 584,
    "preco_inicial": 584,
    "saida": "10:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-14 05:31",
    "voos_parecidos": 0
@@ -176,7 +176,7 @@
    "data": "2026-11-14",
    "destino": "GYN",
    "detectado_em": "2026-11-13 19:31",
-   "horas_ate_saida": 5.0,
+   "horas_ate_saida": 4.5,
    "id": "1b614d20cd",
    "mediana_rota": 1614,
    "menor_preco": 357,
@@ -187,7 +187,7 @@
    "saida": "10:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 6
   },
   "1e3117bfbb": {
@@ -575,7 +575,7 @@
    "data": "2026-11-14",
    "destino": "CGR",
    "detectado_em": "2026-11-13 19:31",
-   "horas_ate_saida": 3.7,
+   "horas_ate_saida": 3.2,
    "id": "57fc85519c",
    "mediana_rota": 1629,
    "menor_preco": 581,
@@ -586,7 +586,7 @@
    "saida": "09:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 0
   },
   "584aaef256": {
@@ -617,7 +617,7 @@
    "data": "2026-11-14",
    "destino": "SSA",
    "detectado_em": "2026-11-14 01:01",
-   "horas_ate_saida": 9.0,
+   "horas_ate_saida": 8.5,
    "id": "592a1dbf52",
    "mediana_rota": 900,
    "menor_preco": 494,
@@ -628,7 +628,7 @@
    "saida": "14:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 1
   },
   "5b616f2526": {
@@ -638,7 +638,7 @@
    "data": "2026-11-14",
    "destino": "FOR",
    "detectado_em": "2026-11-14 01:01",
-   "horas_ate_saida": 12.1,
+   "horas_ate_saida": 11.6,
    "id": "5b616f2526",
    "mediana_rota": 2555,
    "menor_preco": 1072,
@@ -649,7 +649,7 @@
    "saida": "17:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 0
   },
   "5f9689c211": {
@@ -1037,7 +1037,7 @@
    "data": "2026-11-14",
    "destino": "BPS",
    "detectado_em": "2026-11-13 19:08",
-   "horas_ate_saida": 12.9,
+   "horas_ate_saida": 12.4,
    "id": "c21aab1f62",
    "mediana_rota": 2351,
    "menor_preco": 428,
@@ -1048,7 +1048,7 @@
    "saida": "18:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:31",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 0
   },
   "c4522c4f06": {
@@ -1109,7 +1109,7 @@
    "preco": 1059,
    "preco_inicial": 1059,
    "saida": "06:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-14 05:31",
    "voos_parecidos": 0
@@ -1436,7 +1436,7 @@
    "data": "2026-11-14",
    "destino": "SAO",
    "detectado_em": "2026-11-13 19:08",
-   "horas_ate_saida": 8.7,
+   "horas_ate_saida": 7.7,
    "id": "f786fc774a",
    "mediana_rota": 2354,
    "menor_preco": 404,
@@ -1445,9 +1445,9 @@
    "preco": 577,
    "preco_inicial": 404,
    "saida": "13:40",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-14 05:01",
+   "ultima_vista": "2026-11-14 06:01",
    "voos_parecidos": 0
   },
   "f7dfc30c84": {
