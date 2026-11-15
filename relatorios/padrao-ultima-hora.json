@@ -1,71 +1,71 @@
 {
- "voos_partidos": 92999,
+ "voos_partidos": 95110,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 0.8,
   "voos_afetados_pct": 8.0
  },
- "voos_avaliados": 61622,
+ "voos_avaliados": 63026,
  "queda_sustentada": {
-  "20pct": 6.1,
-  "30pct": 3.2
+  "20pct": 6.2,
+  "30pct": 3.3
  },
- "alta_sustentada_30pct": 9.5,
+ "alta_sustentada_30pct": 9.3,
  "por_companhia": {
-  "Azul": {
-   "voos": 15519,
-   "queda20_pct": 6.0
-  },
   "Gol": {
-   "voos": 18815,
-   "queda20_pct": 5.9
+   "voos": 19243,
+   "queda20_pct": 6.1
+  },
+  "Azul": {
+   "voos": 15819,
+   "queda20_pct": 6.1
   },
   "LATAM": {
-   "voos": 27273,
-   "queda20_pct": 6.2
+   "voos": 27948,
+   "queda20_pct": 6.3
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 1063,
-   "queda20_pct": 3.5
+   "voos": 1083,
+   "queda20_pct": 3.4
   },
   "03-05h": {
-   "voos": 4689,
-   "queda20_pct": 5.9
+   "voos": 4797,
+   "queda20_pct": 5.8
   },
   "06-08h": {
-   "voos": 9261,
+   "voos": 9492,
    "queda20_pct": 4.4
   },
   "09-11h": {
-   "voos": 10290,
+   "voos": 10557,
    "queda20_pct": 4.0
   },
   "12-14h": {
-   "voos": 9307,
-   "queda20_pct": 5.2
+   "voos": 9515,
+   "queda20_pct": 5.5
   },
   "15-17h": {
-   "voos": 10981,
-   "queda20_pct": 6.4
+   "voos": 11228,
+   "queda20_pct": 6.7
   },
   "18-20h": {
-   "voos": 10514,
-   "queda20_pct": 8.2
+   "voos": 10718,
+   "queda20_pct": 8.5
   },
   "21-23h": {
-   "voos": 5517,
-   "queda20_pct": 9.8
+   "voos": 5636,
+   "queda20_pct": 10.0
   }
  },
- "achados": 111,
+ "achados": 134,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2559,
+  "mediana": 2555,
   "ate_500_pct": 0.4
  },
  "floripa": {
-  "voos": 4070,
+  "voos": 4176,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -182,16 +182,16 @@
    "final": 314
   },
   {
-   "trecho": "JPA-SAO",
-   "data": "2026-10-12",
-   "saida": "03:40",
+   "trecho": "VIX-SAO",
+   "data": "2026-11-14",
+   "saida": "18:05",
    "cia": "Gol",
-   "base": 2865,
-   "final": 520
+   "base": 1844,
+   "final": 314
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-11-14T13:01"
+  "2026-11-15T13:31"
  ]
 }
