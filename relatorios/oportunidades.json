@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-16 19:31",
+ "atualizado_em": "2026-11-16 20:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -413,10 +413,10 @@
    "menor_preco": 1276,
    "origem": "FOR",
    "paradas": 0,
-   "preco": 1276,
+   "preco": 3287,
    "preco_inicial": 1276,
    "saida": "20:55",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-16 19:31",
    "voos_parecidos": 0
@@ -1163,7 +1163,7 @@
    "data": "2026-11-17",
    "destino": "FOR",
    "detectado_em": "2026-11-16 12:31",
-   "horas_ate_saida": 9.6,
+   "horas_ate_saida": 9.1,
    "id": "906dd6adf2",
    "mediana_rota": 2555,
    "menor_preco": 1072,
@@ -1174,7 +1174,7 @@
    "saida": "05:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-16 19:31",
+   "ultima_vista": "2026-11-16 20:01",
    "voos_parecidos": 0
   },
   "97c17cc8dd": {
