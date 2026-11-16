@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-16 00:31",
+ "atualizado_em": "2026-11-16 01:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -101,7 +101,7 @@
    "preco": 345,
    "preco_inicial": 468,
    "saida": "19:10",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-16 00:31",
    "voos_parecidos": 0
@@ -407,7 +407,7 @@
    "data": "2026-11-16",
    "destino": "SAO",
    "detectado_em": "2026-11-15 23:01",
-   "horas_ate_saida": 20.4,
+   "horas_ate_saida": 19.9,
    "id": "308988905a",
    "mediana_rota": 3046,
    "menor_preco": 1276,
@@ -418,7 +418,7 @@
    "saida": "20:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-16 00:31",
+   "ultima_vista": "2026-11-16 01:01",
    "voos_parecidos": 0
   },
   "3bdc08aab0": {
@@ -1277,7 +1277,7 @@
    "preco": 322,
    "preco_inicial": 322,
    "saida": "06:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-16 00:31",
    "voos_parecidos": 0
@@ -1466,7 +1466,7 @@
    "preco": 1478,
    "preco_inicial": 1476,
    "saida": "11:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-16 00:31",
    "voos_parecidos": 0
