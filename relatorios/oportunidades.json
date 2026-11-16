@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-16 04:01",
+ "atualizado_em": "2026-11-16 04:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -407,7 +407,7 @@
    "data": "2026-11-16",
    "destino": "SAO",
    "detectado_em": "2026-11-15 23:01",
-   "horas_ate_saida": 16.9,
+   "horas_ate_saida": 16.4,
    "id": "308988905a",
    "mediana_rota": 3046,
    "menor_preco": 1276,
@@ -418,7 +418,7 @@
    "saida": "20:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-16 04:01",
+   "ultima_vista": "2026-11-16 04:31",
    "voos_parecidos": 0
   },
   "3bdc08aab0": {
@@ -612,12 +612,12 @@
   },
   "522438f8e4": {
    "base": 2555,
-   "chegada": "08:21",
+   "chegada": "13:40",
    "companhia": "LATAM",
    "data": "2026-11-16",
    "destino": "FOR",
    "detectado_em": "2026-11-15 08:01",
-   "horas_ate_saida": 1.1,
+   "horas_ate_saida": 5.9,
    "id": "522438f8e4",
    "mediana_rota": 2555,
    "menor_preco": 967,
@@ -625,11 +625,11 @@
    "paradas": 0,
    "preco": 1072,
    "preco_inicial": 967,
-   "saida": "05:10",
+   "saida": "10:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-16 04:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-11-16 04:31",
+   "voos_parecidos": 0
   },
   "525687f25a": {
    "base": 2579,
@@ -1268,18 +1268,18 @@
    "data": "2026-11-16",
    "destino": "FLN",
    "detectado_em": "2026-11-15 06:01",
-   "horas_ate_saida": 2.5,
+   "horas_ate_saida": 1.5,
    "id": "a0127502cb",
-   "mediana_rota": 1588,
+   "mediana_rota": 1746,
    "menor_preco": 322,
    "origem": "XAP",
    "paradas": 0,
    "preco": 322,
    "preco_inicial": 322,
    "saida": "06:00",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-16 03:31",
+   "ultima_vista": "2026-11-16 04:31",
    "voos_parecidos": 0
   },
   "a2e5523e04": {
