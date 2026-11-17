@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17 16:01",
+ "atualizado_em": "2026-11-17 16:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -164,7 +164,7 @@
    "preco": 672,
    "preco_inicial": 672,
    "saida": "05:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-17 16:01",
    "voos_parecidos": 0
@@ -575,7 +575,7 @@
    "data": "2026-11-17",
    "destino": "VIX",
    "detectado_em": "2026-11-17 12:31",
-   "horas_ate_saida": 3.2,
+   "horas_ate_saida": 2.7,
    "id": "510897d647",
    "mediana_rota": 2171,
    "menor_preco": 573,
@@ -586,7 +586,7 @@
    "saida": "19:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 16:01",
+   "ultima_vista": "2026-11-17 16:31",
    "voos_parecidos": 0
   },
   "522438f8e4": {
@@ -617,7 +617,7 @@
    "data": "2026-11-17",
    "destino": "SAO",
    "detectado_em": "2026-11-17 12:31",
-   "horas_ate_saida": 5.9,
+   "horas_ate_saida": 4.4,
    "id": "522e83aa7d",
    "mediana_rota": 3046,
    "menor_preco": 1276,
@@ -626,9 +626,9 @@
    "preco": 1276,
    "preco_inicial": 1276,
    "saida": "20:55",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 15:01",
+   "ultima_vista": "2026-11-17 16:31",
    "voos_parecidos": 0
   },
   "525687f25a": {
@@ -1240,6 +1240,27 @@
    "ultima_vista": "2026-11-17 04:01",
    "voos_parecidos": 0
   },
+  "9107c002b9": {
+   "base": 1808,
+   "chegada": "00:30",
+   "companhia": "LATAM",
+   "data": "2026-11-17",
+   "destino": "CGR",
+   "detectado_em": "2026-11-17 16:31",
+   "horas_ate_saida": 7.2,
+   "id": "9107c002b9",
+   "mediana_rota": 2121,
+   "menor_preco": 581,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 581,
+   "preco_inicial": 581,
+   "saida": "23:45",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-17 16:31",
+   "voos_parecidos": 0
+  },
   "97c17cc8dd": {
    "base": 3673,
    "chegada": "12:25",
@@ -1280,6 +1301,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-14 05:01",
+   "voos_parecidos": 0
+  },
+  "995e160bba": {
+   "base": 1684,
+   "chegada": "16:20",
+   "companhia": "Azul",
+   "data": "2026-11-18",
+   "destino": "XAP",
+   "detectado_em": "2026-11-17 16:31",
+   "horas_ate_saida": 22.7,
+   "id": "995e160bba",
+   "mediana_rota": 2787,
+   "menor_preco": 601,
+   "origem": "FLN",
+   "paradas": 0,
+   "preco": 601,
+   "preco_inicial": 601,
+   "saida": "15:15",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-17 16:31",
    "voos_parecidos": 0
   },
   "999e3e5ae0": {
@@ -1541,7 +1583,7 @@
    "data": "2026-11-17",
    "destino": "GYN",
    "detectado_em": "2026-11-17 14:01",
-   "horas_ate_saida": 7.2,
+   "horas_ate_saida": 6.7,
    "id": "bd4e31611e",
    "mediana_rota": 1920,
    "menor_preco": 657,
@@ -1552,7 +1594,7 @@
    "saida": "23:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 16:01",
+   "ultima_vista": "2026-11-17 16:31",
    "voos_parecidos": 1
   },
   "bf305fa86c": {
@@ -1709,7 +1751,7 @@
    "data": "2026-11-17",
    "destino": "MAO",
    "detectado_em": "2026-11-16 15:31",
-   "horas_ate_saida": 4.9,
+   "horas_ate_saida": 3.4,
    "id": "c837bf0cf5",
    "mediana_rota": 2735,
    "menor_preco": 1192,
@@ -1718,9 +1760,9 @@
    "preco": 1192,
    "preco_inicial": 1192,
    "saida": "19:55",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 15:01",
+   "ultima_vista": "2026-11-17 16:31",
    "voos_parecidos": 1
   },
   "d4fa0493f7": {
@@ -1898,7 +1940,7 @@
    "data": "2026-11-18",
    "destino": "SAO",
    "detectado_em": "2026-11-17 12:01",
-   "horas_ate_saida": 14.3,
+   "horas_ate_saida": 13.8,
    "id": "dc75dde777",
    "mediana_rota": 2162,
    "menor_preco": 564,
@@ -1909,7 +1951,7 @@
    "saida": "06:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 16:01",
+   "ultima_vista": "2026-11-17 16:31",
    "voos_parecidos": 0
   },
   "ded239e8d1": {
