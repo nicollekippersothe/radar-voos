@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17 10:31",
+ "atualizado_em": "2026-11-17 11:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -1604,9 +1604,9 @@
    "data": "2026-11-17",
    "destino": "MAO",
    "detectado_em": "2026-11-16 15:31",
-   "horas_ate_saida": 9.4,
+   "horas_ate_saida": 8.9,
    "id": "c837bf0cf5",
-   "mediana_rota": 2693,
+   "mediana_rota": 2714,
    "menor_preco": 1192,
    "origem": "SAO",
    "paradas": 0,
@@ -1615,7 +1615,7 @@
    "saida": "19:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 10:31",
+   "ultima_vista": "2026-11-17 11:01",
    "voos_parecidos": 2
   },
   "d4fa0493f7": {
