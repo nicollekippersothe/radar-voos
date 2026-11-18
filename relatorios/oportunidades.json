@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-17 22:27",
+ "atualizado_em": "2026-11-17 22:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -155,7 +155,7 @@
    "data": "2026-11-18",
    "destino": "SAO",
    "detectado_em": "2026-11-17 13:01",
-   "horas_ate_saida": 20.9,
+   "horas_ate_saida": 20.8,
    "id": "0ff4e889a5",
    "mediana_rota": 1721,
    "menor_preco": 672,
@@ -166,7 +166,7 @@
    "saida": "19:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 22:27",
+   "ultima_vista": "2026-11-17 22:31",
    "voos_parecidos": 0
   },
   "11e897d761": {
@@ -470,7 +470,7 @@
    "data": "2026-11-18",
    "destino": "CGR",
    "detectado_em": "2026-11-17 16:47",
-   "horas_ate_saida": 11.8,
+   "horas_ate_saida": 11.3,
    "id": "40d9f4c1b6",
    "mediana_rota": 1883,
    "menor_preco": 581,
@@ -479,9 +479,9 @@
    "preco": 581,
    "preco_inicial": 581,
    "saida": "09:50",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 22:01",
+   "ultima_vista": "2026-11-17 22:31",
    "voos_parecidos": 2
   },
   "463ac68eab": {
@@ -1163,7 +1163,7 @@
    "data": "2026-11-18",
    "destino": "RIO",
    "detectado_em": "2026-11-17 06:31",
-   "horas_ate_saida": 18.5,
+   "horas_ate_saida": 18.4,
    "id": "7f27b4bfda",
    "mediana_rota": 2950,
    "menor_preco": 1062,
@@ -1174,7 +1174,7 @@
    "saida": "16:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 22:27",
+   "ultima_vista": "2026-11-17 22:31",
    "voos_parecidos": 1
   },
   "7faadf2955": {
@@ -1352,7 +1352,7 @@
    "data": "2026-11-18",
    "destino": "XAP",
    "detectado_em": "2026-11-17 16:31",
-   "horas_ate_saida": 16.8,
+   "horas_ate_saida": 16.7,
    "id": "995e160bba",
    "mediana_rota": 2787,
    "menor_preco": 420,
@@ -1363,7 +1363,7 @@
    "saida": "15:15",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-17 22:27",
+   "ultima_vista": "2026-11-17 22:31",
    "voos_parecidos": 0
   },
   "999e3e5ae0": {
