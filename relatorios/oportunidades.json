@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-18 16:01",
+ "atualizado_em": "2026-11-18 16:22",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -911,7 +911,7 @@
    "data": "2026-11-19",
    "destino": "VIX",
    "detectado_em": "2026-11-18 07:31",
-   "horas_ate_saida": 17.8,
+   "horas_ate_saida": 17.5,
    "id": "6f21f9a969",
    "mediana_rota": 2144,
    "menor_preco": 536,
@@ -922,7 +922,7 @@
    "saida": "09:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-18 16:01",
+   "ultima_vista": "2026-11-18 16:22",
    "voos_parecidos": 0
   },
   "70f6bfb93f": {
@@ -1736,10 +1736,10 @@
    "menor_preco": 1375,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1375,
+   "preco": 3159,
    "preco_inicial": 1375,
    "saida": "20:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-18 16:01",
    "voos_parecidos": 0
