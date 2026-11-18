@@ -1,10 +1,10 @@
 {
- "voos_partidos": 99831,
+ "voos_partidos": 102229,
  "ruido": {
-  "leituras_acima_2x_mediana_pct": 0.8,
+  "leituras_acima_2x_mediana_pct": 0.9,
   "voos_afetados_pct": 8.3
  },
- "voos_avaliados": 66149,
+ "voos_avaliados": 67696,
  "queda_sustentada": {
   "20pct": 6.1,
   "30pct": 3.3
@@ -12,60 +12,60 @@
  "alta_sustentada_30pct": 9.8,
  "por_companhia": {
   "Gol": {
-   "voos": 20230,
-   "queda20_pct": 6.0
-  },
-  "LATAM": {
-   "voos": 29300,
-   "queda20_pct": 6.3
+   "voos": 20776,
+   "queda20_pct": 5.9
   },
   "Azul": {
-   "voos": 16603,
-   "queda20_pct": 6.0
+   "voos": 16951,
+   "queda20_pct": 5.9
+  },
+  "LATAM": {
+   "voos": 29953,
+   "queda20_pct": 6.3
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 1138,
+   "voos": 1164,
    "queda20_pct": 3.4
   },
   "03-05h": {
-   "voos": 5010,
+   "voos": 5139,
    "queda20_pct": 5.7
   },
   "06-08h": {
-   "voos": 9927,
+   "voos": 10174,
    "queda20_pct": 4.4
   },
   "09-11h": {
-   "voos": 11131,
+   "voos": 11393,
    "queda20_pct": 4.0
   },
   "12-14h": {
-   "voos": 10064,
+   "voos": 10291,
    "queda20_pct": 5.4
   },
   "15-17h": {
-   "voos": 11765,
+   "voos": 12033,
    "queda20_pct": 6.6
   },
   "18-20h": {
-   "voos": 11217,
-   "queda20_pct": 8.5
+   "voos": 11464,
+   "queda20_pct": 8.4
   },
   "21-23h": {
-   "voos": 5897,
+   "voos": 6038,
    "queda20_pct": 9.7
   }
  },
- "achados": 136,
+ "achados": 145,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2553,
+  "mediana": 2554,
   "ate_500_pct": 0.4
  },
  "floripa": {
-  "voos": 4390,
+  "voos": 4477,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -192,6 +192,6 @@
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-11-17T15:01"
+  "2026-11-18T15:01"
  ]
 }
