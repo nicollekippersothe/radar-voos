@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-18 07:31",
+ "atualizado_em": "2026-11-18 07:40",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -407,9 +407,9 @@
    "data": "2026-11-18",
    "destino": "CGR",
    "detectado_em": "2026-11-17 16:47",
-   "horas_ate_saida": 2.3,
+   "horas_ate_saida": 2.2,
    "id": "40d9f4c1b6",
-   "mediana_rota": 2121,
+   "mediana_rota": 2049,
    "menor_preco": 581,
    "origem": "SAO",
    "paradas": 0,
@@ -418,7 +418,7 @@
    "saida": "09:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-18 07:31",
+   "ultima_vista": "2026-11-18 07:40",
    "voos_parecidos": 2
   },
   "463ac68eab": {
@@ -743,7 +743,7 @@
    "data": "2026-11-18",
    "destino": "GYN",
    "detectado_em": "2026-11-17 13:31",
-   "horas_ate_saida": 8.0,
+   "horas_ate_saida": 7.8,
    "id": "635a6c919f",
    "mediana_rota": 1907,
    "menor_preco": 657,
@@ -754,7 +754,7 @@
    "saida": "15:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-18 07:31",
+   "ultima_vista": "2026-11-18 07:40",
    "voos_parecidos": 1
   },
   "662b0cad01": {
@@ -890,7 +890,7 @@
    "data": "2026-11-19",
    "destino": "VIX",
    "detectado_em": "2026-11-18 07:31",
-   "horas_ate_saida": 23.9,
+   "horas_ate_saida": 23.8,
    "id": "6f21f9a969",
    "mediana_rota": 2171,
    "menor_preco": 536,
@@ -901,8 +901,8 @@
    "saida": "07:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-18 07:31",
-   "voos_parecidos": 0
+   "ultima_vista": "2026-11-18 07:40",
+   "voos_parecidos": 1
   },
   "70f6bfb93f": {
    "base": 3290,
@@ -1904,10 +1904,10 @@
    "menor_preco": 554,
    "origem": "VIX",
    "paradas": 0,
-   "preco": 554,
+   "preco": 2162,
    "preco_inicial": 564,
    "saida": "19:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-18 07:31",
    "voos_parecidos": 0
