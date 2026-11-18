@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-18 18:01",
+ "atualizado_em": "2026-11-18 18:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -1592,7 +1592,7 @@
    "preco": 985,
    "preco_inicial": 985,
    "saida": "17:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-18 18:01",
    "voos_parecidos": 0
