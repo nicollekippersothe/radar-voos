@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-18 16:31",
+ "atualizado_em": "2026-11-18 17:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -911,7 +911,7 @@
    "data": "2026-11-19",
    "destino": "VIX",
    "detectado_em": "2026-11-18 07:31",
-   "horas_ate_saida": 17.3,
+   "horas_ate_saida": 16.8,
    "id": "6f21f9a969",
    "mediana_rota": 2144,
    "menor_preco": 536,
@@ -922,8 +922,8 @@
    "saida": "09:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-18 16:31",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-11-18 17:01",
+   "voos_parecidos": 0
   },
   "70f6bfb93f": {
    "base": 3290,
@@ -1574,6 +1574,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-15 21:01",
+   "voos_parecidos": 0
+  },
+  "bcd17ea100": {
+   "base": 3012,
+   "chegada": "18:00",
+   "companhia": "Azul",
+   "data": "2026-11-19",
+   "destino": "FLN",
+   "detectado_em": "2026-11-18 17:01",
+   "horas_ate_saida": 24.0,
+   "id": "bcd17ea100",
+   "mediana_rota": 3853,
+   "menor_preco": 985,
+   "origem": "XAP",
+   "paradas": 0,
+   "preco": 985,
+   "preco_inicial": 985,
+   "saida": "17:00",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-18 17:01",
    "voos_parecidos": 0
   },
   "bd4e31611e": {
