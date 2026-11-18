@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-18 06:01",
+ "atualizado_em": "2026-11-18 06:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -407,19 +407,19 @@
    "data": "2026-11-18",
    "destino": "CGR",
    "detectado_em": "2026-11-17 16:47",
-   "horas_ate_saida": 4.8,
+   "horas_ate_saida": 3.3,
    "id": "40d9f4c1b6",
-   "mediana_rota": 1930,
+   "mediana_rota": 2049,
    "menor_preco": 581,
    "origem": "SAO",
    "paradas": 0,
    "preco": 581,
    "preco_inicial": 581,
    "saida": "09:50",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-18 05:01",
-   "voos_parecidos": 3
+   "ultima_vista": "2026-11-18 06:31",
+   "voos_parecidos": 2
   },
   "463ac68eab": {
    "base": 2136,
