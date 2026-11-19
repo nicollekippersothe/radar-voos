@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-19 14:01",
+ "atualizado_em": "2026-11-19 14:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -428,7 +428,7 @@
    "data": "2026-11-19",
    "destino": "XAP",
    "detectado_em": "2026-11-18 22:28",
-   "horas_ate_saida": 7.8,
+   "horas_ate_saida": 7.3,
    "id": "418cb0cfaf",
    "mediana_rota": 2787,
    "menor_preco": 468,
@@ -439,7 +439,7 @@
    "saida": "21:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-19 14:01",
+   "ultima_vista": "2026-11-19 14:31",
    "voos_parecidos": 0
   },
   "463ac68eab": {
