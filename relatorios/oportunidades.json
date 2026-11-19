@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-19 07:01",
+ "atualizado_em": "2026-11-19 08:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -437,7 +437,7 @@
    "preco": 468,
    "preco_inicial": 468,
    "saida": "21:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-19 07:01",
    "voos_parecidos": 0
@@ -1907,7 +1907,7 @@
    "preco": 1276,
    "preco_inicial": 1276,
    "saida": "20:55",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-19 07:01",
    "voos_parecidos": 0
