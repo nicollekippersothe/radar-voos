@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-19 09:01",
+ "atualizado_em": "2026-11-19 09:31",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -422,13 +422,13 @@
    "voos_parecidos": 0
   },
   "418cb0cfaf": {
-   "base": 563,
+   "base": 554,
    "chegada": "23:00",
    "companhia": "Gol",
    "data": "2026-11-19",
    "destino": "XAP",
    "detectado_em": "2026-11-18 22:28",
-   "horas_ate_saida": 14.8,
+   "horas_ate_saida": 12.3,
    "id": "418cb0cfaf",
    "mediana_rota": 2787,
    "menor_preco": 468,
@@ -437,9 +437,9 @@
    "preco": 468,
    "preco_inicial": 468,
    "saida": "21:50",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-19 07:01",
+   "ultima_vista": "2026-11-19 09:31",
    "voos_parecidos": 0
   },
   "463ac68eab": {
