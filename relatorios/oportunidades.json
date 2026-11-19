@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-19 12:31",
+ "atualizado_em": "2026-11-19 13:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -428,7 +428,7 @@
    "data": "2026-11-19",
    "destino": "XAP",
    "detectado_em": "2026-11-18 22:28",
-   "horas_ate_saida": 9.3,
+   "horas_ate_saida": 8.8,
    "id": "418cb0cfaf",
    "mediana_rota": 2787,
    "menor_preco": 468,
@@ -439,7 +439,7 @@
    "saida": "21:50",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-19 12:31",
+   "ultima_vista": "2026-11-19 13:01",
    "voos_parecidos": 0
   },
   "463ac68eab": {
@@ -1892,24 +1892,24 @@
    "voos_parecidos": 0
   },
   "df5b3cf522": {
-   "base": 2763,
-   "chegada": "00:30",
+   "base": 3046,
+   "chegada": "23:25",
    "companhia": "LATAM",
    "data": "2026-11-19",
    "destino": "SAO",
    "detectado_em": "2026-11-18 21:40",
-   "horas_ate_saida": 13.9,
+   "horas_ate_saida": 6.8,
    "id": "df5b3cf522",
-   "mediana_rota": 3046,
+   "mediana_rota": 3021,
    "menor_preco": 1276,
    "origem": "FOR",
    "paradas": 0,
    "preco": 1276,
    "preco_inicial": 1276,
-   "saida": "20:55",
-   "status": "sumiu",
+   "saida": "19:50",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-19 07:01",
+   "ultima_vista": "2026-11-19 13:01",
    "voos_parecidos": 0
   },
   "e35e5b5b98": {
