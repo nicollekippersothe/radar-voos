@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-21 13:31",
+ "atualizado_em": "2026-11-21 14:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -161,10 +161,10 @@
    "menor_preco": 995,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 1084,
+   "preco": 2189,
    "preco_inicial": 995,
    "saida": "21:55",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-21 13:31",
    "voos_parecidos": 0
@@ -323,7 +323,7 @@
    "data": "2026-11-22",
    "destino": "SAO",
    "detectado_em": "2026-11-21 12:01",
-   "horas_ate_saida": 20.4,
+   "horas_ate_saida": 19.9,
    "id": "1cbeb2141e",
    "mediana_rota": 2735,
    "menor_preco": 1049,
@@ -334,7 +334,7 @@
    "saida": "09:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 13:31",
+   "ultima_vista": "2026-11-21 14:01",
    "voos_parecidos": 0
   },
   "22b277237d": {
@@ -743,7 +743,7 @@
    "data": "2026-11-22",
    "destino": "VIX",
    "detectado_em": "2026-11-21 09:31",
-   "horas_ate_saida": 17.8,
+   "horas_ate_saida": 17.3,
    "id": "56893de78f",
    "mediana_rota": 2171,
    "menor_preco": 573,
@@ -754,7 +754,7 @@
    "saida": "07:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 13:31",
+   "ultima_vista": "2026-11-21 14:01",
    "voos_parecidos": 0
   },
   "57fc85519c": {
@@ -1016,9 +1016,9 @@
    "data": "2026-11-21",
    "destino": "SAO",
    "detectado_em": "2026-11-20 10:31",
-   "horas_ate_saida": 2.1,
+   "horas_ate_saida": 1.6,
    "id": "737e4f12ab",
-   "mediana_rota": 2833,
+   "mediana_rota": 2356,
    "menor_preco": 874,
    "origem": "RIO",
    "paradas": 0,
@@ -1027,7 +1027,7 @@
    "saida": "15:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 13:31",
+   "ultima_vista": "2026-11-21 14:01",
    "voos_parecidos": 0
   },
   "743c8cf175": {
@@ -1928,7 +1928,7 @@
    "preco": 1276,
    "preco_inicial": 1027,
    "saida": "19:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-21 13:31",
    "voos_parecidos": 0
