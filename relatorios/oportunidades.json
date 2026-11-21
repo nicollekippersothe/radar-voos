@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-21 04:31",
+ "atualizado_em": "2026-11-21 04:55",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -155,9 +155,9 @@
    "data": "2026-11-21",
    "destino": "BSB",
    "detectado_em": "2026-11-20 08:31",
-   "horas_ate_saida": 17.4,
+   "horas_ate_saida": 17.0,
    "id": "0c8b54f912",
-   "mediana_rota": 3042,
+   "mediana_rota": 2639,
    "menor_preco": 995,
    "origem": "SAO",
    "paradas": 0,
@@ -166,7 +166,7 @@
    "saida": "21:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 04:31",
+   "ultima_vista": "2026-11-21 04:55",
    "voos_parecidos": 0
   },
   "0ff4e889a5": {
@@ -584,7 +584,7 @@
    "preco": 777,
    "preco_inicial": 777,
    "saida": "07:05",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-21 04:31",
    "voos_parecidos": 0
@@ -1004,7 +1004,7 @@
    "preco": 493,
    "preco_inicial": 493,
    "saida": "11:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-21 04:31",
    "voos_parecidos": 0
@@ -2054,7 +2054,7 @@
    "preco": 609,
    "preco_inicial": 609,
    "saida": "07:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-21 04:31",
    "voos_parecidos": 0
