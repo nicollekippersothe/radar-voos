@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-21 06:31",
+ "atualizado_em": "2026-11-21 07:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -197,9 +197,9 @@
    "data": "2026-11-21",
    "destino": "BHZ",
    "detectado_em": "2026-11-20 17:01",
-   "horas_ate_saida": 10.2,
+   "horas_ate_saida": 9.7,
    "id": "108f1ee7ca",
-   "mediana_rota": 2171,
+   "mediana_rota": 2198,
    "menor_preco": 789,
    "origem": "SAO",
    "paradas": 0,
@@ -208,7 +208,7 @@
    "saida": "16:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 06:31",
+   "ultima_vista": "2026-11-21 07:01",
    "voos_parecidos": 0
   },
   "11e897d761": {
@@ -995,7 +995,7 @@
    "data": "2026-11-21",
    "destino": "SAO",
    "detectado_em": "2026-11-20 13:31",
-   "horas_ate_saida": 4.8,
+   "horas_ate_saida": 4.3,
    "id": "743c8cf175",
    "mediana_rota": 2050,
    "menor_preco": 493,
@@ -1006,7 +1006,7 @@
    "saida": "11:20",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-21 06:31",
+   "ultima_vista": "2026-11-21 07:01",
    "voos_parecidos": 0
   },
   "758eebd346": {
@@ -1919,7 +1919,7 @@
    "data": "2026-11-21",
    "destino": "SAO",
    "detectado_em": "2026-11-21 05:31",
-   "horas_ate_saida": 7.5,
+   "horas_ate_saida": 7.0,
    "id": "e12fee4d7c",
    "mediana_rota": 2735,
    "menor_preco": 903,
@@ -1930,17 +1930,17 @@
    "saida": "14:00",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 06:31",
+   "ultima_vista": "2026-11-21 07:01",
    "voos_parecidos": 0
   },
   "e211a5eb53": {
-   "base": 2065,
-   "chegada": "14:30",
+   "base": 2381,
+   "chegada": "10:35",
    "companhia": "Azul",
    "data": "2026-11-21",
    "destino": "JOI",
    "detectado_em": "2026-11-20 13:31",
-   "horas_ate_saida": 22.1,
+   "horas_ate_saida": 2.2,
    "id": "e211a5eb53",
    "mediana_rota": 1492,
    "menor_preco": 888,
@@ -1948,10 +1948,10 @@
    "paradas": 0,
    "preco": 888,
    "preco_inicial": 888,
-   "saida": "13:10",
-   "status": "voltou",
+   "saida": "09:15",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-20 15:01",
+   "ultima_vista": "2026-11-21 07:01",
    "voos_parecidos": 0
   },
   "e35e5b5b98": {
