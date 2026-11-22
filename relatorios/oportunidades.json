@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-22 09:01",
+ "atualizado_em": "2026-11-22 09:31",
  "eventos": {
   "03afd810a9": {
    "base": 2697,
@@ -1247,7 +1247,7 @@
    "data": "2026-11-22",
    "destino": "CWB",
    "detectado_em": "2026-11-21 17:01",
-   "horas_ate_saida": 6.7,
+   "horas_ate_saida": 6.2,
    "id": "a6837165c6",
    "mediana_rota": 2722,
    "menor_preco": 1063,
@@ -1258,7 +1258,7 @@
    "saida": "15:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 09:01",
+   "ultima_vista": "2026-11-22 09:31",
    "voos_parecidos": 0
   },
   "bc24517308": {
