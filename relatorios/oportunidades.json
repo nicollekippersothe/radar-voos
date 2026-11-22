@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-21 20:37",
+ "atualizado_em": "2026-11-21 21:01",
  "eventos": {
   "01bed36adf": {
    "base": 2425,
@@ -743,9 +743,9 @@
    "data": "2026-11-22",
    "destino": "VIX",
    "detectado_em": "2026-11-21 09:31",
-   "horas_ate_saida": 10.7,
+   "horas_ate_saida": 10.3,
    "id": "56893de78f",
-   "mediana_rota": 2193,
+   "mediana_rota": 2171,
    "menor_preco": 573,
    "origem": "SAO",
    "paradas": 0,
@@ -754,7 +754,7 @@
    "saida": "07:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 20:37",
+   "ultima_vista": "2026-11-21 21:01",
    "voos_parecidos": 0
   },
   "57fc85519c": {
@@ -785,7 +785,7 @@
    "data": "2026-11-22",
    "destino": "REC",
    "detectado_em": "2026-11-21 17:31",
-   "horas_ate_saida": 20.9,
+   "horas_ate_saida": 20.5,
    "id": "57fe5c6a30",
    "mediana_rota": 2657,
    "menor_preco": 1448,
@@ -796,7 +796,7 @@
    "saida": "17:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 20:37",
+   "ultima_vista": "2026-11-21 21:01",
    "voos_parecidos": 0
   },
   "592a1dbf52": {
@@ -1541,7 +1541,7 @@
    "data": "2026-11-22",
    "destino": "CWB",
    "detectado_em": "2026-11-21 17:01",
-   "horas_ate_saida": 19.1,
+   "horas_ate_saida": 18.6,
    "id": "a6837165c6",
    "mediana_rota": 2722,
    "menor_preco": 1063,
@@ -1552,7 +1552,7 @@
    "saida": "15:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-21 20:37",
+   "ultima_vista": "2026-11-21 21:01",
    "voos_parecidos": 0
   },
   "bc24517308": {
