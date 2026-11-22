@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-22 13:01",
+ "atualizado_em": "2026-11-22 13:31",
  "eventos": {
   "03afd810a9": {
    "base": 2697,
@@ -41,6 +41,27 @@
    "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-15 18:01",
+   "voos_parecidos": 0
+  },
+  "05afd211c9": {
+   "base": 3287,
+   "chegada": "00:30",
+   "companhia": "LATAM",
+   "data": "2026-11-22",
+   "destino": "SAO",
+   "detectado_em": "2026-11-22 13:31",
+   "horas_ate_saida": 7.4,
+   "id": "05afd211c9",
+   "mediana_rota": 3066,
+   "menor_preco": 1276,
+   "origem": "FOR",
+   "paradas": 0,
+   "preco": 1276,
+   "preco_inicial": 1276,
+   "saida": "20:55",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-22 13:31",
    "voos_parecidos": 0
   },
   "0632726be5": {
