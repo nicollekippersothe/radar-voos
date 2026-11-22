@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-22 06:01",
+ "atualizado_em": "2026-11-22 07:01",
  "eventos": {
   "03afd810a9": {
    "base": 2697,
@@ -248,7 +248,7 @@
    "preco": 1049,
    "preco_inicial": 1049,
    "saida": "09:55",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 0
@@ -584,7 +584,7 @@
    "preco": 573,
    "preco_inicial": 573,
    "saida": "07:20",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 0
@@ -1256,7 +1256,7 @@
    "preco": 1063,
    "preco_inicial": 1063,
    "saida": "15:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 0
@@ -1550,7 +1550,7 @@
    "preco": 1163,
    "preco_inicial": 1163,
    "saida": "13:40",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 7
