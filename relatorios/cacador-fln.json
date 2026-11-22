@@ -1,12 +1,12 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-21 21:46",
- "voos_observados": 23232,
- "eventos": 324,
+ "gerado_em": "2026-11-22 04:52",
+ "voos_observados": 23240,
+ "eventos": 326,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
-  "p75": 75
+  "p75": 73
  },
  "uma_leitura_so_pct": 41,
  "inicio_por_hora": {
@@ -31,19 +31,19 @@
   "18h": 11,
   "19h": 15,
   "20h": 14,
-  "21h": 19,
+  "21h": 21,
   "22h": 19,
   "23h": 25
  },
  "por_companhia": {
   "Gol": 181,
   "LATAM": 83,
-  "Azul": 59,
+  "Azul": 61,
   "LATAM e Aerolineas Argentinas": 1
  },
  "por_destino": {
   "SAO": 55,
-  "RIO": 87,
+  "RIO": 89,
   "POA": 55,
   "CWB": 8,
   "XAP": 100,
@@ -395,6 +395,40 @@
   {
    "origem": "FLN",
    "destino": "RIO",
+   "data": "2026-11-24",
+   "saida": "05:35",
+   "companhia": "Azul",
+   "paradas": 1,
+   "inicio": "2026-11-21 21:25",
+   "fim": "2026-11-21 21:40",
+   "leituras": 3,
+   "duracao_min": 45,
+   "menor_preco": 1518,
+   "preco_normal": 3052,
+   "queda_pct": 50,
+   "horas_ate_partida": 56.2,
+   "hora_do_inicio": 21
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-11-24",
+   "saida": "05:45",
+   "companhia": "Azul",
+   "paradas": 1,
+   "inicio": "2026-11-21 21:25",
+   "fim": "2026-11-21 21:40",
+   "leituras": 3,
+   "duracao_min": 45,
+   "menor_preco": 1518,
+   "preco_normal": 3052,
+   "queda_pct": 50,
+   "horas_ate_partida": 56.3,
+   "hora_do_inicio": 21
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
    "data": "2026-11-22",
    "saida": "06:45",
    "companhia": "Gol",
@@ -697,40 +731,6 @@
    "queda_pct": 42,
    "horas_ate_partida": 32.7,
    "hora_do_inicio": 21
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-11-18",
-   "saida": "20:05",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-11-16 18:01",
-   "fim": "2026-11-16 18:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 630,
-   "preco_normal": 1590,
-   "queda_pct": 60,
-   "horas_ate_partida": 50.1,
-   "hora_do_inicio": 18
-  },
-  {
-   "origem": "FLN",
-   "destino": "XAP",
-   "data": "2026-11-18",
-   "saida": "20:05",
-   "companhia": "LATAM",
-   "paradas": 1,
-   "inicio": "2026-11-16 17:01",
-   "fim": "2026-11-16 17:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 630,
-   "preco_normal": 1590,
-   "queda_pct": 60,
-   "horas_ate_partida": 51.1,
-   "hora_do_inicio": 17
   }
  ]
 }
