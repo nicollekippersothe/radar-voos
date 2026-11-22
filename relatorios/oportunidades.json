@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-22 00:31",
+ "atualizado_em": "2026-11-22 01:01",
  "eventos": {
   "03afd810a9": {
    "base": 2697,
@@ -239,7 +239,7 @@
    "data": "2026-11-22",
    "destino": "SAO",
    "detectado_em": "2026-11-21 12:01",
-   "horas_ate_saida": 10.3,
+   "horas_ate_saida": 9.8,
    "id": "1cbeb2141e",
    "mediana_rota": 2735,
    "menor_preco": 1049,
@@ -250,7 +250,7 @@
    "saida": "10:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 00:31",
+   "ultima_vista": "2026-11-22 01:01",
    "voos_parecidos": 0
   },
   "22b277237d": {
@@ -596,18 +596,18 @@
    "data": "2026-11-22",
    "destino": "REC",
    "detectado_em": "2026-11-21 17:31",
-   "horas_ate_saida": 17.5,
+   "horas_ate_saida": 16.5,
    "id": "57fe5c6a30",
-   "mediana_rota": 2657,
+   "mediana_rota": 2462,
    "menor_preco": 1448,
    "origem": "BSB",
    "paradas": 0,
    "preco": 1448,
    "preco_inicial": 1448,
    "saida": "17:30",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 00:01",
+   "ultima_vista": "2026-11-22 01:01",
    "voos_parecidos": 0
   },
   "59cf3eef7c": {
@@ -1247,7 +1247,7 @@
    "data": "2026-11-22",
    "destino": "CWB",
    "detectado_em": "2026-11-21 17:01",
-   "horas_ate_saida": 15.2,
+   "horas_ate_saida": 14.7,
    "id": "a6837165c6",
    "mediana_rota": 2735,
    "menor_preco": 1063,
@@ -1258,7 +1258,7 @@
    "saida": "15:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 00:31",
+   "ultima_vista": "2026-11-22 01:01",
    "voos_parecidos": 0
   },
   "bc24517308": {
@@ -1541,7 +1541,7 @@
    "data": "2026-11-22",
    "destino": "RIO",
    "detectado_em": "2026-11-21 19:01",
-   "horas_ate_saida": 13.2,
+   "horas_ate_saida": 12.7,
    "id": "da3ff1f884",
    "mediana_rota": 2531,
    "menor_preco": 1163,
@@ -1552,7 +1552,7 @@
    "saida": "13:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 00:31",
+   "ultima_vista": "2026-11-22 01:01",
    "voos_parecidos": 9
   },
   "dc75dde777": {
