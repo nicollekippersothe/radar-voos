@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-22 05:46",
+ "atualizado_em": "2026-11-22 06:01",
  "eventos": {
   "03afd810a9": {
    "base": 2697,
@@ -239,7 +239,7 @@
    "data": "2026-11-22",
    "destino": "SAO",
    "detectado_em": "2026-11-21 12:01",
-   "horas_ate_saida": 4.2,
+   "horas_ate_saida": 3.9,
    "id": "1cbeb2141e",
    "mediana_rota": 2735,
    "menor_preco": 1049,
@@ -250,7 +250,7 @@
    "saida": "09:55",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 05:46",
+   "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 0
   },
   "22b277237d": {
@@ -575,7 +575,7 @@
    "data": "2026-11-22",
    "destino": "VIX",
    "detectado_em": "2026-11-21 09:31",
-   "horas_ate_saida": 1.6,
+   "horas_ate_saida": 1.3,
    "id": "56893de78f",
    "mediana_rota": 2171,
    "menor_preco": 573,
@@ -586,7 +586,7 @@
    "saida": "07:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 05:46",
+   "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 0
   },
   "57fe5c6a30": {
@@ -605,7 +605,7 @@
    "preco": 1448,
    "preco_inicial": 1448,
    "saida": "17:30",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-22 05:46",
    "voos_parecidos": 0
@@ -1247,7 +1247,7 @@
    "data": "2026-11-22",
    "destino": "CWB",
    "detectado_em": "2026-11-21 17:01",
-   "horas_ate_saida": 9.9,
+   "horas_ate_saida": 9.7,
    "id": "a6837165c6",
    "mediana_rota": 2749,
    "menor_preco": 1063,
@@ -1258,7 +1258,7 @@
    "saida": "15:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 05:46",
+   "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 0
   },
   "bc24517308": {
@@ -1541,7 +1541,7 @@
    "data": "2026-11-22",
    "destino": "RIO",
    "detectado_em": "2026-11-21 19:01",
-   "horas_ate_saida": 7.9,
+   "horas_ate_saida": 7.7,
    "id": "da3ff1f884",
    "mediana_rota": 2531,
    "menor_preco": 1163,
@@ -1552,7 +1552,7 @@
    "saida": "13:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-22 05:46",
+   "ultima_vista": "2026-11-22 06:01",
    "voos_parecidos": 7
   },
   "dc75dde777": {
