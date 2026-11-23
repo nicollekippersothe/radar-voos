@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-22 23:01",
+ "atualizado_em": "2026-11-22 23:31",
  "eventos": {
   "03afd810a9": {
    "base": 2697,
@@ -1133,6 +1133,27 @@
    "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-15 18:31",
+   "voos_parecidos": 0
+  },
+  "9a184a9936": {
+   "base": 3039,
+   "chegada": "17:00",
+   "companhia": "Gol",
+   "data": "2026-11-23",
+   "destino": "FOR",
+   "detectado_em": "2026-11-22 23:31",
+   "horas_ate_saida": 14.1,
+   "id": "9a184a9936",
+   "mediana_rota": 3022,
+   "menor_preco": 1252,
+   "origem": "SAO",
+   "paradas": 0,
+   "preco": 1252,
+   "preco_inicial": 1252,
+   "saida": "13:35",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-22 23:31",
    "voos_parecidos": 0
   },
   "9ffd2d7b19": {
