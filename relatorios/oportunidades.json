@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-23 11:31",
+ "atualizado_em": "2026-11-23 12:01",
  "eventos": {
   "05afd211c9": {
    "base": 3287,
@@ -974,7 +974,7 @@
    "data": "2026-11-23",
    "destino": "REC",
    "detectado_em": "2026-11-23 11:31",
-   "horas_ate_saida": 2.9,
+   "horas_ate_saida": 2.4,
    "id": "bb172d89aa",
    "mediana_rota": 2462,
    "menor_preco": 1600,
@@ -985,7 +985,7 @@
    "saida": "14:25",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-23 11:31",
+   "ultima_vista": "2026-11-23 12:01",
    "voos_parecidos": 0
   },
   "bcd17ea100": {
