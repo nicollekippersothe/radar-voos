@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-23 17:01",
+ "atualizado_em": "2026-11-23 17:31",
  "eventos": {
   "05afd211c9": {
    "base": 3287,
@@ -210,6 +210,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-11-18 11:01",
    "voos_parecidos": 2
+  },
+  "2b9ec45af3": {
+   "base": 2496,
+   "chegada": "16:20",
+   "companhia": "Gol",
+   "data": "2026-11-24",
+   "destino": "RIO",
+   "detectado_em": "2026-11-23 17:31",
+   "horas_ate_saida": 21.4,
+   "id": "2b9ec45af3",
+   "mediana_rota": 1427,
+   "menor_preco": 718,
+   "origem": "FLN",
+   "paradas": 0,
+   "preco": 718,
+   "preco_inicial": 718,
+   "saida": "14:55",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-23 17:31",
+   "voos_parecidos": 0
   },
   "2d6f46912b": {
    "base": 2466,
