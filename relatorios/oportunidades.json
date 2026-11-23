@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-23 18:31",
+ "atualizado_em": "2026-11-23 19:01",
  "eventos": {
   "05afd211c9": {
    "base": 3287,
@@ -147,6 +147,27 @@
    "tipo": "queda",
    "ultima_vista": "2026-11-19 00:02",
    "voos_parecidos": 0
+  },
+  "1526f4b56a": {
+   "base": 1833,
+   "chegada": "17:35",
+   "companhia": "Gol",
+   "data": "2026-11-24",
+   "destino": "SAO",
+   "detectado_em": "2026-11-23 19:01",
+   "horas_ate_saida": 21.3,
+   "id": "1526f4b56a",
+   "mediana_rota": 2629,
+   "menor_preco": 296,
+   "origem": "FLN",
+   "paradas": 0,
+   "preco": 296,
+   "preco_inicial": 296,
+   "saida": "16:20",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-23 19:01",
+   "voos_parecidos": 1
   },
   "18bd5f5d89": {
    "base": 2633,
