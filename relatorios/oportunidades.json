@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-23 19:01",
+ "atualizado_em": "2026-11-23 19:31",
  "eventos": {
   "05afd211c9": {
    "base": 3287,
@@ -164,7 +164,7 @@
    "preco": 296,
    "preco_inicial": 296,
    "saida": "16:20",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-23 19:01",
    "voos_parecidos": 1
