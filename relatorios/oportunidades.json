@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-24 12:01",
+ "atualizado_em": "2026-11-24 12:31",
  "eventos": {
   "05afd211c9": {
    "base": 3287,
@@ -85,6 +85,27 @@
    "ultima_vista": "2026-11-18 13:01",
    "voos_parecidos": 0
   },
+  "108dbcacf2": {
+   "base": 3046,
+   "chegada": "23:25",
+   "companhia": "LATAM",
+   "data": "2026-11-24",
+   "destino": "SAO",
+   "detectado_em": "2026-11-24 12:31",
+   "horas_ate_saida": 7.3,
+   "id": "108dbcacf2",
+   "mediana_rota": 2996,
+   "menor_preco": 1276,
+   "origem": "FOR",
+   "paradas": 0,
+   "preco": 1276,
+   "preco_inicial": 1276,
+   "saida": "19:50",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-24 12:31",
+   "voos_parecidos": 0
+  },
   "108f1ee7ca": {
    "base": 1822,
    "chegada": "17:55",
@@ -134,19 +155,19 @@
    "data": "2026-11-24",
    "destino": "SAO",
    "detectado_em": "2026-11-23 19:01",
-   "horas_ate_saida": 12.6,
+   "horas_ate_saida": 7.1,
    "id": "1526f4b56a",
-   "mediana_rota": 2525,
+   "mediana_rota": 2421,
    "menor_preco": 296,
    "origem": "FLN",
    "paradas": 0,
    "preco": 296,
    "preco_inicial": 296,
    "saida": "19:35",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-24 07:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-11-24 12:31",
+   "voos_parecidos": 0
   },
   "18bd5f5d89": {
    "base": 2633,
@@ -995,7 +1016,7 @@
    "data": "2026-11-25",
    "destino": "FLN",
    "detectado_em": "2026-11-24 10:31",
-   "horas_ate_saida": 22.1,
+   "horas_ate_saida": 21.6,
    "id": "c71070a9a7",
    "mediana_rota": 2635,
    "menor_preco": 301,
@@ -1006,7 +1027,7 @@
    "saida": "10:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-24 12:01",
+   "ultima_vista": "2026-11-24 12:31",
    "voos_parecidos": 0
   },
   "c7636bb855": {
@@ -1277,7 +1298,7 @@
    "preco": 1600,
    "preco_inicial": 1600,
    "saida": "14:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-24 12:01",
    "voos_parecidos": 0
@@ -1424,7 +1445,7 @@
    "preco": 198,
    "preco_inicial": 301,
    "saida": "22:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-24 12:01",
    "voos_parecidos": 1
