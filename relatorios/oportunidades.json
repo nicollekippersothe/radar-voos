@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-23 22:31",
+ "atualizado_em": "2026-11-23 23:01",
  "eventos": {
   "05afd211c9": {
    "base": 3287,
@@ -1219,6 +1219,27 @@
    "ultima_vista": "2026-11-21 15:01",
    "voos_parecidos": 0
   },
+  "d2471e888c": {
+   "base": 1546,
+   "chegada": "06:00",
+   "companhia": "Gol",
+   "data": "2026-11-24",
+   "destino": "SAO",
+   "detectado_em": "2026-11-23 23:01",
+   "horas_ate_saida": 5.4,
+   "id": "d2471e888c",
+   "mediana_rota": 2263,
+   "menor_preco": 479,
+   "origem": "IGU",
+   "paradas": 0,
+   "preco": 479,
+   "preco_inicial": 479,
+   "saida": "04:25",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-23 23:01",
+   "voos_parecidos": 0
+  },
   "d4fa0493f7": {
    "base": 314,
    "chegada": "20:45",
@@ -1466,7 +1487,7 @@
    "preco": 1163,
    "preco_inicial": 1163,
    "saida": "14:35",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-23 22:31",
    "voos_parecidos": 2
@@ -1514,24 +1535,24 @@
    "voos_parecidos": 1
   },
   "f6400be3fc": {
-   "base": 1838,
-   "chegada": "18:25",
+   "base": 1843,
+   "chegada": "00:10",
    "companhia": "Gol",
    "data": "2026-11-24",
    "destino": "FLN",
    "detectado_em": "2026-11-23 20:01",
-   "horas_ate_saida": 18.6,
+   "horas_ate_saida": 23.8,
    "id": "f6400be3fc",
    "mediana_rota": 2635,
-   "menor_preco": 301,
+   "menor_preco": 198,
    "origem": "SAO",
    "paradas": 0,
-   "preco": 301,
+   "preco": 198,
    "preco_inicial": 301,
-   "saida": "17:10",
+   "saida": "22:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-23 22:31",
+   "ultima_vista": "2026-11-23 23:01",
    "voos_parecidos": 3
   },
   "f84cc0396b": {
