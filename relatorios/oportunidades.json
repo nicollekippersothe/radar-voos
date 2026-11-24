@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-24 18:01",
+ "atualizado_em": "2026-11-24 18:31",
  "eventos": {
   "011bbf94fc": {
    "base": 219,
@@ -941,7 +941,7 @@
    "preco": 573,
    "preco_inicial": 573,
    "saida": "07:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-24 18:01",
    "voos_parecidos": 0
@@ -1079,7 +1079,7 @@
    "data": "2026-11-25",
    "destino": "FLN",
    "detectado_em": "2026-11-24 10:31",
-   "horas_ate_saida": 23.1,
+   "horas_ate_saida": 22.6,
    "id": "c71070a9a7",
    "mediana_rota": 2635,
    "menor_preco": 301,
@@ -1090,8 +1090,8 @@
    "saida": "17:10",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-24 18:01",
-   "voos_parecidos": 1
+   "ultima_vista": "2026-11-24 18:31",
+   "voos_parecidos": 2
   },
   "c7636bb855": {
    "base": 2864,
@@ -1499,7 +1499,7 @@
    "data": "2026-11-24",
    "destino": "FLN",
    "detectado_em": "2026-11-23 20:01",
-   "horas_ate_saida": 4.8,
+   "horas_ate_saida": 4.3,
    "id": "f6400be3fc",
    "mediana_rota": 2635,
    "menor_preco": 198,
@@ -1510,7 +1510,7 @@
    "saida": "22:50",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-24 18:01",
+   "ultima_vista": "2026-11-24 18:31",
    "voos_parecidos": 1
   },
   "f84cc0396b": {
