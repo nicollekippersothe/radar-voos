@@ -1,71 +1,71 @@
 {
- "voos_partidos": 113671,
+ "voos_partidos": 115879,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 0.9,
   "voos_afetados_pct": 8.2
  },
- "voos_avaliados": 74038,
+ "voos_avaliados": 75125,
  "queda_sustentada": {
   "20pct": 6.1,
   "30pct": 3.3
  },
- "alta_sustentada_30pct": 9.6,
+ "alta_sustentada_30pct": 9.7,
  "por_companhia": {
-  "Azul": {
-   "voos": 18393,
+  "LATAM": {
+   "voos": 33558,
    "queda20_pct": 6.1
   },
-  "LATAM": {
-   "voos": 33056,
-   "queda20_pct": 6.2
-  },
   "Gol": {
-   "voos": 22571,
+   "voos": 22878,
    "queda20_pct": 5.9
+  },
+  "Azul": {
+   "voos": 18671,
+   "queda20_pct": 6.2
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 1299,
+   "voos": 1325,
    "queda20_pct": 3.4
   },
   "03-05h": {
-   "voos": 5687,
-   "queda20_pct": 5.4
+   "voos": 5770,
+   "queda20_pct": 5.3
   },
   "06-08h": {
-   "voos": 11144,
+   "voos": 11294,
    "queda20_pct": 4.5
   },
   "09-11h": {
-   "voos": 12363,
+   "voos": 12547,
    "queda20_pct": 4.1
   },
   "12-14h": {
-   "voos": 11201,
+   "voos": 11363,
    "queda20_pct": 5.4
   },
   "15-17h": {
-   "voos": 13228,
+   "voos": 13358,
    "queda20_pct": 6.6
   },
   "18-20h": {
-   "voos": 12501,
-   "queda20_pct": 8.4
+   "voos": 12729,
+   "queda20_pct": 8.3
   },
   "21-23h": {
-   "voos": 6615,
-   "queda20_pct": 9.4
+   "voos": 6739,
+   "queda20_pct": 9.3
   }
  },
- "achados": 150,
+ "achados": 152,
  "achados_pct": 0.2,
  "preco_final_8h": {
-  "mediana": 2555,
+  "mediana": 2558,
   "ate_500_pct": 0.4
  },
  "floripa": {
-  "voos": 4890,
+  "voos": 4959,
   "menor_final": 270
  },
  "melhores_achados": [
@@ -76,6 +76,14 @@
    "cia": "LATAM",
    "base": 4030,
    "final": 420
+  },
+  {
+   "trecho": "FLN-SAO",
+   "data": "2026-11-24",
+   "saida": "12:15",
+   "cia": "Gol",
+   "base": 2499,
+   "final": 296
   },
   {
    "trecho": "JOI-SAO",
@@ -180,18 +188,10 @@
    "cia": "Gol",
    "base": 1844,
    "final": 314
-  },
-  {
-   "trecho": "VIX-SAO",
-   "data": "2026-11-14",
-   "saida": "18:05",
-   "cia": "Gol",
-   "base": 1844,
-   "final": 314
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-11-23T18:31"
+  "2026-11-24T17:01"
  ]
 }
