@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-25 12:01",
+ "atualizado_em": "2026-11-25 12:31",
  "eventos": {
   "011bbf94fc": {
    "base": 296,
@@ -1046,7 +1046,7 @@
    "preco": 273,
    "preco_inicial": 301,
    "saida": "17:10",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "barato",
    "ultima_vista": "2026-11-25 12:01",
    "voos_parecidos": 1
