@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-25 15:01",
+ "atualizado_em": "2026-11-25 15:31",
  "eventos": {
   "011bbf94fc": {
    "base": 296,
@@ -260,9 +260,9 @@
    "data": "2026-11-25",
    "destino": "SSA",
    "detectado_em": "2026-11-25 14:31",
-   "horas_ate_saida": 6.3,
+   "horas_ate_saida": 5.8,
    "id": "1f46390abb",
-   "mediana_rota": 1909,
+   "mediana_rota": 1614,
    "menor_preco": 468,
    "origem": "BSB",
    "paradas": 0,
@@ -271,7 +271,7 @@
    "saida": "21:20",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-25 15:01",
+   "ultima_vista": "2026-11-25 15:31",
    "voos_parecidos": 0
   },
   "22b277237d": {
