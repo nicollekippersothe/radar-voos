@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-24 21:31",
+ "atualizado_em": "2026-11-24 22:01",
  "eventos": {
   "011bbf94fc": {
    "base": 219,
@@ -17,7 +17,7 @@
    "preco": 185,
    "preco_inicial": 219,
    "saida": "06:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-24 21:31",
    "voos_parecidos": 5
@@ -386,7 +386,7 @@
    "data": "2026-11-25",
    "destino": "RIO",
    "detectado_em": "2026-11-24 19:01",
-   "horas_ate_saida": 19.0,
+   "horas_ate_saida": 18.5,
    "id": "478d16cbad",
    "mediana_rota": 2777,
    "menor_preco": 1163,
@@ -397,7 +397,7 @@
    "saida": "16:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-24 21:31",
+   "ultima_vista": "2026-11-24 22:01",
    "voos_parecidos": 2
   },
   "4c06d02ed8": {
@@ -911,9 +911,9 @@
    "data": "2026-11-25",
    "destino": "RIO",
    "detectado_em": "2026-11-24 20:01",
-   "horas_ate_saida": 8.1,
+   "horas_ate_saida": 7.6,
    "id": "950dd4188c",
-   "mediana_rota": 1408,
+   "mediana_rota": 1425,
    "menor_preco": 593,
    "origem": "FLN",
    "paradas": 0,
@@ -922,7 +922,7 @@
    "saida": "05:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-24 21:31",
+   "ultima_vista": "2026-11-24 22:01",
    "voos_parecidos": 0
   },
   "995e160bba": {
@@ -1142,7 +1142,7 @@
    "data": "2026-11-25",
    "destino": "FLN",
    "detectado_em": "2026-11-24 10:31",
-   "horas_ate_saida": 19.6,
+   "horas_ate_saida": 19.1,
    "id": "c71070a9a7",
    "mediana_rota": 2400,
    "menor_preco": 273,
@@ -1153,8 +1153,8 @@
    "saida": "17:10",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-24 21:31",
-   "voos_parecidos": 0
+   "ultima_vista": "2026-11-24 22:01",
+   "voos_parecidos": 1
   },
   "c7636bb855": {
    "base": 2864,
@@ -1571,7 +1571,7 @@
    "preco": 1136,
    "preco_inicial": 1136,
    "saida": "16:40",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-24 21:31",
    "voos_parecidos": 0
