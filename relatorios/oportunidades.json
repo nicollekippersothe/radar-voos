@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-25 14:01",
+ "atualizado_em": "2026-11-25 14:31",
  "eventos": {
   "011bbf94fc": {
    "base": 296,
@@ -251,6 +251,27 @@
    "status": "sumiu",
    "tipo": "queda",
    "ultima_vista": "2026-11-22 06:01",
+   "voos_parecidos": 0
+  },
+  "1f46390abb": {
+   "base": 1404,
+   "chegada": "23:15",
+   "companhia": "Gol",
+   "data": "2026-11-25",
+   "destino": "SSA",
+   "detectado_em": "2026-11-25 14:31",
+   "horas_ate_saida": 6.8,
+   "id": "1f46390abb",
+   "mediana_rota": 1849,
+   "menor_preco": 468,
+   "origem": "BSB",
+   "paradas": 0,
+   "preco": 468,
+   "preco_inicial": 468,
+   "saida": "21:20",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-25 14:31",
    "voos_parecidos": 0
   },
   "22b277237d": {
