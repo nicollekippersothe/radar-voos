@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-25 20:31",
+ "atualizado_em": "2026-11-25 21:01",
  "eventos": {
   "011bbf94fc": {
    "base": 296,
@@ -50,7 +50,7 @@
    "data": "2026-11-26",
    "destino": "BSB",
    "detectado_em": "2026-11-25 19:01",
-   "horas_ate_saida": 20.6,
+   "horas_ate_saida": 20.1,
    "id": "0762ea972a",
    "mediana_rota": 2693,
    "menor_preco": 525,
@@ -61,7 +61,7 @@
    "saida": "17:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-25 20:31",
+   "ultima_vista": "2026-11-25 21:01",
    "voos_parecidos": 0
   },
   "08c54f6c6e": {
@@ -302,7 +302,7 @@
    "data": "2026-11-26",
    "destino": "RIO",
    "detectado_em": "2026-11-25 18:01",
-   "horas_ate_saida": 9.1,
+   "horas_ate_saida": 8.6,
    "id": "1d2aed2853",
    "mediana_rota": 1320,
    "menor_preco": 717,
@@ -313,7 +313,7 @@
    "saida": "05:35",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-25 20:31",
+   "ultima_vista": "2026-11-25 21:01",
    "voos_parecidos": 0
   },
   "1f46390abb": {
@@ -659,9 +659,9 @@
    "data": "2026-11-26",
    "destino": "FLN",
    "detectado_em": "2026-11-25 20:01",
-   "horas_ate_saida": 16.0,
+   "horas_ate_saida": 15.5,
    "id": "6c49968b52",
-   "mediana_rota": 2142,
+   "mediana_rota": 1325,
    "menor_preco": 696,
    "origem": "RIO",
    "paradas": 0,
@@ -670,7 +670,7 @@
    "saida": "12:30",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-25 20:31",
+   "ultima_vista": "2026-11-25 21:01",
    "voos_parecidos": 0
   },
   "6f21f9a969": {
@@ -890,7 +890,7 @@
    "data": "2026-11-26",
    "destino": "SAO",
    "detectado_em": "2026-11-25 06:31",
-   "horas_ate_saida": 11.4,
+   "horas_ate_saida": 10.9,
    "id": "935bba12f1",
    "mediana_rota": 2629,
    "menor_preco": 185,
@@ -901,7 +901,7 @@
    "saida": "07:55",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-25 20:31",
+   "ultima_vista": "2026-11-25 21:01",
    "voos_parecidos": 0
   },
   "950dd4188c": {
@@ -1226,7 +1226,7 @@
    "data": "2026-11-26",
    "destino": "SAO",
    "detectado_em": "2026-11-25 08:31",
-   "horas_ate_saida": 21.1,
+   "horas_ate_saida": 20.6,
    "id": "cb5178aa20",
    "mediana_rota": 2634,
    "menor_preco": 1163,
@@ -1237,7 +1237,7 @@
    "saida": "17:40",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-25 20:31",
+   "ultima_vista": "2026-11-25 21:01",
    "voos_parecidos": 1
   },
   "d2471e888c": {
