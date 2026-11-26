@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-26 11:31",
+ "atualizado_em": "2026-11-26 12:01",
  "eventos": {
   "011bbf94fc": {
    "base": 296,
@@ -932,18 +932,18 @@
    "data": "2026-11-26",
    "destino": "XAP",
    "detectado_em": "2026-11-25 22:01",
-   "horas_ate_saida": 11.8,
+   "horas_ate_saida": 9.8,
    "id": "a499546a7a",
-   "mediana_rota": 2769,
-   "menor_preco": 443,
+   "mediana_rota": 2787,
+   "menor_preco": 325,
    "origem": "FLN",
    "paradas": 0,
    "preco": 325,
    "preco_inicial": 443,
    "saida": "21:50",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-26 10:01",
+   "ultima_vista": "2026-11-26 12:01",
    "voos_parecidos": 0
   },
   "a6837165c6": {
@@ -974,9 +974,9 @@
    "data": "2026-11-26",
    "destino": "SSA",
    "detectado_em": "2026-11-26 02:01",
-   "horas_ate_saida": 11.7,
+   "horas_ate_saida": 11.2,
    "id": "b961223975",
-   "mediana_rota": null,
+   "mediana_rota": 1404,
    "menor_preco": 397,
    "origem": "BSB",
    "paradas": 0,
@@ -985,7 +985,7 @@
    "saida": "23:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-26 11:31",
+   "ultima_vista": "2026-11-26 12:01",
    "voos_parecidos": 0
   },
   "bb172d89aa": {
