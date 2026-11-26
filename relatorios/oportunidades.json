@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-26 10:31",
+ "atualizado_em": "2026-11-26 11:01",
  "eventos": {
   "011bbf94fc": {
    "base": 296,
@@ -862,6 +862,27 @@
    "ultima_vista": "2026-11-24 16:31",
    "voos_parecidos": 0
   },
+  "9ba8594b61": {
+   "base": 1425,
+   "chegada": "23:20",
+   "companhia": "Gol",
+   "data": "2026-11-26",
+   "destino": "BSB",
+   "detectado_em": "2026-11-26 11:01",
+   "horas_ate_saida": 10.3,
+   "id": "9ba8594b61",
+   "mediana_rota": null,
+   "menor_preco": 489,
+   "origem": "SSA",
+   "paradas": 0,
+   "preco": 489,
+   "preco_inicial": 489,
+   "saida": "21:20",
+   "status": "aberta",
+   "tipo": "queda",
+   "ultima_vista": "2026-11-26 11:01",
+   "voos_parecidos": 0
+  },
   "a02a0a8d7e": {
    "base": 2170,
    "chegada": "08:35",
@@ -953,9 +974,9 @@
    "data": "2026-11-26",
    "destino": "SSA",
    "detectado_em": "2026-11-26 02:01",
-   "horas_ate_saida": 12.7,
+   "horas_ate_saida": 12.2,
    "id": "b961223975",
-   "mediana_rota": 1509,
+   "mediana_rota": null,
    "menor_preco": 397,
    "origem": "BSB",
    "paradas": 0,
@@ -964,7 +985,7 @@
    "saida": "23:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-26 10:31",
+   "ultima_vista": "2026-11-26 11:01",
    "voos_parecidos": 0
   },
   "bb172d89aa": {
