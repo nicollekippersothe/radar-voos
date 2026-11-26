@@ -1,8 +1,8 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-25 18:04",
- "voos_observados": 24228,
- "eventos": 379,
+ "gerado_em": "2026-11-26 00:34",
+ "voos_observados": 24236,
+ "eventos": 381,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
@@ -26,7 +26,7 @@
   "13h": 12,
   "14h": 12,
   "15h": 7,
-  "16h": 11,
+  "16h": 13,
   "17h": 15,
   "18h": 13,
   "19h": 20,
@@ -36,14 +36,14 @@
   "23h": 27
  },
  "por_companhia": {
-  "Gol": 221,
-  "LATAM": 87,
+  "Gol": 222,
+  "LATAM": 88,
   "Azul": 70,
   "LATAM e Aerolineas Argentinas": 1
  },
  "por_destino": {
-  "SAO": 76,
-  "RIO": 114,
+  "SAO": 77,
+  "RIO": 115,
   "POA": 58,
   "CWB": 8,
   "XAP": 104,
@@ -394,6 +394,40 @@
  "recentes": [
   {
    "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-11-25",
+   "saida": "19:30",
+   "companhia": "LATAM",
+   "paradas": 1,
+   "inicio": "2026-11-25 16:01",
+   "fim": "2026-11-25 17:01",
+   "leituras": 3,
+   "duracao_min": 90,
+   "menor_preco": 1319,
+   "preco_normal": 2546,
+   "queda_pct": 48,
+   "horas_ate_partida": 3.5,
+   "hora_do_inicio": 16
+  },
+  {
+   "origem": "FLN",
+   "destino": "SAO",
+   "data": "2026-11-26",
+   "saida": "10:00",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-11-25 16:01",
+   "fim": "2026-11-25 16:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 268,
+   "preco_normal": 2629,
+   "queda_pct": 90,
+   "horas_ate_partida": 18.0,
+   "hora_do_inicio": 16
+  },
+  {
+   "origem": "FLN",
    "destino": "SAO",
    "data": "2026-11-26",
    "saida": "16:20",
@@ -697,40 +731,6 @@
    "queda_pct": 42,
    "horas_ate_partida": 2.1,
    "hora_do_inicio": 13
-  },
-  {
-   "origem": "FLN",
-   "destino": "SAO",
-   "data": "2026-11-24",
-   "saida": "19:35",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-11-24 12:31",
-   "fim": "2026-11-24 12:31",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 296,
-   "preco_normal": 2629,
-   "queda_pct": 89,
-   "horas_ate_partida": 7.1,
-   "hora_do_inicio": 12
-  },
-  {
-   "origem": "FLN",
-   "destino": "RIO",
-   "data": "2026-11-26",
-   "saida": "05:45",
-   "companhia": "Azul",
-   "paradas": 1,
-   "inicio": "2026-11-24 12:01",
-   "fim": "2026-11-24 12:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 1450,
-   "preco_normal": 2602,
-   "queda_pct": 44,
-   "horas_ate_partida": 41.7,
-   "hora_do_inicio": 12
   }
  ]
 }
