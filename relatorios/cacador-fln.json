@@ -1,8 +1,8 @@
 {
  "origem": "FLN",
- "gerado_em": "2026-11-27 01:56",
- "voos_observados": 24392,
- "eventos": 397,
+ "gerado_em": "2026-11-27 11:47",
+ "voos_observados": 24458,
+ "eventos": 400,
  "duracao_min": {
   "mediana": 45,
   "p25": 30,
@@ -10,7 +10,7 @@
  },
  "uma_leitura_so_pct": 44,
  "inicio_por_hora": {
-  "00h": 54,
+  "00h": 57,
   "01h": 2,
   "02h": 1,
   "03h": 4,
@@ -36,14 +36,14 @@
   "23h": 27
  },
  "por_companhia": {
-  "Gol": 235,
+  "Gol": 238,
   "LATAM": 91,
   "Azul": 70,
   "LATAM e Aerolineas Argentinas": 1
  },
  "por_destino": {
   "SAO": 78,
-  "RIO": 129,
+  "RIO": 132,
   "POA": 59,
   "CWB": 8,
   "XAP": 104,
@@ -394,6 +394,57 @@
  "recentes": [
   {
    "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-11-28",
+   "saida": "18:00",
+   "companhia": "Gol",
+   "paradas": 0,
+   "inicio": "2026-11-27 00:01",
+   "fim": "2026-11-27 00:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 887,
+   "preco_normal": 1525,
+   "queda_pct": 42,
+   "horas_ate_partida": 42.0,
+   "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-11-29",
+   "saida": "06:45",
+   "companhia": "Gol",
+   "paradas": 1,
+   "inicio": "2026-11-27 00:01",
+   "fim": "2026-11-27 00:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 1116,
+   "preco_normal": 2163,
+   "queda_pct": 48,
+   "horas_ate_partida": 54.7,
+   "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
+   "destino": "RIO",
+   "data": "2026-11-29",
+   "saida": "19:35",
+   "companhia": "Gol",
+   "paradas": 2,
+   "inicio": "2026-11-27 00:01",
+   "fim": "2026-11-27 00:01",
+   "leituras": 1,
+   "duracao_min": 30,
+   "menor_preco": 1116,
+   "preco_normal": 2163,
+   "queda_pct": 48,
+   "horas_ate_partida": 67.6,
+   "hora_do_inicio": 0
+  },
+  {
+   "origem": "FLN",
    "destino": "POA",
    "data": "2026-11-26",
    "saida": "20:45",
@@ -680,57 +731,6 @@
    "queda_pct": 48,
    "horas_ate_partida": 3.5,
    "hora_do_inicio": 16
-  },
-  {
-   "origem": "FLN",
-   "destino": "SAO",
-   "data": "2026-11-26",
-   "saida": "10:00",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-11-25 16:01",
-   "fim": "2026-11-25 16:01",
-   "leituras": 1,
-   "duracao_min": 30,
-   "menor_preco": 268,
-   "preco_normal": 2629,
-   "queda_pct": 90,
-   "horas_ate_partida": 18.0,
-   "hora_do_inicio": 16
-  },
-  {
-   "origem": "FLN",
-   "destino": "SAO",
-   "data": "2026-11-26",
-   "saida": "16:20",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-11-25 06:31",
-   "fim": "2026-11-25 07:01",
-   "leituras": 2,
-   "duracao_min": 60,
-   "menor_preco": 268,
-   "preco_normal": 2629,
-   "queda_pct": 90,
-   "horas_ate_partida": 33.8,
-   "hora_do_inicio": 6
-  },
-  {
-   "origem": "FLN",
-   "destino": "SAO",
-   "data": "2026-11-26",
-   "saida": "06:25",
-   "companhia": "Gol",
-   "paradas": 0,
-   "inicio": "2026-11-25 06:31",
-   "fim": "2026-11-25 07:01",
-   "leituras": 2,
-   "duracao_min": 60,
-   "menor_preco": 185,
-   "preco_normal": 1303,
-   "queda_pct": 86,
-   "horas_ate_partida": 23.9,
-   "hora_do_inicio": 6
   }
  ]
 }
