@@ -1,71 +1,71 @@
 {
- "voos_partidos": 120520,
+ "voos_partidos": 122801,
  "ruido": {
   "leituras_acima_2x_mediana_pct": 0.9,
   "voos_afetados_pct": 8.3
  },
- "voos_avaliados": 77627,
+ "voos_avaliados": 78796,
  "queda_sustentada": {
-  "20pct": 6.0,
+  "20pct": 6.1,
   "30pct": 3.3
  },
  "alta_sustentada_30pct": 9.7,
  "por_companhia": {
   "Azul": {
-   "voos": 19191,
-   "queda20_pct": 6.1
-  },
-  "Gol": {
-   "voos": 23675,
-   "queda20_pct": 5.9
+   "voos": 19427,
+   "queda20_pct": 6.2
   },
   "LATAM": {
-   "voos": 34743,
-   "queda20_pct": 6.1
+   "voos": 35320,
+   "queda20_pct": 6.0
+  },
+  "Gol": {
+   "voos": 24031,
+   "queda20_pct": 6.2
   }
  },
  "por_faixa_de_saida": {
   "00-02h": {
-   "voos": 1372,
-   "queda20_pct": 3.4
+   "voos": 1397,
+   "queda20_pct": 3.6
   },
   "03-05h": {
-   "voos": 5985,
+   "voos": 6072,
    "queda20_pct": 5.4
   },
   "06-08h": {
-   "voos": 11690,
-   "queda20_pct": 4.4
+   "voos": 11890,
+   "queda20_pct": 4.5
   },
   "09-11h": {
-   "voos": 12938,
-   "queda20_pct": 4.0
+   "voos": 13146,
+   "queda20_pct": 4.1
   },
   "12-14h": {
-   "voos": 11657,
-   "queda20_pct": 5.3
+   "voos": 11811,
+   "queda20_pct": 5.4
   },
   "15-17h": {
-   "voos": 13797,
+   "voos": 13996,
    "queda20_pct": 6.5
   },
   "18-20h": {
-   "voos": 13195,
-   "queda20_pct": 8.3
+   "voos": 13380,
+   "queda20_pct": 8.4
   },
   "21-23h": {
-   "voos": 6993,
-   "queda20_pct": 9.4
+   "voos": 7104,
+   "queda20_pct": 9.5
   }
  },
- "achados": 158,
+ "achados": 170,
  "achados_pct": 0.2,
  "preco_final_8h": {
   "mediana": 2559,
   "ate_500_pct": 0.4
  },
  "floripa": {
-  "voos": 5117,
+  "voos": 5194,
   "menor_final": 185
  },
  "melhores_achados": [
@@ -126,6 +126,14 @@
    "final": 253
   },
   {
+   "trecho": "SAO-XAP",
+   "data": "2026-11-27",
+   "saida": "09:00",
+   "cia": "Gol",
+   "base": 1611,
+   "final": 210
+  },
+  {
    "trecho": "SAO-FLN",
    "data": "2026-11-24",
    "saida": "15:05",
@@ -140,6 +148,14 @@
    "cia": "Gol",
    "base": 2533,
    "final": 351
+  },
+  {
+   "trecho": "SAO-VIX",
+   "data": "2026-11-26",
+   "saida": "16:50",
+   "cia": "Gol",
+   "base": 1617,
+   "final": 228
   },
   {
    "trecho": "XAP-SAO",
@@ -172,26 +188,10 @@
    "cia": "LATAM",
    "base": 1937,
    "final": 306
-  },
-  {
-   "trecho": "SAO-XAP",
-   "data": "2026-10-25",
-   "saida": "10:50",
-   "cia": "LATAM",
-   "base": 1937,
-   "final": 306
-  },
-  {
-   "trecho": "FLN-POA",
-   "data": "2026-10-23",
-   "saida": "21:40",
-   "cia": "Gol",
-   "base": 1683,
-   "final": 270
   }
  ],
  "periodo": [
   "2026-09-30T15:19",
-  "2026-11-26T16:01"
+  "2026-11-27T16:01"
  ]
 }
