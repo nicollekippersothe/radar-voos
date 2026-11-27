@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-27 10:01",
+ "atualizado_em": "2026-11-27 10:37",
  "eventos": {
   "00ecc5f194": {
    "base": 1776,
@@ -674,24 +674,24 @@
    "voos_parecidos": 1
   },
   "52fa48635e": {
-   "base": 1506,
+   "base": 825,
    "chegada": "08:40",
    "companhia": "Gol",
    "data": "2026-11-28",
    "destino": "JOI",
    "detectado_em": "2026-11-27 08:01",
-   "horas_ate_saida": 23.1,
+   "horas_ate_saida": 21.1,
    "id": "52fa48635e",
-   "mediana_rota": 2203,
+   "mediana_rota": 1968,
    "menor_preco": 226,
    "origem": "SAO",
    "paradas": 0,
    "preco": 226,
    "preco_inicial": 226,
    "saida": "07:40",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-27 08:31",
+   "ultima_vista": "2026-11-27 10:37",
    "voos_parecidos": 0
   },
   "546fd902eb": {
@@ -1508,7 +1508,7 @@
    "preco": 361,
    "preco_inicial": 361,
    "saida": "07:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-27 10:01",
    "voos_parecidos": 1
@@ -1634,7 +1634,7 @@
    "preco": 214,
    "preco_inicial": 214,
    "saida": "05:55",
-   "status": "aberta",
+   "status": "sumiu",
    "tipo": "barato",
    "ultima_vista": "2026-11-27 10:01",
    "voos_parecidos": 0
