@@ -1,5 +1,5 @@
 {
- "atualizado_em": "2026-11-28 07:31",
+ "atualizado_em": "2026-11-28 08:01",
  "eventos": {
   "00ecc5f194": {
    "base": 2352,
@@ -8,9 +8,9 @@
    "data": "2026-11-28",
    "destino": "RIO",
    "detectado_em": "2026-11-27 04:01",
-   "horas_ate_saida": 10.2,
+   "horas_ate_saida": 9.7,
    "id": "00ecc5f194",
-   "mediana_rota": 2352,
+   "mediana_rota": 2729,
    "menor_preco": 555,
    "origem": "NAT",
    "paradas": 0,
@@ -19,7 +19,7 @@
    "saida": "17:45",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-28 07:31",
+   "ultima_vista": "2026-11-28 08:01",
    "voos_parecidos": 0
   },
   "011bbf94fc": {
@@ -722,7 +722,7 @@
    "data": "2026-11-29",
    "destino": "VIX",
    "detectado_em": "2026-11-28 07:31",
-   "horas_ate_saida": 23.6,
+   "horas_ate_saida": 23.1,
    "id": "45e6d52a3c",
    "mediana_rota": 2000,
    "menor_preco": 358,
@@ -733,7 +733,7 @@
    "saida": "07:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-28 07:31",
+   "ultima_vista": "2026-11-28 08:01",
    "voos_parecidos": 0
   },
   "478d16cbad": {
@@ -764,7 +764,7 @@
    "data": "2026-11-28",
    "destino": "REC",
    "detectado_em": "2026-11-27 17:01",
-   "horas_ate_saida": 3.6,
+   "horas_ate_saida": 3.1,
    "id": "4c23706c19",
    "mediana_rota": 1973,
    "menor_preco": 337,
@@ -775,7 +775,7 @@
    "saida": "11:10",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-28 07:31",
+   "ultima_vista": "2026-11-28 08:01",
    "voos_parecidos": 2
   },
   "4f0ed5bfdb": {
@@ -1109,7 +1109,7 @@
    "preco": 411,
    "preco_inicial": 411,
    "saida": "17:00",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-28 07:31",
    "voos_parecidos": 0
@@ -1319,7 +1319,7 @@
    "preco": 212,
    "preco_inicial": 199,
    "saida": "09:35",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "barato",
    "ultima_vista": "2026-11-28 07:31",
    "voos_parecidos": 0
@@ -1352,7 +1352,7 @@
    "data": "2026-11-29",
    "destino": "REC",
    "detectado_em": "2026-11-28 07:31",
-   "horas_ate_saida": 22.6,
+   "horas_ate_saida": 22.1,
    "id": "8ee2aa18d1",
    "mediana_rota": 1973,
    "menor_preco": 818,
@@ -1363,7 +1363,7 @@
    "saida": "06:05",
    "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-28 07:31",
+   "ultima_vista": "2026-11-28 08:01",
    "voos_parecidos": 0
   },
   "90a8c01fc9": {
@@ -1382,7 +1382,7 @@
    "preco": 534,
    "preco_inicial": 422,
    "saida": "19:50",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-28 07:31",
    "voos_parecidos": 0
@@ -1550,7 +1550,7 @@
    "preco": 418,
    "preco_inicial": 418,
    "saida": "17:25",
-   "status": "aberta",
+   "status": "voltou",
    "tipo": "queda",
    "ultima_vista": "2026-11-28 07:31",
    "voos_parecidos": 0
@@ -1730,7 +1730,7 @@
    "data": "2026-11-28",
    "destino": "SAO",
    "detectado_em": "2026-11-27 05:31",
-   "horas_ate_saida": 5.1,
+   "horas_ate_saida": 4.6,
    "id": "be3ae88c07",
    "mediana_rota": 1725,
    "menor_preco": 299,
@@ -1741,7 +1741,7 @@
    "saida": "12:35",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-28 07:31",
+   "ultima_vista": "2026-11-28 08:01",
    "voos_parecidos": 3
   },
   "c71070a9a7": {
@@ -1877,19 +1877,19 @@
    "data": "2026-11-28",
    "destino": "GYN",
    "detectado_em": "2026-11-27 08:31",
-   "horas_ate_saida": 12.1,
+   "horas_ate_saida": 10.6,
    "id": "d7f7e4ad4f",
-   "mediana_rota": 1710,
+   "mediana_rota": 1715,
    "menor_preco": 291,
    "origem": "SAO",
    "paradas": 0,
    "preco": 311,
    "preco_inicial": 361,
    "saida": "18:35",
-   "status": "voltou",
+   "status": "aberta",
    "tipo": "queda",
-   "ultima_vista": "2026-11-28 06:31",
-   "voos_parecidos": 5
+   "ultima_vista": "2026-11-28 08:01",
+   "voos_parecidos": 4
   },
   "da3ff1f884": {
    "base": 2563,
@@ -2129,7 +2129,7 @@
    "data": "2026-11-28",
    "destino": "FLN",
    "detectado_em": "2026-11-27 17:01",
-   "horas_ate_saida": 13.7,
+   "horas_ate_saida": 13.2,
    "id": "f35f936410",
    "mediana_rota": 1886,
    "menor_preco": 177,
@@ -2140,7 +2140,7 @@
    "saida": "21:15",
    "status": "aberta",
    "tipo": "barato",
-   "ultima_vista": "2026-11-28 07:31",
+   "ultima_vista": "2026-11-28 08:01",
    "voos_parecidos": 1
   },
   "f3a1822ab6": {
